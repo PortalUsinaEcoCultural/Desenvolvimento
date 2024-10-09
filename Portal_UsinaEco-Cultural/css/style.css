@@ -1,39 +1,20 @@
-body{
+body {
     font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto ao corpo */
 }
 
 ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centraliza os itens */
     width: 100%; /* Ocupa toda a largura disponível */
     padding: 0; /* Remove o padding padrão */
 }
 
 li {
-    margin: 0 20px; /* Aumenta o espaçamento entre os itens */
+    margin: 0 30px; /* Aumenta o espaçamento entre os itens */
 }
 
 .nav-item {
     color: rgb(0, 0, 0); /* Cor dos itens da nav */
-    margin-right: 5px; /* Ajuste o valor conforme necessário */
     text-decoration: none; /* Remove sublinhado */
 }
-
-.nav-item:hover {
-    color: #007BFF; /* Altera a cor ao passar o mouse, por exemplo */
-}
-
-.btn-doar {
-    color: rgb(0, 0, 0); /* Cor dos itens da nav */
-    margin-right: 5px; /* Ajuste o valor conforme necessário */
-    text-decoration: none; /* Remove sublinhado */
-    background-color: #69A625;
-    color: white;
-}
-
-.titulo {
-    font-size: 35px; /* Tamanho da fonte */
-    margin-top: 20px; /* Espaçamento acima do título */
-}
-
