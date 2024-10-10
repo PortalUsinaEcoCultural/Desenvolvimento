@@ -11,7 +11,9 @@ ul {
 }
 
 li {
-    margin: 0 30px; /* Aumenta o espaçamento entre os itens */
+    
+    color: rgb(0, 0, 0); /* Cor dos itens da nav */
+    text-decoration: none; /* Remove sublinhado */
 }
 
 .nav-item {
