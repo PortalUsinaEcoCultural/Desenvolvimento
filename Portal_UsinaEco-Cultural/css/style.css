@@ -2,21 +2,78 @@ body {
     font-family: 'Roboto', sans-serif; /* Aplica a fonte Roboto ao corpo */
 }
 
+/* Estiliza a lista de navegação */
 ul {
     list-style: none;
     display: flex;
     justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
     width: 100%; /* Ocupa toda a largura disponível */
     padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
 }
 
+/* Estiliza os itens da lista de navegação */
 li {
-    
-    color: rgb(0, 0, 0); /* Cor dos itens da nav */
-    text-decoration: none; /* Remove sublinhado */
+    margin: 0 15px; /* Espaçamento entre os itens */
 }
 
-.nav-item {
-    color: rgb(0, 0, 0); /* Cor dos itens da nav */
+/* Estiliza os links dentro dos itens de navegação */
+.nav-link {
+    color: rgb(0, 0, 0); /* Cor do texto dos links */
     text-decoration: none; /* Remove sublinhado */
+    font-weight: 500; /* Define uma espessura para o texto */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+}
+
+/* Estilos para todas as seções */
+section {
+    padding: 60px 0; /* Adiciona espaçamento vertical */
+}
+
+.texto {
+    max-width: 500px; /* Limita a largura do texto para melhorar a aparência */
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: left; /* Alinha o conteúdo do texto à esquerda */
+}
+
+.texto h2 {
+    font-size: 2.5rem; /* Tamanho da fonte */
+    color: #333;
+    font-weight: 300;
+}
+
+.texto p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.fale-conosco {
+    background-color: #f1f1f1; /* Cor de fundo da seção Fale Conosco */
+}
+
+.nova-secao, .novse, .informacoes, .nov {
+    display: flex; /* Transforma a seção em um container flexbox */
+    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+    align-items: center; /* Alinha os elementos verticalmente no centro */
+}
+
+/* Estilos da imagem */
+.imagem img {
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto {
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-bottom: 20px;
+    }
+    
+    .imagem {
+        text-align: center; /* Centraliza a imagem em telas menores */
+    }
 }
