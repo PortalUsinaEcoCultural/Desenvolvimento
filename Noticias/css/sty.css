@@ -35,3 +35,11 @@ li {
 .pagination-container {
     margin-top: 20px;
 }
+
+.pagina {
+    display: none;
+}
+
+.pagina.active {
+    display: block;
+}
