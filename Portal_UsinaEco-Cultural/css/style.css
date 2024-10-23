@@ -77,3 +77,9 @@ section {
         text-align: center; /* Centraliza a imagem em telas menores */
     }
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Ajuste o valor conforme necessário */
+}
