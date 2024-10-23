@@ -1,0 +1,37 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estiliza a lista de navegação */
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+/* Estiliza os itens da lista de navegação */
+li {
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+/* Estiliza os links dentro dos itens de navegação */
+.nav-link {
+    color: rgb(0, 0, 0); /* Cor do texto dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: 500; /* Define uma espessura para o texto */
+    padding: 10px 15px; /* Adiciona espaçamento interno */
+}
+
+.news-section {
+    display: none; /* Esconde todas as seções inicialmente */
+}
+.active {
+    display: block; /* Exibe a seção ativa */
+}
+.pagination-container {
+    margin-top: 20px;
+}
