@@ -43,3 +43,6 @@ li {
 .pagina.active {
     display: block;
 }
+.row{
+    columns: 12;
+}
