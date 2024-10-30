@@ -10,6 +10,29 @@
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
     <title>Fale Conosco</title>
 </head>
+<style>
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+    }
+    h1 {
+        font-size: 24px;
+        color: #000000;
+    }
+    .btn-submit {
+        background-color: #658b2c;
+        color: #ffffff;
+        font-size: 16px;
+        width: 100%;
+    }
+    .btn-submit:hover {
+        background-color: #567924;
+    }
+</style>
 <body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
@@ -66,7 +89,7 @@
         <div class="row align-items-center">
             <div class="col-md-6 text-right">
                 <div class="texto">
-                    <h2 style="text-align: right;">Fale conosco</h2>
+                    <h2 style="text-align: right; color:black">Fale conosco</h2>
                     <p style="text-align: right;">Sua opinião e sugestões são importantes para que o movimento se renove e melhore cada vez mais.</p>
                 </div>
             </div>
@@ -88,7 +111,7 @@
             </div>
             <div class="col-md-6">
                 <div class="texto">
-                    <h2>Canal exclusivo para <span>doador</span></h2>
+                    <h2 style="color:black">Canal exclusivo para <span>doador</span></h2>
                     <p>Caso queira falar conosco sobre doações, brindes ou atualização de dados, entre em contato por meio da nossa central de relacionamento com o doador: <strong>0800 789 2510</strong> (de segunda a sexta-feira das 9h às 19h). Ou envie um e-mail para: <strong>usinaecocultural@gmail.com</strong></p>
                 </div>
             </div>
@@ -97,7 +120,7 @@
         <div class="row align-items-center mb-4">
             <div class="col-md-6 text-right" style="direction: rtl;">
                 <div class="texto" style="text-align: right;">
-                    <h2>Mobilização e <span>voluntariado</span></h2>
+                    <h2 style="color:black">Mobilização e <span>voluntariado</span></h2>
                     <p>Quer saber como participar de nossas atividades, solicitar apoio de mobilização ou se tornar um voluntário ou voluntária? Envie um e-mail para <strong>conexaoverde.br@greenpeace.org</strong>. Caso queira receber palestras na sua escola, preencha o nosso formulário e conheça o Projeto Escola aqui.</p>
                 </div>
             </div>
@@ -111,26 +134,77 @@
                 <img src="img/evento.jpg" alt="Descrição da imagem" class="img-fluid">
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="texto text-start"> <h2>Informações gerais</h2>
+                <div class="texto text-start"> <h2 style="color:black">Informações gerais</h2>
                     <p>Nós temos uma página exclusiva sobre <u>dúvidas frequentes</u> que pode te ajudar. Para outras informações e comentários, escreva um e-mail para <strong>usinaecocultural@gmail.com</strong>.</p>
                 </div>
             </div>
         </div> 
 </section>
 
-<!-- Seção com imagem de fundo e formulário de inscrição -->
-<div class="header" style="background-image: url('img/fundo.jpg'); background-size: cover; background-position: center; height: 100vh; position: relative;">
-    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-    <div class="form-container" style="position: relative; z-index: 2; text-align: center; color: white;">
-        <h1>Cadastre-se abaixo!</h1>
-        <p>Receba alertas de ações e novos conteúdos no seu email.</p>
-        <form>
-            <input type="text" placeholder="Nome*" required>
-            <input type="email" placeholder="Email*" required>
-            <br>
-            <button type="submit">Cadastre</button>
-        </form>
-    </div>
+<!--Formulário-->
+
+<div class="form-container">
+    <h1 class="mb-3">Ainda restaram dúvidas?</h1>
+    <p class="text-muted mb-4">Entre em contato pelo formulário e entraremos em contato assim que possível</p>
+    
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome*</label>
+            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">E-mail*</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Como conheceu a Usina Eco-Cultural?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="conheceu" id="opcao1" value="opcao1">
+                <label class="form-check-label" for="opcao1">Opção 1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="conheceu" id="opcao2" value="opcao2">
+                <label class="form-check-label" for="opcao2">Opção 2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="conheceu" id="opcao3" value="opcao3">
+                <label class="form-check-label" for="opcao3">Opção 3</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="conheceu" id="opcao4" value="opcao4">
+                <label class="form-check-label" for="opcao4">Opção 4</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>Qual assunto quer abordar?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assunto" id="assunto1" value="assunto1">
+                <label class="form-check-label" for="assunto1">Assunto 1</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assunto" id="assunto2" value="assunto2">
+                <label class="form-check-label" for="assunto2">Assunto 2</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assunto" id="assunto3" value="assunto3">
+                <label class="form-check-label" for="assunto3">Assunto 3</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="assunto" id="assunto4" value="assunto4">
+                <label class="form-check-label" for="assunto4">Assunto 4</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-submit">Enviar</button>
+    </form>
 </div>
 
     <!--Seção do Rodapé-->
