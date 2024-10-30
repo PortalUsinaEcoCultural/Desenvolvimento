@@ -22,7 +22,26 @@
     margin-bottom: 5%;
 }
 
+.dropbtn{
+    position: relative;
+}
 
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 2;
+}
+
+.dropdown-content{
+    display: block;
+    padding: 12px 16px;
+}
+
+.dropbtn:hover .dropdown-content{
+    display: block;
+}
 
 .doe-button {
     background-color: #69a625; /* Verde escuro */
