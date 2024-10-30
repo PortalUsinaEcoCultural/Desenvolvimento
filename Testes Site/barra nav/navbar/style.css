@@ -1,4 +1,4 @@
-*{
+{
     font-family: "Roboto", sans-serif; 
 }
 
@@ -228,7 +228,7 @@ section {
 }
 
 .fale-conosco {
-    background-color: #f1f1f1; /* Cor de fundo da seção Fale Conosco */
+    background-color: #f1f1f1; 
 }
 
 .nova-secao, .novse, .informacoes, .nov {
@@ -265,6 +265,7 @@ section {
     padding-right: 30px; 
     padding-top: 30px;
     padding-bottom: 30px;
+    flex-direction: column;
 }
 
 .card01 {
@@ -291,7 +292,7 @@ section {
 
 .secao4 {
     margin: 0;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .row {
@@ -304,8 +305,9 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 300px; /* Altura fixa */
     margin: 10px;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     background-color: white;
@@ -318,6 +320,7 @@ section {
     z-index: 1;
 }
 
+
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .secao4-div-card01 {
@@ -328,7 +331,7 @@ section {
 /* Cards notícias */
 .card {
     background-color: #ffffff;
-    border-radius: 6px;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     margin: 0 auto;
@@ -404,7 +407,6 @@ button {
     background-color: #ffffff;
     color: #69A625;
     border: 2px solid #69A625;
-
     padding: 8px 16px;
     color: #69A625;
     font-size: 12px;
@@ -420,3 +422,120 @@ button:hover {
     color: white;
 }
 
+/*MVV*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .mvv {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .mvv h1 {
+    font-size: 40px;
+    margin: 0 30px 0;
+    letter-spacing: 1px;
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #f2f2f2;
+    border-radius: 5px 5px 5px 5px;
+    height: 600px;
+
+}
+
+.content .icons {
+    font-size: 70px;
+    margin: 16px 0;
+}
+
+.content > * {
+    flex: 1 1 100%;
+}
+
+.content:hover{
+    color: white;
+}
+
+.content:hover a{
+    border-color: white;
+    background: white;
+}
+
+.content-1:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-1:hover a{
+    color: #69A625
+}
+
+.content-2:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-2:hover a{
+    color: #69A625
+}
+
+.content-3:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-3:hover a{
+    color: #69A625
+}
+
+.content h2 {
+    font-size: 30px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content p{
+    font-size: 15px;
+}
+
+.content a{
+    margin: 22px 0;
+    background: black;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+    border-radius: 25px;
+}
+
+.content a:hover{
+    border-radius: 4px;
+}
+
+@media (max-width: 900px){
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+}
