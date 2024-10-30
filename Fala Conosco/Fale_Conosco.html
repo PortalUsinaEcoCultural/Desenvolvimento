@@ -10,84 +10,32 @@
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
     <title>Fale Conosco</title>
 </head>
-<style>
-.form-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 100%;
-}
-h1 {
-    font-size: 24px;
-    color: #7e2f33;
-}
-.btn-submit {
-    background-color: #658b2c;
-    color: #ffffff;
-    font-size: 16px;
-    width: 100%;
-}
-.btn-submit:hover {
-    background-color: #567924;
-}
-</style>
-<body>
-
-    <style>
-        .logo img {
-            width: 60px;
-        }
-        /* CSS para mostrar dropdown ao passar o mouse */
-        .nav-item.dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        .dropdown-menu {
-            display: none; /* Esconde o menu por padrão */
-        }
-    </style>
 </head>
 <body>
 
-<!-- Navbar -->
+<!--Barra de Pesquisa-->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <!-- Logo -->
-        <div class="logo">
-            <img src="/Fala Conosco/img/logo.jpg" alt="Logo Usina Eco-Cultural">
-        </div>
-
-        <!-- Offcanvas Menu -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="logo"><img src="/Fala Conosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural"></div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Usina Eco-Cultural</h5>
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                    <!-- O Coletivo Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            O Coletivo
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Galeria</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="dropbtn nav-link mx-lg-2 active" aria-current="page" href="/O Coletivo/barra nav/navbar/index.html">O Coletivo</a>
+                        <div class="dropdown-content">
+                            <a heref="#">Galeria</a>
+                        </div>
                     </li>
-
-                    <!-- História Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            História
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Usina</a></li>
-                            <li><a class="dropdown-item" href="#">Incinerador</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="dropbtn nav-link mx-lg-2" href="">História</a>
+                        <a heref="#">Incenerador</a>
+                        <a heref="#">Usina</a>
                     </li>
-
-                    <!-- Other Navbar Items -->
                     <li class="nav-item">
                         <a class="nav-link mx-lg-2" href="#">Loja</a>
                     </li>
@@ -106,18 +54,18 @@ h1 {
                 </ul>
             </div>
         </div>
-
-        <!-- Login and Donate Buttons -->
-        <a href="a" class="login-button mx-2"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a href="a" class="doe-button mx-2"><b>Doe e apoie</b></a>
     </div>
+    <a href="/Login/login.html" class="login-button"><i class="fa-solid fa-right-to-bracket"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <button class="navbar-toggler" pe-0 type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a href="a" class="doe-button"><b>Doe e apoie</b></a>
 </nav>
-
-<!-- Arquivo JavaScrip -->
-<script src="/Fala Conosco/JS/script.js"></script>
 
 <!-- Seção "Fale Conosco" -->
 <section class="fale-conosco d-flex align-items-center justify-content-center bg-light py-5">
