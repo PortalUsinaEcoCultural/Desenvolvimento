@@ -108,20 +108,22 @@ h2.quem-somos {
 
 /* Seção de Objetivos */
 h1.objetivos {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight:lighter;
     color: #313131;
     text-align: right;
+    padding-bottom: 0;
 }
 h2.objetivos {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold; 
     color: #313131;
     text-align: right;
+    padding-top: 0;
 }
 .objetivos {
     padding: 20px;
