@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+    <link rel="stylesheet" href="eventos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+    crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 </head>
 <body>
-    
+    <!-- Banner da página de Eventos -->
+    <header>
+        <h2 class="titulo-banner">Eventos Usina Eco-Cultural</h2>
+        <p class="subtitulo-banner">Fique por dentro dos próximos eventos e não perca a oportunidade de participar deles!</p>
+    </header>
+
+    <!-- Seção dos eventos -->
+    <section class="eventos">
+        <h3 class="subtitulo-eventos">Próximos Eventos</h3>
+        <ul>
+            <li class="evento1">
+                <strong>O Skate na Usina Resiste</strong> - dia 10 de fevereiro de 2025 às 14h
+                <p>Um dia de arte, música e competições. Participe e traga seus amigos!</p>
+            </li>
+            <li>
+                <strong>Seminário de Inovação Tecnológica</strong> - 15 de Novembro de 2024
+                <p>Uma oportunidade de conhecer as tendências da tecnologia. Participe conosco!</p>
+            </li>
+            <li>
+                <strong>Feira de Profissões</strong> - 22 de Novembro de 2024
+                <p>Descubra oportunidades e orientações para o mercado de trabalho!</p>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Seção do calendário do Google -->
+    <section class="calendario">
+        <h3 class="subtitulo-eventos"> <light>Acompanhe </light><strong>nosso calendário</strong></h3>
+        <iframe src="https://calendar.google.com/calendar/embed?src=leticia.csilva%40mauajr.com&ctz=America%2FSao_Paulo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
