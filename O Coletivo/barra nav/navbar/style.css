@@ -1,0 +1,541 @@
+{
+    font-family: "Roboto", sans-serif; 
+}
+
+/*Nav Bar*/
+.navbar {
+    background-color:#fff;
+    height: 70px;
+    /*margin: 20px;
+    border-radius: 10px;
+    padding: 0.5rem;*/
+
+}
+
+.logo{
+    font-weight: 500;
+    color: #69a625;
+    font-size: 24px;
+    transition: 0.3s color;
+    margin-left: 18%;
+    margin-bottom: 5%;
+}
+
+.doe-button {
+    background-color: #69a625; /* Verde escuro */
+    color: #fff;
+    font-size: 15px;
+    padding: 4px 15px; /* Ajusta a altura do botão */
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-radius: 0px 0px 5px 5px;
+    margin-right: 12%;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    text-align:center;
+    position: fixed; /* Fixa o botão no topo */
+    top: 0; /* Posiciona no topo da página */
+    right: 0; /* Alinha à direita */
+    z-index: 1000; /* Garante que o botão fique na frente de outros elementos */
+}
+
+.doe-button:hover{
+    background-color: #487218;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 30%;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #000
+}
+
+@media(min-width: 991px){
+    .nav-link::before{
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: #69a625;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+.hero-section {
+    background: url(imagens/home.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container2 {
+    text-align: right;
+    color: white;
+    padding-right: 200px; /* Gutter de 15px à direita */
+    padding-left: 15px;  /* Gutter de 15px à esquerda */
+}
+
+
+
+.offcanvas-body{
+    margin-right: 1%;
+    margin-left: 5%;
+
+}
+
+.login-button{
+    margin-right: 22%;
+    border:2px solid #69a625 ;
+    color: #69a625;
+    padding: 5px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align:center;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+}
+
+.login-button:hover{
+    background-color: #69a625;
+    color: white;
+}
+
+.hero-section::before{
+    background-color: (0, 0, 0, 0.6);
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.hero-section .container{
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-section h1{
+    font-size: 1.5em;
+}
+
+.hero-section h2{
+    font-size: 1.2em;
+}
+
+/*bolinhas*/
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.title {
+    color: #b30000;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.conquistas {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.conquista {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f3e8e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conquista img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.conquista span {
+    color: #666;
+    font-size: 14px;
+}
+
+.conquista .number {
+    color: #b36b00;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*Conteúdo*/
+section {
+    padding: 45px 0; /* Adiciona espaçamento vertical */
+}
+
+.texto {
+    max-width: 500px; /* Limita a largura do texto para melhorar a aparência */
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: left; /* Alinha o conteúdo do texto à esquerda */
+}
+
+.texto h2 {
+    font-size: 35px; /* Tamanho da fonte */
+    color: #555555;
+    font-weight: 300;
+}
+
+.texto p {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.fale-conosco {
+    background-color: #f1f1f1; 
+}
+
+.nova-secao, .novse, .informacoes, .nov {
+    display: flex; /* Transforma a seção em um container flexbox */
+    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
+    align-items: center; /* Alinha os elementos verticalmente no centro */
+}
+
+
+/* Estilos da imagem */
+.imagem img {
+    border-radius: 0px;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto {
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-bottom: 20px;
+    }
+    
+    .imagem {
+        text-align: center; /* Centraliza a imagem em telas menores */
+    }
+}
+
+/* Cards 01 */
+.cards {
+    background-color: #EDEDED;
+    background-image: url(imagens/fundo.png);
+    background-size: contain;
+    padding-left: 30px; 
+    padding-right: 30px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction: column;
+}
+
+.card01 {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+.card01 h2 {
+    color: #9A1827;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.card01 p {
+    color: #555555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5%;
+}
+
+.secao4 {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.row {
+    display: flex;
+    justify-content: center; 
+}
+
+.secao4-div-card01 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300px; /* Altura fixa */
+    margin: 10px;
+    padding: 30px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.5s ease;
+    text-align: center; /* Centraliza o conteúdo do card */
+}
+
+.secao4-div-card01:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .secao4-div-card01 {
+        width: 100%;
+    }
+}
+
+/* Cards notícias */
+.card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 700px; /* Define a altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido, sem distorcer */
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Garante que o texto esteja alinhado à esquerda */
+}
+
+.card h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    color:#9A1827;
+}
+
+.card p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    color:#555555
+}
+
+.card-text-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.card img {
+    width: 80%; /* Ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    width: 100%; /* Ajusta a largura para preencher o card */
+    height: 200px; /* Define a altura uniforme */
+    object-fit: cover; /* Faz com que a imagem preencha o espaço sem distorcer */
+}
+
+.card button {
+    background-color: #9A1827;
+    border: none;
+    padding: 8px 16px;
+    color: #f2f2f2;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #9A1827;
+}
+
+.card button:hover {
+    background-color: #ffffff;
+    color: #9A1827;
+    border: 2px solid #9A1827;
+}
+
+button {
+    background-color: #ffffff;
+    color: #69A625;
+    border: 2px solid #69A625;
+    padding: 8px 16px;
+    color: #69A625;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    margin-top: auto
+}
+
+button:hover {
+    background-color: #69A625;
+    border: 2px solid #69A625;
+    color: white;
+}
+
+/*MVV*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .mvv {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .mvv h1 {
+    font-size: 40px;
+    margin: 0 30px 0;
+    letter-spacing: 1px;
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #f2f2f2;
+    border-radius: 5px 5px 5px 5px;
+    height: 600px;
+
+}
+
+.content .icons {
+    font-size: 70px;
+    margin: 16px 0;
+}
+
+.content > * {
+    flex: 1 1 100%;
+}
+
+.content:hover{
+    color: white;
+}
+
+.content:hover a{
+    border-color: white;
+    background: white;
+}
+
+.content-1:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-1:hover a{
+    color: #69A625
+}
+
+.content-2:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-2:hover a{
+    color: #69A625
+}
+
+.content-3:hover {
+    border-color:#69A625;
+    background: #69A625;
+}
+
+.content-3:hover a{
+    color: #69A625
+}
+
+.content h2 {
+    font-size: 30px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.content p{
+    font-size: 15px;
+}
+
+.content a{
+    margin: 22px 0;
+    background: black;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+    border-radius: 25px;
+}
+
+.content a:hover{
+    border-radius: 4px;
+}
+
+@media (max-width: 900px){
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+}
