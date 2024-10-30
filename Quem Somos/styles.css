@@ -6,28 +6,27 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
 }
 
 /* Cabeçalho */
-.header {
+.cabecalho {
     display: flex;
     padding: 20px;
     background: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     gap: 20px;
     position: relative;
     background-color: #EDEDED; /* Retângulo cinza */
 }
 
-.header img {
+.cabecalho img {
     width: 50%;
     height: auto;
 }
 
-.header-content {
+.conteudo-cabecalho {
     width: 50%;
     padding: 10px 20px;
 }
@@ -40,39 +39,39 @@ h1 {
 h2.quem-somos {
     margin: 10px 0;
     font-size: 18px;
-    color: #69A625;
+    color: #212220;
 }
 
 /* Atividades */
-.activities {
+.atividades {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.activities h2 {
+.atividades h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 24px;
 }
 
-.gallery {
+.galeria {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.gallery-item {
+.item-galeria {
     flex: 1;
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
 
-.gallery-item:hover {
+.item-galeria:hover {
     transform: scale(1.05); /* Leve zoom ao passar o mouse */
 }
 
-.gallery-item img {
+.item-galeria img {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -80,7 +79,7 @@ h2.quem-somos {
 }
 
 /* Efeito de animação para sublinhado */
-.gallery-item p {
+.item-galeria p {
     margin-top: 10px;
     font-style: italic;
     display: inline-block;
@@ -88,7 +87,7 @@ h2.quem-somos {
     cursor: pointer;
 }
 
-.gallery-item p::after {
+.item-galeria p::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -99,26 +98,62 @@ h2.quem-somos {
     transition: width 0.3s ease-in-out;
 }
 
-.gallery-item p:hover::after {
+.item-galeria p:hover::after {
     width: 100%; /* Animação para o sublinhado verde */
+}
+
+/* Seção de Objetivos */
+.objetivos {
+    padding: 20px;
+    width: 100%;
+    background-color: #EDEDED; /* Retângulo cinza */
+}
+
+.conteudo-objetivos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.objetivos .texto {
+    flex: 1;
+    text-align: justify;
+}
+
+.objetivos .imagem {
+    flex: 1;
+}
+
+.objetivos .img-fluid {
+    width: 100%;
+    height: auto;
 }
 
 /* Media query para dispositivos menores */
 @media (max-width: 768px) {
-    .header {
+    .cabecalho {
         flex-direction: column;
     }
-    
-    .header img,
-    .header-content {
+
+    .cabecalho img,
+    .conteudo-cabecalho {
         width: 100%;
     }
-    
-    .gallery {
+
+    .galeria {
         flex-direction: column;
     }
-    
-    .gallery-item {
+
+    .item-galeria {
         margin-bottom: 20px;
+    }
+
+    .conteudo-objetivos {
+        flex-direction: column;
+    }
+
+    .objetivos .texto,
+    .objetivos .imagem {
+        width: 100%;
     }
 }

@@ -35,53 +35,89 @@ h1 {
 </style>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <div class="logo"><img src="/Fala Conosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural"></div>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">O Coletivo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="">História</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Loja</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="/Noticias/Noticia.html">Notícias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Boletim da Usina</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a>
-                        </li>
-                    </ul>
-                </div>
+    <style>
+        .logo img {
+            width: 60px;
+        }
+        /* CSS para mostrar dropdown ao passar o mouse */
+        .nav-item.dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu {
+            display: none; /* Esconde o menu por padrão */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="/Fala Conosco/img/logo.jpg" alt="Logo Usina Eco-Cultural">
+        </div>
+
+        <!-- Offcanvas Menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Usina Eco-Cultural</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <!-- O Coletivo Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            O Coletivo
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Galeria</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- História Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            História
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Usina</a></li>
+                            <li><a class="dropdown-item" href="#">Incinerador</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Other Navbar Items -->
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="#">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="/Noticias/Noticia.html">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="#">Boletim da Usina</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <a href="a" class="login-button"><i class="fa-solid fa-right-to-bracket"></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+        <!-- Login and Donate Buttons -->
+        <a href="a" class="login-button mx-2"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="navbar-toggler" pe-0 type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a href="a" class="doe-button"><b>Doe e apoie</b></a>
-    </nav>
+        <a href="a" class="doe-button mx-2"><b>Doe e apoie</b></a>
+    </div>
+</nav>
+
+<!-- Arquivo JavaScrip -->
+<script src="/Fala Conosco/JS/script.js"></script>
 
 <!-- Seção "Fale Conosco" -->
 <section class="fale-conosco d-flex align-items-center justify-content-center bg-light py-5">
