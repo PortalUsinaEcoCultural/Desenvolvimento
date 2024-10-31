@@ -179,3 +179,30 @@ h2.objetivos {
         width: 100%;
     }
 }
+/* Estilos para a seção "Nossos Principais Objetivos Detalhados" */
+.objetivo-card {
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+    text-align: center;
+    vertical-align: top;
+    position: relative; /* Adicionado para posicionar o background */
+}
+
+.circular-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.objetivo-card h3 {
+    background-color: #6aa6255e; /* Cor do retângulo */
+    color: #2B2B2E; /* Cor do texto */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    position: relative; /* Para garantir que o fundo verde seja aplicado corretamente */
+    z-index: 1; /* Para garantir que o texto fique acima do fundo verde */
+    display: inline-block; /* Para ajustar o tamanho ao conteúdo */
+}
+
