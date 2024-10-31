@@ -15,11 +15,8 @@ body {
 .cabecalho {
     display: flex;
     padding: 20px;
-    background: #fff;
-    width: 100%;
-    gap: 20px;
-    position: relative;
     background-color: #EDEDED; /* Retângulo cinza */
+    margin-bottom: 30px;
 }
 
 .cabecalho img {
@@ -41,7 +38,7 @@ h2.quem-somos {
     margin: 10px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     color: #313131;
 }
 
@@ -56,7 +53,6 @@ h2.quem-somos {
     text-align: center;
     margin-bottom: 30px;
     font-size: 35px;
-
 }
 
 .galeria {
@@ -77,9 +73,9 @@ h2.quem-somos {
 
 .item-galeria img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 5px;
+    height: 250px; /* Altura uniforme */
+    object-fit: cover; /* Faz o corte da imagem sem distorção */
+    border-radius: 5px; /* Bordas arredondadas, se necessário */
 }
 
 /* Efeito de animação para sublinhado */
@@ -111,24 +107,27 @@ h1.objetivos {
     margin: 5px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight:lighter;
+    font-weight: lighter;
     color: #313131;
     text-align: right;
     padding-bottom: 0;
 }
+
 h2.objetivos {
     margin: 5px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight: bold; 
+    font-weight: bold;
     color: #313131;
     text-align: right;
     padding-top: 0;
 }
+
 .objetivos {
     padding: 20px;
     width: 100%;
     background-color: #EDEDED; /* Retângulo cinza */
+    margin-bottom: 30px;
 }
 
 .conteudo-objetivos {
@@ -148,7 +147,9 @@ h2.objetivos {
 
 .objetivos .img-fluid {
     width: 100%;
-    height: auto;
+    height: 350px; /* Altura uniforme */
+    object-fit: cover; /* Faz o corte da imagem sem distorção */
+    border-radius: 5px; /* Bordas arredondadas, se necessário */
 }
 
 /* Media query para dispositivos menores */
@@ -179,11 +180,32 @@ h2.objetivos {
         width: 100%;
     }
 }
+
 /* Estilos para a seção "Nossos Principais Objetivos Detalhados" */
+.objetivos-detalhados {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.objetivos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tres,
+.dois {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
 .objetivo-card {
     display: inline-block;
-    width: 20%;
-    margin: 20px;
+    width: 40%;
+    margin: 40px;
     text-align: center;
     vertical-align: top;
     position: relative; /* Adicionado para posicionar o background */
@@ -197,12 +219,19 @@ h2.objetivos {
 }
 
 .objetivo-card h3 {
-    background-color: #6aa6255e; /* Cor do retângulo */
+    background-color: #6aa6258f; /* Cor do retângulo */
     color: #2B2B2E; /* Cor do texto */
-    padding: 5px; /* Espaçamento interno */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 8px; /* Espaçamento interno */
     border-radius: 10px; /* Bordas arredondadas */
-    position: relative; /* Para garantir que o fundo verde seja aplicado corretamente */
+    position: relative; 
     z-index: 1; /* Para garantir que o texto fique acima do fundo verde */
     display: inline-block; /* Para ajustar o tamanho ao conteúdo */
 }
-
+.img-fluid {
+    width: 100%; /* Largura total do contêiner */
+    height: 250px; /* Mantém a altura uniforme */
+    object-fit: cover; /* Faz o corte da imagem sem distorção */
+    border-radius: 5px; /* Bordas arredondadas, se necessário */
+}
