@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #1D1D1F;
+}
+
+header {
+    margin-top: 50px;
+    background-color: #69A625;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.titulo-eventos {
+    font-size: 35px;
+}
+
+.subtitulo-banner {
+    font-size: 15px;
+}
+.subtitulo-eventos{
+    font-size: 20px;
+}
+
+.eventos {
+    margin: 40px 0;
+}
+
+.eventos ul {
+    list-style-type: none;
+}
+
+.eventos li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eventos li p {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.calendario {
+    margin: 40px 0;
+    text-align: center; /* Centraliza o conteúdo da seção */
+}
+
+.calendario h3 {
+    margin-bottom: 50px;
+}
+
+.calendario iframe {
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px; /* Opcional, para suavizar as bordas do iframe */
+}

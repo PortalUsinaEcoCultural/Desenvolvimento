@@ -92,18 +92,22 @@ body {
     color: #333;
     font-weight: 600;
 }
+.wrapper button:hover{
+    background-color: #69A625;
+    color: #fff;
+}
 .wrapper .cadastrar{
     font-size: 14.5px;
     text-align: center;
     margin-top: 20px;
 }
-.cadastrar p a {
+.cadastrar p {
     color: #fff;
     text-decoration: none;
     font-weight: 300;
 }
-.cadastrar p a:hover {
-    text-decoration: underline;
+.cadastrar p:hover {
+    text-decoration: underline; 
 }
 .checkbox{
     color:green

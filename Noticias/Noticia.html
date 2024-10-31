@@ -47,6 +47,35 @@
             display: inline-block;
             text-align: center;
         }
+
+        /* Alinha o container de notícias à esquerda */
+#news-container {
+    text-align: left; /* Garante que o texto fique à esquerda */
+}
+
+/* Alinha as colunas à esquerda */
+.row {
+    justify-content: flex-start; /* Alinha as colunas à esquerda */
+}
+
+header {
+    margin-top: 50px;
+    background-color: #69A625;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.titulo-eventos {
+    font-size: 35px;
+    padding-bottom: 10px;
+}
+
+.subtitulo-banner {
+    font-size: 15px;
+    padding-bottom: -5px;
+}
+
     </style>
     
 </head>
@@ -65,7 +94,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page" href="#">O Coletivo</a>
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="/O Coletivo/barra nav/navbar/index.html">O Coletivo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="">História</a>
@@ -74,7 +103,7 @@
                             <a class="nav-link mx-lg-2" href="#">Loja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="#">Eventos</a>
+                            <a class="nav-link mx-lg-2" href="/Eventos/eventos.html">Eventos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-lg-2" href="/Noticias/Noticia.html">Notícias</a>
@@ -89,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <a href="a" class="login-button"><i class="fa-solid fa-right-to-bracket"></i></a>
+        <a href="/Login/login.html" class="login-button"><i class="fa-solid fa-right-to-bracket"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -102,19 +131,11 @@
     </nav>
 
 <!--Seção de Noticias e botão pra mudar de noticia-->
-<section class="container my-4">
-    <div class="row">
-        <div class="col-12">
-            <h1>Notícias</h1>
-            <h2 class="h5">Fique por dentro das notícias! E vejam o que falam sobre nós!</h2>
-        </div>
-    </div>
-    
-    <div class="row">
-        <div class="col-12">
-            <hr style="border: 1px solid #000000;">
-        </div>
-    </div>
+<section>
+    <header>
+        <h2 class="titulo-banner" style="padding-top: 15px;">Notícias Usina Eco-Cultural!</h2>
+        <p class="subtitulo-banner">Veja o que falam sobre nós na mídia e fique por dentro de novas atualizações assinando a nossa newsletter!</p>
+    </header>
 </section>
 
 <section class="container my-4">

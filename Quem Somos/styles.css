@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    font-weight: 400; /* Regular */
 }
 
 /* Cabeçalho */
@@ -33,13 +34,15 @@ body {
 
 h1 {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 h2.quem-somos {
     margin: 10px 0;
-    font-size: 18px;
-    color: #212220;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:lighter;
+    color: #313131;
 }
 
 /* Atividades */
@@ -52,7 +55,8 @@ h2.quem-somos {
 .atividades h2 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 24px;
+    font-size: 35px;
+
 }
 
 .galeria {
@@ -103,6 +107,24 @@ h2.quem-somos {
 }
 
 /* Seção de Objetivos */
+h1.objetivos {
+    margin: 5px 0;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight:lighter;
+    color: #313131;
+    text-align: right;
+    padding-bottom: 0;
+}
+h2.objetivos {
+    margin: 5px 0;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; 
+    color: #313131;
+    text-align: right;
+    padding-top: 0;
+}
 .objetivos {
     padding: 20px;
     width: 100%;
@@ -117,7 +139,7 @@ h2.quem-somos {
 
 .objetivos .texto {
     flex: 1;
-    text-align: justify;
+    text-align: right;
 }
 
 .objetivos .imagem {
