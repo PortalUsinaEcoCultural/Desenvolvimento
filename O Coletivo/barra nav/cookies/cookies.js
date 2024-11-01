@@ -1,11 +1,11 @@
-class CookiesNotice{
-    constructor(){
-        this.key = "@cookies"
+class CookiesNotice {
+    constructor() {
+        this.key = "@cookies";
         this.init();
     }
 
-    layout(){
-        return
+    layout() {
+        return `
             <div id="cookies-aviso">
                 <div class="coteudo">
                     <span>
@@ -19,42 +19,43 @@ class CookiesNotice{
                     <button class="aceitar" onclick="cookiesNotice.accept();">Aceitar</button>
                 </div>
             </div>
-        ;
+        `;
     }
 
-    save(){
-        localStorage.setItem(this.key,true)
+    save() {
+        localStorage.setItem(this.key, true);
     }
 
-    get(){
-        const get = localStorage.getItem(this.key) || false;
-        return get;
+    get() {
+        return localStorage.getItem(this.key) || false;
     }
 
-    create(){
-        document.body.insertAdjacentHTML("beforebegin", this.layout());
+    create() {
+        document.body.insertAdjacentHTML("beforeend", this.layout());
     }
 
-    remove(){
-        const select = document.querySelector("#cookies-notice");
-        select.parentNode.removeChild(select);
+    remove() {
+        const select = document.querySelector("#cookies-aviso");
+        if (select) {
+            select.parentNode.removeChild(select);
+        }
     }
 
-    accept(){
+    accept() {
         this.save();
         this.remove();
     }
 
-    async init(){
-    
-        const status = await this.get();
-        console.log(status)
+    async init() {
+        const status = this.get();
+        console.log(status);
 
-        if (status){
+        if (status) {
             return;
         }
         this.create();
     }
 }
 
-const CookiesNotice = new CookiesNotice;
+const cookiesNotice = new CookiesNotice();
+
