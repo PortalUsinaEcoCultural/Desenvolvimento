@@ -1,10 +1,11 @@
 class CookiesNotice {
     constructor() {
-        this.key = "@cookies";
-        this.init();
+        this.key = "@cookies"; // Chave para armazenar no localStorage
+        this.init(); // Inicializa a classe
     }
 
     layout() {
+        // Cria o layout do aviso de cookies
         return `
             <div id="cookies-aviso">
                 <div class="coteudo">
@@ -15,47 +16,57 @@ class CookiesNotice {
                     </span>
                 </div>
                 <div class="acoes">
-                    <button class="rejeitar" onclick="cookiesNotice.remove();">Rejeitar</button>
-                    <button class="aceitar" onclick="cookiesNotice.accept();">Aceitar</button>
+                    <button class="rejeitar">Rejeitar</button>
+                    <button class="aceitar">Aceitar</button>
                 </div>
             </div>
         `;
     }
 
     save() {
+        // Salva a escolha do usuário no localStorage
         localStorage.setItem(this.key, true);
+        console.log("Cookies aceitos."); // Log para depuração
     }
 
     get() {
-        return localStorage.getItem(this.key) || false;
+        // Recupera a escolha do usuário do localStorage
+        return localStorage.getItem(this.key) === "true";
     }
 
     create() {
+        // Adiciona o aviso de cookies ao DOM
         document.body.insertAdjacentHTML("beforeend", this.layout());
+        console.log("Aviso de cookies criado."); // Log para depuração
+
+        // Adiciona os event listeners para os botões
+        document.querySelector(".rejeitar").addEventListener("click", () => {
+            console.log("Cookies rejeitados."); // Log para depuração
+            this.remove();
+        });
+        document.querySelector(".aceitar").addEventListener("click", () => {
+            this.save();
+            this.remove();
+        });
     }
 
     remove() {
+        // Remove o aviso de cookies do DOM
         const select = document.querySelector("#cookies-aviso");
         if (select) {
             select.parentNode.removeChild(select);
+            console.log("Aviso de cookies removido."); 
         }
-    }
-
-    accept() {
-        this.save();
-        this.remove();
     }
 
     async init() {
         const status = this.get();
-        console.log(status);
-
+        console.log("Status de cookies:", status); 
         if (status) {
-            return;
+            return; 
         }
-        this.create();
+        this.create(); 
     }
 }
 
-const cookiesNotice = new CookiesNotice();
-
+const cookiesNotice = new CookiesNotice(); 
