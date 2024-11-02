@@ -196,3 +196,86 @@ body {
 .nav-item.dropdown > .nav-link::after {
     display: none; /* Esconde o ícone de seta */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cookies-aviso {
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 3px 15px #000;
+    padding: 24px 12px;
+}
+
+#cookies-aviso .conteudo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#cookies-aviso .conteudo span {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#cookies-aviso .acoes {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#cookies-aviso .acoes button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin: 6px;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+
+#cookies-aviso .acoes .rejeitar {
+    border: 1px solid #69a625;
+    color: #69a625;
+}
+
+#cookies-aviso .acoes .rejeitar:hover {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+}
+
+#cookies-aviso .acoes .aceitar {
+    background-color: #69a625;
+    color: #fff;
+}
+
+#cookies-aviso .acoes .aceitar:hover {
+    background-color: #3b5f13;
+    color: #fff;
+}
