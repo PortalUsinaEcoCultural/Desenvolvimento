@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link rel="stylesheet" href="login.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a27cc7b249.js" crossorigin="anonymous"></script>
+    <title>Login</title>
 </head>
 <body>
+    <div class="container">
+        <div class="form-box m-20">
+            <h1 id="title">Cadastro</h1>
+            <form>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn" class="button">Cadastrar</button>
+                    <button type="button" id="signinBtn" class="button disable">Login</button>
+                </div>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Nome">
+                    </div>
 
-    <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required>
-                <i class='bx bxs-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="Senha" required>
-                <i class='bx bxs-lock-alt'></i>
-            </div>
-
-            <div class="esqueceu-senha">
-                <label><input type="checkbox">Lembre-se de mim</label>
-                <a href="#">Esqueceu a senha?</a>
-            </div>
-
-            <button type="submit" class="botao">Login</button>
-
-            <div class="cadastrar">
-                <a href="#"><p>Não tem uma conta? <strong> Cadastrar</strong></a></p>
-            </div>
-
-
-        </form>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Senha">
+                    </div>
+                    <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
+                </div>
+                <button type="button" id="entrarBtn" class="button">Entrar</button>
+            </form>
+        </div>
     </div>
+
+<script>
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+let entrarBtn = document.getElementById("entrarBtn");
+
+signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML = "Login"
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+    entrarBtn.innerHTML = "Entrar";  // Altera o texto do botão "Entrar" para "Login"
+}
+
+signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML = "Cadastrar"
+    signupBtn.classList.remove("disable");
+    signinBtn.classList.add("disable");
+    entrarBtn.innerHTML = "Cadastrar";  // Altera o texto do botão "Entrar" para "Cadastrar"
+}
+</script>
 
 </body>
 </html>
