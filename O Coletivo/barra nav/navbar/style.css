@@ -542,22 +542,11 @@ button:hover {
 
 /*Cookies*/
 
-* {
+#cookies-aviso {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-}
 
-body {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#cookies-aviso {
     z-index: 10000;
     position: fixed;
     bottom: 0;
