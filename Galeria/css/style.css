@@ -1,11 +1,12 @@
-.torn-paper-section {
+.torn-paper-section { 
     background-image: url('/Galeria/img/fundo2.png'); 
-    background-size: contain; /* Faz a imagem cobrir todo o espaço da seção em que esta contida */
-    background-position: center; /* Centraliza a imagem */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
+    height: 100vh; 
+    display: flex; 
 }
+
 
 .content-wrapper {
     color: black; 
@@ -13,47 +14,47 @@
 }
 
 .event-section {
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 20px 0; /* Espaço ao redor da seção */
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 .event-title {
     cursor: pointer;
     color: #505050;
-    text-decoration: none; /* Removendo o sublinhado padrão */
+    text-decoration: none; 
     text-align: center;
 }
 
 .event-title:hover {
-    text-decoration: underline; /* Adicionando o sublinhado ao passar o mouse */
-    color: #3A90C3; /* Opcional, se quiser mudar a cor no hover */
+    text-decoration: underline; 
+    color: #3A90C3; 
 }
 
 
 .event-section a:hover {
     color: #3A90C3;
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 20px 0; /* Espaço ao redor da seção */
+    text-align: center; 
+    margin: 20px 0; 
 }
 
 .event-container {
     display: flex;
-    gap: 10px; /* Ajuste o valor do gap conforme necessário */
-    justify-content: center; /* Centraliza as seções */
+    gap: 10px; 
+    justify-content: center; 
 }
 
 .event-section {
     flex: 1;
-    max-width: 25%; /* Limita a largura para que as seções fiquem mais próximas */
+    max-width: 25%; 
     text-align: center;
 }
 
 .event-section img {
-    transition: transform 0.3s ease; /* Suaviza a transição */
+    transition: transform 0.3s ease; 
 }
 
 .event-section img:hover {
-    transform: scale(1.1); /* Aumenta a escala da imagem */
+    transform: scale(1.1); 
 }
 
 .torn-paper-section h2 {
@@ -145,7 +146,7 @@
 .nav-item .dropdown-menu {
     display: none;
     position: absolute;
-    top: 70%; /* Reduzido para aproximar o menu do título principal */
+    top: 70%; 
     left: 0;
     background: none;
     border: none;
@@ -262,5 +263,23 @@ body {
 
 /* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
-    display: none; /* Esconde o ícone de seta */
+    display: none; 
+}
+
+/* Estilo para garantir que o link envolva a imagem */
+.event-link {
+    display: block; 
+    position: relative;
+}
+
+.event-link img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+.event-title {
+    display: inline-block;
+    text-decoration: none; 
+    color: inherit; 
 }

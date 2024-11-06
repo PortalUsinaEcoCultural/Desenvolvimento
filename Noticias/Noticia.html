@@ -8,76 +8,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
     <title>Noticias</title>
-    <style>
-        /* Estilo adicional para centralizar os botões */
-        .pagination {
-            display: flex;
-            justify-content: center; /* Centraliza horizontalmente */
-            align-items: center; /* Alinha verticalmente os botões e o número da página */
-            margin-top: 20px; /* Espaço acima dos botões */
-        }
-    
-        .pagination button {
-            margin: 0 10px; /* Espaço entre os botões */
-            padding: 10px 20px; 
-            font-size: 1rem; /* Tamanho da fonte dos botões */
-            cursor: pointer; 
-            background-color: transparent; /* Fundo transparente */
-            color: white; 
-            border: 2px solid #69A625; /* Borda verde */
-            border-radius: 5px; 
-            background-color: #69A625; 
-        }
-    
-        .pagination button:hover {
-            background-color: #4b7a19; 
-        }
-    
-        .pagination button:disabled {
-            background-color: #69A625; /* Cor do botão desativado */
-            cursor: not-allowed; /* Cursor para botão desativado */
-            color: #ffffff; 
-            border-color: #69A625; 
-        }
-    
-        .pagination span {
-            color: #69A625; /* Cor verde para o número da página */
-            font-weight: bold;
-            margin: 0 10px; /* Espaço em torno do número da página */
-            display: inline-block;
-            text-align: center;
-        }
 
-        /* Alinha o container de notícias à esquerda */
-#news-container {
-    text-align: left; /* Garante que o texto fique à esquerda */
-}
-
-/* Alinha as colunas à esquerda */
-.row {
-    justify-content: flex-start; /* Alinha as colunas à esquerda */
-}
-
-header {
-    margin-top: 50px;
-    background-color: #69A625;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-.titulo-eventos {
-    font-size: 35px;
-    padding-bottom: 10px;
-}
-
-.subtitulo-banner {
-    font-size: 15px;
-    padding-bottom: -5px;
-}
-
-    </style>
-    
 </head>
 <body>
 
@@ -139,7 +70,7 @@ header {
 </section>
 
 <section class="container my-4">
-    <div id="news-container">
+    <div id="news-container" style="margin-top: 100px;">
         <!-- As notícias serão geradas aqui pelo JavaScript -->
     </div>
 
