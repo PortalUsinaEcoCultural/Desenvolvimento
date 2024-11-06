@@ -1,40 +1,38 @@
 /* Seção "Nossos Parceiros..." */
 const carrossel = document.querySelector(".carrossel");
-const arrowBtns = document.querySelectorAll(".wrapper ");
-const fisrtParceiroWidth = carrossel.querySelector(".parceiro").offsetWidth;
-const carrosselChildrens = [...carrossel.children];
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const firstParceiroWidth = carrossel.querySelector(".parceiro").offsetWidth;
+const carrosselChildren = [...carrossel.children];
 
-let isDragging = false, startX, startScroollLeft;
+let isDragging = false, startX, startScrollLeft;
 
-let parceiroPerView = Math.round(carrossel.offsetWidth / firstParceiroWidth);
+let parceirosPerView = Math.round(carrossel.offsetWidth / firstParceiroWidth);
 
-carrosselChildrens.slice(-parceiroPerView).reverse().forEach(parceiro => {
+carrosselChildren.slice(-parceirosPerView).reverse().forEach(parceiro => {
     carrossel.insertAdjacentHTML("afterbegin", parceiro.outerHTML);
-
 });
 
-
-carrosselChildrens.slice(0, parceiroPerView).forEach(parceiro => {
+carrosselChildren.slice(0, parceirosPerView).forEach(parceiro => {
     carrossel.insertAdjacentHTML("beforeend", parceiro.outerHTML);
-
 });
 
 arrowBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        carrossel.scrollLeft += btn.id === "left" ? -fisrtParceiroWidth : fisrtParceiroWidth;
+        carrossel.scrollLeft += btn.id === "left" ? -firstParceiroWidth : firstParceiroWidth;
     });
 });
 
-const dragStart = () => {
+const dragStart = (e) => {
     isDragging = true;
     carrossel.classList.add("dragging");
     startX = e.pageX;
-    startScroollLeft = carrossel.scrollLeft;
+    startScrollLeft = carrossel.scrollLeft;
 }
 
 const dragging = (e) => {
-    if(!isDragging) return; 
-    carrossel.scrollLeft = startScroollLeft - (e.pageX - startX);
+    if (!isDragging) return;
+    e.preventDefault();
+    carrossel.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
 const dragStop = () => {
