@@ -1,8 +1,9 @@
 .torn-paper-section {
-    background-image: url('/Galeria/img/fundo2.png'); /* Substitua pelo caminho da sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a seção */
+    background-image: url('/Galeria/img/fundo2.png'); 
+    background-size: contain; /* Faz a imagem cobrir todo o espaço da seção em que esta contida */
     background-position: center; /* Centraliza a imagem */
-    height: 100vh; 
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
 }
 
