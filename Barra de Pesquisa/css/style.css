@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+/* Estilos Gerais */ 
 *{ 
     font-family: "Roboto", sans-serif; 
 }
@@ -140,21 +140,31 @@
     margin-left: 5%;
 }
 
+/* Login Button */
+/* Login Button */
 .login-button {
-    margin-right: 22%;
-    border: 2px solid #69a625;
-    color: #69a625;
-    padding: 5px 12px;
-    border-radius: 5px;
+    width: 40px;  /* Definindo a largura */
+    height: 40px; /* Definindo a altura */
+    background-color: transparent; /* Cor de fundo transparente por padrão */
+    color: #69a625;  /* Cor do ícone/texto */
+    border-radius: 50%;  /* Fazendo o botão redondo */
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    padding: 5px;
+    margin-right: 30%; /* Movendo o botão mais para a direita */
+    border: 2px solid #69a625; /* Cor da borda verde */
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #69a625;
-    color: white;
+    background-color: #69a625; /* Fica verde ao passar o mouse */
+    color: white; /* Cor do ícone/texto fica branco */
 }
+
 
 /* Seção Hero */
 .hero-section::before {
@@ -197,6 +207,7 @@ body {
     display: none; /* Esconde o ícone de seta */
 }
 
+/*Começo dos cookies*/
 * {
     margin: 0;
     padding: 0;

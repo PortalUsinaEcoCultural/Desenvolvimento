@@ -197,24 +197,35 @@ body {
     display: none; /* Esconde o ícone de seta */
 }
 
-button {
+/* Estilo comum para todos os botões */
+button, .pagination button {
     background-color: #ffffff; /* Começa branco */
-    color: #69A625;
-    border: 2px solid #69A625;
-    padding: 8px 16px;
-    font-size: 12px;
+    color: #69A625; /* Texto verde */
+    border: 2px solid #69A625; /* Borda verde */
+    padding: 12px 24px;  /* Aumentando o tamanho do botão */
+    font-size: 16px;  /* Aumentando o tamanho da fonte */
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
     margin-top: auto;
 }
 
-button:hover {
+/* Efeito hover para todos os botões */
+button:hover, .pagination button:hover {
     background-color: #69A625; /* Fica verde ao passar o mouse */
     color: white; /* Texto fica branco */
-    border-color: #69A625; /* Borda também fica verde */
+    border-color: #69A625; /* Borda verde */
 }
 
+/* Botão desabilitado */
+.pagination button:disabled {
+    background-color: #e0e0e0; /* Cinza quando desabilitado */
+    cursor: not-allowed;
+    color: #a0a0a0; /* Texto cinza claro */
+    border-color: #a0a0a0; /* Borda cinza */
+}
+
+/* Estilo adicional para alinhamento */
 .pagination {
     display: flex;
     justify-content: center;
@@ -222,30 +233,7 @@ button:hover {
     margin-top: 20px;
 }
 
-.pagination button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: #ffffff; /* Começa branco */
-    color: #69A625;
-    border: 2px solid #69A625;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-}
-
-.pagination button:hover {
-    background-color: #69A625; /* Fica verde ao passar o mouse */
-    color: white; /* Texto fica branco */
-}
-
-.pagination button:disabled {
-    background-color: #69A625;
-    cursor: not-allowed;
-    color: #ffffff;
-    border-color: #69A625;
-}
-
+/* Estilo do texto */
 .pagination span {
     color: #69A625;
     font-weight: bold;
@@ -254,6 +242,7 @@ button:hover {
     text-align: center;
 }
 
+/* Outros estilos */
 #news-container {
     text-align: left;
 }
@@ -283,5 +272,5 @@ header {
 .news-image {
     width: 293.52px;
     height: 226px;
-    object-fit: cover; /* Garantir que a imagem se ajuste ao tamanho sem distorção */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
 }
