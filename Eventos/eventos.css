@@ -26,11 +26,12 @@ header {
     font-size: 15px;
 }
 .subtitulo-eventos{
+    margin: 35px;
     font-size: 20px;
 }
 
 .eventos {
-    margin: 40px 0;
+    margin: 40px;
 }
 
 .eventos ul {
@@ -43,11 +44,36 @@ header {
     margin-bottom: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .eventos li p {
     margin-top: 10px;
     font-size: 15px;
+}
+
+button{
+    background-color: #ffffff;
+    color: #69A625;
+    border: 2px solid #69A625;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: #69A625;
+    font-size: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    margin-top: auto;
+    position: absolute;
+    top: 50%; 
+    right: 100px;
+    transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: #69A625;
+    border: 2px solid #69A625;
+    border-radius: 5px;
+    color: white;
 }
 
 .calendario {
@@ -64,3 +90,4 @@ header {
     margin: 0 auto;
     border-radius: 5px; /* Opcional, para suavizar as bordas do iframe */
 }
+
