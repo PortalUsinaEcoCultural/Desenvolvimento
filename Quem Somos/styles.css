@@ -23,20 +23,19 @@ body {
     flex: 1;
 }
 .cabecalho .img-fluid {
-    width: 100%;
-    height: 400px; /* Altura uniforme */
-    width: 600px ;
-    object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 5px; /* Bordas arredondadas, se necessário */
+    width: 100%; 
+    height: 380px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 
 .conteudo-cabecalho {
     width: 50%;
-    padding: 10px 20px;
+    padding: 10px 20px;    
 }
 
-h1 {
+h1 .quem-somos {
     margin-top: 0;
     font-size: 35px;
 }
@@ -385,6 +384,9 @@ h2.objetivos {
     text-align: center;
     margin-bottom: 20px;
     color: #EDEDED;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 0;
 }
 
 .retangulo-fundo {
@@ -418,3 +420,4 @@ h2.objetivos {
     opacity: 1; 
     transform: translateY(0); 
 }
+
