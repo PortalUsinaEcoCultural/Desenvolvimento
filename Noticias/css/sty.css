@@ -183,7 +183,6 @@
 
 /* Estilos Globais */
 body {
-    font-family: "Roboto", sans-serif;
     background-color: #f9f9f9;
 }
 
@@ -252,7 +251,7 @@ button:hover, .pagination button:hover {
 }
 
 header {
-    margin-top: 150px;
+    margin-top: 100px;
     background-color: #69A625;
     color: white;
     padding: 10px;
@@ -261,16 +260,14 @@ header {
 
 .titulo-eventos {
     font-size: 35px;
-    padding-bottom: 10px;
 }
 
 .subtitulo-banner {
     font-size: 15px;
-    padding-bottom: -5px;
 }
 
 .news-image {
     width: 293.52px;
     height: 226px;
-    object-fit: cover; /* Ajusta a imagem sem distorção */
+    object-fit: cover;
 }
