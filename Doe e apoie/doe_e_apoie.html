@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Doe e apoie</title>
+    <link rel="stylesheet" href="/Doe e apoie/CSS/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 logo bg-white text-center p-5">
+                <img src="/Fala Conosco/img/logo.jpg" width="80px" alt="Logo Usina Eco-Cultural">
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2>Você está doando para <strong>Usina Eco-Cultural</strong></h2>
+        <form>
+            <div class="form-group row">
+                <div class="col-12 col-md-6">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-group">
+                <label for="comentario">Deixe um comentário:</label>
+                <textarea id="comentario" name="comentario" class="form-control" placeholder="Ex. uma ótima iniciativa! Fico feliz em poder contribuir." rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="como-ouviu">Como você ouviu falar de nós?</label>
+                <input type="text" id="como-ouviu" name="como-ouviu" class="form-control" placeholder="Ex. pelas redes sociais, através de amigos...">
+            </div>
+            <div class="form-groups mt-4">
+                <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
+                <button type="button" class="btn btn-pagamento" id="btnPix">PIX</button>
+                <button type="button" class="btn btn-pagamento">PayPal</button>
+                <button type="submit" class="btn btn-continuar">Continuar &gt;</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+
+    <!-- Botão para gerar o QR Code -->
+    <button id="btnPix" class="btn btn-primary">Gerar QR Code PIX</button>
+    
+    <!-- Container onde o QR Code será exibido -->
+    <div id="pix-qr-code" style="margin-top: 20px;"></div>
+    
+    <script>
+        // Substitua pela sua chave PIX (exemplo: chave aleatória ou CPF/CNPJ)
+        const chavePix = '26216017829';  // Exemplo de chave PIX (use sua chave real)
+        const valor = 100.00;  // Valor do pagamento
+    
+        // Seleciona o botão PIX
+        const btnPix = document.getElementById('btnPix');
+        const pixQrCodeContainer = document.getElementById('pix-qr-code');
+    
+        // Função para gerar o QR Code do PIX
+        function gerarQRCodePIX(chavePix, valor) {
+            // URL do pagamento PIX para C6 Bank (formato correto)
+            const pixUrl = `00020101021126370014BR.GOV.BCB.PIX0114${chavePix}520400005303986540${valor.toFixed(2)}5802BR5905Sofia6009SAO PAULO62070503***6304`;
+
+            // Gera o QR Code usando a biblioteca QRCode.js
+            try {
+                // Chamada para instanciar o QRCode
+                new QRCode(pixQrCodeContainer, {
+                    text: pixUrl,
+                    width: 200,
+                    height: 200,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H  // Nível de correção de erro
+                });
+                console.log('QR Code gerado com sucesso!');
+            } catch (error) {
+                console.error('Erro ao gerar o QR Code:', error);
+                // Exibir uma mensagem de erro para o usuário
+                alert('Ocorreu um erro ao gerar o QR Code. Por favor, verifique sua conexão com a internet e tente novamente.');
+            }
+        }
+
+        // Limpa qualquer QR Code anterior
+        pixQrCodeContainer.innerHTML = '';
+    
+        // Evento de clique no botão PIX
+        btnPix.addEventListener('click', () => {
+            // Lógica para o botão PIX
+            console.log('Botão PIX clicado');
+            
+            // Exibe o QR Code do PIX
+            gerarQRCodePIX(chavePix, valor);
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+
+</body>
+</html>
