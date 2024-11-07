@@ -193,16 +193,16 @@ body {
 
 /* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
-    display: none; /* Esconde o ícone de seta */
+    display: none; 
 }
 
 /* Estilo comum para todos os botões */
 button, .pagination button {
-    background-color: #ffffff; /* Começa branco */
-    color: #69A625; /* Texto verde */
-    border: 2px solid #69A625; /* Borda verde */
-    padding: 12px 24px;  /* Aumentando o tamanho do botão */
-    font-size: 16px;  /* Aumentando o tamanho da fonte */
+    background-color: #ffffff; 
+    color: #69A625; 
+    border: 2px solid #69A625; 
+    padding: 12px 24px;  
+    font-size: 16px;  
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
@@ -211,17 +211,17 @@ button, .pagination button {
 
 /* Efeito hover para todos os botões */
 button:hover, .pagination button:hover {
-    background-color: #69A625; /* Fica verde ao passar o mouse */
-    color: white; /* Texto fica branco */
-    border-color: #69A625; /* Borda verde */
+    background-color: #69A625; 
+    color: white; 
+    border-color: #69A625; 
 }
 
 /* Botão desabilitado */
 .pagination button:disabled {
-    background-color: #e0e0e0; /* Cinza quando desabilitado */
+    background-color: #e0e0e0; 
     cursor: not-allowed;
-    color: #a0a0a0; /* Texto cinza claro */
-    border-color: #a0a0a0; /* Borda cinza */
+    color: #a0a0a0; 
+    border-color: #a0a0a0; 
 }
 
 /* Estilo adicional para alinhamento */
@@ -269,5 +269,9 @@ header {
 .news-image {
     width: 293.52px;
     height: 226px;
+<<<<<<< Updated upstream
     object-fit: cover;
+=======
+    object-fit: cover; 
+>>>>>>> Stashed changes
 }

@@ -1,4 +1,4 @@
-/* Estilos Gerais */ 
+/* Estilos Gerais */  
 *{ 
     font-family: "Roboto", sans-serif; 
 }
@@ -6,6 +6,12 @@
 .navbar {
     background-color: #fff;
     height: 70px;
+    margin-top: 10px;
+}
+
+.box{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra só na parte inferior */
+    
 }
 
 /* Logo */
@@ -16,6 +22,7 @@
     transition: 0.3s color;
     margin-left: 18%;
     margin-bottom: 5%;
+    margin-top: 10px;
 }
 
 /* Botão de Doação */
@@ -24,7 +31,7 @@
     color: #fff;
     font-size: 15px;
     padding: 4px 15px;
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 10px;
     border-radius: 0px 0px 5px 5px;
     margin-right: 12%;
@@ -141,30 +148,28 @@
 }
 
 /* Login Button */
-/* Login Button */
 .login-button {
-    width: 40px;  /* Definindo a largura */
-    height: 40px; /* Definindo a altura */
-    background-color: transparent; /* Cor de fundo transparente por padrão */
-    color: #69a625;  /* Cor do ícone/texto */
-    border-radius: 50%;  /* Fazendo o botão redondo */
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    color: #69a625;
+    border-radius: 50%;
     font-size: 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     padding: 5px;
-    margin-right: 30%; /* Movendo o botão mais para a direita */
-    border: 2px solid #69a625; /* Cor da borda verde */
+
+    border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #69a625; /* Fica verde ao passar o mouse */
-    color: white; /* Cor do ícone/texto fica branco */
+    background-color: #69a625;
+    color: white;
 }
-
 
 /* Seção Hero */
 .hero-section::before {
@@ -189,12 +194,6 @@
 
 .hero-section h2 {
     font-size: 1.2em;
-}
-
-/* Estilos Globais */
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f9f9f9;
 }
 
 .container {
