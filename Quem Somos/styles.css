@@ -33,10 +33,10 @@ body {
 
 .conteudo-cabecalho {
     width: 50%;
-    padding: 10px 20px;
+    padding: 10px 20px;    
 }
 
-h1 {
+h1 .quem-somos {
     margin-top: 0;
     font-size: 35px;
 }
@@ -385,6 +385,9 @@ h2.objetivos {
     text-align: center;
     margin-bottom: 20px;
     color: #EDEDED;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 0;
 }
 
 .retangulo-fundo {
@@ -418,3 +421,4 @@ h2.objetivos {
     opacity: 1; 
     transform: translateY(0); 
 }
+
