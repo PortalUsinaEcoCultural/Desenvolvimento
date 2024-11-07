@@ -15,12 +15,14 @@ header {
     padding: 10px;
     text-align: center;
 }
-.titulo-eventos {
+.titulo-banner {
     font-size: 35px;
 }
 .subtitulo-banner {
     font-size: 15px;
 }
+
+/*proximos eventos*/
 .subtitulo-eventos{
     margin: 35px;
     font-size: 20px;
