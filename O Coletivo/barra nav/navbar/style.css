@@ -232,9 +232,9 @@ section {
 }
 
 .nova-secao, .novse, .informacoes, .nov {
-    display: flex; /* Transforma a seção em um container flexbox */
-    justify-content: space-between; /* Distribui os elementos com espaço entre eles */
-    align-items: center; /* Alinha os elementos verticalmente no centro */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
 }
 
 
@@ -247,12 +247,12 @@ section {
 /* Responsividade */
 @media (max-width: 768px) {
     .texto {
-        text-align: center; /* Centraliza o texto em telas menores */
+        text-align: center;
         margin-bottom: 20px;
     }
     
     .imagem {
-        text-align: center; /* Centraliza a imagem em telas menores */
+        text-align: center; 
     }
 }
 
