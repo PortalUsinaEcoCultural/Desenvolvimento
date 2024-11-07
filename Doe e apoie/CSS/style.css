@@ -1,4 +1,4 @@
-/* Estilos Gerais */
+/* Estilos Gerais */ 
 body {
     font-family: Arial, sans-serif;
     background-color: #F8F8F8;
@@ -38,13 +38,11 @@ h2 {
 .form-group {
     margin-bottom: 15px;
     text-align: left;
-
 }
 
 .form-groups {
     margin-bottom: 15px;
     text-align: center;
-
 }
 
 .form-control {
@@ -62,18 +60,36 @@ h2 {
 
 /* Botões de Pagamento */
 .btn-pagamento {
-    background-color: #69A625;
-    color: #fff;
+    background-color: #fff; /* Cor inicial do botão */
+    color: #69A625;
     padding: 10px 40px;
-    border: none;
+    border: 2px solid #69A625; /* Borda verde inicial */
     border-radius: 5px;
     font-size: 16px;
     margin: 5px;
     width: 120px;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
 
 .btn-pagamento:hover {
-    background-color: #69A625;
+    background-color: #69A625; /* Fundo verde quando passar o mouse */
+    color: white;
+}
+
+/* Estilo para o link */
+a {
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+a:hover, a:hover .btn-pagamento {
+    color: #fff; /* Cor do texto quando o mouse passar por cima */
+}
+
+/* Estilo para os botões quando selecionados */
+.selecionado {
+    background-color: #69A625; /* Muda o fundo para verde quando selecionado */
+    color: white; /* Mantém o texto branco */
+    border-color: #69A625; /* Altera a cor da borda para verde */
 }
 
 /* Botão Continuar */
