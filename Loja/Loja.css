@@ -1,0 +1,111 @@
+/*Geral*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f4;
+    color: #1D1D1F;
+}
+
+/*Banner*/
+header {
+    margin-top: 100px;
+    background-color: #69A625;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.titulo-banner {
+    font-size: 35px;
+}
+.subtitulo-banner {
+    font-size: 15px;
+}
+
+/*Barra de pesquisa e carrinho*/
+.barra-carrinho-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.barra-pesquisa{
+    display: flex;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    align-items: center;
+    padding: 10px 15px;
+    width: 50%;
+}
+.barra-pesquisa i{
+    color: #fff;
+    margin-right: 10px;
+}
+.barra-pesquisa input{
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+}
+.barra-pesquisa input::placeholder{
+    color: #888;
+}
+
+/*carrinho de compras*/
+.carrinho-icone{
+    position: relative;
+    padding: 10px;
+    border: 2px solid #69A625;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrinho-icone i{
+    color: #69A625;
+    font-size: 20px;
+}
+.carrinho-quantidade {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #69A625;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/*Opções de compra*/
+.produtos-container{
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.acessorios{
+    padding: 1%;
+    margin: 2%;
+    align-items: center;
+    background-color: #DDC5BB;
+    border-radius: 100%;
+    color:
+}
