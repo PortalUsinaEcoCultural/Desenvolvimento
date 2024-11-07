@@ -3,13 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: "Roboto", sans-serif;
     background-color: #f4f4f4;
     color: #1D1D1F;
 }
-
 header {
     margin-top: 100px;
     background-color: #69A625;
@@ -17,11 +15,9 @@ header {
     padding: 10px;
     text-align: center;
 }
-
 .titulo-eventos {
     font-size: 35px;
 }
-
 .subtitulo-banner {
     font-size: 15px;
 }
@@ -29,15 +25,12 @@ header {
     margin: 35px;
     font-size: 20px;
 }
-
 .eventos {
     margin: 40px;
 }
-
 .eventos ul {
     list-style-type: none;
 }
-
 .eventos li {
     background-color: white;
     padding: 15px;
@@ -46,12 +39,10 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-
 .eventos li p {
     margin-top: 10px;
     font-size: 15px;
 }
-
 button{
     background-color: #ffffff;
     color: #69A625;
@@ -68,23 +59,19 @@ button{
     right: 100px;
     transform: translateY(-50%);
 }
-
 button:hover {
     background-color: #69A625;
     border: 2px solid #69A625;
     border-radius: 5px;
     color: white;
 }
-
 .calendario {
     margin: 40px 0;
     text-align: center; /* Centraliza o conteúdo da seção */
 }
-
 .calendario h3 {
     margin-bottom: 50px;
 }
-
 .calendario iframe {
     display: block;
     margin: 0 auto;
