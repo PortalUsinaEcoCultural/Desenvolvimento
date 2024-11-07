@@ -49,7 +49,6 @@ button{
     border: 2px solid #69A625;
     border-radius: 5px !important;
     padding: 8px 16px;
-    color: #69A625;
     font-size: 12px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
