@@ -23,11 +23,10 @@ body {
     flex: 1;
 }
 .cabecalho .img-fluid {
-    width: 100%;
-    height: 400px; /* Altura uniforme */
-    width: 600px ;
-    object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 5px; /* Bordas arredondadas, se necessário */
+    width: 100%; 
+    height: 380px; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 
