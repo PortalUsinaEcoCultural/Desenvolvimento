@@ -5,13 +5,14 @@
 
 .navbar {
     background-color: #fff;
-    height: 70px;
-    margin-top: 10px;
+    height: 10px;
+    margin-top: 5px;
+    padding: 10px 10px;
 }
 
 .box{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra só na parte inferior */
-    
+    padding: 4px;
 }
 
 /* Logo */
@@ -21,8 +22,7 @@
     font-size: 24px;
     transition: 0.3s color;
     margin-left: 18%;
-    margin-bottom: 5%;
-    margin-top: 10px;
+    margin-top: 70px;
 }
 
 /* Botão de Doação */
@@ -65,6 +65,8 @@
     font-weight: 500;
     position: relative;
     margin-bottom: 30%;
+    margin-top: 120px;
+    margin-left: 15px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -112,6 +114,7 @@
 .dropdown-item {
     display: block;
     padding-left: 20px;
+    margin-top: 20px;
 }
 
 @media (min-width: 991px) {
@@ -160,6 +163,7 @@
     align-items: center;
     text-decoration: none;
     padding: 5px;
+    margin-top: 120px;
 
     border: 2px solid #69a625;
     text-align: center;
