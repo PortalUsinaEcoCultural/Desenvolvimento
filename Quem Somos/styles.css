@@ -603,3 +603,8 @@ h2.objetivos {
     opacity: 1; 
     transform: translateY(0); 
 }
+
+/* Espaçamento entre os carrosséis */
+section + section {
+    margin-top: 50px; 
+}
