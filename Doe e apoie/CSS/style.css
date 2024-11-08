@@ -9,7 +9,6 @@ body {
     margin: 0;
     flex-direction: column;
 }
-
 .container {
     padding: 30px;
     border-radius: 10px;
@@ -17,7 +16,6 @@ body {
     width: 100%;
     text-align: center;
 }
-
 h2 {
     font-size: 18px;
     color: #333;
@@ -26,7 +24,7 @@ h2 {
 
 /* Logo */
 .logo {
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: #fff;
     text-align: center;
     margin-bottom: 15px;
@@ -39,12 +37,10 @@ h2 {
     margin-bottom: 15px;
     text-align: left;
 }
-
 .form-groups {
     margin-bottom: 15px;
     text-align: center;
 }
-
 .form-control {
     border-radius: 5px;
     padding: 10px;
@@ -52,60 +48,58 @@ h2 {
     background-color: #e0e0e0; 
     text-align: left; 
 }
-
 .form-control::placeholder {
     color: #aaa;
-    font-size: 14px; /* Ajusta o tamanho do texto do placeholder */
+    font-size: 14px; 
 }
 
 /* Botões de Pagamento */
 .btn-pagamento {
-    background-color: #fff; /* Cor inicial do botão */
+    background-color: #fff; 
     color: #69A625;
     padding: 10px 40px;
-    border: 2px solid #69A625; /* Borda verde inicial */
+    border: 2px solid #69A625; 
     border-radius: 5px;
     font-size: 16px;
     margin: 5px;
     width: 120px;
-    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    transition: background-color 0.3s, color 0.3s; 
 }
-
 .btn-pagamento:hover {
-    background-color: #69A625; /* Fundo verde quando passar o mouse */
+    background-color: #69A625; 
     color: white;
 }
 
 /* Estilo para o link */
 a {
-    text-decoration: none; /* Remove o sublinhado do link */
+    text-decoration: none; 
 }
-
 a:hover, a:hover .btn-pagamento {
-    color: #fff; /* Cor do texto quando o mouse passar por cima */
+    color: #fff;
 }
 
 /* Estilo para os botões quando selecionados */
 .selecionado {
-    background-color: #69A625; /* Muda o fundo para verde quando selecionado */
-    color: white; /* Mantém o texto branco */
-    border-color: #69A625; /* Altera a cor da borda para verde */
+    background-color: #69A625;
+    color: white; 
+    border-color: #69A625;
 }
 
 /* Botão Continuar */
 .btn-continuar {
-    background-color: #fff;
-    color: #69A625; 
+    background-color: #69A625;
+    color: #fff; 
     padding: 5px 15px; 
     border: 2px solid #69A625; 
     border-radius: 5px;
     font-size: 14px; 
     margin-left: 151px; 
     margin-top: 50px; 
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-continuar:hover {
-    background-color: #69A625; 
+    background-color: #4e7a1b;
+    border-color: #4e7a1b; 
     color: #fff; 
 }
