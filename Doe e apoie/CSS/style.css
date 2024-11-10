@@ -1,6 +1,6 @@
 /* Estilos Gerais */ 
 body {
-    font-family: 'roboto';
+    font-family: 'roboto',sans-serif;
     background-color: #F8F8F8;
     display: flex;
     justify-content: center;
@@ -22,14 +22,39 @@ h2 {
     margin-bottom: 20px;
 }
 
+.header {
+    background-color: #fff;
+    padding: 10px 0;
+    position: relative;
+}
+
 /* Logo */
 .logo {
     margin-top: 10px;
-    background-color: #fff;
     text-align: center;
-    margin-bottom: 15px;
+    margin-top: 100px;
     display: inline-block; 
     padding: 15px;
+}
+
+.logo-container {
+    padding: 20px 0;
+}
+
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.back-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Formulário */
