@@ -16,16 +16,11 @@ body {
     width: 100%;
     text-align: center;
 }
+
 h2 {
     font-size: 18px;
     color: #333;
     margin-bottom: 20px;
-}
-
-.header {
-    background-color: #fff;
-    padding: 10px 0;
-    position: relative;
 }
 
 /* Logo */
@@ -37,15 +32,6 @@ h2 {
     padding: 15px;
 }
 
-.logo-container {
-    padding: 20px 0;
-}
-
-.logo-container img {
-    max-width: 100%;
-    height: auto;
-}
-
 .back-btn {
     font-size: 20px;
     background: none;
@@ -53,7 +39,7 @@ h2 {
     cursor: pointer;
     position: absolute;
     left: 20px;
-    top: 50%;
+    top: 10%;
     transform: translateY(-50%);
 }
 
@@ -62,19 +48,27 @@ h2 {
     margin-bottom: 15px;
     text-align: left;
 }
+
 .form-groups {
     margin-bottom: 15px;
     text-align: center;
 }
+
 .form-control {
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 14px;
     background-color: #e0e0e0; 
-    text-align: left; 
+    border: 1px solid transparent; 
+    color: #333; 
 }
+
+.form-control:focus, .form-control:hover {
+    background-color: #e0e0e0; 
+    outline: none; 
+    border: 1px solid transparent; 
+    box-shadow: none; 
+}
+
 .form-control::placeholder {
-    color: #aaa;
+    color: #999;
     font-size: 14px; 
 }
 
