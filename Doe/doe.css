@@ -1,0 +1,87 @@
+*{
+    font-family: "Roboto", sans-serif; 
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.imagem {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 2;
+}
+.banner-content {
+    position: relative;
+    z-index: 3; 
+}
+.doeBtn{
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #69A625;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #69A625;
+    font-weight: bold;
+}
+.doeBtn:hover {
+    background-color: #3b5f13;
+    color: #ffffff;
+    border: 2px solid #3b5f13;
+}
+
+/* Actions Section */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+.action {
+    text-align: center;
+    max-width: 250px;
+}
+.action img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+.action h3 {
+    color: #4CAF50;
+    font-size: 1.5rem;
+}
+.action p {
+    font-size: 1rem;
+    color: #666;
+}
+.btn-action {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
