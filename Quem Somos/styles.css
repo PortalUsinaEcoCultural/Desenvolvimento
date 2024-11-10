@@ -4,86 +4,82 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 400; /* Regular */
 }
 
 /* Cabeçalho */
 .cabecalho {
     display: flex;
-    padding: 20px;
+    padding: 50px;
     background-color: #EDEDED; /* Retângulo cinza */
     margin-bottom: 30px;
+    width: 120%;
+    height: auto; 
 }
-
 .cabecalho img {
-    flex: 1;
+    flex: 3;
+    margin-top: 2%;
+    margin-bottom: -3.1%;
+    margin-left: -3.5%;
+    margin-right: -10.7%;
 }
 .cabecalho .img-fluid {
     width: 100%; 
     height: 380px; 
-    object-fit: cover; 
-    border-radius: 5px; 
+    object-fit: cover;
 }
-
-
 .conteudo-cabecalho {
     width: 50%;
-    padding: 10px 20px;    
+    padding: 10px 20px; 
+    margin-right: 20%;   
+    margin-top: 1%;
+    margin-left: 11%;
 }
-
 h1 .quem-somos {
     margin-top: 0;
     font-size: 35px;
 }
-
 h2.quem-somos {
     margin: 10px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     color: #313131;
+    font-weight:bolder;
 }
-
 /* Atividades */
 .atividades {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .atividades h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 35px;
 }
-
 .galeria {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
-
 .item-galeria {
     flex: 1;
     text-align: center;
     transition: transform 0.2s ease-in-out;
 }
-
 .item-galeria:hover {
     transform: scale(1.05); /* Leve zoom ao passar o mouse */
 }
-
 .item-galeria img {
     width: 100%;
     height: 250px; /* Altura uniforme */
     object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 5px; /* Bordas arredondadas, se necessário */
+    border-radius: 0px; /* Bordas arredondadas, se necessário */
 }
-
 /* Efeito de animação para sublinhado */
 .item-galeria p {
     margin-top: 10px;
@@ -155,7 +151,7 @@ h2.objetivos {
     width: 100%;
     height: 350px; /* Altura uniforme */
     object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 5px; /* Bordas arredondadas, se necessário */
+    border-radius: 0px; /* Bordas arredondadas, se necessário */
 }
 
 /* Media query para dispositivos menores */
@@ -230,7 +226,7 @@ h2.objetivos {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding: 8px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 0px; /* Bordas arredondadas */
     position: relative; 
     z-index: 1; /* Para garantir que o texto fique acima do fundo verde */
     display: inline-block; /* Para ajustar o tamanho ao conteúdo */
@@ -239,7 +235,7 @@ h2.objetivos {
     width: 100%; /* Largura total do contêiner */
     height: 250px; /* Mantém a altura uniforme */
     object-fit: cover; /* Faz o corte da imagem */
-    border-radius: 5px; /* Bordas arredondadas*/
+    border-radius: 0px; /* Bordas arredondadas*/
 }
 
 .slider-container {
@@ -247,7 +243,7 @@ h2.objetivos {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .slider {
@@ -262,7 +258,7 @@ h2.objetivos {
     padding: 20px;
     background-color: #2196F3;
     color: white;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
 }
@@ -329,7 +325,7 @@ h2.objetivos {
     width: 300px;
     list-style: none;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 0px;
     display: flex;
     cursor: pointer;
     padding-bottom: 15px;
@@ -346,7 +342,7 @@ h2.objetivos {
     width: 190px;
     height: 160px;
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 0%;
 }
 .parceiro h2 {
     font-weight: 500;
@@ -500,7 +496,7 @@ h2.objetivos {
     width: 300px;
     list-style: none;
     background: #fff;
-    border-radius: 8px;
+    border-radius: 0px;
     display: flex;
     cursor: pointer;
     padding-bottom: 15px;
@@ -511,13 +507,13 @@ h2.objetivos {
 .parceiro-conexoes .img {
     width: 148px;
     height: 148px;
-    border-radius: 5%;
+    border-radius: 0%;
 }
 .parceiro-conexoes .img img {
     width: 190px;
     height: 160px;
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 0%;
 }
 .parceiro-conexoes h2 {
     font-weight: 500;
