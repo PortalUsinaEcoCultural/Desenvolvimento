@@ -9,9 +9,7 @@
     /*margin: 20px;
     border-radius: 10px;
     padding: 0.5rem;*/
-
 }
-
 .logo{
     font-weight: 500;
     color: #69a625;
@@ -20,7 +18,6 @@
     margin-left: 18%;
     margin-bottom: 5%;
 }
-
 .doe-button {
     background-color: #69a625; /* Verde escuro */
     color: #fff;
@@ -33,37 +30,31 @@
     text-decoration: none;
     transition: 0.3s background-color;
     text-align:center;
-    position: fixed; /* Fixa o botão no topo */
-    top: 0; /* Posiciona no topo da página */
-    right: 0; /* Alinha à direita */
-    z-index: 1000; /* Garante que o botão fique na frente de outros elementos */
+    position: fixed; 
+    top: 0;
+    right: 0; 
+    z-index: 1000; 
 }
-
 .doe-button:hover{
     background-color: #487218;
 }
-
 .navbar-toggler{
     border: none;
     font-size: 1.25rem;
 }
-
 .navbar-toggler:focus, btn-close:focus{
     box-shadow: none;
     outline: none;
 }
-
 .nav-link{
     color: #666777;
     font-weight: 500;
     position: relative;
     margin-bottom: 30%;
 }
-
 .nav-link:hover, .nav-link.active{
     color: #000
 }
-
 @media(min-width: 991px){
     .nav-link::before{
         content:"";
@@ -83,7 +74,6 @@
         visibility: visible;
     }
 }
-
 .hero-section {
     background: url(imagens/home.jpg) no-repeat center center;
     background-size: cover;
@@ -93,22 +83,16 @@
     align-items: center;
     justify-content: flex-end;
 }
-
 .container2 {
     text-align: right;
     color: white;
     padding-right: 200px; /* Gutter de 15px à direita */
     padding-left: 15px;  /* Gutter de 15px à esquerda */
 }
-
-
-
 .offcanvas-body{
     margin-right: 1%;
     margin-left: 5%;
-
 }
-
 .login-button{
     margin-right: 22%;
     border:2px solid #69a625 ;
@@ -118,14 +102,11 @@
     text-decoration: none;
     text-align:center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-
 }
-
 .login-button:hover{
     background-color: #69a625;
     color: white;
 }
-
 .hero-section::before{
     background-color: (0, 0, 0, 0.6);
     content:"";
@@ -140,16 +121,13 @@
     z-index: 1;
     position: relative;
 }
-
 .hero-section h1{
     font-size: 1.5em;
 }
-
 .hero-section h2{
     font-size: 1.2em;
 }
-
-/*banner*/
+/*banner
 .carousel-item{
     height: 32rem;
     background: #000;
@@ -157,13 +135,15 @@
     position: relative;
     background-position: center;
     background-size: cover;
+    z-index: 10;
 }
-.containerbanner{
+.container{
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding-bottom: 50px;
+    z-index: 15;
 }
 .overlay-image{
     position: absolute;
@@ -174,7 +154,9 @@
     background-position: center;
     background-size: cover;
     opacity:0.5;
-}
+    z-index: 15;
+}*/
+
 /*Conteúdo*/
 section {
     padding: 45px 0; 
@@ -203,15 +185,10 @@ section {
     justify-content: space-between;
     align-items: center; 
 }
-
-
-/* Estilos da imagem */
 .imagem img {
     border-radius: 0px;
     width: 100%;
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     .texto {
         text-align: center;
@@ -254,10 +231,9 @@ section {
     margin: 0;
     font-family: Helvetica, sans-serif;
 }
-/* Centraliza os cards horizontalmente */
 .row {
     display: flex;
-    justify-content: center; /* Centraliza os cards */
+    justify-content: center; 
 }
 .secao4-div-card1 {
     display: flex;
@@ -283,6 +259,7 @@ section {
     }
 }
 
+
 /* Cards notícias */
 .card {
     background-color: #ffffff;
@@ -304,7 +281,6 @@ section {
     flex-direction: column;
     text-align: left; /* Garante que o texto esteja alinhado à esquerda */
 }
-
 .card h2 {
     font-family: "Roboto", sans-serif;
     font-size: 25px;
@@ -313,7 +289,6 @@ section {
     text-align: left;
     color:#9A1827;
 }
-
 .card p {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -321,7 +296,6 @@ section {
     text-align: left;
     color:#555555
 }
-
 .card-text-info {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
@@ -329,7 +303,6 @@ section {
     text-align: left;
     font-weight: bold;
 }
-
 .card img {
     width: 80%; /* Ajuste conforme necessário */
     height: auto;
@@ -339,9 +312,8 @@ section {
     height: 200px; /* Define a altura uniforme */
     object-fit: cover; /* Faz com que a imagem preencha o espaço sem distorcer */
 }
-
 .card button {
-    background-color: #9A1827;
+    background-color: #69A625;
     border: none;
     padding: 8px 16px;
     color: #f2f2f2;
@@ -349,15 +321,13 @@ section {
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
-    border: 2px solid #9A1827;
+    border: 2px solid #69A625;
 }
-
 .card button:hover {
-    background-color: #ffffff;
-    color: #9A1827;
-    border: 2px solid #9A1827;
+    background-color: #3b5f13;
+    color: #ffffff;
+    border: 2px solid #3b5f13;
 }
-
 button {
     background-color: #ffffff;
     color: #69A625;
@@ -371,40 +341,35 @@ button {
     margin-top: auto
     
 }
-
 button:hover {
     background-color: #69A625;
     border: 2px solid #69A625;
     color: white;
 }
 
-/*MVV*/
 
+/*MVV*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
-
-  .mvv {
+.mvv {
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
     padding: 30px;
   }
-
-  .mvv h1 {
+.mvv h1 {
     font-size: 40px;
     margin: 0 30px 0;
     letter-spacing: 1px;
-  }
-
+}
   .services {
     display: flex;
     align-items: center;
 }
-
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -414,66 +379,54 @@ button:hover {
     transition: all 0.3s ease;
     background-color: #f2f2f2;
     border-radius: 5px 5px 5px 5px;
-    height: 600px;
-
+    height: 400px;
 }
-
 .content .icons {
     font-size: 70px;
     margin: 16px 0;
 }
-
 .content > * {
     flex: 1 1 100%;
 }
-
 .content:hover{
     color: white;
 }
-
 .content:hover a{
     border-color: white;
     background: white;
 }
-
 .content-1:hover {
     border-color:#69A625;
     background: #69A625;
 }
-
 .content-1:hover a{
     color: #69A625
 }
-
 .content-2:hover {
     border-color:#69A625;
     background: #69A625;
 }
-
 .content-2:hover a{
     color: #69A625
 }
-
 .content-3:hover {
     border-color:#69A625;
     background: #69A625;
 }
-
 .content-3:hover a{
     color: #69A625
 }
-
 .content h2 {
     font-size: 30px;
     margin: 16px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: left;
 }
-
 .content p{
     font-size: 15px;
+    text-align: left;
 }
-
 .content a{
     margin: 22px 0;
     background: black;
@@ -483,12 +436,11 @@ button:hover {
     border: 1px solid black;
     padding: 15px 0;
     border-radius: 25px;
+    text-align: left;
 }
-
 .content a:hover{
     border-radius: 4px;
 }
-
 @media (max-width: 900px){
     .services{
         display: flex;
@@ -497,7 +449,6 @@ button:hover {
 }
 
 /*Cookies*/
-
 #cookies-aviso {
     margin: 0;
     box-sizing: border-box;
@@ -518,7 +469,6 @@ button:hover {
     box-shadow: 2px 3px 15px #000;
     padding: 24px 12px;
 }
-
 #cookies-aviso .conteudo {
     flex: 1;
     display: flex;
@@ -526,19 +476,16 @@ button:hover {
     align-items: center;
     text-align: center;
 }
-
 #cookies-aviso .conteudo span {
     font-size: 18px;
     line-height: 1.5;
 }
-
 #cookies-aviso .acoes {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     align-items: center;
 }
-
 #cookies-aviso .acoes button {
     padding: 12px 24px;
     border: none;
@@ -548,23 +495,20 @@ button:hover {
     transition: background-color .5s;
     cursor: pointer;
 }
-
 #cookies-aviso .acoes .rejeitar {
     border: 1px solid #69a625;
     color: #69a625;
 }
-
 #cookies-aviso .acoes .rejeitar:hover {
     background-color: red;
     border-color: red;
     color: #fff;
 }
-
 #cookies-aviso .acoes .aceitar {
     background-color: #69a625;
     color: #fff;
 }
-
 #cookies-aviso .acoes .aceitar:hover {
     background-color: #3b5f13;
     color: #fff;
+}
