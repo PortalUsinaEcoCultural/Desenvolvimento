@@ -11,7 +11,7 @@
 }
 
 .box{
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra só na parte inferior */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     padding: 4px;
 }
 

@@ -283,3 +283,28 @@ body {
     text-decoration: none; 
     color: inherit; 
 }
+
+/*Rodapé*/
+/* Configurações gerais para os ícones e o círculo de fundo */
+.social-icons {
+    padding-top: 25px;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    color: black; /* Cor inicial do ícone */
+    background-color: white; /* Cor de fundo inicial do círculo */
+    padding: 12px; /* Ajuste do padding para um círculo mais consistente */
+    border-radius: 50%; /* Garante o fundo circular */
+    transition: color 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse */
+.social-icons a:hover {
+    transform: scale(1.1); /* Aumenta o ícone em 10% */
+}
