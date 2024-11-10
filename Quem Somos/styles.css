@@ -76,9 +76,9 @@ h2.quem-somos {
 }
 .item-galeria img {
     width: 100%;
-    height: 250px; /* Altura uniforme */
-    object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 0px; /* Bordas arredondadas, se necessário */
+    height: 250px;/
+    object-fit: cover; 
+    border-radius: 0px; 
 }
 /* Efeito de animação para sublinhado */
 .item-galeria p {
@@ -88,7 +88,6 @@ h2.quem-somos {
     position: relative;
     cursor: pointer;
 }
-
 .item-galeria p::after {
     content: "";
     position: absolute;
@@ -99,7 +98,6 @@ h2.quem-somos {
     background-color: #69A625;
     transition: width 0.3s ease-in-out;
 }
-
 .item-galeria p:hover::after {
     width: 100%; /* Animação para o sublinhado verde */
 }
