@@ -11,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Seção Hero */
 .hero-section {
     position: relative;
     text-align: center;
@@ -56,34 +55,40 @@ body {
 
 /* Seção de Serviços */
 .services-section {
-    padding: 50px 0;
+    position: absolute;
+    top: 120%; /* Ajuste de posição vertical */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 77%;
+    background-color: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
 }
 
 .services-container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-.services-section .col-md-4 {
+.service-card {
     text-align: center;
-    padding: 20px;
+    margin: 0 15px;
 }
 
-.services-section img {
+.service-card img {
     width: 60px;
     height: auto;
     margin-bottom: 15px;
 }
 
-.services-section h2 {
+.service-card h2 {
     font-size: 25px;
     color: #4CAF50;
     margin-bottom: 10px;
 }
 
-.services-section p {
+.service-card p {
     font-size: 18px;
     margin-bottom: 20px;
     color: #666;

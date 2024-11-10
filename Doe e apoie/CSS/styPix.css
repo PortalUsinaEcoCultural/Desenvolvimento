@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'roboto';
+    font-family: 'roboto', sans-serif;
     background-color: #F8F8F8;
     color: #333;
     text-align: center;
