@@ -1,7 +1,9 @@
 *{
     font-family: "Roboto", sans-serif; 
 }
-
+body {
+    background-color: #dedede; /* Escolha a cor que desejar */
+}
 /* Banner */
 .banner {
     position: relative;
@@ -35,6 +37,10 @@
     position: relative;
     z-index: 3; 
 }
+.banner-content h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
 .doeBtn{
     display: inline-block;
     padding: 10px 24px;
@@ -52,36 +58,112 @@
     border: 2px solid #3b5f13;
 }
 
-/* Actions Section */
-.actions {
+/* Seção de Serviços */
+.icons {
+    font-size: 50px;
+    margin: 16px 0;
+}
+.trio {
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76%;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    z-index: 90;
+}
+.services-container {
     display: flex;
     justify-content: space-around;
-    padding: 2rem 0;
-    background-color: #f9f9f9;
+    align-items: flex-start;
 }
-.action {
+.service-card {
     text-align: center;
-    max-width: 250px;
+    margin: 0 15px;
 }
-.action img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
+.service-card img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 15px;
 }
-.action h3 {
-    color: #4CAF50;
-    font-size: 1.5rem;
+.service-card h2 {
+    font-size: 25px;
+    color: #1D1D1F;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
 }
-.action p {
-    font-size: 1rem;
-    color: #666;
+.service-card p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #2B2B2E;
+    text-align: left;
 }
-.btn-action {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.5rem 1.5rem;
-    background-color: #4CAF50;
+.service-button {
+    font-size: 15px;
+    padding: 8px 30px;
+    background-color: #69A625;
     color: white;
-    text-decoration: none;
     border-radius: 5px;
+    text-decoration: none;
+    float: left;
+}
+.service-button:hover {
+    background-color: #3b5f13;
+    color: #ffffff;
+}
+
+/* Doe/Volunatrie */
+.atividades {
+    padding: 20px;
+    max-width: 1100px;
+    max-height: 100%;
+    margin: 0 auto;
+    margin-top: 17%; 
+}
+.atividades h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.item-galeria {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+.item-galeria:hover {
+    transform: scale(1.05);
+}
+.item-galeria img {
+    width: 100%;
+    height: 250px;/
+    object-fit: cover; 
+    border-radius: 0px; 
+}
+.item-galeria p {
+    margin-top: 10px;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.item-galeria p::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #69A625;
+    transition: width 0.3s ease-in-out;
+}
+.item-galeria p:hover::after {
+    width: 100%; /* Animação para o sublinhado verde */
 }
