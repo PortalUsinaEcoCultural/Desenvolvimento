@@ -66,16 +66,35 @@ button:hover {
     border-radius: 5px;
     color: white;
 }
+@media (max-width: 900px) {
+    button {
+        position: static;
+        transform: translateY(0%);
+    }
+}
+
+/*parte do calendario*/
 .calendario {
     margin: 40px 0;
-    text-align: center; /* Centraliza o conteúdo da seção */
+    text-align: center;
 }
 .calendario h3 {
     margin-bottom: 50px;
 }
-.calendario iframe {
-    display: block;
-    margin: 0 auto;
-    border-radius: 5px; /* Opcional, para suavizar as bordas do iframe */
+.calendario-parte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 75%;
+    overflow: hidden;
 }
+.calendario-parte iframe {
+    margin: auto;
+    width: 80%;
+    max-width: 800px;
+    height: 600px;
+    border: 0;
+    border-radius: 5px;
 
+}
