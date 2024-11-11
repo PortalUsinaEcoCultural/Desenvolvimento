@@ -167,3 +167,90 @@ body {
 .item-galeria p:hover::after {
     width: 100%; /* Animação para o sublinhado verde */
 }
+
+/*do abandono*/
+.section {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    max-width: 1900px;
+    height: 500px;
+    margin: 0 auto;
+
+}
+.section img {
+    width: 50%;
+    border-radius: 0px;
+    margin-right: 20px;
+    align-self: flex-end;
+}
+.content {
+    width: 50%;
+}
+.content h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 10%;
+}
+.content h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-right:20%;
+}
+.content p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-right:25%;
+    text-align: justify;
+}
+
+/*do abandono*/
+.section2 {
+    display: flex;
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    max-width: 1900px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.section2 img {
+    width: 50%;
+    border-radius: 0px;
+    margin-right: 0px;
+    align-self: flex-end;
+    height: 100%;
+    margin-top: 2%;
+}
+.content2 {
+    width: 50%;
+}
+.content2 h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 10%;
+    text-align: right;
+    margin-right: 2%;
+}
+.content2 h3 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 15px;
+    margin-left:20%;
+    margin-right: 2%;
+    text-align: right;
+}
+.content2 p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+    margin-left:25%;
+    margin-right: 2%;
+    text-align: right ;
+}
+
+

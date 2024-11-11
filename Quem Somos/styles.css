@@ -150,7 +150,6 @@ h2.objetivos {
     width: 100%;
     height: 350px; /* Altura uniforme */
     object-fit: cover; /* Faz o corte da imagem sem distorção */
-    border-radius: 0px; /* Bordas arredondadas, se necessário */
 }
 
 /* Media query para dispositivos menores */
