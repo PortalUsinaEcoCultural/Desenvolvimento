@@ -9,33 +9,18 @@ body {
     color: #1D1D1F;
 }
 
-/*banner da página*/
-header {
-    margin-top: 100px;
-    background-color: #69A625;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-.titulo-banner {
-    font-size: 35px;
-}
-.subtitulo-banner {
-    font-size: 15px;
-}
-
-/*proximos eventos*/
-.subtitulo-eventos{
+/*boletins da usina*/
+.subtitulo-boletim{
     margin: 35px;
     font-size: 20px;
 }
-.eventos {
+.boletins {
     margin: 40px;
 }
-.eventos ul {
+.boletins ul {
     list-style-type: none;
 }
-.eventos li {
+.boletins li {
     background-color: white;
     padding: 15px;
     margin-bottom: 15px;
@@ -43,7 +28,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-.eventos li p {
+.boletins li p {
     margin-top: 10px;
     font-size: 15px;
 }
@@ -73,30 +58,4 @@ button:hover {
         position: static;
         transform: translateY(0%);
     }
-}
-
-/*parte do calendario*/
-.calendario {
-    margin: 40px 0;
-    text-align: center;
-}
-.calendario h3 {
-    margin-bottom: 50px;
-}
-.calendario-parte{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-bottom: 75%;
-    overflow: hidden;
-}
-.calendario-parte iframe {
-    margin: auto;
-    width: 80%;
-    max-width: 800px;
-    height: 600px;
-    border: 0;
-    border-radius: 5px;
-
 }
