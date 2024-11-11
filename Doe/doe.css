@@ -4,6 +4,10 @@
 body {
     background-color: #dedede; /* Escolha a cor que desejar */
 }
+html {
+    scroll-behavior: smooth;
+}
+
 /* Banner */
 .banner {
     position: relative;
@@ -41,6 +45,11 @@ body {
     font-size: 50px;
     font-weight: bolder;
 }
+.containerBtn {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-left: 10%;
+}
 .doeBtn{
     display: inline-block;
     padding: 10px 24px;
@@ -50,13 +59,13 @@ body {
     font-size: 20px;
     border-radius: 5px;
     border: 2px solid #69A625;
-    font-weight: bold;
 }
 .doeBtn:hover {
     background-color: #3b5f13;
     color: #ffffff;
     border: 2px solid #3b5f13;
 }
+
 
 /* Seção de Serviços */
 .icons {
@@ -115,6 +124,7 @@ body {
     color: #ffffff;
 }
 
+
 /* Doe/Volunatrie */
 .atividades {
     padding: 20px;
@@ -147,14 +157,19 @@ body {
     object-fit: cover; 
     border-radius: 0px; 
 }
-.item-galeria p {
+.item-galeria a {
     margin-top: 10px;
-    font-style: italic;
+    font-style: none;
     display: inline-block;
     position: relative;
     cursor: pointer;
+    color: #2B2B2E;
+    text-decoration: none;
 }
-.item-galeria p::after {
+.item-galeria a:hover{
+    color: #2B2B2E;
+}
+.item-galeria a::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -163,9 +178,11 @@ body {
     height: 2px;
     background-color: #69A625;
     transition: width 0.3s ease-in-out;
+    text-decoration: none;
 }
-.item-galeria p:hover::after {
+.item-galeria a:hover::after {
     width: 100%; /* Animação para o sublinhado verde */
+    text-decoration: none;
 }
 
 /*do abandono*/
@@ -194,7 +211,7 @@ body {
     margin-top: 10%;
 }
 .content h3 {
-    font-size: 25px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
     margin-right:20%;
@@ -237,7 +254,7 @@ body {
     margin-right: 2%;
 }
 .content2 h3 {
-    font-size: 25px;
+    font-size: 20px;
     color: #333;
     margin-bottom: 15px;
     margin-left:20%;
