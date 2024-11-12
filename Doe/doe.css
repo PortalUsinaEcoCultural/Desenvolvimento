@@ -181,7 +181,7 @@ html {
     text-decoration: none;
 }
 .item-galeria a:hover::after {
-    width: 100%; /* Animação para o sublinhado verde */
+    width: 100%; 
     text-decoration: none;
 }
 
