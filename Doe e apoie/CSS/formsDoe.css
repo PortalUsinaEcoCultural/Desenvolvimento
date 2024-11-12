@@ -1,26 +1,30 @@
-/* Estilos Gerais */ 
+
 body {
-    font-family: 'roboto',sans-serif;
+    font-family: 'Roboto',sans-serif;
     background-color: #F8F8F8;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:100vh;
     margin: 0;
     flex-direction: column;
 }
 .container {
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     max-width: 500px;
     width: 100%;
     text-align: center;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
-    margin-bottom: 20px;
+}
+h3{
+    font-size: 15px;
+    color: #505050;
+    margin-bottom: 9%;
 }
 
 /* Logo */
@@ -69,7 +73,7 @@ h2 {
 
 .form-control::placeholder {
     color: #999;
-    font-size: 14px; 
+    font-size: 13px; 
 }
 
 /* Botões de Pagamento */
@@ -79,7 +83,7 @@ h2 {
     padding: 10px 40px;
     border: 2px solid #69A625; 
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px;
     margin: 5px;
     width: 120px;
     transition: background-color 0.3s, color 0.3s; 
@@ -112,7 +116,7 @@ a:hover, a:hover .btn-pagamento {
     border: 2px solid #69A625; 
     border-radius: 5px;
     font-size: 14px; 
-    margin-left: 151px; 
+    margin-left: 330px; 
     margin-top: 50px; 
     transition: background-color 0.3s, color 0.3s;
 }
