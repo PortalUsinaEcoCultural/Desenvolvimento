@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,89 +8,96 @@
     <title>Doe</title>
     <link rel="stylesheet" href="/Doe e apoie/CSS/formsDoe.css">
 </head>
+
 <body>
 
-        <div class="container-fluid"> 
-            <div class="row">
-                <div class="col-12 logo bg-white text-center p-5">
-                    <a href="/Doe/doe.html">
-                        <button class="back-btn">&lt;</button>
-                    </a>
-                    <img src="/Fala Conosco/img/logo.jpg" width="80px" alt="Logo Usina Eco-Cultural">
-                </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 logo bg-white text-center p-3">
+                <a href="/Doe/doe.html">
+                    <button class="back-btn">&lt;</button>
+                </a>
+                <img src="/Fala Conosco/img/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
             </div>
         </div>
+    </div>
 
 
     <div class="container">
         <h2>Você está doando para <strong>Usina Eco-Cultural</strong></h2>
-        <h3>Cada contribuição, grande ou pequena, faz a diferença. 
-            <br>Juntos, podemos construir um futuro mais justo e consciente.</h3>
+        <h3>Cada contribuição, grande ou pequena, faz a diferença.
+            <br>Juntos, podemos construir um futuro mais justo e consciente.
+        </h3>
         <form>
             <div class="form-group row">
                 <div class="col-12 col-md-6">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome"
+                        required>
                 </div>
                 <div class="col-12 col-md-6">
                     <label for="sobrenome">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control"
+                        placeholder="Digite seu sobrenome" required>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email"
+                    required>
             </div>
             <div class="form-group">
                 <label for="comentario">Deixe um comentário:</label>
-                <textarea id="comentario" name="comentario" class="form-control" placeholder="Ex. uma ótima iniciativa! Fico feliz em poder contribuir." rows="3"></textarea>
+                <textarea id="comentario" name="comentario" class="form-control"
+                    placeholder="Ex. uma ótima iniciativa! Fico feliz em poder contribuir." rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="como-ouviu">Como você ouviu falar de nós?</label>
-                <input type="text" id="como-ouviu" name="como-ouviu" class="form-control" placeholder="Ex. pelas redes sociais, através de amigos...">
+                <input type="text" id="como-ouviu" name="como-ouviu" class="form-control"
+                    placeholder="Ex. pelas redes sociais, através de amigos...">
             </div>
-            <div class="form-groups mt-4"> 
+            <div class="form-groups mt-4">
                 <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
-                
+
                 <!-- Botões de pagamento -->
                 <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
                 <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
-                
+
                 <!-- Botão Continuar -->
                 <button type="submit" class="btn btn-continuar" id="continuarBtn">Continuar &gt;</button>
             </div>
-            
+
             <script>
                 // Variáveis dos botões
                 const pixBtn = document.getElementById('pixBtn');
                 const paypalBtn = document.getElementById('paypalBtn');
                 const continuarBtn = document.getElementById('continuarBtn');
-                
+
                 // Variável para verificar se o método PIX foi selecionado
                 let metodoSelecionado = '';
-            
+
                 // Função para resetar a aparência dos botões
                 function resetBotao() {
                     pixBtn.classList.remove('selecionado');
                     paypalBtn.classList.remove('selecionado');
                 }
-            
+
                 // Ação do botão PIX
-                pixBtn.addEventListener('click', function() {
+                pixBtn.addEventListener('click', function () {
                     resetBotao(); // Resetar todos os botões
                     pixBtn.classList.add('selecionado'); // Adiciona a classe de destaque no botão PIX
                     metodoSelecionado = 'PIX'; // Marca que o método PIX foi selecionado
                 });
-            
+
                 // Ação do botão PayPal
-                paypalBtn.addEventListener('click', function() {
+                paypalBtn.addEventListener('click', function () {
                     resetBotao(); // Resetar todos os botões
                     paypalBtn.classList.add('selecionado'); // Adiciona a classe de destaque no botão PayPal
                     metodoSelecionado = 'PayPal'; // Marca que o método PayPal foi selecionado
                 });
-            
+
                 // Ação do botão Continuar
-                continuarBtn.addEventListener('click', function() {
+                continuarBtn.addEventListener('click', function () {
                     if (metodoSelecionado === 'PIX') {
                         window.location.href = '/Doe e apoie/formsPix.html'; // Redireciona para o PIX quando o botão Continuar é clicado
                     } else {
@@ -101,4 +109,5 @@
         </form>
     </div>
 </body>
+
 </html>

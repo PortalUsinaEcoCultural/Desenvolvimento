@@ -31,7 +31,7 @@ h3{
 .logo {
     margin-top: 10px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
     display: inline-block; 
     padding: 15px;
 }
@@ -42,7 +42,7 @@ h3{
     border: none;
     cursor: pointer;
     position: absolute;
-    left: 20px;
+    left: 70px;
     top: 10%;
     transform: translateY(-50%);
 }
@@ -78,7 +78,7 @@ h3{
 
 /* Botões de Pagamento */
 .btn-pagamento {
-    background-color: #fff; 
+    background-color: #F8F8F8; 
     color: #69A625;
     padding: 10px 40px;
     border: 2px solid #69A625; 
@@ -113,7 +113,6 @@ a:hover, a:hover .btn-pagamento {
     background-color: #69A625;
     color: #fff; 
     padding: 5px 15px; 
-    border: 2px solid #69A625; 
     border-radius: 5px;
     font-size: 14px; 
     margin-left: 330px; 
@@ -123,6 +122,5 @@ a:hover, a:hover .btn-pagamento {
 
 .btn-continuar:hover {
     background-color: #4e7a1b;
-    border-color: #4e7a1b; 
     color: #fff; 
 }
