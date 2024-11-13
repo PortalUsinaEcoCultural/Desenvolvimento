@@ -80,7 +80,7 @@ function updateNews() {
         newsContainer.innerHTML += `
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <img src="${article.img}" alt="Foto: ${article.photoCredit}" class="img-fluid rounded">
+                    <img src="${article.img}" alt="Foto: ${article.photoCredit}" class="img-fluid rounded" width="293" height="226">
                     <p class="text-muted text-left" style="font-size: 0.8rem;">Foto: ${article.photoCredit}</p>
                 </div>
                 <div class="col-md-8">
@@ -91,7 +91,6 @@ function updateNews() {
                 </div>
             </div>`;
     }
-    
 
     // Atualiza os botões de navegação
     document.getElementById("prevBtn").disabled = currentPage === 1;
