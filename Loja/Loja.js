@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart')
+    const addToCartButtons = document.querySelectorAll('.adicionar')
     const cartItemCount = document.querySelector('.carrinho-quantidade');
     const cartItemsList = document.querySelector('.itens-carrinho');
     const cartTotal = document.querySelector('.total-carrinho');
@@ -21,19 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (exisitingItem) {
                 exisitingItem.quantity++;
-            }
-            else {
+            }else {
                 cartItems.push(item);
             }
 
             totalAmount += item.price;
-
             updateCartUI();
         });
     });
 
     function updateCartUI() {
-        updateCartItemCount(cartItems.length);
+        updateCartItemCount(cartItems.reduce((sum, item) => sum + item.quantity, 0));
         updateCartList();
         updateCartTotal();
     }
@@ -59,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const removeButtons = document.querySelectorAll('.remove-btn');
         removeButtons.forEach(button => {
             button.addEventListener('click', event => {
-                const index = event.target.dataset.index;
+                const index = event.currentTarget.dataset.index;
                 removeItemFromCart(index);
             });
         });
@@ -68,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeltemFromCart(index) {
         const removeltem = cartItems.splice(index, 1)[0];
         totalAmount -= removeltem.price * removeItem.quantity;
-        updateCartUI;
+        updateCartUI();
     }
 
     function updateCartTotal() {
@@ -79,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('abrir-sidebar');
     });
 
-    const closeButton = document.querySelector('.sidebar-close');
+    const closeButton = document.querySelector('.fechar-sidebar i');
     closeButton.addEventListener('click', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
 
-});
+}
