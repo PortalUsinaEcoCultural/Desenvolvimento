@@ -1,3 +1,7 @@
+* { 
+    font-family: "Roboto", sans-serif; 
+}
+
 .torn-paper-section { 
     background-image: url('/Galeria/img/fundo2.png'); 
     background-size: cover; 
@@ -7,54 +11,52 @@
     display: flex; 
 }
 
-
 .content-wrapper {
     color: black; 
     padding: 20px; 
-}
-
-.event-section {
-    text-align: center; 
-    margin: 20px 0; 
-}
-
-.event-title {
-    cursor: pointer;
-    color: #505050;
-    text-decoration: none; 
-    text-align: center;
-}
-
-.event-title:hover {
-    text-decoration: underline; 
-    color: #3A90C3; 
-}
-
-
-.event-section a:hover {
-    color: #3A90C3;
-    text-align: center; 
-    margin: 20px 0; 
 }
 
 .event-container {
     display: flex;
     gap: 10px; 
     justify-content: center; 
+    flex-wrap: wrap;
 }
 
 .event-section {
+    text-align: center; 
     flex: 1;
     max-width: 25%; 
-    text-align: center;
+    margin: 20px;
 }
 
 .event-section img {
+    width: 297px;
+    height: 259px;
+    object-fit: contain;
     transition: transform 0.3s ease; 
 }
 
 .event-section img:hover {
     transform: scale(1.1); 
+}
+
+.event-title {
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none; 
+    display: block; 
+}
+
+.event-title:hover {  
+    font-weight: bold;
+}
+
+
+/* Estilo para garantir que o link envolva a imagem */
+.event-link {
+    display: block; 
 }
 
 .torn-paper-section h2 {
@@ -67,225 +69,7 @@
     line-height: 1.6;
 }
 
-/* Estilos Gerais */
-*{ 
-    font-family: "Roboto", sans-serif; 
-}
-
-.navbar {
-    background-color: #fff;
-    height: 70px;
-}
-
-/* Logo */
-.logo {
-    font-weight: 500;
-    color: #69a625;
-    font-size: 24px;
-    transition: 0.3s color;
-    margin-left: 18%;
-    margin-bottom: 5%;
-}
-
-/* Botão de Doação */
-.doe-button {
-    background-color: #69a625;
-    color: #fff;
-    font-size: 15px;
-    padding: 4px 15px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    border-radius: 0px 0px 5px 5px;
-    margin-right: 12%;
-    text-decoration: none;
-    transition: 0.3s background-color;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.doe-button:hover {
-    background-color: #487218;
-}
-
-/* Toggler do Navbar */
-.navbar-toggler {
-    border: none;
-    font-size: 1.25rem;
-}
-
-.navbar-toggler:focus, .btn-close:focus {
-    box-shadow: none;
-    outline: none;
-}
-
-/* Links da Navbar */
-.nav-link {
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-    margin-bottom: 30%;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: #000;
-}
-
-/* Remove seta do dropdown */
-.nav-item.dropdown > .nav-link::after {
-    display: none; /* Esconde o ícone de seta */
-}
-
-/* Dropdown Menu Inline */
-.nav-item.dropdown {
-    position: relative;
-}
-
-.nav-item .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 70%; 
-    left: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-item:hover .dropdown-menu {
-    display: block; /* Exibe o menu ao passar o mouse */
-}
-
-.dropdown-menu .dropdown-item {
-    padding: 5px 0;
-    color: #666777;
-    font-weight: 500;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    color: #000;
-    background: none;
-}
-
-/* Para espaçar itens do dropdown */
-.dropdown-item {
-    display: block;
-    padding-left: 20px;
-}
-
-@media (min-width: 991px) {
-    .nav-link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0%;
-        height: 2px;
-        background-color: #69a625;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
-
-    .nav-link:hover::before {
-        width: 100%;
-        visibility: visible;
-    }
-}
-
-/* Outros estilos */
-.container2 {
-    text-align: right;
-    color: white;
-    padding-right: 200px;
-    padding-left: 15px;
-}
-
-.offcanvas-body {
-    margin-right: 1%;
-    margin-left: 5%;
-}
-
-.login-button {
-    margin-right: 22%;
-    border: 2px solid #69a625;
-    color: #69a625;
-    padding: 5px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-}
-
-.login-button:hover {
-    background-color: #69a625;
-    color: white;
-}
-
-/* Seção Hero */
-.hero-section::before {
-    background-color: rgba(0, 0, 0, 0.6);
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.hero-section .container {
-    height: 100vh;
-    z-index: 1;
-    position: relative;
-}
-
-.hero-section h1 {
-    font-size: 1.5em;
-}
-
-.hero-section h2 {
-    font-size: 1.2em;
-}
-
-/* Estilos Globais */
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f9f9f9;
-}
-
-.container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* Remove seta do dropdown */
-.nav-item.dropdown > .nav-link::after {
-    display: none; 
-}
-
-/* Estilo para garantir que o link envolva a imagem */
-.event-link {
-    display: block; 
-    position: relative;
-}
-
-.event-link img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-}
-
-.event-title {
-    display: inline-block;
-    text-decoration: none; 
-    color: inherit; 
-}
-
 /*Rodapé*/
-/* Configurações gerais para os ícones e o círculo de fundo */
 .social-icons {
     padding-top: 25px;
 }
@@ -304,7 +88,6 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Efeito de zoom ao passar o mouse */
 .social-icons a:hover {
     transform: scale(1.1); /* Aumenta o ícone em 10% */
 }
