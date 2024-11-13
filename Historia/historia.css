@@ -1,166 +1,70 @@
-button {
+/* Estilo da seção "O Incinerador" */
+.incenerador {
+    background-color: #EDEDED;
+    padding: 5rem 0;
+}
+
+.incenerador .texto h2 {
+    text-align: right;
+    color: black;
+    margin-right: 10%;
+}
+
+.incenerador .texto p {
+    text-align: right;
+    margin-right: 10%;
+}
+
+/* Estilo do botão */
+.button {
     background-color: #69A625;
-    color: #69A625;
+    color: #ffffff;
     border: 2px solid #69A625;
-    padding: 8px 16px;
-    color: #ffff;
-    font-size: 12px;
-    border-radius: 5px !important;
+    padding: 10px 35px;
+    font-size: 15px;
+    border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
     margin-top: auto;
-    margin-right;
+    margin-right: 10%;
 }
 
-button:hover {
+.button:hover {
     background-color: #487218;
     border: 2px solid #487218;
     color: white;
 }
 
-/*Nav Bar*/
-.navbar {
-    background-color:#fff;
-    height: 70px;
-    /*margin: 20px;
-    border-radius: 10px;
-    padding: 0.5rem;*/
-
-}
-
-.logo{
-    font-weight: 500;
-    color: #69a625;
-    font-size: 24px;
-    transition: 0.3s color;
-    margin-left: 18%;
-    margin-bottom: 5%;
-}
-
-.doe-button {
-    background-color: #69a625; /* Verde escuro */
-    color: #fff;
-    font-size: 15px;
-    padding: 4px 15px; /* Ajusta a altura do botão */
-    padding-top: 30px;
-    padding-bottom: 10px;
-    border-radius: 0px 0px 5px 5px;
-    margin-right: 12%;
-    text-decoration: none;
-    transition: 0.3s background-color;
-    text-align:center;
-    position: fixed; /* Fixa o botão no topo */
-    top: 0; /* Posiciona no topo da página */
-    right: 0; /* Alinha à direita */
-    z-index: 1000; /* Garante que o botão fique na frente de outros elementos */
-}
-
-.doe-button:hover{
-    background-color: #487218;
-}
-
-.navbar-toggler{
-    border: none;
-    font-size: 1.25rem;
-}
-
-.navbar-toggler:focus, btn-close:focus{
-    box-shadow: none;
-    outline: none;
-}
-
-.nav-link{
-    color: #666777;
-    font-weight: 500;
-    position: relative;
-    margin-bottom: 30%;
-}
-
-.nav-link:hover, .nav-link.active{
-    color: #000
-}
-
-@media(min-width: 991px){
-    .nav-link::before{
-        content:"";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0%;
-        height: 2px;
-        background-color: #69a625;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
-
-    .nav-link:hover::before{
-        width: 100%;
-        visibility: visible;
-    }
-}
-
-.hero-section {
-    background: url(imagens/home.jpg) no-repeat center center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
+/* Estilo do cabeçalho */
+.header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
 }
 
-.container2 {
-    text-align: right;
-    color: white;
-    padding-right: 200px; /* Gutter de 15px à direita */
-    padding-left: 15px;  /* Gutter de 15px à esquerda */
+.header .icon {
+    font-size: 60px;
+    color: #69A625;
+    margin-bottom: 2% ;
 }
 
-
-
-.offcanvas-body{
-    margin-right: 1%;
-    margin-left: 5%;
-
+.header h1 {
+    text-align: center;
+    font-size: 35px;
 }
 
-.login-button{
-    margin-right: 22%;
-    border:2px solid #69a625 ;
-    color: #69a625;
-    padding: 5px 12px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align:center;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-
+/* Estilo dos itens de conteúdo */
+.content-section {
+    margin-top: 20px;
 }
 
-.login-button:hover{
-    background-color: #69a625;
-    color: white;
+.content-item {
+    margin-bottom: 20px;
 }
 
-.hero-section::before{
-    background-color: (0, 0, 0, 0.6);
-    content:"";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.hero-section .container{
-    height: 100vh;
-    z-index: 1;
-    position: relative;
-}
-
-.hero-section h1{
-    font-size: 1.5em;
-}
-
-.hero-section h2{
-    font-size: 1.2em;
+.content-item img {
+    max-width: 100%;
+    height: auto;
 }
