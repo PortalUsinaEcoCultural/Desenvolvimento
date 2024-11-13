@@ -23,13 +23,13 @@ body {
     flex: 3;
     margin-top: 2%;
     margin-bottom: -3.1%;
-    margin-left: -3.5%;
+    margin-left: -2px;
     margin-right: -10.7%;
 }
 .cabecalho .img-fluid {
-    width: 100%; 
-    height: 380px; 
-    object-fit: cover;
+    width: 100%;
+    height: 350px; /* Altura uniforme */
+    object-fit: cover; /* Faz o corte da imagem sem distorção */ 
 }
 .conteudo-cabecalho {
     width: 50%;
@@ -37,6 +37,7 @@ body {
     margin-right: 20%;   
     margin-top: 1%;
     margin-left: 11%;
+    margin-bottom: 4%;
 }
 h1 .quem-somos {
     margin-top: 0;
@@ -48,9 +49,7 @@ h2.quem-somos {
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
     color: #313131;
-    font-weight:bolder;
 }
-
 /* Atividades */
 .atividades {
     padding: 20px;
@@ -233,7 +232,7 @@ h2.objetivos {
     width: 100%; /* Largura total do contêiner */
     height: 250px; /* Mantém a altura uniforme */
     object-fit: cover; /* Faz o corte da imagem */
-    border-radius: 0px; /* Bordas arredondadas*/
+    border-radius: 5px; /* Bordas arredondadas*/
 }
 
 .slider-container {
@@ -503,6 +502,9 @@ h2.objetivos {
     flex-direction: column;
 }
 .parceiro-conexoes .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 148px;
     height: 148px;
     border-radius: 0%;
@@ -523,6 +525,7 @@ h2.objetivos {
 .parceiro-conexoes span {
     color: #6a6d78;
     font-size: 1.31rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 900px) {
