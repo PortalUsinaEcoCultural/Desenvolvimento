@@ -15,7 +15,7 @@
     color: #69a625;
     font-size: 24px;
     transition: 0.3s color;
-    margin-left: 18%;
+    margin-left: 16%;
     margin-top: 5px;
 }
 
@@ -28,13 +28,13 @@
     padding-top: 40px;
     padding-bottom: 10px;
     border-radius: 0px 0px 5px 5px;
-    margin-right: 12%;
+    margin-right: 5%;
     text-decoration: none;
     transition: 0.3s background-color;
     text-align: center;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 12%;
     z-index: 1000;
 }
 
@@ -55,12 +55,11 @@
 
 /* Links da Navbar */
 .nav-link {
-    color: #666777;
     font-weight: 500;
     position: relative;
     margin-bottom: 30%;
     margin-top: 40px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -72,36 +71,33 @@
     display: none; /* Esconde o ícone de seta */
 }
 
-/* Dropdown Menu Inline */
-.nav-item.dropdown {
-    position: relative;
-}
-
+/* Estilo do Dropdown Menu */ 
 .nav-item .dropdown-menu {
     display: none;
     position: absolute;
-    top: 70%; /* Reduzido para aproximar o menu do título principal */
+    top: 100%; 
     left: 0;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    margin: 0;
+    background-color: #ffffff; 
+    padding: 10px 0; 
+    border-radius: 8px; 
+    min-width: 180px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: none; /* Remover a borda */
 }
 
+/* Exibe o dropdown ao passar o mouse */
 .nav-item:hover .dropdown-menu {
-    display: block; /* Exibe o menu ao passar o mouse */
+    display: block;
 }
 
+/* Estilos para os itens do dropdown */
 .dropdown-menu .dropdown-item {
-    padding: 5px 0;
-    color: #666777;
     font-weight: 500;
-}
-
-.dropdown-menu .dropdown-item:hover {
-    color: #000;
-    background: none;
+    padding: 10px 20px; 
+    color: black; 
+    text-align: left; 
+    background-color: transparent; 
+    transition: background-color 0.3s ease; 
 }
 
 /* Para espaçar itens do dropdown */
@@ -110,6 +106,7 @@
     padding-left: 20px;
     margin-top: 10px;
 }
+
 
 @media (min-width: 991px) {
     .nav-link::before {
@@ -158,7 +155,6 @@
     text-decoration: none;
     padding: 5px;
     margin-top: 10px;
-
     border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
@@ -242,13 +238,6 @@
 }
 
 /*Começo dos cookies*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
 body {
     width: 100%;
     display: flex;
