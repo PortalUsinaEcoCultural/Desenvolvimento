@@ -6,26 +6,25 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-    font-weight: 400; /* Regular */
 }
 
 /* Cabeçalho */
 .cabecalho {
     display: flex;
-    padding: 50px;
-    background-color: #EDEDED; /* Retângulo cinza */
+    padding: 65px;
+    background-color: #EDEDED; 
     margin-bottom: 30px;
     width: 100%;
     height: auto; 
+
 }
 .cabecalho img {
-    flex: 3;
+    flex: 1;
     margin-top: 2%;
     margin-bottom: -3.1%;
-    margin-left: -2px;
+    margin-left: -50px;
     margin-right: -10.7%;
-    width: 50vw;
+    transform: scale(1.14);
     
 }
 .cabecalho .img-fluid {
@@ -38,7 +37,7 @@ body {
     padding: 10px 20px; 
     margin-right: 20%;   
     margin-top: 1%;
-    margin-left: 11%;
+    margin-left: 15%;
     margin-bottom: 4%;
     flex-shrink: 0;
 }
@@ -49,8 +48,6 @@ h1 .quem-somos {
 h2.quem-somos {
     margin: 10px 0;
     font-size: 35px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
     color: #313131;
 }
 /* Atividades */
@@ -79,9 +76,9 @@ h2.quem-somos {
 }
 .item-galeria img {
     width: 100%;
-    height: 250px;/
+    height: 250px;
     object-fit: cover; 
-    border-radius: 0px; 
+    border-radius: 3px; 
 }
 /* Efeito de animação para sublinhado */
 .item-galeria p {
@@ -110,7 +107,7 @@ h1.objetivos {
     margin: 5px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
+
     color: #313131;
     text-align: right;
     padding-bottom: 0;
@@ -150,8 +147,8 @@ h2.objetivos {
 
 .objetivos .img-fluid {
     width: 100%;
-    height: 350px; /* Altura uniforme */
-    object-fit: cover; /* Faz o corte da imagem sem distorção */
+    height: 350px; 
+    object-fit: cover; 
 }
 
 /* Media query para dispositivos menores */
@@ -232,11 +229,9 @@ h2.objetivos {
     display: inline-block; /* Para ajustar o tamanho ao conteúdo */
 }
 .img-fluid {
-    width: 100%; /* Largura total do contêiner */
-    height: 20px; /* Mantém a altura uniforme */
-    object-fit: cover; /* Faz o corte da imagem */
-    border-radius: 0px; /* Bordas arredondadas*/
-    flex-shrink: 0;
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
 }
 
 .slider-container {
@@ -346,7 +341,7 @@ h2.objetivos {
     border-radius: 0%;
 }
 .parceiro h2 {
-    font-weight: 500;
+
     font-size: 1.56rem;
     margin: 30px 0 5px;
     color: #2B2B2E;
@@ -397,12 +392,12 @@ h2.objetivos {
 
 .parceiros {
     font-family: 'Roboto', sans-serif; 
-    font-weight: 400; 
+
 }
 
 .estrategicos {
-    font-family: 'Roboto Light', sans-serif; 
-    font-weight: 300; 
+    font-family: 'Roboto ', sans-serif; 
+
 }
 
 .retangulo-fundo {
