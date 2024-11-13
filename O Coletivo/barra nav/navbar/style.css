@@ -488,17 +488,18 @@ button:hover {
     align-items: center;
 }
 #cookies-aviso .acoes button {
-    padding: 12px 24px;
+    padding: 12px 12px;
     border: none;
     border-radius: 12px;
     outline: none;
-    margin: 6px;
+    margin: 1px;
     transition: background-color .5s;
     cursor: pointer;
 }
 #cookies-aviso .acoes .rejeitar {
     border: 1px solid #69a625;
     color: #69a625;
+    margin-right: 4px;
 }
 #cookies-aviso .acoes .rejeitar:hover {
     background-color: red;
@@ -508,6 +509,7 @@ button:hover {
 #cookies-aviso .acoes .aceitar {
     background-color: #69a625;
     color: #fff;
+    margin-right: 120px;
 }
 #cookies-aviso .acoes .aceitar:hover {
     background-color: #3b5f13;
