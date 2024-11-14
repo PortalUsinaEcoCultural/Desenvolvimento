@@ -1,0 +1,178 @@
+*{
+    font-family: "Roboto", sans-serif; 
+}
+.topo h2 {
+    margin-top: 120px; 
+    font-size: 35px; 
+    text-align: left;
+    font-weight: bolder;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+.topo p{
+    font-size: 15px; 
+    text-align: left;
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-bottom: 13%;
+}
+.papelfundo { 
+    background-image: url('papelfundo.png'); 
+    background: size 100px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex; 
+    width: 100%;
+    background-size: cover;
+    margin-top: -20%;
+    align-items: end;
+}
+
+/* Fotos */
+.atividades {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.atividades h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+}
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+.item-galeria {
+    flex: 1;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+.item-galeria:hover {
+    transform: scale(1.05);
+}
+.item-galeria img {
+    width: 85%;
+    height: 180px; 
+    object-fit: cover; 
+    border-radius: 3px; 
+}
+.item-galeria p {
+    margin-top: 10px;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.item-galeria p::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #69A625;
+    transition: width 0.3s ease-in-out;
+}
+.item-galeria p:hover::after {
+    width: 100%; 
+}
+/*Rodapé*/
+.social-icons {
+    padding-top: 25px;
+}
+.social-icons a {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    border-radius: 50%;
+}
+.social-icons a i {
+    color: rgb(32, 32, 32); /* Cor inicial do ícone */
+    background-color: rgb(239, 239, 239); /* Cor de fundo inicial do círculo */
+    padding: 15px !important; 
+    border-radius: 50% !important; 
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.1); 
+}
+
+.contato {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    text-decoration: none;
+  }
+  
+  .contato-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .contato-item p{
+    margin-left: 6%;
+    margin-top: 9%;
+  }
+  
+  .contact-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; 
+  }
+  
+
+
+
+
+
+  /* Estilos para os botões de edição */
+/* Estilos para o contêiner do fundo */
+.edit-buttons-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;  /* Coloca o fundo atrás dos botões */
+    background-color: rgba(0, 0, 0, 0.6);  /* Fundo semitransparente */
+    padding: 15px;
+    border-radius: 5px;  /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);  /* Sombra para destacar o contêiner */
+}
+
+/* Estilos para os botões de edição */
+.edit-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.edit-button {
+    background-color: #69A625;
+    border: none;
+    padding: 8px 16px;
+    color: #f2f2f2;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-button:hover {
+    background-color: #558320;
+    color: #ffffff;
+}
+
+.edit-button:active {
+    background-color: #3b5f13; 
+}
+
+.edit-button:disabled {
+    background-color: #f1f1f1;
+    cursor: not-allowed;
+}
+
