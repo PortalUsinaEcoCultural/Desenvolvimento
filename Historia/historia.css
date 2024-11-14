@@ -56,15 +56,3 @@
 }
 
 /* Estilo dos itens de conteúdo */
-.content-section {
-    margin-top: 20px;
-}
-
-.content-item {
-    margin-bottom: 20px;
-}
-
-.content-item img {
-    max-width: 100%;
-    height: auto;
-}
