@@ -344,3 +344,8 @@ button:hover {
     background-size: cover;
     opacity:0.5;
 }
+.edit-mode-border {
+    border: 5px solid rgba(105, 166, 37, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+}
