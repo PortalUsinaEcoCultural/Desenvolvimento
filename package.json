@@ -1,0 +1,20 @@
+{
+  "name": "desenvolvimento",
+  "version": "1.0.0",
+  "description": "Desenvolvedores\r Letícia de Carvalho Silva (RA: 24.00141-4)\r Lyssa Okawa Perini (RA: 24.01193-2)\r Mateus Martins Gonçalves Dóro (RA: 24.00553-3)\r Sophia Heringer Coelho (RA: 24.01202-5)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.1",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7"
+  }
+}

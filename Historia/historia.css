@@ -309,6 +309,19 @@
 }
 
 /* Conteúdo Principal linha 1*/
+.content-1 p {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px; 
+    color: #505050; 
+    line-height: 1.5; 
+    margin: 10px 0; 
+}
+
+/* Estilo adicional para o elemento strong dentro do parágrafo */
+.content-1 p strong {
+    color: #313131; 
+}
+
 
 .content-1 {
     display: flex;
@@ -362,6 +375,19 @@
 }
 
 /* Conteúdo Principal linha 2*/
+.content-2 p {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px; 
+    color: #505050; 
+    line-height: 1.5; 
+    margin: 10px 0; 
+    margin-left: 10%;
+}
+
+/* Estilo adicional para o elemento strong dentro do parágrafo */
+.content-2 p strong {
+    color: #313131; 
+}
 
 .img-cartaz {
     width: 100%;
@@ -390,13 +416,72 @@
     flex: 1;
     text-align: left;
 }
-.texto p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #555;
-}
+
 
 .content-2 img[src="img"] {
     width: 40%;
     height: auto;
 }
+
+/* Conteúdo ret 1*/
+.content-ret1 {
+    background-color: #EDEDED;
+    padding: 20px;
+    margin-top: 6%;
+}
+
+.ret1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.img-comida {
+    margin-right: 20px;
+    width: 550px;
+    height: auto;
+    margin-top: 2%;
+    margin-left: -2%;
+}
+
+.texto-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+    margin-right: 12%;
+    margin-top: 3%;
+}
+
+.texto-content h1, .texto-content h2, .texto-content p {
+    margin: 0;
+    text-align: left;
+}
+
+.texto-content h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #313131;
+}
+
+.texto-content h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #464545;
+    margin: 5px 0;
+    margin-top: 3%;
+    margin-right: 5%;
+}
+
+.texto-content p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #505050;
+    margin-top: 3%;
+}
+.texto-stack {
+    display: flex;
+    flex-direction: column;
+  }
