@@ -12,7 +12,60 @@
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid box">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="/Fala Conosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural">
+            </div>
+
+            <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
     
+            <!-- Menu de navegação (Hamburguer) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
+                            <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
+                                <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;" href="/Galeria/galeria.html">Galeria</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">História</a>
+                            <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
+                                <li><a class="dropdown-item" href="#">Incinerador</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link"  href="/Loja/Loja.html">Loja</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="/Eventos/eventos.html">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="/Noticias/Noticia.html">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="/Boletim/Boletim.html">Boletim da Usina</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a></li>
+
+                        <li class="nav-item">
+                            <a href="/Login/login.html" class="login-button login-button-rounded" style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a" class="doe-button"><b>Doe e apoie</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!--Seção do banner Boletim da Usina-->
     <section class="boletim d-flex align-items-center justify-content-center bg-light py-5">
         <div class="container">

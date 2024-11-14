@@ -28,12 +28,12 @@
     padding-top: 40px;
     padding-bottom: 10px;
     border-radius: 0px 0px 5px 5px;
-    margin-right: 5%;
+    margin-right: 3.7%;
     text-decoration: none;
     transition: 0.3s background-color;
     text-align: center;
     position: fixed;
-    top: 0;
+    top: -9px;
     right: 12%;
     z-index: 1000;
 }
@@ -46,6 +46,7 @@
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
+        margin-right: 50px; /* Ajuste para mover o botão para a esquerda */
 }
 
 .navbar-toggler:focus, .btn-close:focus {
@@ -138,7 +139,7 @@
 
 .offcanvas-body {
     margin-right: 1%;
-    margin-left: 15px;
+    margin-left: 50px;
 }
 
 /* Login Button */
@@ -158,6 +159,7 @@
     border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    margin-left: 40px;
 }
 
 .login-button:hover {
