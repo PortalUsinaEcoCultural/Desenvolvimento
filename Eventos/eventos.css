@@ -1,8 +1,4 @@
-/* Estilos Gerais */  
-*{ 
-    font-family: "Roboto", sans-serif; 
-}
-
+/* Barra de navegação */  
 .navbar {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     height: 80px;
@@ -14,7 +10,6 @@
     z-index: 1050; 
     background-color: #fff; 
 }
-
 /* Logo */
 .logo {
     font-weight: 500;
@@ -24,7 +19,6 @@
     margin-left: 16%;
     margin-top: 5px;
 }
-
 /* Botão de Doação */
 .doe-button {
     background-color: #69a625;
@@ -43,24 +37,20 @@
     right: 12%;
     z-index: 1000;
 }
-
 .doe-button:hover {
     background-color: #487218;
     color: #fff; 
 }
-
 /* Toggler do Navbar */
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
-        margin-right: 50px; /* Ajuste para mover o botão para a esquerda */
+        margin-right: 50px; 
 }
-
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
     outline: none;
 }
-
 /* Links da Navbar */
 .nav-link {
     font-weight: 500;
@@ -69,16 +59,13 @@
     margin-top: 40px;
     margin-left: 10px;
 }
-
 .nav-link:hover, .nav-link.active {
     color: #000;
 }
-
 /* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
-    display: none; /* Esconde o ícone de seta */
+    display: none; 
 }
-
 /* Estilo do Dropdown Menu */ 
 .nav-item .dropdown-menu {
     display: none;
@@ -90,14 +77,12 @@
     border-radius: 8px; 
     min-width: 180px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: none; /* Remover a borda */
+    border: none; 
 }
-
 /* Exibe o dropdown ao passar o mouse */
 .nav-item:hover .dropdown-menu {
     display: block;
 }
-
 /* Estilos para os itens do dropdown */
 .dropdown-menu .dropdown-item {
     font-weight: 500;
@@ -107,16 +92,13 @@
     background-color: transparent; 
     transition: background-color 0.3s ease; 
 }
-
 /* Para espaçar itens do dropdown */
 .dropdown-item {
     display: block;
     padding-left: 20px;
     margin-top: 10px;
 }
-
-
-@media (min-width: 991px) {
+@media (min-width: 200px) {
     .nav-link::before {
         content: "";
         position: absolute;
@@ -129,13 +111,11 @@
         visibility: hidden;
         transition: 0.3s ease-in-out;
     }
-
     .nav-link:hover::before {
         width: 100%;
         visibility: visible;
     }
 }
-
 /* Outros estilos */
 .container2 {
     text-align: right;
@@ -143,12 +123,10 @@
     padding-right: 200px;
     padding-left: 15px;
 }
-
 .offcanvas-body {
     margin-right: 1%;
     margin-left: 50px;
 }
-
 /* Login Button */
 .login-button {
     width: 40px;
@@ -168,12 +146,10 @@
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     margin-left: 40px;
 }
-
 .login-button:hover {
     background-color: #69a625;
     color: white;
 }
-
 /* Seção Hero */
 .hero-section::before {
     background-color: rgba(0, 0, 0, 0.6);
@@ -184,13 +160,11 @@
     bottom: 0;
     left: 0;
 }
-
 .hero-section .container {
     height: 100vh;
     z-index: 1;
     position: relative;
 }
-
 .hero-section h1 {
     font-size: 1.5em;
 }
@@ -198,53 +172,45 @@
 .hero-section h2 {
     font-size: 1.2em;
 }
-
 .container {
     text-align: center;
     margin-top: 50px;
 }
-
 /* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
     display: none; 
 }
-
 /* Ajustes para o menu hambúrguer */
 
 /* Ajuste de espaçamento dentro do hambúrguer */
 .offcanvas-body .navbar-nav {
     margin-top: 10px; 
 }
-
 .nav-item {
     margin-bottom: 10px; 
 }
-
 .nav-item .nav-link {
     margin-top: 10px; 
     margin-bottom: 10px; 
 }
-
 /* Ajuste do título do menu hambúrguer */
 .offcanvas-header .offcanvas-title {
     font-size: 20px;
     margin-bottom: 5px; 
 }
-
 /* Ajuste do botão de fechamento do hambúrguer */
 .offcanvas-header .btn-close {
     margin-top: 0;
     padding: 10px; 
 }
-
 /* Dropdown */
 .nav-item.dropdown .nav-link {
     margin-top: 10px; /
 }
-
 .nav-item .dropdown-menu {
     padding: 5px 0; 
 }
+
 
 * {
     margin: 0;
@@ -276,6 +242,7 @@ header {
 .subtitulo-eventos{
     margin: 35px;
     font-size: 20px;
+    text-align: left;
 }
 .eventos {
     margin: 40px;
@@ -294,6 +261,7 @@ header {
 .eventos li p {
     margin-top: 10px;
     font-size: 15px;
+    text-align: left;
 }
 button{
     background-color: #ffffff;
@@ -309,6 +277,7 @@ button{
     top: 50%; 
     right: 100px;
     transform: translateY(-50%);
+    text-align: end;
 }
 button:hover {
     background-color: #69A625;
