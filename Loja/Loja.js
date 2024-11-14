@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartIcon = document.querySelector('.carrinho-icone');
     const sidebar = document.querySelector('.sidebar');
     const closeButton = document.querySelector('.fechar-sidebar i');
+    const mensagemConfirmacao = document.querySelector('.mensagem-confirmacao');
 
     let cartItems = [];
     let totalAmount = 0;
@@ -79,4 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
+
+    
+    function mostrarConfirmacao(message){
+        mensagemConfirmacao.textContent = message;
+        mensagemConfirmacao.style.display = 'block';
+
+        setTimeout(() => {
+            confirmationMessage.style.display = 'none';
+        }, 3000);
+    }
 });
