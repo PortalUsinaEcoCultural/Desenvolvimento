@@ -7,6 +7,8 @@
     <title>O coletivo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/O Coletivo/barra nav/cookies/cookies.css">
@@ -14,122 +16,65 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid box">
+    <div id="myCarousel" class="carousel slide " data-ride="carousel">
 
-            <!-- Logo -->
-            <div class="logo">
-                <img src="/Fala Conosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural">
-            </div>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
 
-            <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <!-- Menu de navegação (Hamburguer) -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
-                            <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
-                                <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;" href="/Galeria/galeria.html">Galeria</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">História</a>
-                            <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
-                                <li><a class="dropdown-item" href="#">Incinerador</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link"  href="/Loja/Loja.html">Loja</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Eventos/eventos.html">Eventos</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Noticias/Noticia.html">Notícias</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Boletim/Boletim.html">Boletim da Usina</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a></li>
-
-                        <li class="nav-item">
-                            <a href="/Login/login.html" class="login-button login-button-rounded" ><i class="fa-solid fa-user"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="a" class="doe-button"><b>Doe e apoie</b></a>
-                        </li>
-                    </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="overlay-image" style="background-image:url(./imagens/noticias/1.jpeg);"></div>
+                <div class="sequencia">
+                    <h1>Primeiro</h1>
+                    <p>Carousels don’t automatically normalize slide dimensions. As such, you may need to use additional
+                        utilities or custom styles to appropriately size content.</p>
+                    <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
                 </div>
             </div>
-        </div>
-    </nav>  
-
-<!--Carrossel banner-->
-
-<div id="myCarousel" class="carousel slide " data-ride="carousel">
-
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-    </ol>
-
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="overlay-image" style="background-image:url(./imagens/noticias/1.jpeg);"></div>
-            <div class="container">
-                <h1>Primeiro</h1>
-                <p>Carousels don’t automatically normalize slide dimensions. As such, you may need to use additional
-                    utilities or custom styles to appropriately size content.</p>
-                <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(./imagens/imagem2.jpg);"></div>
+                <div class="sequencia">
+                    <h1>Segundo</h1>
+                    <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
+                        utilities.</p>
+                    <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="overlay-image" style="background-image:url(./imagens/imagem2.jpg);"></div>
-            <div class="container">
-                <h1>Segundo</h1>
-                <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
-                    utilities.</p>
-                <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(./imagens/imagem3.jpeg);"></div>
+                <div class="sequencia">
+                    <h1>Terceiro</h1>
+                    <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
+                        utilities or custom styles to appropriately size content.</p>
+                    <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="overlay-image" style="background-image:url(./imagens/imagem3.jpeg);"></div>
-            <div class="container">
-                <h1>Terceiro</h1>
-                <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
-                    utilities or custom styles to appropriately size content.</p>
-                <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image:url(./imagens/noticias/4.jpg);"></div>
+                <div class="sequencia">
+                    <h1>Quarto</h1>
+                    <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
+                        utilities or custom styles to appropriately size content.</p>
+                    <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
+                </div>
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="overlay-image" style="background-image:url(./imagens/noticias/4.jpg);"></div>
-            <div class="container">
-                <h1>Quarto</h1>
-                <p>Carousels don't automatically normalize slide dimensions. As such, you may need to use additional
-                    utilities or custom styles to appropriately size content.</p>
-                <a href="#" class="btn btn-lg btn-primary">Increva-se</a>
-            </div>
-        </div>
 
+        </div>
+        </a>
+
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
     </div>
-    </a>
-
-    <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
-        <span class="sr-only">Previous</span>
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </a>
-    <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
-        <span class="sr-only">Next</span>
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </a>
-
-</div>
-
 
     <!--4 cards-->
     <div class="cards1">
@@ -192,7 +137,7 @@
         </div>
     </div>
 
-<!-- Sessões MVV -->
+    <!-- Sessões MVV -->
     <div class="mvv">
         <div class="services">
             <div class="content content-1">
@@ -281,7 +226,7 @@
                     <img src="imagens/imagem3.jpeg" alt="Descrição da imagem" class="img-fluid">
                 </div>
                 <div class="col-md-6 texto">
-                    <h2>O que fazemos</h2>
+                    <h2 style=" margin-top: 9%;">O que fazemos</h2>
                     <p>Se você quer <strong>defender o planeta e se somar às pessoas que atuam para proteger o meio
                             ambiente</strong>,
                         aqui é o seu lugar! <br>Nós acreditamos que um mundo mais verde, pacífico e justo para todas as
@@ -294,7 +239,7 @@
         </div>
     </section>
 
-<!-- Sessões cards noticias -->
+    <!-- Sessões cards noticias -->
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-3 col-sm-6 mt-2">
@@ -367,22 +312,22 @@
         </div>
     </div>
 
-<!--Cookies-->
-<div id="cookies-aviso">
-    <div class="conteudo">
-        <span>Este site utiliza cookies 🍪
-            Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com o uso de
-            todos os cookies ou pode gerenciar suas preferências.
-        </span>
+    <!--Cookies-->
+    <div id="cookies-aviso">
+        <div class="conteudo">
+            <span>Este site utiliza cookies 🍪
+                Utilizamos cookies para melhorar sua experiência. Ao continuar navegando, você concorda com o uso de
+                todos os cookies ou pode gerenciar suas preferências.
+            </span>
+        </div>
+        <div class="acoes">
+            <button class="rejeitar" onclick="rejeitarCookies()">Rejeitar</button>
+            <button class="aceitar" onclick="aceitarCookies()">Aceitar</button>
+        </div>
     </div>
-    <div class="acoes">
-        <button class="rejeitar" onclick="rejeitarCookies()">Rejeitar</button>
-        <button class="aceitar" onclick="aceitarCookies()">Aceitar</button>
-    </div>
-</div>
-<script src="/O Coletivo/barra nav/cookies/cookies.js"></script>
+    <script src="/O Coletivo/barra nav/cookies/cookies.js"></script>
 
-<!-- Sessões libras, etc -->
+    <!-- Sessões libras, etc -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
@@ -401,6 +346,15 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
