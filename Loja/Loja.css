@@ -246,6 +246,9 @@
     padding: 5px 0; 
 }
 
+
+
+
 /*Geral*/
 * {
     margin: 0;
@@ -322,6 +325,9 @@ header {
     color: #69A625;
     font-size: 20px;
 }
+.carrinho-icone:hover{
+    box-shadow: 3px 4px 20px rgba(83, 83, 83, 0.5) !important;
+}
 .carrinho-quantidade {
     position: absolute;
     top: -5px;
@@ -374,7 +380,7 @@ header {
 /*Lojinha*/ 
 .lista-cards{
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 3%;
 }
 .card{
     display: flex;
@@ -394,7 +400,9 @@ header {
     transition: all 0.3s ease;
 }
 .card img{
-    width: 100%;
+    width: 70%;
+    min-width: 10%;
+    height: auto;
 }
 .card-preco{
     display: flex;
@@ -420,16 +428,16 @@ header {
 /*menu sidebar do carrinho*/
 .sidebar {
     width: 350px;
-    height: 100%;
+    height: 70%;
     position: fixed;
-    top: 0;
+    top: 20%;
     right: -400px;
     background-color: #fff;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     transition: right 0,3s ease-in-out;
     z-index: 1000;
     padding: 30px;
-    border-top-left-radius: 20px;
+    border-radius: 20px 0 0 20px;
 }
 .abrir-sidebar{
     right: 0;
@@ -486,6 +494,7 @@ header {
 .checkout{
     width: 100%;
     margin-top: 20px;
+    margin-bottom: 40px;
     background-color: #69A625;
     color: #fff;
     border: none;

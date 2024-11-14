@@ -305,7 +305,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-bottom: 75%;
+    padding-bottom: 3%;
     overflow: hidden;
 }
 .calendario-parte iframe {
@@ -315,5 +315,4 @@ button:hover {
     height: 600px;
     border: 0;
     border-radius: 5px;
-
 }
