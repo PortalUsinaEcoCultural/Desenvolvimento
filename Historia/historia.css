@@ -302,5 +302,101 @@
     text-align: center;
     font-size: 35px;
 }
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-/* Estilo dos itens de conteúdo */
+/* Conteúdo Principal linha 1*/
+
+.content-1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.content-1 .imagem {
+    flex: 1;
+}
+
+.content-1 .texto {
+    flex: 1;
+    text-align: left;
+}
+
+.img-usina {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.3),
+    -10px 15px 0px 5px rgba(85, 132, 32, 1);
+}
+
+.texto p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.content-1 img[src="img/UsinaB&W.png"] {
+    width: 60%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .content-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-1 .imagem,
+    .content-1 .texto {
+        width: 100%;
+    }
+
+    .content-1 .imagem {
+        margin-bottom: 20px;
+    }
+}
+
+/* Conteúdo Principal linha 2*/
+
+.img-cartaz {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: -5px 10px 5px rgba(0, 0, 0, 0.3),
+}
+
+.content-2 img[src="img/Cartaz.png"] {
+    width: 40%;
+    height: auto;
+}
+
+.content-2 {
+    margin-top: 40px; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-2 .imagem {
+    flex: 1;
+}
+
+.content-2 .texto {
+    flex: 1;
+    text-align: left;
+}
+.texto p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.content-2 img[src="img"] {
+    width: 40%;
+    height: auto;
+}
