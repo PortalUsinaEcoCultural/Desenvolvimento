@@ -375,15 +375,27 @@ header {
     font-size: 35px;
     color: black;
     margin-bottom: 20px;
+    margin-left: 10%;
 }
 
 .newsletter-container p {
     font-size: 15px;
     margin-bottom: 20px;
+    margin-left: 10%;
 }
 
 .newsletter-container .form-control {
-    max-width: none; /* Remover limite de largura */
+    max-width: 400px; 
+}
+
+.form-group {
+    margin-left: 10%;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
 }
 
 .newsletter-container .btn {
@@ -395,24 +407,31 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    margin-left: 10%;
 }
 
 .newsletter-container .btn:hover {
     background-color: #5b8f22;
 }
 
-@media (min-width: 768px) {
-    .form-row {
-        display: flex;
-        justify-content: space-between;
-    }
-    
+/* Flexbox para organizar os campos */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+@media (max-width: 767px) {
     .form-group {
-        flex: 1;
-        margin-right: 10px;
-    }
-    
-    .form-group:last-child {
+        flex: 1 1 100%; 
+        margin-left: 0;
         margin-right: 0;
+    }
+
+    .newsletter-container h3, 
+    .newsletter-container p, 
+    .newsletter-container .btn {
+        margin-left: 0; 
     }
 }

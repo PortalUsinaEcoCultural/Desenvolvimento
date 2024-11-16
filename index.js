@@ -1,5 +1,7 @@
 // npm  init -y
 //npm install express, mongoose, nodemailer, body-parser, nodemon
+// Pra acessar coloque o comando "node nome_do_arquivo.js"
+//Tem q aparecer a mensagem: Servidor rodando em http://localhost:3000 e conectado ao MongoDB
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -37,7 +39,8 @@ const transport = nodemailer.createTransport({
     auth: {
         user: 'sophiacoelho40@gmail.com', // Substitua com seu e-mail
         pass: 'fcxj jrtl xbpd tqgm', // Substitua com a senha do seu e-mail
-    }
+    },
+    socketTimeout: 60000 // 60 segundos
 });
 
 // Endpoint para salvar o email e enviar o e-mail de confirmação

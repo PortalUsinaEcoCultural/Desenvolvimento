@@ -3,63 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/Login/login.css">
     <script src="https://kit.fontawesome.com/a27cc7b249.js" crossorigin="anonymous"></script>
-    <title>Login</title>
+    <title>Login e Cadastro</title>
 </head>
 <body>
     <div class="container">
         <div class="form-box m-20">
-            <h1 id="title">Cadastro</h1>
-            <form>
+            <h1 id="title">Login</h1>
+            <!-- Formulário de Login -->
+            <form id="loginForm" action="http://localhost:3000/login" method="post">
                 <div class="btn-field">
                     <button type="button" id="signupBtn" class="button">Cadastrar</button>
                     <button type="button" id="signinBtn" class="button disable">Login</button>
                 </div>
                 <div class="input-group">
-                    <div class="input-field" id="nameField">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Nome">
-                    </div>
-
+                    <!-- Campos do Login -->
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" name="senha" placeholder="Senha" required>
                     </div>
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
-                <button type="button" id="entrarBtn" class="button">Entrar</button>
+                <button type="submit" id="entrarBtn" class="button">Entrar</button>
+            </form>
+
+            <!-- Formulário de Cadastro -->
+            <form id="signupForm" action="http://localhost:3000/signup" method="post" style="display: none;">
+                <div class="btn-field">
+                    <button type="button" id="signupBtn2" class="button disable">Cadastrar</button>
+                    <button type="button" id="signinBtn2" class="button">Login</button>
+                </div>
+                <div class="input-group">
+                    <!-- Campos do Cadastro -->
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
+                </div>
+                <button type="submit" id="cadastrarBtn" class="button">Cadastrar</button>
             </form>
         </div>
     </div>
 
-<script>
-let signupBtn = document.getElementById("signupBtn");
-let signinBtn = document.getElementById("signinBtn");
-let nameField = document.getElementById("nameField");
-let title = document.getElementById("title");
-let entrarBtn = document.getElementById("entrarBtn");
+    <script>
+        // Alternar entre os formulários de Login e Cadastro
+        const signupForm = document.getElementById("signupForm");
+        const loginForm = document.getElementById("loginForm");
 
-signinBtn.onclick = function(){
-    nameField.style.maxHeight = "0";
-    title.innerHTML = "Login"
-    signupBtn.classList.add("disable");
-    signinBtn.classList.remove("disable");
-    entrarBtn.innerHTML = "Entrar";  // Altera o texto do botão "Entrar" para "Login"
-}
+        const signupBtn = document.getElementById("signupBtn");
+        const signinBtn = document.getElementById("signinBtn");
 
-signupBtn.onclick = function(){
-    nameField.style.maxHeight = "60px";
-    title.innerHTML = "Cadastrar"
-    signupBtn.classList.remove("disable");
-    signinBtn.classList.add("disable");
-    entrarBtn.innerHTML = "Cadastrar";  // Altera o texto do botão "Entrar" para "Cadastrar"
-}
-</script>
+        const signupBtn2 = document.getElementById("signupBtn2");
+        const signinBtn2 = document.getElementById("signinBtn2");
 
+        const title = document.getElementById("title");
+
+        // Exibir formulário de Cadastro
+        signupBtn.onclick = function() {
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+            title.innerHTML = "Cadastro";
+        };
+
+        // Exibir formulário de Login
+        signinBtn.onclick = function() {
+            signupForm.style.display = "none";
+            loginForm.style.display = "block";
+            title.innerHTML = "Login";
+        };
+
+        // Repetição para os botões no formulário de cadastro
+        signupBtn2.onclick = signupBtn.onclick;
+        signinBtn2.onclick = signinBtn.onclick;
+    </script>
 </body>
 </html>
