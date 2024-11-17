@@ -69,7 +69,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid #6cc24a;
+    border: 2px solid #69A625;
     padding: 30px;
     border-radius: 8px;
     background-color: #fff;
@@ -100,9 +100,9 @@ p {
     margin-left: 90px;
     padding: 8px 16px;
     font-size: 14px; 
-    color: #6cc24a;
+    color: #69A625;
     background-color: #fff;
-    border: 2px solid #6cc24a;
+    border: 2px solid #69A625;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none; 
@@ -110,6 +110,6 @@ p {
 }
 
 .main-btn:hover {
-    background-color: #6cc24a;
+    background-color: #69A625;
     color: #fff;
 }

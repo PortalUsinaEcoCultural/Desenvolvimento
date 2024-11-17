@@ -7,12 +7,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors'); // Importa o middleware cors
 
 const app = express();
 const port = 3000;
 
+// Middleware para habilitar o CORS
+app.use(cors()); // Permite todas as origens por padrão
+
 // Middleware para parsear os dados do corpo da requisição
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Conexão com o MongoDB
@@ -56,12 +61,12 @@ app.post('/login', async (req, res) => {
     try {
         const usuario = await User.findOne({ email, senha });
         if (usuario) {
-            res.status(200).send(`Bem-vindo(a), ${usuario.nome}!`);
+            res.json({ success: true, message: `Bem-vindo, ${usuario.nome}!` });
         } else {
-            res.status(400).send('E-mail ou senha incorretos.');
+            res.status(400).json({ success: false, message: 'E-mail ou senha incorretos.' });
         }
     } catch (err) {
-        res.status(500).send('Erro ao processar login.');
+        res.status(500).json({ success: false, message: 'Erro ao processar login.' });
     }
 });
 
