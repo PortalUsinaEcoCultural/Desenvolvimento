@@ -1,0 +1,49 @@
+
+body {
+    background-color: #f8f9fa; 
+    color: #3D3D3D; 
+    font-family: Arial, sans-serif;
+}
+h1, h2, h3, h4 {
+    color: #3D3D3D;
+}
+
+i {
+    color: #3D3D3D; 
+}
+.opcoes .p-3 {
+    transition: background-color 0.3s ease;
+}
+.opcoes .p-3:hover {
+    background-color: #f0f0f0;
+}
+.img-fluid,
+.bg-white {
+    border-radius: 8px;
+}
+p, li {
+    line-height: 1.5;
+}
+.container {
+    max-width: 1100px; 
+}
+.btn-save {
+    background-color: #ffffff;
+    color: #69A625;
+    border: 2px solid #69A625;
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-save:hover {
+    background-color: #69A625;
+    border: 2px solid #69A625;
+    color: white;
+}
+.bg-white {
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
