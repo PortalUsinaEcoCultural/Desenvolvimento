@@ -256,11 +256,18 @@
     text-align: right;
     color: black;
     margin-right: 10%;
+    font-size: 35px; /* Alterar o tamanho do título (h2) aqui */
+    font-family: 'Roboto', sans-serif;
 }
 
 .incenerador .texto p {
     text-align: right;
     margin-right: 10%;
+    font-size: 20px; /* Alterar o tamanho do texto (parágrafo) aqui */
+    font-family: 'Roboto', sans-serif; 
+    margin-top: 3%;
+    margin-left: -5%;
+    margin-bottom: 5%;
 }
 
 /* Estilo do botão */
@@ -282,6 +289,18 @@
     border: 2px solid #487218;
     color: white;
 }
+
+/* Adicionado para redimensionar a imagem */
+.incenerador .imagem img {
+    width: 130%; /* Ajustar o tamanho da imagem proporcionalmente ao contêiner */
+    max-width: 6000px; /* Tamanho máximo da imagem (pode ser ajustado) */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+    margin: 0 auto; /* Centraliza dentro do contêiner */
+    margin-bottom: -8.7%;
+    margin-top: -13%;
+}
+
 
 /* Estilo do cabeçalho */
 .header {
@@ -427,7 +446,7 @@
 .content-ret1 {
     background-color: #EDEDED;
     padding: 20px;
-    margin-top: 6%;
+    margin-top: 3%;
 }
 
 .ret1 {
@@ -485,3 +504,229 @@
     display: flex;
     flex-direction: column;
   }
+
+  /* Conteúdo ret 2 */
+.content-ret2 {
+    background-color: #EDEDED;
+    padding: 20px;
+    margin-top: -2.5%;
+}
+
+.ret2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.img-banner {
+    margin-left: 20px; /* Espaço entre o texto e a imagem */
+    width: 550px;
+    height: auto;
+    margin-top: -1.5%;
+    margin-right: -2%;
+}
+
+.texto-content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3%; /* Espaço entre o texto e a borda */
+    margin-top: 3%;
+}
+
+.texto-content2 h1, .texto-content2 h2, .texto-content2 p {
+    margin: 0;
+    text-align: right;
+    margin-left: 20%;
+}
+
+.texto-content2 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #313131;
+}
+
+.texto-content2 h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #464545;
+    margin: 5px 0;
+    margin-top: 3%;
+}
+
+.texto-content2 p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    color: #505050;
+    margin-top: 3%;
+}
+
+.texto-stack2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Seção "Apoiadores" */
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;  
+    margin-top: 2%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-right: 20px;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    z-index: 1;
+    transition: transform 0.2s ease-out;
+}
+.wrapper i:first-child {
+    left: -80px;
+}
+.wrapper i:last-child {
+    right: -80px;
+}
+.wrapper .carrossel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+.carrossel :where(.parceiro, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrossel .dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carrossel .parceiro {
+    scroll-snap-align: start;
+    height: 342px;
+    width: 300px;
+    margin-top: 8%;
+    list-style: none;
+    background: #fff;
+    border-radius: 0px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.parceiro .img {
+    width: 148px;
+    height: 148px;
+    border-radius: 0%;
+}
+.parceiro .img img {
+    width: 190px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 0%;
+}
+.parceiro h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color: #2B2B2E;
+    text-align: center;
+}
+.parceiro span {
+    color: #6a6d78;
+    font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carrossel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+    .wrapper i {
+        font-size: 1rem;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .wrapper .carrossel {
+        grid-auto-columns: 100%;
+    }
+    .wrapper i {
+        font-size: 0.875rem;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+}
+.titulo {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    margin-top: -3%;
+    color: #EDEDED;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 0;
+}
+
+.titulo h1 {
+    position: relative;
+    top: 20px;
+}
+
+.parceiros {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400; 
+}
+
+.estrategicos {
+    font-family: 'Roboto Light', sans-serif; 
+    font-weight: 300; 
+}
+
+.retangulo-fundo {
+    position: absolute;
+    top: 5;
+    left: 0;
+    width: 100%;
+    height: 105%; 
+    background-color: #69A625;
+    z-index: -1;
+  }
+  
+
+  section {
+    position: relative;
+    padding-top: 50px; 
+    z-index: 0;
+    margin-top: 4%;
+  }
+  .wrapper i:active {
+    transform: translateY(-50%) scale(1.2); 
+}
