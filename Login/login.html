@@ -21,12 +21,12 @@
                     <!-- Campos do Login -->
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="senha" placeholder="Senha" required>
-                    </div>
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required autocomplete="current-password">
+                    </div>                    
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
                 <button type="submit" id="entrarBtn" class="button">Entrar</button>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="senha" placeholder="Senha" required>
+                        <input type="password" name="senha" placeholder="Senha" required autocomplete="current-password">
                     </div>
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
@@ -58,6 +58,26 @@
             </form>
         </div>
     </div>
+
+        <!-- Botões para ativar edição, salvar e desfazer -->
+        <div class="edit-buttons-container" style="display: none;">
+            <div class="edit-buttons">
+                <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
+                <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
+                <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Edições</button>
+            </div>
+        </div>
+
+        <!-- Modal e outros elementos permanecem os mesmos -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <p id="modal-message"></p>
+                <button class="modal-button" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+    
+        <script src="/login.js"></script>
+        <script src="/edit.js"></script>
 
     <script>
         // Alternar entre os formulários de Login e Cadastro
