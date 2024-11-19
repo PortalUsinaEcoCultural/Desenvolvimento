@@ -1,5 +1,5 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio do formulário padrão
+    event.preventDefault();
 
     const email = document.querySelector("input[name='email']").value;
     const senha = document.querySelector("input[name='senha']").value;
@@ -14,12 +14,10 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Login bem-sucedido: armazene no localStorage
             localStorage.setItem("loggedIn", "true");
-            alert(data.message);  // Exibe uma mensagem de boas-vindas
-            window.location.reload(); // Recarrega a página para mostrar os botões
+            alert(data.message);
+            window.location.href = "/Login/FalaConosco/Fale_Conosco.html";
         } else {
-            // Falha no login
             alert("Login falhou: " + data.message);
         }
     })

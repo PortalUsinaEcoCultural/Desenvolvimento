@@ -12,7 +12,7 @@
         <div class="form-box m-20">
             <h1 id="title">Login</h1>
             <!-- Formulário de Login -->
-            <form id="loginForm" action="http://localhost:3000/login" method="post">
+            <form id="loginForm">
                 <div class="btn-field">
                     <button type="button" id="signupBtn" class="button">Cadastrar</button>
                     <button type="button" id="signinBtn" class="button disable">Login</button>
@@ -26,7 +26,7 @@
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
                         <input type="password" id="senha" name="senha" placeholder="Senha" required autocomplete="current-password">
-                    </div>                    
+                    </div>
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
                 <button type="submit" id="entrarBtn" class="button">Entrar</button>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" name="senha" placeholder="Senha" required autocomplete="current-password">
+                        <input type="password" name="senha" placeholder="Senha" required>
                     </div>
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
@@ -59,56 +59,86 @@
         </div>
     </div>
 
-        <!-- Botões para ativar edição, salvar e desfazer -->
-        <div class="edit-buttons-container" style="display: none;">
-            <div class="edit-buttons">
-                <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
-                <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
-                <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Edições</button>
-            </div>
+    <!-- Botões para ativar edição, salvar e desfazer -->
+    <div class="edit-buttons-container" style="display: none;">
+        <div class="edit-buttons">
+            <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
+            <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
+            <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Edições</button>
         </div>
+    </div>
 
-        <!-- Modal e outros elementos permanecem os mesmos -->
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <p id="modal-message"></p>
-                <button class="modal-button" onclick="fecharModal()">Fechar</button>
-            </div>
+    <!-- Modal e outros elementos permanecem os mesmos -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button class="modal-button" onclick="fecharModal()">Fechar</button>
         </div>
-    
-        <script src="/login.js"></script>
-        <script src="/edit.js"></script>
+    </div>
+    <script src="/login.js"></script>
+    <script src="/edit.js"></script>
 
     <script>
         // Alternar entre os formulários de Login e Cadastro
         const signupForm = document.getElementById("signupForm");
         const loginForm = document.getElementById("loginForm");
-
+    
         const signupBtn = document.getElementById("signupBtn");
         const signinBtn = document.getElementById("signinBtn");
-
+    
         const signupBtn2 = document.getElementById("signupBtn2");
         const signinBtn2 = document.getElementById("signinBtn2");
-
+    
         const title = document.getElementById("title");
-
+    
         // Exibir formulário de Cadastro
         signupBtn.onclick = function() {
             loginForm.style.display = "none";
             signupForm.style.display = "block";
             title.innerHTML = "Cadastro";
         };
-
+    
         // Exibir formulário de Login
         signinBtn.onclick = function() {
             signupForm.style.display = "none";
             loginForm.style.display = "block";
             title.innerHTML = "Login";
         };
-
+    
         // Repetição para os botões no formulário de cadastro
         signupBtn2.onclick = signupBtn.onclick;
         signinBtn2.onclick = signinBtn.onclick;
-    </script>
+    
+        // Função de login usando fetch
+document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Impede o envio tradicional do formulário
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // Envia os dados como JSON
+            },
+            body: JSON.stringify({ email, senha }) // Converte os dados em JSON
+        });
+
+        const data = await response.json(); // Resposta do servidor
+
+        if (response.ok) {
+            console.log(data.message); // Exibe a mensagem de sucesso
+            alert(data.message);  // Exibe o resultado para o usuário
+        } else {
+            console.error('Login falhou:', data.message || 'Erro desconhecido');
+            alert('Login falhou: ' + (data.message || 'Erro desconhecido'));
+        }
+    } catch (error) {
+        console.error('Erro ao fazer login:', error);
+        alert('Erro ao fazer login: ' + error.message);
+    }
+});
+    </script>    
 </body>
 </html>
