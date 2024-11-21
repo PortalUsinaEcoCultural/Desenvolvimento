@@ -50,6 +50,12 @@
             </section>
     
 
+<div id="modal-salvo" class="modal" style="display: none;">
+    <div class="modal-content">
+        <p>Alterações salvas com sucesso!</p>
+        <button id="fechar-modal" class="btn btn-save">Fechar</button>
+    </div>
+</div>
             
 
         <!-- Gerenciamento do site -->
@@ -121,6 +127,27 @@
             </div>
         </section>
     </main>
+    
+    <script>// Popup Modal
+        document.getElementById("salvar-perfil").addEventListener("click", salvarPerfil);
+    
+        function salvarPerfil() {
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+    
+            console.log("Dados salvos:", { nome, email, senha }); 
+    
+            const modal = document.getElementById("modal-salvo");
+            modal.style.display = "flex";
+    
+            document.getElementById("fechar-modal").addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+        }
+    </script>
+    
 
     <!-- Scripts do Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
