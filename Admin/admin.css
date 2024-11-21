@@ -57,6 +57,38 @@ p, li {
     max-height: 1100px;
 }
 
+/* olhinho */
+.input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.input-group .form-control {
+    flex: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-olhinho {
+    border: none;
+    background: transparent;
+    padding: 0 10px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #313131;
+}
+
+.btn-olhinho:hover {
+    color: #69A625;
+}
+
+#password-icon {
+    font-size: 16px;
+}
+
+
 /* Botão */
 .btn-save {
     background-color: #ffffff;
@@ -95,10 +127,12 @@ p, li {
 
 .modal-content {
     background-color: white;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 300px;
 }
 
 .modal-content p {
@@ -106,3 +140,20 @@ p, li {
     color: #313131;
     font-size: 16px;
 }
+
+.modal-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #69A625;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content .btn:hover {
+    background-color: #55791e;
+}
+
