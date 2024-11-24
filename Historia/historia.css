@@ -460,6 +460,7 @@
     height: auto;
     margin-top: 2%;
     margin-left: -2%;
+    margin-bottom: -1.5%;
 }
 
 .texto-content {
@@ -486,7 +487,7 @@
 .texto-content h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 19px;
     color: #464545;
     margin: 5px 0;
     margin-top: 3%;
@@ -496,7 +497,7 @@
 .texto-content p {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #505050;
     margin-top: 3%;
 }
@@ -549,7 +550,7 @@
 .texto-content2 h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 18px;
     color: #464545;
     margin: 5px 0;
     margin-top: 3%;
@@ -558,7 +559,7 @@
 .texto-content2 p {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #505050;
     margin-top: 3%;
 }
@@ -738,12 +739,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font: normal 16px/1.5 "Inter", sans-serif;
-  color: #323135; /* Texto padrão */
-  margin-bottom: 50px;
 }
 
 .section {
