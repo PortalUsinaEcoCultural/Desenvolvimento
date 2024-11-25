@@ -83,72 +83,7 @@ document.getElementById("toggle-password").addEventListener("click", function ()
 
 
 
-
-document.getElementById('salvar-perfil').addEventListener('click', function () {
-    const form = document.getElementById('perfil-form');
-    const fields = form.querySelectorAll('.form-control');
-    let isValid = true;
-    let errorMessage = '';
-
-    // Validar os campos
-    fields.forEach(field => {
-        const value = field.value.trim();
-        const originalValue = field.getAttribute('data-original');
-
-        if (field.id === 'nome' && value === '') {
-            isValid = false;
-            errorMessage += 'O nome não pode estar vazio.<br>';
-            field.value = originalValue;
-        }
-
-        if (field.id === 'email' && !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|br)$/.test(value)) {
-            isValid = false;
-            errorMessage += 'O email deve ser válido.<br>';
-            field.value = originalValue;
-        }
-
-        if (field.id === 'senha' && value.length < 8) {
-            isValid = false;
-            errorMessage += 'A senha deve ter pelo menos 8 caracteres.<br>';
-            field.value = originalValue;
-        }
-    });
-
-    // Se não for válido, mostrar o erro
-    if (!isValid) {
-        const errorModal = document.getElementById('error-modal');
-        document.getElementById('error-message').innerHTML = errorMessage;
-        errorModal.style.display = 'flex';
-        document.getElementById('close-modal').onclick = function () {
-            errorModal.style.display = 'none';
-        };
-    } else {
-        // Mostrar o modal simulando o envio do e-mail
-        const emailModal = document.getElementById('email-modal');
-        const userEmail = document.getElementById('email').value;
-        document.getElementById('user-email').textContent = userEmail;
-        emailModal.style.display = 'flex';
-
-        document.getElementById('close-email-modal').onclick = function () {
-            emailModal.style.display = 'none';
-        };
-
-        // Lógica para simular a confirmação do e-mail
-        document.getElementById('confirm-email').onclick = function () {
-            emailModal.style.display = 'none';
-            const successModal = document.getElementById('success-modal');
-            successModal.style.display = 'flex';
-
-            document.getElementById('close-success-modal').onclick = function () {
-                successModal.style.display = 'none';
-            };
-        };
-    }
-});
-
-
 // Gráficos
- // Inicializando o contador de acessos
  if (localStorage.getItem('acessos')) {
     let contador = parseInt(localStorage.getItem('acessos')) + 1;
     localStorage.setItem('acessos', contador);
@@ -207,3 +142,4 @@ new Chart(ctxVendas, {
         responsive: true,
     }
 });
+
