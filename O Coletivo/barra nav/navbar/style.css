@@ -154,11 +154,6 @@ button:hover {
 
 
 /*MVV*/
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
 .mvv {
     max-width: 1100px;
     margin: 0 auto;
@@ -342,10 +337,72 @@ button:hover {
     top:0;
     background-position: center;
     background-size: cover;
-    opacity:0.5;
+    opacity:5;
 }
 .edit-mode-border {
     border: 5px solid rgba(105, 166, 37, 0.7);
     padding: 10px;
     box-sizing: border-box;
+}
+.carousel-item{
+    height: 32rem;
+    background: #000;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.sequencia{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+    opacity:0.5;
+}
+
+/* banner */
+.carousel-item h1,
+.carousel-item p {
+    color: #fff;
+    padding: 5px; 
+    border-radius: 5px;
+    max-width: 80%; 
+}
+.carousel-item .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left; 
+    z-index: 10; 
+}
+/* botoes banner */
+.carousel-item .btn {
+    background-color: #69A625; 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+.carousel-item .btn:hover {
+    background-color: #3b5f13;
+    color: #fff; 
+}
+/* deixar banner mais escuro */
+.overlay-image {
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%); 
 }
