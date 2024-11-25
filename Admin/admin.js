@@ -145,3 +145,65 @@ document.getElementById('salvar-perfil').addEventListener('click', function () {
         };
     }
 });
+
+
+// Gráficos
+ // Inicializando o contador de acessos
+ if (localStorage.getItem('acessos')) {
+    let contador = parseInt(localStorage.getItem('acessos')) + 1;
+    localStorage.setItem('acessos', contador);
+} else {
+    localStorage.setItem('acessos', 1);
+}
+
+// Exibe o número total de acessos no site
+document.getElementById('acesso-total').innerText = localStorage.getItem('acessos');
+
+// Dados para o gráfico de Acessos
+var acessoDados = {
+    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai'], // Mês
+    datasets: [{
+        label: 'Acessos ao Site',
+        data: [10, 15, 20, 25, 30], // Quantidade de acessos por mês (exemplo)
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+    }]
+};
+
+// Gráfico de Acessos ao Site
+var ctxAcesso = document.getElementById('acessoGrafico').getContext('2d');
+new Chart(ctxAcesso, {
+    type: 'bar',
+    data: acessoDados,
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+// Dados para o gráfico de Vendas
+var vendasDados = {
+    labels: ['Produto A', 'Produto B', 'Produto C', 'Produto D'], // Produtos
+    datasets: [{
+        label: 'Vendas por Produto',
+        data: [5, 10, 8, 15], // Número de vendas por produto (exemplo)
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1
+    }]
+};
+
+// Gráfico de Vendas por Produto
+var ctxVendas = document.getElementById('vendasGrafico').getContext('2d');
+new Chart(ctxVendas, {
+    type: 'pie', // Gráfico de pizza
+    data: vendasDados,
+    options: {
+        responsive: true,
+    }
+});
