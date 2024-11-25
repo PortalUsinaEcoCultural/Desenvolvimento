@@ -340,6 +340,22 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
+    <!-- fazer banner rodar a cada 10s -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.querySelector("#myCarousel");
+            const items = carousel.querySelectorAll(".carousel-item");
+            let currentIndex = 0;
+        
+            setInterval(() => {
+                items[currentIndex].classList.remove("active");
+                currentIndex = (currentIndex + 1) % items.length;
+                items[currentIndex].classList.add("active");
+            }, 10000);
+        });
+        
+    </script>
 </body>
 
 </html>
