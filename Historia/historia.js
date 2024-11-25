@@ -43,3 +43,30 @@ const dragStop = () => {
 carrossel.addEventListener("mousedown", dragStart);
 carrossel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
+
+
+// VARIÁVEIS
+const elementosLinhaDoTempo = document.querySelectorAll(".linha-do-tempo-item");
+
+// INÍCIO
+window.addEventListener("load", iniciar);
+
+function iniciar() {
+  definirAlturasIguais(elementosLinhaDoTempo);
+}
+
+// DEFINIR ALTURAS IGUAIS
+function definirAlturasIguais(el) {
+  let alturaMaxima = 0;
+  for (let i = 0; i < el.length; i++) {
+    const alturaAtual = el[i].offsetHeight;
+
+    if (alturaMaxima < alturaAtual) {
+      alturaMaxima = alturaAtual;
+    }
+  }
+
+  for (let i = 0; i < el.length; i++) {
+    el[i].style.height = `${alturaMaxima}px`;
+  }
+}
