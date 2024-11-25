@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="admin.css">
 </head>
+
 <body>
 
     <header class="bg-light border-bottom py-3">
@@ -17,126 +19,163 @@
             </a>
             <h1 class="m-0">Meu Site</h1>
         </div>
-    </header>    
-    
-        <main class="container my-5">
-            <section class="mb-5">
-                <h2 class="mb-4">Bem-vindo, (nome)!</h2>
-                <div class="row align-items-center bg-white p-4 rounded shadow-sm">
+    </header>
 
-                    <!-- Informações do perfil -->
-                    <div class="col-md-6">
-                        <h3 class="mb-3">Meu Perfil</h3>
-                        <form id="perfil-form">
-                            <div class="mb-3">
-                                <label for="nome" class="form-label"><i class="fas fa-user"></i> Nome</label>
-                                <input type="text" id="nome" class="form-control" value="Mariana Lopez de Abreu">
+    <main class="container my-5">
+        <section class="mb-5">
+            <h2 class="mb-4">Bem-vindo, (nome)!</h2>
+            <div class="row align-items-center bg-white p-4 rounded shadow-sm">
+
+                <!-- Informações do perfil -->
+                <div class="col-md-6">
+                    <h3 class="mb-3">Meu Perfil</h3>
+                    <form id="perfil-form">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label"><i class="fas fa-user"></i> Nome</label>
+                            <input type="text" id="nome" class="form-control" value="Mariana Lopez de Abreu"
+                                data-original="Mariana Lopez de Abreu">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" class="form-control" value="marianalopezdeabreu92@gmail.com"
+                                data-original="marianalopezdeabreu92@gmail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label"><i class="fas fa-lock"></i> Senha</label>
+                            <div class="input-group">
+                                <input type="password" id="senha" class="form-control" value="Mariana123Lopez"
+                                    data-original="Mariana123Lopez">
+                                <button type="button" id="toggle-password" class="btn-olhinho">
+                                    <i class="fas fa-eye" id="password-icon"></i>
+                                </button>
                             </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
-                                <input type="email" id="email" class="form-control" value="marianalopezdeabreu92@gmail.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="senha" class="form-label"><i class="fas fa-lock"></i> Senha</label>
-                                <div class="input-group">
-                                    <input type="password" id="senha" class="form-control" value="Mariana123Lopez">
-                                    <button type="button" id="toggle-password" class="btn-olhinho">
-                                        <i class="fas fa-eye" id="password-icon"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <button type="button" id="salvar-perfil" class="btn btn-save">Salvar </button>
-                        </form>
-                    </div>
-                    <div class="col-md-6 text-center">
-                        <img src="https://via.placeholder.com/350x200" alt="Imagem do prédio" class="img-fluid rounded">
+                        </div>
+                        <button type="button" id="salvar-perfil" class="btn btn-save">Salvar</button>
+                    </form>
+                </div>
+
+                <!-- Caixa Erro -->
+                <div class="modal" id="error-modal" style="display: none;">
+                    <div class="modal-content">
+                        <p id="error-message"></p>
+                        <button class="btn" id="close-modal">Fechar</button>
                     </div>
                 </div>
-            </section>
-            
-            
+                <!-- Caixa Sucesso -->
+                <div class="modal" id="success-modal" style="display: none;">
+                    <div class="modal-content">
+                        <p id="success-message">Informações atualizadas com sucesso!</p>
+                        <button class="btn" id="close-success-modal">Fechar</button>
+                    </div>
+                </div>
 
-<div id="modal-salvo" class="modal" style="display: none;">
-    <div class="modal-content">
-        <p>Alterações salvas com sucesso!</p>
-        <button id="fechar-modal" class="btn btn-save">Fechar</button>
-    </div>
-</div>
-            
+                <div id="modal-salvo" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <p>Alterações salvas com sucesso!</p>
+                        <button id="fechar-modal" class="btn btn-save">Fechar</button>
+                    </div>
+                </div>
+        </section>
 
         <!-- Gerenciamento do site -->
         <section class="mb-5">
-            <h3 class="mb-4">Gerenciamento de Conteúdo do Site</h3>
-            <div class="row text-center gx-4 gy-3">
-                <div class="col-6 col-md-2">
-                    <div class="p-3 bg-white rounded shadow-sm opcoes">
-                        <i class="fas fa-edit fa-2x mb-3"></i>
-                        <p class="m-0">Editar Site</p>
+            <div class="p-4 bg-white rounded shadow-sm">
+                <h3 class="mb-4">Gerenciamento de Conteúdo do Site</h3>
+                <div class="row text-center gx-4 gy-3">
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="opcoes d-block">
+                            <i class="fas fa-edit fa-2x mb-3"></i>
+                            <p class="m-0">Editar Site</p>
+                        </a>
                     </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="p-3 bg-white rounded shadow-sm opcoes">
-                        <i class="fas fa-images fa-2x mb-3"></i>
-                        <p class="m-0">Gerenciar Galeria</p>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="opcoes d-block">
+                            <i class="fas fa-images fa-2x mb-3"></i>
+                            <p class="m-0">Gerenciar Galeria</p>
+                        </a>
                     </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="p-3 bg-white rounded shadow-sm opcoes">
-                        <i class="fas fa-store fa-2x mb-3"></i>
-                        <p class="m-0">Sessão de Produtos</p>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="opcoes d-block">
+                            <i class="fas fa-store fa-2x mb-3"></i>
+                            <p class="m-0">Sessão de Produtos</p>
+                        </a>
                     </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="p-3 bg-white rounded shadow-sm opcoes">
-                        <i class="fas fa-calendar-alt fa-2x mb-3"></i>
-                        <p class="m-0">Eventos</p>
+                    <div class="col-6 col-md-2">
+                        <a href="https://calendar.google.com/calendar/u/0/r" class="opcoes d-block" target="_blank">
+                            <i class="fas fa-calendar-alt fa-2x mb-3"></i>
+                            <p class="m-0">Eventos</p>
+                        </a>
                     </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="p-3 bg-white rounded shadow-sm opcoes">
-                        <i class="fas fa-newspaper fa-2x mb-3"></i>
-                        <p class="m-0">Adicionar Notícias</p>
+                    <div class="col-6 col-md-2">
+                        <a href="#" class="opcoes d-block">
+                            <i class="fas fa-newspaper fa-2x mb-3"></i>
+                            <p class="m-0">Adicionar Notícias</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Validação -->
+
+        <div id="email-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <p>Enviamos um e-mail de validação para <span id="user-email">lyoperini2@gmail.com</span>. Clique no
+                    link para confirmar a alteração do seu perfil.</p>
+                <button id="close-email-modal" class="btn">Fechar</button>
+                <button id="confirm-email" class="btn">Confirmar E-mail</button>
+            </div>
+        </div>
+
+        <!-- Modal de Sucesso após confirmação -->
+        <div id="success-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <p>Informações atualizadas com sucesso!</p>
+                <button id="close-success-modal" class="btn">Fechar</button>
+            </div>
+        </div>
+
+
 
         <!-- Estatísticas -->
         <section>
-            <h3 class="mb-4">Estatística</h3>
-            <div class="row gx-4 gy-3">
-                <!-- Gráfico 1 -->
-                <div class="col-md-4">
-                    <div class="p-3 bg-white rounded shadow-sm text-center">
-                        <h4 class="mb-3">Acesso ao Site</h4>
-                        <img src="https://via.placeholder.com/150x100" alt="Gráfico de acesso" class="img-fluid">
+            <div class="p-4 bg-white rounded shadow-sm">
+                <h3 class="mb-4">Estatística</h3>
+                <div class="row gx-4 gy-3">
+                    <!-- Gráfico 1 -->
+                    <div class="col-md-4">
+                        <div class="p-3 bg-light rounded shadow-sm text-center">
+                            <h4 class="mb-3">Acesso ao Site</h4>
+                            <img src="https://via.placeholder.com/150x100" alt="Gráfico de acesso" class="img-fluid">
+                        </div>
                     </div>
-                </div>
-                <!-- Gráfico 2 -->
-                <div class="col-md-4">
-                    <div class="p-3 bg-white rounded shadow-sm text-center">
-                        <h4 class="mb-3">Vendas por Produto</h4>
-                        <img src="https://via.placeholder.com/150x100" alt="Gráfico de vendas" class="img-fluid">
+                    <!-- Gráfico 2 -->
+                    <div class="col-md-4">
+                        <div class="p-3 bg-light rounded shadow-sm text-center">
+                            <h4 class="mb-3">Vendas por Produto</h4>
+                            <img src="https://via.placeholder.com/150x100" alt="Gráfico de vendas" class="img-fluid">
+                        </div>
                     </div>
-                </div>
-                <!-- Informações adicionais -->
-                <div class="col-md-4">
-                    <div class="p-3 bg-white rounded shadow-sm">
-                        <h4 class="mb-3">Outras Informações</h4>
-                        <ul class="list-unstyled">
-                            <li>Visitantes na última semana: 299</li>
-                            <li>Total de vendas: 57</li>
-                            <li>Total de inscritos na newsletter: 44</li>
-                        </ul>
+                    <!-- Informações adicionais -->
+                    <div class="col-md-4">
+                        <div class="p-3 bg-light rounded shadow-sm">
+                            <h4 class="mb-3">Outras Informações</h4>
+                            <ul class="list-unstyled">
+                                <li>Visitantes na última semana: 299</li>
+                                <li>Total de vendas: 57</li>
+                                <li>Total de inscritos na newsletter: 44</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-    
-    <script src="admin.js"></script>
 
-    <!-- Scripts do Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="admin.js"></script>
+
+        <!-- Scripts do Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

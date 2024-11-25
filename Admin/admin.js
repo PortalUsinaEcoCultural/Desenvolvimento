@@ -1,56 +1,51 @@
 // Função para salvar o perfil
-document.getElementById("salvar-perfil").addEventListener("click", salvarPerfil);
-
-function salvarPerfil() {
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-
-    // Validar e-mail e senha
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-
+document.getElementById('salvar-perfil').addEventListener('click', function () {
+    const form = document.getElementById('perfil-form');
+    const fields = form.querySelectorAll('.form-control');
     let isValid = true;
+    let errorMessage = '';
 
-    // Resetando os estilos dos campos de erro
-    document.getElementById("email").classList.remove("is-invalid");
-    document.getElementById("senha").classList.remove("is-invalid");
+    fields.forEach(field => {
+        const value = field.value.trim();
+        const originalValue = field.getAttribute('data-original');
 
-    // Validação do e-mail
-    if (!emailRegex.test(email)) {
-        alert("Por favor, insira um e-mail válido.");
-        document.getElementById("email").classList.add("is-invalid"); // Adiciona classe de erro
-        isValid = false;
-    }
+        if (field.id === 'nome' && value === '') {
+            isValid = false;
+            errorMessage += 'O nome não pode estar vazio.<br>';
+            field.value = originalValue; 
+        }
 
-    // Validação da senha
-    if (!senhaRegex.test(senha)) {
-        alert("A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula e um número.");
-        document.getElementById("senha").classList.add("is-invalid"); // Adiciona classe de erro
-        isValid = false;
-    }
+        if (field.id === 'email' && !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|br)$/.test(value)) {
+            isValid = false;
+            errorMessage += 'O email deve ser válido';
+            field.value = originalValue; 
+        }
 
-    // Se os dados não são válidos, não salva nada
-    if (!isValid) {
-        return; // Não salva dados e não atualiza o Local Storage
-    }
-
-    // Salvar os dados no Local Storage
-    localStorage.setItem("nome", nome);
-    localStorage.setItem("email", email);
-    localStorage.setItem("senha", senha);
-
-    console.log("Dados salvos:", { nome, email, senha });
-
-    // Exibir o modal de sucesso
-    const modal = document.getElementById("modal-salvo");
-    modal.style.display = "flex";
-
-    // Fechar o modal ao clicar no botão
-    document.getElementById("fechar-modal").addEventListener("click", function () {
-        modal.style.display = "none";
+        if (field.id === 'senha' && value.length < 8) {
+            isValid = false;
+            errorMessage += 'A senha deve ter pelo menos 8 caracteres.<br>';
+            field.value = originalValue; 
+        }
     });
-}
+
+    if (!isValid) {
+        const errorModal = document.getElementById('error-modal');
+        document.getElementById('error-message').innerHTML = errorMessage;
+        errorModal.style.display = 'flex';
+
+        document.getElementById('close-modal').onclick = function () {
+            errorModal.style.display = 'none';
+        };
+    } else {
+        const successModal = document.getElementById('success-modal');
+        successModal.style.display = 'flex';
+
+        document.getElementById('close-success-modal').onclick = function () {
+            successModal.style.display = 'none';
+        };
+    }
+});
+
 
 // Selecionar os campos de entrada
 const nomeInput = document.getElementById("nome");
@@ -83,5 +78,70 @@ document.getElementById("toggle-password").addEventListener("click", function ()
         senhaInput.type = "password";
         passwordIcon.classList.remove("fa-eye-slash");
         passwordIcon.classList.add("fa-eye");
+    }
+});
+
+
+
+
+document.getElementById('salvar-perfil').addEventListener('click', function () {
+    const form = document.getElementById('perfil-form');
+    const fields = form.querySelectorAll('.form-control');
+    let isValid = true;
+    let errorMessage = '';
+
+    // Validar os campos
+    fields.forEach(field => {
+        const value = field.value.trim();
+        const originalValue = field.getAttribute('data-original');
+
+        if (field.id === 'nome' && value === '') {
+            isValid = false;
+            errorMessage += 'O nome não pode estar vazio.<br>';
+            field.value = originalValue;
+        }
+
+        if (field.id === 'email' && !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|br)$/.test(value)) {
+            isValid = false;
+            errorMessage += 'O email deve ser válido.<br>';
+            field.value = originalValue;
+        }
+
+        if (field.id === 'senha' && value.length < 8) {
+            isValid = false;
+            errorMessage += 'A senha deve ter pelo menos 8 caracteres.<br>';
+            field.value = originalValue;
+        }
+    });
+
+    // Se não for válido, mostrar o erro
+    if (!isValid) {
+        const errorModal = document.getElementById('error-modal');
+        document.getElementById('error-message').innerHTML = errorMessage;
+        errorModal.style.display = 'flex';
+        document.getElementById('close-modal').onclick = function () {
+            errorModal.style.display = 'none';
+        };
+    } else {
+        // Mostrar o modal simulando o envio do e-mail
+        const emailModal = document.getElementById('email-modal');
+        const userEmail = document.getElementById('email').value;
+        document.getElementById('user-email').textContent = userEmail;
+        emailModal.style.display = 'flex';
+
+        document.getElementById('close-email-modal').onclick = function () {
+            emailModal.style.display = 'none';
+        };
+
+        // Lógica para simular a confirmação do e-mail
+        document.getElementById('confirm-email').onclick = function () {
+            emailModal.style.display = 'none';
+            const successModal = document.getElementById('success-modal');
+            successModal.style.display = 'flex';
+
+            document.getElementById('close-success-modal').onclick = function () {
+                successModal.style.display = 'none';
+            };
+        };
     }
 });

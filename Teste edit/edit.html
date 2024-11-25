@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Edição</title>
     <link rel="stylesheet" href="/Teste edit/edit.css">
 </head>
+
 <body>
 
     <!-- Conteúdo editável da página -->
     <h1 data-editable data-key="titulo">Título da Página</h1>
-    <p data-editable data-key="descricao">Esta é a descrição da página. Edite este conteúdo após ativar o modo de edição.</p>
+    <p data-editable data-key="descricao">Esta é a descrição da página. Edite este conteúdo após ativar o modo de
+        edição.</p>
 
     <!-- Botões para ativar edição, salvar e desfazer, exibidos apenas para usuários autenticados -->
     <div class="edit-buttons-container" id="editButtons" style="display: none;">
@@ -20,27 +23,26 @@
             <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
         </div>
     </div>
-                
-    <!-- Modal para mensagens de confirmação -->
+
+    <!-- Caixa para mensagens de confirmação -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <p id="modal-message"></p>
             <button class="modal-button" onclick="fecharModal()">Fechar</button>
         </div>
     </div>
-                
+
     <!-- Elemento visual para indicar modo de edição -->
     <div class="edit-mode-border" id="editModeBorder" style="display: none;"></div>
     <div class="edit-mode-text" id="editModeText">Modo de edição ativado</div>
 
-    <!-- JavaScript para controle do modo de edição e verificação de autenticação -->
+    <!-- controle do modo de edição e verificação de autenticação -->
     <script>
-        // Verifica se o usuário está logado
         async function verificarAutenticacao() {
             try {
                 const response = await fetch('/verificar-autenticacao');
                 if (response.ok) {
-                    document.getElementById('editButtons').style.display = 'block'; // Mostra os botões de edição
+                    document.getElementById('editButtons').style.display = 'block'; 
                 }
             } catch (error) {
                 console.error('Erro ao verificar autenticação:', error);
@@ -63,7 +65,7 @@
             document.querySelectorAll("[data-editable]").forEach(element => {
                 element.setAttribute("contenteditable", "true");
             });
-            document.getElementById("editModeBorder").style.display = "block"; 
+            document.getElementById("editModeBorder").style.display = "block";
             document.getElementById("editModeText").style.display = "block";
             mostrarModal("Modo de edição ativado. Clique em 'Salvar Edições' para salvar ou 'Desfazer Todas Edições' para reverter.");
         }
@@ -73,8 +75,8 @@
                 const key = element.getAttribute("data-key");
                 localStorage.setItem(key, element.innerText);
             });
-            document.getElementById("editModeBorder").style.display = "none"; 
-            document.getElementById("editModeText").style.display = "none"; 
+            document.getElementById("editModeBorder").style.display = "none";
+            document.getElementById("editModeText").style.display = "none";
             mostrarModal("Edições salvas com sucesso!");
         }
 
@@ -85,8 +87,8 @@
                     localStorage.removeItem(key);
                     element.innerText = element.getAttribute("data-original");
                 });
-                document.getElementById("editModeBorder").style.display = "none"; 
-                document.getElementById("editModeText").style.display = "none"; 
+                document.getElementById("editModeBorder").style.display = "none";
+                document.getElementById("editModeText").style.display = "none";
                 mostrarModal("Todas as edições foram desfeitas.");
             }
         }
@@ -109,11 +111,12 @@
             modal.style.display = "none";
         }
 
-        window.onload = function() {
+        window.onload = function () {
             salvarConteudoOriginal();
             carregarConteudo();
         };
     </script>
 
 </body>
+
 </html>

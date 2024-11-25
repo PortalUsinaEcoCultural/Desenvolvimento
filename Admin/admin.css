@@ -29,7 +29,6 @@ header a {
     box-shadow: none;
     transition: box-shadow 0.3s ease, border 0.3s ease;
 }
-
 .form-control:focus {
     background-color: #f2f2f2;
     border-color: transparent;
@@ -63,13 +62,11 @@ p, li {
     align-items: center;
     position: relative;
 }
-
 .input-group .form-control {
     flex: 1;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 .btn-olhinho {
     border: none;
     background: transparent;
@@ -79,11 +76,9 @@ p, li {
     cursor: pointer;
     color: #313131;
 }
-
 .btn-olhinho:hover {
     color: #69A625;
 }
-
 #password-icon {
     font-size: 16px;
 }
@@ -111,7 +106,7 @@ p, li {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Popup modal */
+/* Popup caixa */
 .modal {
     position: fixed;
     top: 0;
@@ -124,7 +119,6 @@ p, li {
     align-items: center;
     z-index: 1000;
 }
-
 .modal-content {
     background-color: white;
     padding: 20px 30px;
@@ -134,13 +128,11 @@ p, li {
     width: auto;
     max-width: 300px;
 }
-
 .modal-content p {
     margin-bottom: 20px;
     color: #313131;
     font-size: 16px;
 }
-
 .modal-content .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -152,8 +144,58 @@ p, li {
     font-size: 14px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .modal-content .btn:hover {
     background-color: #55791e;
 }
+
+/* gerenciamento de conteudo */
+.opcoes {
+    border-radius: 5px; 
+    text-align: center;
+    padding: 20px; 
+    min-height: 120px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; 
+    color: #313131;
+    flex: 1; 
+}
+.opcoes:hover {
+    transform: scale(1.02);
+}
+.opcoes i {
+    color: #313131; 
+    margin-bottom: 10px;
+}
+.opcoes p {
+    margin: 0;
+    font-size: 14px;
+    color: #313131;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.col-6 {
+    flex: 1;
+    max-width: 20%; 
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .col-6 {
+        max-width: 50%; 
+    }
+}
+@media (max-width: 480px) {
+    .col-6 {
+        max-width: 100%; 
+    }
+}
+
+
+
 
