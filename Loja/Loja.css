@@ -380,13 +380,13 @@ header {
 /*Lojinha*/ 
 .lista-cards{
     display: flex;
-    margin-bottom: 3%;
 }
 .card{
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 15px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 3px 4px 20px rgba(0, 0, 0, 0.5) !important;
@@ -400,8 +400,7 @@ header {
     transition: all 0.3s ease;
 }
 .card img{
-    width: 70%;
-    min-width: 10%;
+    width: 90%;
     height: auto;
 }
 .card-preco{
@@ -423,6 +422,27 @@ header {
 .adicionar:hover{
     background-color: #3b5f13;
     box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231, 236, 236) 0px 0px 0px 3px;
+}
+.mensagem-confirmacao{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    padding: 20%;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    border-radius: 5px;
+    transform: translateX(-50%);    
+    font-size: 15px; 
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+.mensagem-confirmacao.show {
+    display: block;
+    opacity: 1;
 }
 
 /*menu sidebar do carrinho*/

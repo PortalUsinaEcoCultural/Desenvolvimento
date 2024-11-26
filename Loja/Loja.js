@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             totalAmount += itemPrice;
             updateCartUI();
+            mostrarConfirmacao();
         });
     });
 
@@ -80,14 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
-
     
-    function mostrarConfirmacao(message){
-        mensagemConfirmacao.textContent = message;
-        mensagemConfirmacao.style.display = 'block';
-
+    function mostrarConfirmacao() {
+        mensagemConfirmacao.classList.add('show');
         setTimeout(() => {
-            confirmationMessage.style.display = 'none';
+            mensagemConfirmacao.classList.remove('show'); 
         }, 3000);
     }
 });
