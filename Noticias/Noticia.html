@@ -21,12 +21,14 @@
             </div>
 
             <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Menu de navegação (Hamburguer) -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -34,27 +36,32 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
                             <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
                                 <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;" href="/Galeria/galeria.html">Galeria</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;"
+                                        href="/Galeria/galeria.html">Galeria</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">História</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">História</a>
                             <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
                                 <li><a class="dropdown-item" href="#">Incinerador</a></li>
                                 <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link"  href="/Loja/Loja.html">Loja</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Eventos/eventos.html">Eventos</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Noticias/Noticia.html">Notícias</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Boletim/Boletim.html">Boletim da Usina</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Loja/Loja.html">Loja</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Eventos/eventos.html">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Noticias/Noticia.html">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Boletim/Boletim.html">Boletim da Usina</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a>
+                        </li>
 
                         <li class="nav-item">
-                            <a href="/Login/login.html" class="login-button login-button-rounded" style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
+                            <a href="/Login/login.html" class="login-button login-button-rounded"
+                                style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
                             <a href="a" class="doe-button"><b>Doe e apoie</b></a>
@@ -75,7 +82,7 @@
     </section>
 
     <section class="container my-4">
-       <!--as noticias são geradas aqui-->
+        <!--as noticias são geradas aqui-->
         <div id="news-container" style="margin-top: 100px;"></div>
 
         <div class="pagination">
@@ -88,137 +95,143 @@
     <!-- Arquivo JavaScrip -->
     <script src="/Noticias/script.js"></script>
 
-        <!-- área dos vídeos -->
-        <div class="container video-container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 event-section mb-4">
-                    <iframe src="https://www.youtube.com/embed/q12dSGr1JIE" title="Vídeo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3 class="mt-3" style="font-size: 20px;">
-                        <a href="https://youtu.be/q12dSGr1JIE" target="_blank" class="event-title">Usina Eco-Cultural</a>
-                    </h3>
-                </div>
-                <div class="col-lg-6 col-md-12 event-section mb-4">
-                    <iframe src="https://www.youtube.com/embed/MGrZqSV2GX8" title="Vídeo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3 class="mt-3" style="font-size: 20px;">
-                        <a href="https://m.youtube.com/watch?v=MGrZqSV2GX8" target="_blank" class="event-title">Comissão de Política Urbana debateu a instalação de uma usina Ecocultural no Ipiranga</a>
-                    </h3>
-                </div>
+    <!-- área dos vídeos -->
+    <div class="container video-container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 event-section mb-4">
+                <iframe src="https://www.youtube.com/embed/q12dSGr1JIE" title="Vídeo 1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h3 class="mt-3" style="font-size: 20px;">
+                    <a href="https://youtu.be/q12dSGr1JIE" target="_blank" class="event-title">Usina Eco-Cultural</a>
+                </h3>
+            </div>
+            <div class="col-lg-6 col-md-12 event-section mb-4">
+                <iframe src="https://www.youtube.com/embed/MGrZqSV2GX8" title="Vídeo 2"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <h3 class="mt-3" style="font-size: 20px;">
+                    <a href="https://m.youtube.com/watch?v=MGrZqSV2GX8" target="_blank" class="event-title">Comissão de
+                        Política Urbana debateu a instalação de uma usina Ecocultural no Ipiranga</a>
+                </h3>
             </div>
         </div>
-        
-        <!--Newsletter-->
-        <div class="newsletter-container mt-5">
-            <h3>Cadastre-se!</h3>
-            <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
-        
-            <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
-                    </div>
+    </div>
+
+    <!--Newsletter-->
+    <div class="newsletter-container mt-5">
+        <h3>Cadastre-se!</h3>
+        <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
+
+        <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
-            </form>
-        </div>        
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
 
     <!--Seção do Rodapé-->
-        <div class="container-fluid" style="background-color: #2B3420; height: 100vh;">
-            <div class="footer" style="padding-top: 50px;">
-                <p class="text-center" style="font-size: 20px; color: white;">Fique por dentro do que acontece na Usina
-                </p>
+    <div class="container-fluid" style="background-color: #2B3420; height: 100vh;">
+        <div class="footer" style="padding-top: 50px;">
+            <p class="text-center" style="font-size: 20px; color: white;">Fique por dentro do que acontece na Usina
+            </p>
+        </div>
+        <div class="social-icons text-center" style="padding-top: 25px;">
+            <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
+                <i class="fab fa-instagram fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+            <a href="https://www.facebook.com/usinaecocultural" target="_blank">
+                <i class="fa-brands fa-facebook fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+            <a href="https://twitter.com/your_twitter_handle" target="_blank">
+                <i class="fa-brands fa-x-twitter fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+            <a href="https://www.youtube.com/@usinaecocultural" target="_blank">
+                <i class="fa-brands fa-youtube fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+            <a href="https://open.spotify.com/intl-pt" target="_blank">
+                <i class="fa-brands fa-spotify fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-whatsapp fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
+            </a>
+        </div>
+        <div class="col-md-6 mx-auto">
+            <hr style="border-top: 1px solid #767676;">
+        </div>
+
+        <div class="row" style="margin: 0 300px;">
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 style="font-size: 20px; color: #9ABC74;">O Coletivo</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
             </div>
-            <div class="social-icons text-center" style="padding-top: 25px;">
-                <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
-                    <i class="fab fa-instagram fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-                <a href="https://www.facebook.com/usinaecocultural" target="_blank">
-                    <i class="fa-brands fa-facebook fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-                <a href="https://twitter.com/your_twitter_handle" target="_blank">
-                    <i class="fa-brands fa-x-twitter fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-                <a href="https://www.youtube.com/@usinaecocultural" target="_blank">
-                    <i class="fa-brands fa-youtube fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-                <a href="https://open.spotify.com/intl-pt" target="_blank">
-                    <i class="fa-brands fa-spotify fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-whatsapp fa-2x rounded-circle bg-white p-3 mx-2" style="color: black;"></i>
-                </a>
-            </div>
-            <div class="col-md-6 mx-auto">
-                <hr style="border-top: 1px solid #767676;">
+
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 style="font-size: 20px; color: #9ABC74;">História</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
             </div>
 
-            <div class="row" style="margin: 0 300px;">
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 style="font-size: 20px; color: #9ABC74;">O Coletivo</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 style="font-size: 20px; color: #9ABC74;">Loja</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
+            </div>
 
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 style="font-size: 20px; color: #9ABC74;">História</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 style="font-size: 20px; color: #9ABC74;">Eventos</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
+            </div>
 
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 style="font-size: 20px; color: #9ABC74;">Loja</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 style="font-size: 20px; color: #9ABC74;">Notícias</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
+            </div>
 
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 style="font-size: 20px; color: #9ABC74;">Eventos</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
+            <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
+                <h3 class="text-nowrap" style="font-size: 18px; color: #9ABC74;">Boletim da Usina</h3>
+                <li style="font-size: 15px;color: white;">ertyu</li>
+            </div>
 
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 style="font-size: 20px; color: #9ABC74;">Notícias</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
-
-                <div class="col-md-2" style="font-size: 25px; padding-top: 50px;">
-                    <h3 class="text-nowrap" style="font-size: 18px; color: #9ABC74;">Boletim da Usina</h3>
-                    <li style="font-size: 15px;color: white;">ertyu</li>
-                </div>
-
-                <footer class="container text-center">
-                    <div class="row">
-                        <div class="col-12" style="padding-top: 200px;">
-                            <h2 class="footer-title">
-                                <div class="footer-title">
-                                    <span style="font-size: 30px; color: #AEAEAE; text-align: right;">Usina</span><br>
-                                    <span style="font-size: 30px; color: #5A5A5A;">Eco-Cultural</span>
-                                </div>
-                            </h2>
-                            <p class="copyright" style="color: #9ABC74;">Todos os direitos reservados © 2024</p>
-                        </div>
+            <footer class="container text-center">
+                <div class="row">
+                    <div class="col-12" style="padding-top: 200px;">
+                        <h2 class="footer-title">
+                            <div class="footer-title">
+                                <span style="font-size: 30px; color: #AEAEAE; text-align: right;">Usina</span><br>
+                                <span style="font-size: 30px; color: #5A5A5A;">Eco-Cultural</span>
+                            </div>
+                        </h2>
+                        <p class="copyright" style="color: #9ABC74;">Todos os direitos reservados © 2024</p>
                     </div>
-                </footer>
-            </div>
-
-            <div vw class="enabled">
-                <div vw-access-button class="active"></div>
-                <div vw-plugin-wrapper>
-                    <div class="vw-plugin-top-wrapper"></div>
                 </div>
+            </footer>
+        </div>
+
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-            <script>
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-            </script>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 
-            <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
-            
+        <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
-    </body>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
