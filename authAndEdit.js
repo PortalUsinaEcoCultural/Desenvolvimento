@@ -1,7 +1,10 @@
 // Função para verificar a autenticação do usuário
 async function verificarAutenticacao() {
     try {
-        const response = await fetch('http://localhost:3000/verificar-autenticacao');
+        const response = await fetch('http://localhost:3000/verificar-autenticacao', {
+            method: 'GET',
+            credentials: 'include', // Envia os cookies para autenticação
+        });
         if (!response.ok) throw new Error('Falha na requisição');
         
         const data = await response.json();
@@ -31,29 +34,26 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-// Função para logout
+// Função de logout
 function logout() {
     fetch('http://localhost:3000/logout', {
-        method: 'GET',
+        method: 'POST', // Ajuste para POST caso necessário
         credentials: 'include', // Inclui os cookies na requisição
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao fazer logout');
+        console.log(response);  // Verifique a resposta do servidor
+        if (response.ok) {
+            console.log('Logout realizado com sucesso.');
+            // Redireciona para a página de login
+            window.location.href = '/login.html'; 
+        } else {
+            throw new Error(`Erro ao fazer logout: ${response.status} ${response.statusText}`);
         }
-        // Após o logout, ocultar o botão de logout e mostrar o botão de login novamente
-        const loginButton = document.querySelector('.login-button');
-        const logoutButton = document.getElementById('logoutButton');
-        if (loginButton) loginButton.classList.remove('logged-in');
-        if (logoutButton) logoutButton.style.display = 'none';
-
-        // Esconde os botões de edição
-        const editContainer = document.querySelector(".edit-buttons-container");
-        if (editContainer) editContainer.style.display = "none";
-
-        console.log('Usuário deslogado');
     })
-    .catch(error => console.error('Erro ao deslogar:', error));
+    .catch(error => {
+        console.error('Erro ao deslogar:', error);
+        alert('Erro ao tentar fazer logout. Tente novamente mais tarde.');
+    });
 }
 
 // Adiciona o evento de clique para o botão de logout
@@ -109,39 +109,24 @@ function salvarEdicoes() {
 function desfazerEdicoes() {
     if (confirm("Tem certeza que deseja desfazer todas as edições? Esta ação é irreversível.")) {
         document.querySelectorAll("[data-editable]").forEach(element => {
-            const key = element.getAttribute("data-key");
-            localStorage.removeItem(key);
-            element.innerText = element.getAttribute("data-original");
+            const originalText = element.getAttribute("data-original");
+            element.innerText = originalText;
         });
-        document.getElementById("editModeBorder").style.display = "none";
-        document.getElementById("editModeText").style.display = "none";
-        mostrarModal("Todas as edições foram desfeitas.");
+        esconderBotoesDeEdicao();
+        mostrarModal("Edições desfeitas.");
     }
 }
 
-// Mostra um modal com uma mensagem
+// Função para mostrar um modal
 function mostrarModal(mensagem) {
-    const modal = document.getElementById("modal");
-    const modalMessage = document.getElementById("modal-message");
-    const modalOverlay = document.getElementById("modal-overlay");
-
-    modalMessage.innerText = mensagem;
-    modal.style.display = "block";
-    modalOverlay.style.display = "block";
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="modal-close">×</span>
+            <p>${mensagem}</p>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    modal.querySelector(".modal-close").addEventListener("click", () => modal.remove());
 }
-
-// Fecha o modal
-function fecharModal() {
-    const modal = document.getElementById("modal");
-    const modalOverlay = document.getElementById("modal-overlay");
-
-    modal.style.display = "none";
-    modalOverlay.style.display = "none";
-}
-
-
-// Garantir que o conteúdo seja tratado ao carregar a página
-window.onload = function () {
-    salvarConteudoOriginal();
-    carregarConteudo();
-};

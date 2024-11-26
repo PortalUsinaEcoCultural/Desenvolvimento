@@ -1,7 +1,8 @@
 // npm init -y 
-// npm install express mongoose body-parser nodemon bcrypt
+// npm install express mongoose body-parser nodemon bcrypt npm install jsonwebtoken
 // Para executar, use o comando "node server.js"
 // Deve aparecer a mensagem: "Servidor rodando em http://localhost:3000 e conectado ao MongoDB"
+//mongodb+srv://sophiacoelho40:sophia010306@cluster0.vztzz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -9,34 +10,38 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 const session = require('express-session');
-const bcrypt = require('bcrypt'); // Usando bcrypt para hash de senhas
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = 3000;
 
 // Configuração do CORS
-app.use(cors());
+app.use(cors({
+    origin: 'http://127.0.0.1:5501', // Substitua pelo domínio do frontend
+    credentials: true, // Permite o envio de cookies
+}));
 
 // Middleware para parsear os dados do corpo da requisição
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Configuração do express-session
 app.use(session({
-    secret: 'seuSegredoAqui',
+    secret: 'Usina',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    cookie: {
+        secure: false, // Use "true" se estiver em HTTPS
+        httpOnly: true,
+        maxAge: 1000 * 60 * 60 * 24, // 1 dia
+    },
 }));
 
-// Serve todos os diretórios definidos no array
+// Serve os arquivos estáticos
 const directories = [
-    'Admin', 'Boletim', 'Doe', 'Doe e apoie', 'Eventos',
-    'Login/FalaConosco/Fale_Conosco.html', 'Galeria', 'Galeria Teste', 'Historia', 'Login', 'Loja',
+    'Admin', 'Boletim', 'Doe', 'Eventos', 'Login', 'Loja',
     'Noticias', 'O Coletivo', 'Quem Somos'
 ];
-
-// Serve os arquivos estáticos
 directories.forEach(dir => {
     app.use(express.static(path.join(__dirname, dir)));
 });
@@ -51,51 +56,31 @@ async function conectarAoMongoDB() {
     }
 }
 
-// Definindo o esquema do MongoDB
+// Modelo do MongoDB
 const User = mongoose.model('User', mongoose.Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     senha: { type: String, required: true }
 }));
 
-// Rota de cadastro de novo usuário
+// Rota de cadastro
 app.post('/signup', async (req, res) => {
-    const { nome, email, senha } = req.body; // Extraindo dados do corpo da requisição
+    const { nome, email, senha } = req.body;
 
     try {
-        // Verificar se o usuário já existe
         const usuarioExistente = await User.findOne({ email });
         if (usuarioExistente) {
-            return res.status(400).json({
-                success: false,
-                message: 'Este e-mail já está cadastrado.'
-            });
+            return res.status(400).json({ success: false, message: 'E-mail já cadastrado.' });
         }
 
-        // Gerar o salt e criptografar a senha
-        const salt = await bcrypt.genSalt(10);
-        const senhaHash = await bcrypt.hash(senha, salt);
-
-        // Criar o novo usuário com a senha criptografada
-        const novoUsuario = new User({
-            nome,
-            email,
-            senha: senhaHash
-        });
-
-        // Salvar o novo usuário no banco de dados
+        const senhaHash = await bcrypt.hash(senha, 10);
+        const novoUsuario = new User({ nome, email, senha: senhaHash });
         await novoUsuario.save();
 
-        res.status(201).json({
-            success: true,
-            message: 'Cadastro realizado com sucesso!'
-        });
+        res.status(201).json({ success: true, message: 'Cadastro realizado com sucesso!' });
     } catch (err) {
-        console.error(err); // Verifique o erro no console do servidor
-        res.status(500).json({
-            success: false,
-            message: 'Erro ao processar cadastro.'
-        });
+        console.error(err);
+        res.status(500).json({ success: false, message: 'Erro ao processar cadastro.' });
     }
 });
 
@@ -104,56 +89,35 @@ app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
     try {
         const usuario = await User.findOne({ email });
-
-        if (usuario) {
-            const senhaValida = await bcrypt.compare(senha, usuario.senha);
-
-            if (senhaValida) {
-                req.session.user = { nome: usuario.nome, email: usuario.email }; // Armazena apenas os dados necessários
-
-                console.log("Usuário logado:", req.session.user); // Log temporário para verificação
-
-                res.status(200).json({
-                    success: true,
-                    message: `Bem-vindo(a), ${usuario.nome}!`
-                });
-            } else {
-                res.status(400).json({
-                    success: false,
-                    message: 'E-mail ou senha incorretos.'
-                });
-            }
+        if (usuario && await bcrypt.compare(senha, usuario.senha)) {
+            req.session.user = { nome: usuario.nome, email: usuario.email };
+            res.status(200).json({ success: true, message: `Bem-vindo(a), ${usuario.nome}!` });
         } else {
-            res.status(400).json({
-                success: false,
-                message: 'E-mail ou senha incorretos.'
-            });
+            res.status(400).json({ success: false, message: 'E-mail ou senha incorretos.' });
         }
     } catch (err) {
         console.error(err);
-        res.status(500).json({
-            success: false,
-            message: 'Erro ao processar login.'
-        });
+        res.status(500).json({ success: false, message: 'Erro ao processar login.' });
     }
 });
 
 // Rota de verificação de autenticação
 app.get('/verificar-autenticacao', (req, res) => {
     if (req.session.user) {
-        res.status(200).send({ autenticado: true });
+        res.status(200).json({ autenticado: true, usuario: req.session.user });
     } else {
-        res.status(401).send({ autenticado: false });
+        res.status(401).json({ autenticado: false });
     }
 });
 
 // Rota de logout
-app.get('/logout', (req, res) => {
-    req.session.destroy((err) => {
+app.post('/logout', (req, res) => {
+    req.session.destroy(err => {
         if (err) {
-            return res.status(500).send('Erro ao deslogar.');
+            return res.status(500).json({ success: false, message: 'Erro ao deslogar.' });
         }
-        res.status(200).send('Logout realizado com sucesso.');
+        res.clearCookie('connect.sid'); // Limpa o cookie de sessão
+        res.status(200).json({ success: true, message: 'Logout realizado com sucesso.' });
     });
 });
 

@@ -155,25 +155,25 @@
     </div>
 </div>
 
-<!-- Newsletter -->
-<div class="newsletter-container mt-5">
-    <h3 data-editable data-key="newsletterTitulo">Cadastre-se!</h3>
-    <p data-editable data-key="newsletterDescricao">Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
-
-    <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
-        <div class="form-row">
-            <div class="form-group">
-                <label data-editable data-key="newsletterLabelNome" for="name">Nome</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-                <label data-editable data-key="newsletterLabelEmail" for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-    </form>
-</div>       
+        <!--Newsletter-->
+        <div class="newsletter-container mt-5">
+            <h3>Cadastre-se!</h3>
+            <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
+        
+            <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>       
 
     <!--Seção do Rodapé-->
 
@@ -264,9 +264,8 @@
         <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
         <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
         <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
-    </div>
 </div>
-<button id="logoutButton" style="display: none;">Logout</button>
+
 <script src="/authAndEdit.js"></script>
 <script src="/edit.js"></script>
 
@@ -276,6 +275,20 @@
                 <div class="vw-plugin-top-wrapper"></div>
                 </div>
             </div>
+
+            <button id="logoutButton" style="display: none;">Logout</button>
+
+            <div class="edit-mode-border" id="editModeBorder" style="display: none;"></div> 
+            <div class="edit-mode-text" id="editModeText" style="display: none;">Modo de edição ativado</div> 
+            <button class="back-btn" id="backButton" onclick="irParaAdmin()" style="display: none;">&lt;</button>
+
+            <script>
+                function irParaAdmin() {
+                    //  página de administração
+                    window.location.href = "/Admin/admin.html";
+                }
+            </script>
+
             <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
             <script>
                 new window.VLibras.Widget('https://vlibras.gov.br/app');
