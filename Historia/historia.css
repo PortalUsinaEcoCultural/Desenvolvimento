@@ -776,17 +776,19 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  min-height: 200px;
+  overflow: visible;
 }
 
 .linha-do-tempo-lista {
   font-size: 0;
-  padding: 220px 0;
+  padding: 150px 0;
   transition: all 1s;
-  overflow-x: scroll;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-color: #69A625 #253d0900;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 
 }
 
@@ -806,17 +808,18 @@
 }
 
 .linha-do-tempo-lista li {
-  position: relative;
-  display: inline-block;
-  list-style-type: none;
-  width: 350px;
-  height: 5px;
-  background: #fff;
-  scroll-snap-align: start;
-  margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 350px;
+    height: auto;
+    background: #fff;
+    scroll-snap-align: start;
+    margin: 0 80px;
 }
 
 .linha-do-tempo-lista li:not(:last-child)::after {
+  left: calc(100% + 20px);
   content: "";
   position: absolute;
   top: 50%;
@@ -832,7 +835,8 @@
 .linha-do-tempo-item {
   position: absolute;
   left: calc(100% + 7px);
-  width: 270px;
+  width: 250px;
+  height: 250px;
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
@@ -852,7 +856,7 @@
 }
 
 .linha-do-tempo-lista li:nth-child(odd) .linha-do-tempo-item {
-  top: -16px;
+  top: -10px;
   transform: translateY(-100%);
   border-radius: 10px 10px 10px 0;
 }
