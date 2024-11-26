@@ -46,12 +46,39 @@ h3{
     transform: translateY(-50%);
 }
 
+/* Formulário */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
 
+.form-groups {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-control {
+    background-color: #e0e0e0; 
+    border: 1px solid transparent; 
+    color: #333; 
+}
+
+.form-control:focus, .form-control:hover {
+    background-color: #e0e0e0; 
+    outline: none; 
+    border: 1px solid transparent; 
+    box-shadow: none; 
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-size: 13px; 
+}
 
 /* Botões de Pagamento */
 .btn-pagamento {
     background-color: #F8F8F8; 
-    color: #69A625 ;
+    color: #69A625;
     padding: 10px 40px;
     border: 2px solid #69A625; 
     border-radius: 5px;

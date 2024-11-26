@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Compra</title>
+
     <link rel="stylesheet" href="/Loja/FinalizarCompra/FinalizarCompra.css">
+    <script src="/Loja/FinalizarCompra/FinalizarCompra.js"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
@@ -16,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 logo bg-white text-center p-3">
-                <a href="/Loja/FinalizarCompra/FinalizarCompra.html">
+                <a href="/Loja/Loja/Loja.html">
                     <button class="back-btn">&lt;</button>
                 </a>
                 <img src="/Login/FalaConosco/img/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
@@ -28,55 +31,12 @@
     <div class="form-groups mt-4">
         <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
 
-        <!-- Botões de pagamento -->
         <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
         <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
-
-        <!-- Botão Continuar -->
         <button type="submit" class="btn btn-continuar" id="continuarBtn">Continuar &gt;</button>
     </div>
 
-    <script>
-        // Variáveis dos botões
-        const pixBtn = document.getElementById('pixBtn');
-        const paypalBtn = document.getElementById('paypalBtn');
-        const continuarBtn = document.getElementById('continuarBtn');
-
-        // Variável para verificar se o método PIX foi selecionado
-        let metodoSelecionado = '';
-
-        // Função para resetar a aparência dos botões
-        function resetBotao() {
-            pixBtn.classList.remove('selecionado');
-            paypalBtn.classList.remove('selecionado');
-        }
-
-        // Ação do botão PIX
-        pixBtn.addEventListener('click', function () {
-            resetBotao(); // Resetar todos os botões
-            pixBtn.classList.add('selecionado'); // Adiciona a classe de destaque no botão PIX
-            metodoSelecionado = 'PIX'; // Marca que o método PIX foi selecionado
-        });
-
-        // Ação do botão PayPal
-        paypalBtn.addEventListener('click', function () {
-            resetBotao(); // Resetar todos os botões
-            paypalBtn.classList.add('selecionado'); // Adiciona a classe de destaque no botão PayPal
-            metodoSelecionado = 'PayPal'; // Marca que o método PayPal foi selecionado
-        });
-
-        // Ação do botão Continuar
-        continuarBtn.addEventListener('click', function () {
-            if (metodoSelecionado === 'PIX') {
-                window.location.href = '/Doe e apoie/formsPix.html'; // Redireciona para o PIX quando o botão Continuar é clicado
-            } else {
-                // Pode adicionar uma mensagem de erro ou redirecionar para outro lugar, se necessário
-                alert('Selecione um método de pagamento antes de continuar.');
-            }
-        });
-    </script>
-    </form>
-    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
@@ -93,6 +53,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-</body>
+
 
 </html>
