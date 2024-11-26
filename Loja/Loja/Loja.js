@@ -63,11 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function removeItemFromCart(index) {
-        const removedItem = cartItems[index];
-        totalAmount -= removedItem.price * removedItem.quantity;
-        cartItems.splice(index, 1);
-        updateCartUI();
+    function removeItemFromCart(index) { 
+        const removedItem = cartItems[index]; 
+        if (removedItem.quantity > 1) {
+            removedItem.quantity--;
+            totalAmount -= removedItem.price; 
+        }
+        else { 
+            totalAmount -= removedItem.price; cartItems.splice(index, 1); 
+        } 
+        updateCartUI(); 
     }
 
     function updateCartTotal() {
