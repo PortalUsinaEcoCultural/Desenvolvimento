@@ -1,0 +1,97 @@
+
+body {
+    font-family: 'Roboto',sans-serif;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin-top: -60px;
+    flex-direction: column;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+h3{
+    font-size: 15px;
+    color: #505050;
+    margin-bottom: 9%;
+}
+
+/* Logo */
+.logo {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 130px;
+    display: inline-block; 
+    padding: 15px;
+}
+
+.back-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 70px;
+    top: 8%;
+    transform: translateY(-50%);
+}
+
+/* Formulário */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-groups {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-control {
+    background-color: #e0e0e0; 
+    border: 1px solid transparent; 
+    color: #333; 
+}
+
+.form-control:focus, .form-control:hover {
+    background-color: #e0e0e0; 
+    outline: none; 
+    border: 1px solid transparent; 
+    box-shadow: none; 
+}
+
+.form-control::placeholder {
+    color: #999;
+    font-size: 13px; 
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    background-color: #69A625;
+    color: #fff;
+    width: 184px; 
+    height: 49px; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #4e7a1b; 
+    color: #fff;
+}

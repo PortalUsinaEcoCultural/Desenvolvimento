@@ -1,5 +1,5 @@
 // npm init -y 
-// npm install express mongoose body-parser nodemon bcrypt npm install jsonwebtoken
+// npm install express mongoose body-parser nodemon bcrypt
 // Para executar, use o comando "node server.js"
 // Deve aparecer a mensagem: "Servidor rodando em http://localhost:3000 e conectado ao MongoDB"
 //mongodb+srv://sophiacoelho40:sophia010306@cluster0.vztzz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
@@ -17,8 +17,8 @@ const port = 3000;
 
 // Configuração do CORS
 app.use(cors({
-    origin: 'http://127.0.0.1:5501', // Substitua pelo domínio do frontend
-    credentials: true, // Permite o envio de cookies
+    origin: 'http://127.0.0.1:5501',
+    credentials: true,
 }));
 
 // Middleware para parsear os dados do corpo da requisição
@@ -31,7 +31,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: false, // Use "true" se estiver em HTTPS
+        secure: false,
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24, // 1 dia
     },
@@ -103,10 +103,13 @@ app.post('/login', async (req, res) => {
 
 // Rota de verificação de autenticação
 app.get('/verificar-autenticacao', (req, res) => {
-    if (req.session.user) {
-        res.status(200).json({ autenticado: true, usuario: req.session.user });
+    if (req.session && req.session.user) {
+        res.status(200).json({
+            autenticado: true,
+            usuario: req.session.user,
+        });
     } else {
-        res.status(401).json({ autenticado: false });
+        res.status(401).json({ autenticado: false, message: 'Usuário não autenticado.' });
     }
 });
 

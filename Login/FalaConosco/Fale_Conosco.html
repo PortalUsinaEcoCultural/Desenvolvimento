@@ -52,7 +52,7 @@
                         <li class="nav-item"><a class="nav-link"  href="/Eventos/eventos.html">Eventos</a></li>
                         <li class="nav-item"><a class="nav-link"  href="/Noticias/Noticia.html">Notícias</a></li>
                         <li class="nav-item"><a class="nav-link"  href="/Boletim/Boletim.html">Boletim da Usina</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a></li>
+                        <li class="nav-item"><a class="nav-link"  href="/Login/FalaConosco/Fale_Conosco.html">Fale Conosco</a></li>
 
                         <li class="nav-item"> 
                             <a href="/Login/login.html" class="login-button login-button-rounded">
@@ -69,13 +69,13 @@
     </nav>
 
 <!-- Seção "Fale Conosco" --> 
-<section class="fale-conosco d-flex align-items-center justify-content-center bg-light py-5">
+<section class="fale-conosco">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 text-right">
                 <div class="texto">
-                    <h2 data-editable data-key="faleConoscoTitulo" style="text-align: right; color:black">Fale conosco</h2>
-                    <p data-editable data-key="faleConoscoDescricao" style="text-align: right;">Sua opinião e sugestões são importantes para que o movimento se renove e melhore cada vez mais.</p>
+                    <h2 data-editable data-key="faleConoscoTitulo">Fale conosco</h2>
+                    <p data-editable data-key="faleConoscoDescricao">Sua opinião e sugestões são importantes para que o movimento se renove e melhore cada vez mais.</p>
                 </div>
             </div>
             <div class="col-md-6">
@@ -88,7 +88,7 @@
 </section>
 
 <!-- Seção do quadro de informações -->
-<section class="d-flex align-items-center justify-content-center" style="border: 2px solid #69A625; border-radius: 10px; padding: 20px; margin: 30px auto; max-width: 900px;">
+<section class="informacoes-quadro">
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
@@ -96,16 +96,16 @@
             </div>
             <div class="col-md-6">
                 <div class="texto">
-                    <h2 data-editable data-key="canalExclusivoTitulo" style="color:#505050">Canal exclusivo para <span>doador</span></h2>
+                    <h2 data-editable data-key="canalExclusivoTitulo">Canal exclusivo para doador</h2>
                     <p data-editable data-key="canalExclusivoDescricao">Caso queira falar conosco sobre doações, brindes ou atualização de dados, entre em contato por meio da nossa central de relacionamento com o doador: <strong>0800 789 2510</strong> (de segunda a sexta-feira das 9h às 19h). Ou envie um e-mail para: <strong>usinaecocultural@gmail.com</strong></p>
                 </div>
             </div>
         </div>
 
         <div class="row align-items-center mb-4">
-            <div class="col-md-6 text-right" style="direction: rtl;">
-                <div class="texto" style="text-align: right;">
-                    <h2 data-editable data-key="mobilizacaoTitulo" style="color:#505050">Mobilização e <span>voluntariado</span></h2>
+            <div class="col-md-6 text-right">
+                <div class="texto2">
+                    <h2 data-editable data-key="mobilizacaoTitulo">Mobilização e voluntariado</h2>
                     <p data-editable data-key="mobilizacaoDescricao">Quer saber como participar de nossas atividades, solicitar apoio de mobilização ou se tornar um voluntário ou voluntária? Envie um e-mail para <strong>conexaoverde.br@greenpeace.org</strong>. Caso queira receber palestras na sua escola, preencha o nosso formulário e conheça o Projeto Escola aqui.</p>
                 </div>
             </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="col-md-6 d-flex justify-content-center align-items-center">
                 <div class="texto text-start">
-                    <h2 data-editable data-key="informacoesGeraisTitulo" style="color: #505050">Informações gerais</h2>
+                    <h2 data-editable data-key="informacoesGeraisTitulo">Informações gerais</h2>
                     <p data-editable data-key="informacoesGeraisDescricao">Nós temos uma página exclusiva sobre <u>dúvidas frequentes</u> que pode te ajudar. Para outras informações e comentários, escreva um e-mail para <strong>usinaecocultural@gmail.com</strong>.</p>
                 </div>
             </div>
@@ -157,8 +157,12 @@
         <h2 data-editable data-key="duvidasTitulo">Ainda restaram dúvidas?</h2>
         <p data-editable data-key="duvidasDescricao">Entre em contato pelo formulário e entraremos em contato assim que possível</p>
         <div class="botoes">
-            <button class="btn-voluntario">Sou voluntário</button>
-            <button class="btn-parceiro">Sou um parceiro</button>
+            <a href="/Login/FalaConosco/voluntário.html">
+                <button class="btn-voluntario">Sou voluntário</button>
+            </a>
+            <a href="/Login/FalaConosco/parceiro.html">
+                <button class="btn-parceiro">Sou um parceiro</button>
+            </a>
         </div>
     </div>
 </div>
@@ -263,39 +267,48 @@
             <div id="modal-overlay"></div> <!-- Fundo escuro -->
             <div id="modal">
                 <div id="modal-message">Mensagem do modal</div>
-                <button onclick="fecharModal()" style="margin-left: 20px;">Fechar</button>
-            </div>                      
-
-    <!-- Botões de edição (inicialmente escondidos) -->
-<div class="edit-buttons-container" id="editButtons" style="display: none;">
-    <div class="edit-buttons">
-        <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
-        <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
-        <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
-</div>
-
-<script src="/authAndEdit.js"></script>
-<script src="/edit.js"></script>
-
+                <button onclick="fecharModal()" class="close-button">Fechar</button> 
+            </div>
+            
+            <!-- Modal de feedback -->
+            <div id="feedbackModal" class="modal"> 
+                <div class="modal-content">
+                    <span class="modal-close" onclick="document.getElementById('feedbackModal').style.display='none'">&times;</span>
+                    <p class="modal-message"></p>
+                </div>
+            </div>
+            
+            <!-- Botões de edição (inicialmente escondidos) -->
+            <div class="edit-buttons-container" id="editButtons" style="display: none;">
+                <div class="edit-buttons">
+                    <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
+                    <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
+                    <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
+                </div>
+            </div>
+            
+            <script src="/authAndEdit.js"></script>
+            <script src="/edit.js"></script>
+            
             <div vw class="enabled">
                 <div vw-access-button class="active"></div>
                 <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
+                    <div class="vw-plugin-top-wrapper"></div>
                 </div>
             </div>
-
+            
             <button id="logoutButton" style="display: none;">Logout</button>
-
+            
             <div class="edit-mode-border" id="editModeBorder" style="display: none;"></div> 
             <div class="edit-mode-text" id="editModeText" style="display: none;">Modo de edição ativado</div> 
             <button class="back-btn" id="backButton" onclick="irParaAdmin()" style="display: none;">&lt;</button>
-
+            
             <script>
                 function irParaAdmin() {
-                    //  página de administração
+                    // Redireciona para a página de administração
                     window.location.href = "/Admin/admin.html";
                 }
-            </script>
+            </script>            
 
             <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
             <script>

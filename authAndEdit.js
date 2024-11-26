@@ -5,8 +5,11 @@ async function verificarAutenticacao() {
             method: 'GET',
             credentials: 'include', // Envia os cookies para autenticação
         });
-        if (!response.ok) throw new Error('Falha na requisição');
-        
+
+        if (!response.ok) {
+            throw new Error('Falha na requisição');
+        }
+
         const data = await response.json();
         return data.autenticado; // Certifique-se de que a API retorna { autenticado: true }
     } catch (error) {
@@ -14,6 +17,9 @@ async function verificarAutenticacao() {
         return false;
     }
 }
+
+document.getElementById('logoutButton')?.addEventListener('click', logout);
+
 
 // Inicializa os estados da página ao carregar
 document.addEventListener("DOMContentLoaded", async function () {
@@ -37,15 +43,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Função de logout
 function logout() {
     fetch('http://localhost:3000/logout', {
-        method: 'POST', // Ajuste para POST caso necessário
+        method: 'POST',
         credentials: 'include', // Inclui os cookies na requisição
     })
     .then(response => {
-        console.log(response);  // Verifique a resposta do servidor
         if (response.ok) {
-            console.log('Logout realizado com sucesso.');
-            // Redireciona para a página de login
-            window.location.href = '/login.html'; 
+            window.location.href = '/login.html';
         } else {
             throw new Error(`Erro ao fazer logout: ${response.status} ${response.statusText}`);
         }
@@ -56,18 +59,16 @@ function logout() {
     });
 }
 
-// Adiciona o evento de clique para o botão de logout
-document.getElementById('logoutButton')?.addEventListener('click', logout);
+document.addEventListener("DOMContentLoaded", async function () {
+    const logoutButton = document.getElementById('logoutButton');
+    const autenticado = await verificarAutenticacao();
 
-// Função para carregar o conteúdo salvo do localStorage
-function carregarConteudo() {
-    document.querySelectorAll("[data-editable]").forEach(element => {
-        const savedText = localStorage.getItem(element.getAttribute("data-key"));
-        if (savedText) {
-            element.innerText = savedText;
-        }
-    });
-}
+    if (autenticado) {
+        logoutButton.style.display = 'block';
+    } else {
+        logoutButton.style.display = 'none';
+    }
+});
 
 // Salva o conteúdo original dos elementos editáveis
 function salvarConteudoOriginal() {
@@ -103,30 +104,4 @@ function salvarEdicoes() {
     document.getElementById("editModeBorder").style.display = "none";
     document.getElementById("editModeText").style.display = "none";
     mostrarModal("Edições salvas com sucesso!");
-}
-
-// Desfaz todas as edições, restaurando o conteúdo original
-function desfazerEdicoes() {
-    if (confirm("Tem certeza que deseja desfazer todas as edições? Esta ação é irreversível.")) {
-        document.querySelectorAll("[data-editable]").forEach(element => {
-            const originalText = element.getAttribute("data-original");
-            element.innerText = originalText;
-        });
-        esconderBotoesDeEdicao();
-        mostrarModal("Edições desfeitas.");
-    }
-}
-
-// Função para mostrar um modal
-function mostrarModal(mensagem) {
-    const modal = document.createElement("div");
-    modal.classList.add("modal");
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="modal-close">×</span>
-            <p>${mensagem}</p>
-        </div>
-    `;
-    document.body.appendChild(modal);
-    modal.querySelector(".modal-close").addEventListener("click", () => modal.remove());
 }

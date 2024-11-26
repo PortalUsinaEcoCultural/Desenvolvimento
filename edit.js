@@ -112,8 +112,11 @@ window.onload = function () {
         botoesEdicao.style.display = loggedIn ? "block" : "none";
     }
 
-    // Oculta o botão de retorno inicialmente
-    document.getElementById("backButton").style.display = "none";
+    // Verifica se o botão de retorno existe antes de tentar acessar seu estilo
+    const backButton = document.getElementById("backButton");
+    if (backButton) {
+        backButton.style.display = "none";
+    }
 
     salvarConteudoOriginal();
     carregarConteudo();
