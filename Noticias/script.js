@@ -9,18 +9,18 @@ const news = [
         title: "Inauguração da reforma e modernização de Estação de Transbordo",
         date: "Prefeitura de São Paulo - 11/06/2012",
         link: "https://www.prefeitura.sp.gov.br/cidade/secretarias/comunicacao/noticias/?p=106970",
+        photoCredit: "Fábio Arantes/Secom" },
+
+    { img: "/Noticias/imgs/noticia4.jpg",
+        title: "Audiência Pública sobre Transbordo Vergueiro",
+        date: "Câmara de São Paulo - 28/07/2021",
+        link: "https://www.saopaulo.sp.leg.br/blog/situacao-atual-e-obras-de-modernizacao-da-estacao-de-transbordo-vergueiro-sao-debatidos-em-audiencia-publica/",
         photoCredit: "Usina Eco-Cultural" },
     
     { img: "/Noticias/imgs/noticia3.jpg",
         title: "INCINERADOR VERGUEIRO - Espaço nobre e subutilizado",
         date: "Publicação: Nova Gazeta, JULHO 10, 2020",
         link: "https://www.youtube.com/watch?v=DarEmOyc2mE&t=127s",
-        photoCredit: "Usina Eco-Cultural" },
-
-    { img: "/Noticias/imgs/noticia4.jpg",
-        title: "Audiência Pública sobre Transbordo Vergueiro",
-        date: "Câmara de São Paulo - 28/07/2021",
-        link: "https://www.saopaulo.sp.leg.br/blog/situacao-atual-e-obras-de-modernizacao-da-estacao-de-transbordo-vergueiro-sao-debatidos-em-audiencia-publica/",
         photoCredit: "Usina Eco-Cultural" },
 
     { img: "/Noticias/imgs/noticia5.jpg",

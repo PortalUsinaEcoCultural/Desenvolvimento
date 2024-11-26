@@ -246,22 +246,23 @@
     padding: 5px 0; 
 }
 
+
+
 /* Noticias*/
 body {
+    font-family: "Roboto", sans-serif;
     background-color: #f9f9f9;
 }
-
 .container {
     text-align: center;
     margin-top: 50px;
 }
-
-/* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
     display: none; 
 }
 
-/* Estilo comum para todos os botões */
+
+/*estilização de todos os botões da página*/
 button, .pagination button {
     background-color: #ffffff; 
     color: #69A625; 
@@ -273,15 +274,14 @@ button, .pagination button {
     cursor: pointer;
     margin-top: auto;
 }
-
-/* Efeito hover para todos os botões */
 button:hover, .pagination button:hover {
     background-color: #69A625; 
     color: white; 
     border-color: #69A625; 
 }
 
-/* Botão desabilitado */
+
+/* botão desabilitado */
 .pagination button:disabled {
     background-color: #e0e0e0; 
     cursor: not-allowed;
@@ -289,15 +289,14 @@ button:hover, .pagination button:hover {
     border-color: #a0a0a0; 
 }
 
-/* Estilo adicional para alinhamento */
+
+/* ajuste do alinhamento */
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
 }
-
-/* Estilo do texto */
 .pagination span {
     color: #69A625;
     font-weight: bold;
@@ -306,15 +305,14 @@ button:hover, .pagination button:hover {
     text-align: center;
 }
 
-/* Outros estilos */
+
+/*conteudo das noticias*/
 #news-container {
     text-align: left;
 }
-
 .row {
     justify-content: flex-start;
 }
-
 header {
     margin-top: 100px;
     background-color: #69A625;
@@ -322,106 +320,93 @@ header {
     padding: 10px;
     text-align: center;
 }
-
-.titulo-eventos {
+.titulo-banner {
     font-size: 35px;
 }
-
 .subtitulo-banner {
     font-size: 15px;
 }
-
 .news-image {
     width: 293.52px;
     height: 226px;
 }
 
-/* Video */
+
+/* parte dos videos*/
 .video-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
 }
-
 .event-section {
     text-align: center;
 }
-
 .event-section iframe {
     width: 100%;
     height: 341px; 
 }
-
 .event-title {
     color: black;
     text-decoration: none;
     font-weight: normal;
 }
 
-/*Newsletter*/
-.event-title:hover {
-    text-decoration: none;
-}
 
+/*seção do newsletter*/
 .newsletter-container {
     background-color: #D9D9D9;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     margin-top: 30px;
-}
 
+}
 .newsletter-container h3 {
     font-size: 35px;
     color: black;
-    margin-bottom: 20px;
-    margin-left: 10%;
+    margin-bottom: 10px;
+    margin-left: 15%;
 }
-
 .newsletter-container p {
     font-size: 15px;
-    margin-bottom: 20px;
-    margin-left: 10%;
+    margin-bottom: 30px;
+    margin-left: 15%;
 }
-
 .newsletter-container .form-control {
-    max-width: 400px; 
+    max-width: 70%; 
 }
-
 .form-group {
-    margin-left: 10%;
+    margin-left: 15%;
     flex: 1;
-    margin-right: 10px;
+    margin-bottom: 1%;
 }
-
 .form-group:last-child {
     margin-right: 0;
+    margin-left: -10%;
 }
-
 .newsletter-container .btn {
     background-color: #69A625;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 10px;
     font-size: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    margin-left: 10%;
+    margin-left: 15%;
 }
-
 .newsletter-container .btn:hover {
     background-color: #5b8f22;
 }
 
-/* Flexbox para organizar os campos */
+
+/* adição do flexbox para organizar as seções */
 .form-row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1px;
 }
-
 @media (max-width: 767px) {
     .form-group {
         flex: 1 1 100%; 
