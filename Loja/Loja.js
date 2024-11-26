@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             totalAmount += itemPrice;
             updateCartUI();
-            mostrarConfirmacao();
+            mostrarConfirmacao(itemName);
         });
     });
 
@@ -81,8 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
     closeButton.addEventListener('click', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
-    
+
     function mostrarConfirmacao() {
+        mensagemConfirmacao.textContent = `"${itemName}" adicionado ao carrinho!`;
+
         mensagemConfirmacao.classList.add('show');
         setTimeout(() => {
             mensagemConfirmacao.classList.remove('show'); 

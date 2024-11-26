@@ -223,6 +223,7 @@ body {
     color: #1D1D1F;
 }
 
+
 /*banner da página*/
 header {
     margin-top: 100px;
@@ -237,6 +238,7 @@ header {
 .subtitulo-banner {
     font-size: 15px;
 }
+
 
 /*proximos eventos*/
 .subtitulo-eventos{
@@ -291,6 +293,7 @@ button:hover {
         transform: translateY(0%);
     }
 }
+
 
 /*parte do calendario*/
 .calendario {
