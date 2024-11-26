@@ -75,19 +75,20 @@
     </nav>
 
     <!--Seção do banner Boletim da Usina-->
-    <section class="boletim d-flex align-items-center justify-content-center bg-light py-5">
+    <section class="boletim d-flex align-items-center justify-content-center bg-light py-4">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-right">
                     <div class="texto">
                         <h2 style="text-align: right; color:#313131">Boletim da Usina</h2>
-                        <p style="text-align: right;">Acompanhe os nossos boletins periódicos e fique por <br>dentro do
-                            que está acontecendo no movimento</p>
+                        <p style="text-align: right;">Acompanhe os nossos <strong>boletins periódicos </strong> e fique
+                            por dentro do que está acontecendo no movimento. Além disso, aproveite para se cadastrar em
+                            nosso <strong>newsletter</strong>!</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="imagem">
-                        <img src="img/usina.jpeg" class="img-fluid" alt="Comunidade reunida">
+                        <img src="img/Banner.png" class="img-fluid" alt="Comunidade reunida">
                     </div>
                 </div>
             </div>
@@ -127,22 +128,25 @@
 
     <!--Newsletter-->
     <div class="newsletter-container mt-5">
-        <h3>Cadastre-se!</h3>
-        <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
+        <div class="conteudo">
+            <h3>Cadastre-se!</h3>
+            <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
 
-        <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome" required>
+            <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
+                <div class="row justify-content-start">
+                    <div class="form-group nome col-md-5">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="form-group email col-md-5">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail"
+                            required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" required>
-                </div>
-            </div>
-            <button type="submit" class="cadastro-botao">Cadastrar</button>
-        </form>
+                <button type="submit" class="cadastro-botao">Cadastrar</button>
+            </form>
+        </div>
     </div>
 
     <div class="container-fluid" style="background-color: #2B3420; height: 100%;">
@@ -202,20 +206,21 @@
             </div>
         </div>
 
-            <footer class="container text-center">
-                <div class="row">
-                    <div class="col-12" style="padding-top: 80px;">
-                        <h2 class="footer-title">
-                            <div class="footer-title">
-                                <span style="font-size: 30px; color: #AEAEAE; text-align: right;">Usina</span><br>
-                                <span style="font-size: 30px; color: #5A5A5A;">Eco-Cultural</span>
-                            </div>
-                        </h2>
-                        <p class="copyright" style="color: #9ABC74;">Todos os direitos reservados USINA ECO-CULTURAL © 2024</p>
-                    </div>
+        <footer class="container text-center">
+            <div class="row">
+                <div class="col-12" style="padding-top: 80px;">
+                    <h2 class="footer-title">
+                        <div class="footer-title">
+                            <span style="font-size: 30px; color: #AEAEAE; text-align: right;">Usina</span><br>
+                            <span style="font-size: 30px; color: #5A5A5A;">Eco-Cultural</span>
+                        </div>
+                    </h2>
+                    <p class="copyright" style="color: #9ABC74;">Todos os direitos reservados USINA ECO-CULTURAL © 2024
+                    </p>
                 </div>
-            </footer>
-    
+            </div>
+        </footer>
+
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
@@ -234,4 +239,5 @@
         </script>
 
 </body>
+
 </html>
