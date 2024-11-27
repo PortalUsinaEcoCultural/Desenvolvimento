@@ -5,7 +5,7 @@ Este é um site desenvolvido com HTML, CSS, e JavaScript, além do bando de dado
 
 ---
 
-✒️ Desenvolvedores:
+## ✒️ Desenvolvedores:
 
 Letícia de Carvalho Silva - realizou documentação e programadora frontend
 
@@ -15,9 +15,28 @@ Mateus Martins Gonçalves Doro - prototipagem no Figma e programador frontend
 
 Sophia Heringer Coelho - programadora frontend e backend
 
+---
+## 🛠️Tecnologias usadas:
+1- HTML5
 
+2- CSS
 
-🔍 Visão Geral do Projeto
+3- JavaScript
+
+4- MongoDB (banco de dados)
+
+5- Figma (prototipagem digital)
+
+6- Ferramentas Google (Google Forms, Goocle Agenda, entre outros)
+
+7- Miro (desenvolvimento de personas, mapas de empatia, entre outros)
+
+8- Trello (gestão de tempo)
+
+9- Bootstrap (site responsivo)
+
+---
+## 🔍 Visão Geral do Projeto
 
 A Usina Eco-Cultural é uma organização que busca promover a cultura e a sustentabilidade. Para alcançar um público maior e aumentar o engajamento, nosso grupo está desenvolvendo um site com:
   1- Navegação fácil: Foco em uma interface agradável, que permita aos usuários encontrarem rapidamente as informações de que precisam.
@@ -28,10 +47,5 @@ A Usina Eco-Cultural é uma organização que busca promover a cultura e a suste
   
   4- Elementos interativos: Funcionalidades que incentivem a interatividade e tornem o site mais dinâmico, criando uma experiência mais envolvente para o usuário.
 
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML5"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap"/></code>
-<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" alt="MongoDB"/></code>
-
+--- 
 📋 Pré-requisitos
