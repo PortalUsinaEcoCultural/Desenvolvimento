@@ -6,8 +6,11 @@ Este é um site desenvolvido com HTML, CSS, e JavaScript, além do bando de dado
 
 ✒️ Desenvolvedores:
 Letícia de Carvalho Silva - realizou documentação e programadora frontend
+
 Lyssa Okawa Perini - prototipagem no Figma e programador frontend
+
 Mateus Martins Gonçalves Doro - prototipagem no Figma e programador frontend
+
 Sophia Heringer Coelho - programadora frontend e backend
 
 
@@ -15,8 +18,11 @@ Sophia Heringer Coelho - programadora frontend e backend
 
 A Usina Eco-Cultural é uma organização que busca promover a cultura e a sustentabilidade. Para alcançar um público maior e aumentar o engajamento, nosso grupo está desenvolvendo um site com:
   1- Navegação fácil: Foco em uma interface agradável, que permita aos usuários encontrarem rapidamente as informações de que precisam.
+  
   2- Design minimalista: Um layout limpo, moderno e visualmente agradável, que prioriza a clareza e a simplicidade.
+  
   3- Estrutura bem organizada: Informações e imagens dispostas de forma lógica, facilitando a compreensão e acesso aos conteúdos.
+  
   4- Elementos interativos: Funcionalidades que incentivem a interatividade e tornem o site mais dinâmico, criando uma experiência mais envolvente para o usuário.
 
 📋 Pré-requisitos
