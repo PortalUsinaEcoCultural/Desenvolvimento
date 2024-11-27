@@ -44,29 +44,30 @@ carrossel.addEventListener("mousedown", dragStart);
 carrossel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 
+/* Seção "linha do tempo" */
 
-// VARIÁVEIS
-const elementosLinhaDoTempo = document.querySelectorAll(".linha-do-tempo-item");
+function adicionarEvento() {
+  const ano = prompt("Digite o ano:");
+  const descricao = prompt("Digite a descrição:");
 
-// INÍCIO
-window.addEventListener("load", iniciar);
+  if (!ano || !descricao) return;
 
-function iniciar() {
-  definirAlturasIguais(elementosLinhaDoTempo);
+  const linhaDoTempo = document.getElementById('linha-do-tempo');
+  const container = document.createElement('div');
+  container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+
+  container.innerHTML = `
+      <div class="linha-do-tempo-conteudo">
+          <h2>${ano}</h2>
+          <p>${descricao}</p>
+          <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+      </div>
+  `;
+
+  linhaDoTempo.appendChild(container);
 }
 
-// DEFINIR ALTURAS IGUAIS
-function definirAlturasIguais(el) {
-  let alturaMaxima = 0;
-  for (let i = 0; i < el.length; i++) {
-    const alturaAtual = el[i].offsetHeight;
-
-    if (alturaMaxima < alturaAtual) {
-      alturaMaxima = alturaAtual;
-    }
-  }
-
-  for (let i = 0; i < el.length; i++) {
-    el[i].style.height = `${alturaMaxima}px`;
-  }
+function excluirEvento(botao) {
+  const evento = botao.parentElement.parentElement;
+  evento.remove();
 }
