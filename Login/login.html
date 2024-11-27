@@ -8,7 +8,12 @@
     <title>Login e Cadastro</title>
 </head>
 <body>
+    
     <div class="container">
+        <a href="javascript:history.back()" class="back-button">
+            <
+        </a>
+        
         <div class="form-box m-20">
             <h1 id="title">Login</h1>
             <!-- Formulário de Login -->
@@ -79,7 +84,6 @@
     <script src="/edit.js"></script>
 
     <script>
-        // Alternar entre os formulários de Login e Cadastro
         const signupForm = document.getElementById("signupForm");
         const loginForm = document.getElementById("loginForm");
     
@@ -91,21 +95,18 @@
     
         const title = document.getElementById("title");
     
-        // Exibir formulário de Cadastro
         signupBtn.onclick = function() {
-            loginForm.style.display = "none";
-            signupForm.style.display = "block";
+            loginForm.style.display = "block";
+            signupForm.style.display = "none";
             title.innerHTML = "Cadastro";
         };
-    
-        // Exibir formulário de Login
+
         signinBtn.onclick = function() {
-            signupForm.style.display = "none";
-            loginForm.style.display = "block";
+            signupForm.style.display = "block";
+            loginForm.style.display = "none";
             title.innerHTML = "Login";
         };
     
-        // Repetição para os botões no formulário de cadastro
         signupBtn2.onclick = signupBtn.onclick;
         signinBtn2.onclick = signinBtn.onclick;
     </script>    
