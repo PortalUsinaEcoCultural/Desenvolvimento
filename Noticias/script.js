@@ -77,8 +77,8 @@ function updateNews() {
         const labelColor = isTCC ? "#EA8356" : "#69A625"; 
     
         newsContainer.innerHTML += `
-            <div class="row mb-4">
-                <div class="col-md-4">
+            <div class="row mb-3">
+                <div class="col-md-3">
                     <img src="${article.img}" alt="Foto: ${article.photoCredit}" class="img-fluid rounded" width="293" height="226">
                     <p class="text-muted text-left" style="font-size: 0.8rem;">Foto: ${article.photoCredit}</p>
                 </div>
