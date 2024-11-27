@@ -774,22 +774,23 @@ body {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #69A625;
+    background-color: transparent;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
+    border-left: 6px dotted #555555;
 }
 
 .linha-do-tempo-container {
     padding: 10px 40px;
     position: relative;
-    width: calc(50% - 40px);
+    width: calc(65% - 45px);
     animation: fadeIn 1s;
 }
 
 .linha-do-tempo-container.esquerda {
-    left: 4.5%;
+    left: -9.7%;
 }
 
 .linha-do-tempo-container.direita {
@@ -801,14 +802,19 @@ body {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 800px; 
+    width: auto; 
+    margin: 10px auto; 
+    display: inline-block; 
 }
+
 
 .linha-do-tempo-container::after {
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
-    background-color: white;
+    background-color: #69A625;
     border: 4px solid #69A625;
     border-radius: 50%;
     top: 15px;
@@ -896,3 +902,7 @@ body {
     background-color: #567d1c;
 }
 
+.linha-do-tempo-conteudo h2 {
+    color: #69A625;
+    font-weight: bold;
+}
