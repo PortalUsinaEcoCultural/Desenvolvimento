@@ -1,7 +1,9 @@
 🌐 Site Usina Eco-Cultural
 
+
 Descrição:
 Este é um site desenvolvido com HTML, CSS, e JavaScript, além do bando de dados no MongoDB. O projeto tem como foco principal a criação de um site institucional para o parceiro Usina Eco-Cultural que não só atenda as demandas solicitadas por eles, mas também cumpra com o objetivo de ser um meio informativo sobre o movimento. O intuito é divulgar a história da Usina, quem eles são, os eventos que promovem, as notícias, página de doações, informações para contato, boletins periódicos e uma loja que vende seus produtos.
+
 
 
 ✒️ Desenvolvedores:
@@ -12,6 +14,7 @@ Lyssa Okawa Perini - prototipagem no Figma e programador frontend
 Mateus Martins Gonçalves Doro - prototipagem no Figma e programador frontend
 
 Sophia Heringer Coelho - programadora frontend e backend
+
 
 
 🔍 Visão Geral do Projeto
