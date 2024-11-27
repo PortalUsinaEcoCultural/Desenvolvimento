@@ -10,7 +10,6 @@
     z-index: 1050; 
     background-color: #fff; 
 }
-/* Logo */
 .logo {
     font-weight: 500;
     color: #69a625;
@@ -19,7 +18,6 @@
     margin-left: 16%;
     margin-top: 5px;
 }
-/* Botão de Doação */
 .doe-button {
     background-color: #69a625;
     color: #fff;
@@ -41,7 +39,6 @@
     background-color: #487218;
     color: #fff; 
 }
-/* Toggler do Navbar */
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
@@ -51,7 +48,6 @@
     box-shadow: none;
     outline: none;
 }
-/* Links da Navbar */
 .nav-link {
     font-weight: 500;
     position: relative;
@@ -62,11 +58,9 @@
 .nav-link:hover, .nav-link.active {
     color: #000;
 }
-/* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
     display: none; 
 }
-/* Estilo do Dropdown Menu */ 
 .nav-item .dropdown-menu {
     display: none;
     position: absolute;
@@ -79,11 +73,9 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: none; 
 }
-/* Exibe o dropdown ao passar o mouse */
 .nav-item:hover .dropdown-menu {
     display: block;
 }
-/* Estilos para os itens do dropdown */
 .dropdown-menu .dropdown-item {
     font-weight: 500;
     padding: 10px 20px; 
@@ -91,8 +83,8 @@
     text-align: left; 
     background-color: transparent; 
     transition: background-color 0.3s ease; 
+    margin-top: -5px;
 }
-/* Para espaçar itens do dropdown */
 .dropdown-item {
     display: block;
     padding-left: 20px;
@@ -116,7 +108,6 @@
         visibility: visible;
     }
 }
-/* Outros estilos */
 .container2 {
     text-align: right;
     color: white;
@@ -127,7 +118,6 @@
     margin-right: 1%;
     margin-left: 50px;
 }
-/* Login Button */
 .login-button {
     width: 40px;
     height: 40px;
@@ -141,16 +131,15 @@
     text-decoration: none;
     padding: 5px;
     margin-top: 10px;
+    margin-left: 47px;
     border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    margin-left: 40px;
 }
 .login-button:hover {
     background-color: #69a625;
     color: white;
 }
-/* Seção Hero */
 .hero-section::before {
     background-color: rgba(0, 0, 0, 0.6);
     content: "";
@@ -176,12 +165,9 @@
     text-align: center;
     margin-top: 50px;
 }
-/* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
     display: none; 
 }
-/* Ajustes para o menu hambúrguer */
-
 /* Ajuste de espaçamento dentro do hambúrguer */
 .offcanvas-body .navbar-nav {
     margin-top: 10px; 
@@ -193,17 +179,14 @@
     margin-top: 10px; 
     margin-bottom: 10px; 
 }
-/* Ajuste do título do menu hambúrguer */
 .offcanvas-header .offcanvas-title {
     font-size: 20px;
     margin-bottom: 5px; 
 }
-/* Ajuste do botão de fechamento do hambúrguer */
 .offcanvas-header .btn-close {
     margin-top: 0;
     padding: 10px; 
 }
-/* Dropdown */
 .nav-item.dropdown .nav-link {
     margin-top: 10px; /
 }
@@ -212,7 +195,7 @@
 }
 
 
-/*estilizações gerais do site*/
+/*Estilizações gerais do site*/
 * {
     margin: 0;
     padding: 0;
@@ -225,7 +208,7 @@ body {
 }
 
 
-/*banner da página*/
+/*Banner da página*/
 header {
     margin-top: 100px;
     background-color: #69A625;
@@ -242,7 +225,7 @@ header {
 }
 
 
-/*proximos eventos*/
+/*Proximos eventos*/
 .subtitulo-eventos{
     margin: 35px;
     font-size: 20px;
@@ -297,7 +280,7 @@ header {
 }
 
 
-/*parte do calendario*/
+/*Área do calendário do Google*/
 .calendario {
     margin: 40px 0;
     text-align: center;
@@ -322,7 +305,8 @@ header {
     border-radius: 5px;
 }
 
-/*seção do newsletter*/
+
+/*Seção do newsletter*/
 .newsletter-container {
     background-color: #D9D9D9;
     padding: 30px;

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos</title>
+
     <link rel="stylesheet" href="Eventos.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
@@ -14,21 +16,19 @@
 
 <body>
 
+    <!--Barra de navegação-->
     <nav class="navbar navbar-expand-xxl fixed-top">
         <div class="container-fluid box">
 
-            <!-- Logo -->
             <div class="logo">
                 <img src="/Login/FalaConosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural">
             </div>
 
-            <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu de navegação (Hamburguer) -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
@@ -38,20 +38,20 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
+                            <a class="nav-link dropdown-toggle" href="/O Coletivo/barra nav/navbar/index.html"
+                                id="coletivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O
+                                Coletivo</a>
                             <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
                                 <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;"
-                                        href="/Galeria/galeria.html">Galeria</a></li>
+                                <li><a class="dropdown-item" href="/Galeria/galeria.html">Galeria</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">História</a>
+                            <a class="nav-link dropdown-toggle" href="/Historia/historia.html" id="historiaDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">História</a>
                             <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
                                 <li><a class="dropdown-item" href="#">Incinerador</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
+                                <li><a class="dropdown-item" href="#">Usina</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="/Loja/Loja/Loja.html">Loja</a></li>
@@ -62,8 +62,8 @@
                                 Conosco</a></li>
 
                         <li class="nav-item">
-                            <a href="/Login/login.html" class="login-button login-button-rounded"
-                                style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
+                            <a href="/Login/login.html" class="login-button login-button-rounded"><i
+                                    class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
                             <a href="/Doe/doe.html" class="doe-button"><b>Doe e apoie</b></a>
@@ -74,7 +74,8 @@
         </div>
     </nav>
 
-    <!-- banner da página de Eventos -->
+
+    <!-- Banner da página de Eventos -->
     <section>
         <header>
             <h2 class="titulo-banner">Eventos Usina Eco-Cultural</h2>
@@ -83,7 +84,8 @@
         </header>
     </section>
 
-    <!-- seção dos eventos -->
+
+    <!-- Seção dos eventos -->
     <section class="eventos container">
         <h3 class="subtitulo-eventos">Próximos Eventos</h3>
         <ul>
@@ -111,7 +113,8 @@
         </ul>
     </section>
 
-    <!-- seção do calendário do Google -->
+
+    <!-- Seção do calendário do Google -->
     <section class="calendario container mb-5">
         <h3 class="subtitulo-eventos">
             <light>Acompanhe </light><strong>nosso calendário</strong>
@@ -123,6 +126,7 @@
         </div>
     </section>
 
+    
     <!--Newsletter-->
     <div class="newsletter-container mt-5">
         <div class="conteudo">
@@ -132,7 +136,8 @@
                 <div class="row justify-content-start">
                     <div class="form-group nome col-md-5">
                         <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome"
+                            required>
                     </div>
                     <div class="form-group email col-md-5">
                         <label for="email">E-mail</label>
@@ -150,6 +155,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!--plugin VLibras para garantir acessibilidade-->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -160,6 +166,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+
 </body>
 
 </html>
