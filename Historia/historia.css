@@ -835,7 +835,7 @@ body {
 }
 
 .linha-do-tempo-btn-excluir {
-    background-color: #69A625;
+    background-color: #c74e4e;
     color: #fff;
     border: none;
     padding: 5px 10px;
@@ -845,7 +845,7 @@ body {
 }
 
 .linha-do-tempo-btn-excluir:hover {
-    background-color: #567d1c;
+    background-color: #7e3026;
 }
 
 .linha-do-tempo-botoes {
@@ -869,3 +869,17 @@ body {
     background-color: #567d1c;
 }
 
+.linha-do-tempo-minimizar {
+    background-color: #69A625;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza o botão */
+}
+
+.linha-do-tempo-minimizar:hover {
+    background-color: #567d1c;
+}

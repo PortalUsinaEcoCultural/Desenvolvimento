@@ -107,3 +107,15 @@ function carregarEventos() {
       linhaDoTempo.appendChild(container);
   });
 }
+
+function alternarVisibilidade() {
+  const linhaDoTempo = document.getElementById('linha-do-tempo');
+  const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
+  if (linhaDoTempo.style.display === 'none') {
+      linhaDoTempo.style.display = 'block';
+      botaoMinimizar.textContent = 'Minimizar Linha do Tempo';
+  } else {
+      linhaDoTempo.style.display = 'none';
+      botaoMinimizar.textContent = 'Expandir Linha do Tempo';
+  }
+}
