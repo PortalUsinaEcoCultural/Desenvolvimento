@@ -7,6 +7,7 @@ Este é um site desenvolvido com HTML, CSS, e JavaScript, além do bando de dado
 
 
 ✒️ Desenvolvedores:
+
 Letícia de Carvalho Silva - realizou documentação e programadora frontend
 
 Lyssa Okawa Perini - prototipagem no Figma e programador frontend
