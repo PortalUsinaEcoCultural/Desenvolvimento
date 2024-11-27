@@ -77,6 +77,30 @@ function excluirEvento(botao) {
   evento.remove();
 }
 
+function editarTodosEventos() {
+    const ano = prompt("Digite o ano do evento que deseja editar:");
+    const eventos = document.querySelectorAll('.linha-do-tempo-container');
+    let encontrado = false;
+
+    eventos.forEach(evento => {
+        if (evento.querySelector('h2').textContent === ano) {
+            const novoAno = prompt("Editar ano:", evento.querySelector('h2').textContent);
+            const novaDescricao = prompt("Editar descrição:", evento.querySelector('p').textContent);
+
+            if (novoAno && novaDescricao) {
+                evento.querySelector('h2').textContent = novoAno;
+                evento.querySelector('p').textContent = novaDescricao;
+            }
+            encontrado = true;
+        }
+    });
+
+    if (!encontrado) {
+        alert(`Não existe um evento cadastrado em ${ano}.`);
+    }
+}
+
+
 function salvarEventos() {
   const eventos = [];
   document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
@@ -85,7 +109,7 @@ function salvarEventos() {
       eventos.push({ ano, descricao });
   });
   localStorage.setItem('eventosLinhaDoTempo', JSON.stringify(eventos));
-  alert('Eventos salvos com sucesso!');
+  alert('Modificações salvas com sucesso!');
 }
 
 function carregarEventos() {

@@ -856,7 +856,7 @@ body {
     gap: 10px; /* Espaçamento entre os botões */
 }
 
-.linha-do-tempo-adicionar-evento, .linha-do-tempo-salvar-eventos {
+.linha-do-tempo-adicionar-evento, .linha-do-tempo-editar-evento, .linha-do-tempo-salvar-eventos {
     background-color: #69A625;
     color: white;
     border: none;
@@ -883,3 +883,16 @@ body {
 .linha-do-tempo-minimizar:hover {
     background-color: #567d1c;
 }
+
+.linha-do-tempo-editar-evento {
+    background-color: #406b99;
+}
+
+.linha-do-tempo-editar-evento:hover {
+    background-color: #27486b;
+}
+
+.linha-do-tempo-adicionar-evento:hover, .linha-do-tempo-salvar-eventos:hover {
+    background-color: #567d1c;
+}
+
