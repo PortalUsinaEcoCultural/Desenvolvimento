@@ -65,7 +65,7 @@ let currentPage = 1;
 
 function updateNews() {
     const newsContainer = document.getElementById("news-container");
-    newsContainer.innerHTML = ""; // Limpa as notícias atuais
+    newsContainer.innerHTML = "";
 
     const startIndex = (currentPage - 1) * 3;
     const endIndex = startIndex + 3;
@@ -74,9 +74,8 @@ function updateNews() {
         const article = news[i];
         const isTCC = article.img.includes("TCC");
         const label = isTCC ? "TCC - Trabalho de Conclusão de Curso" : "Notícia";
-        const labelColor = isTCC ? "#EA8356" : "#69A625";  // Aqui está a cor para TCC
+        const labelColor = isTCC ? "#EA8356" : "#69A625"; 
     
-        // Adiciona o conteúdo ao container de notícias
         newsContainer.innerHTML += `
             <div class="row mb-4">
                 <div class="col-md-4">
@@ -92,11 +91,9 @@ function updateNews() {
             </div>`;
     }
 
-    // Atualiza os botões de navegação
     document.getElementById("prevBtn").disabled = currentPage === 1;
     document.getElementById("nextBtn").disabled = currentPage === totalPages;
 
-    // Atualiza a numeração da página
     updatePageNumbers();
 }
 
@@ -114,5 +111,4 @@ function navigate(direction) {
     updateNews();
 }
 
-// Inicializa as notícias
 updateNews();
