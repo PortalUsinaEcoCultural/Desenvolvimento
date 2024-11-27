@@ -1,10 +1,9 @@
-🌐 Site Usina Eco-Cultural
-
+## 🌐 Site Usina Eco-Cultural!
 
 Descrição:
 Este é um site desenvolvido com HTML, CSS, e JavaScript, além do bando de dados no MongoDB. O projeto tem como foco principal a criação de um site institucional para o parceiro Usina Eco-Cultural que não só atenda as demandas solicitadas por eles, mas também cumpra com o objetivo de ser um meio informativo sobre o movimento. O intuito é divulgar a história da Usina, quem eles são, os eventos que promovem, as notícias, página de doações, informações para contato, boletins periódicos e uma loja que vende seus produtos.
 
-
+---
 
 ✒️ Desenvolvedores:
 
@@ -28,5 +27,11 @@ A Usina Eco-Cultural é uma organização que busca promover a cultura e a suste
   3- Estrutura bem organizada: Informações e imagens dispostas de forma lógica, facilitando a compreensão e acesso aos conteúdos.
   
   4- Elementos interativos: Funcionalidades que incentivem a interatividade e tornem o site mais dinâmico, criando uma experiência mais envolvente para o usuário.
+
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" alt="Javascript"/></code>
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" alt="HTML5"/></code>
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" alt="CSS"/></code>
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap"/></code>
+<code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" alt="MongoDB"/></code>
 
 📋 Pré-requisitos
