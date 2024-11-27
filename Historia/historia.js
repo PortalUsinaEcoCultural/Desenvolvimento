@@ -46,6 +46,11 @@ document.addEventListener("mouseup", dragStop);
 
 /* Seção "linha do tempo" */
 
+// Carregar eventos do localStorage ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  carregarEventos();
+});
+
 function adicionarEvento() {
   const ano = prompt("Digite o ano:");
   const descricao = prompt("Digite a descrição:");
@@ -70,4 +75,35 @@ function adicionarEvento() {
 function excluirEvento(botao) {
   const evento = botao.parentElement.parentElement;
   evento.remove();
+}
+
+function salvarEventos() {
+  const eventos = [];
+  document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
+      const ano = container.querySelector('h2').textContent;
+      const descricao = container.querySelector('p').textContent;
+      eventos.push({ ano, descricao });
+  });
+  localStorage.setItem('eventosLinhaDoTempo', JSON.stringify(eventos));
+  alert('Eventos salvos com sucesso!');
+}
+
+function carregarEventos() {
+  const linhaDoTempo = document.getElementById('linha-do-tempo');
+  linhaDoTempo.innerHTML = ''; // Limpa o conteúdo para evitar duplicação
+  const eventos = JSON.parse(localStorage.getItem('eventosLinhaDoTempo')) || [];
+  eventos.forEach(evento => {
+      const container = document.createElement('div');
+      container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+
+      container.innerHTML = `
+          <div class="linha-do-tempo-conteudo">
+              <h2>${evento.ano}</h2>
+              <p>${evento.descricao}</p>
+              <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+          </div>
+      `;
+
+      linhaDoTempo.appendChild(container);
+  });
 }

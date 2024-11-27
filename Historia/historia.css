@@ -732,8 +732,7 @@
     transform: translateY(-50%) scale(1.2); 
 }
 
-/* Seção Linha-do-Tempo*/
-
+/* Seção Linha-do-Tempo */
 *,
 *::before,
 *::after {
@@ -762,6 +761,7 @@ body {
     background: #ededed; /* Retângulo cinza */
     padding: 20px;
     border-radius: 10px;
+    position: relative;
 }
 
 .linha-do-tempo {
@@ -834,18 +834,6 @@ body {
     }
 }
 
-.linha-do-tempo-adicionar-evento {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #69A625;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 .linha-do-tempo-btn-excluir {
     background-color: #69A625;
     color: #fff;
@@ -857,6 +845,27 @@ body {
 }
 
 .linha-do-tempo-btn-excluir:hover {
+    background-color: #567d1c;
+}
+
+.linha-do-tempo-botoes {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.linha-do-tempo-adicionar-evento, .linha-do-tempo-salvar-eventos {
+    background-color: #69A625;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.linha-do-tempo-adicionar-evento:hover, .linha-do-tempo-salvar-eventos:hover {
     background-color: #567d1c;
 }
 
