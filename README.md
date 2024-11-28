@@ -14,7 +14,6 @@ Lyssa Okawa Perini (24.001193-2) - prototipagem no Figma e programador frontend
 Mateus Martins Gonçalves Doro (24.00553-3) - prototipagem no Figma e programador frontend
 
 Sophia Heringer Coelho (24.01202-5) - programadora frontend e backend
-
 ---
 ### 🛠️Tecnologias usadas:
 1- HTML5
@@ -51,7 +50,6 @@ A Usina Eco-Cultural é uma organização que busca promover a cultura e a suste
   3- Estrutura bem organizada: Informações e imagens dispostas de forma lógica, facilitando a compreensão e acesso aos conteúdos.
   
   4- Elementos interativos: Funcionalidades que incentivem a interatividade e tornem o site mais dinâmico, criando uma experiência mais envolvente para o usuário.
-
 --- 
 ### 📄 Documentação e apresentação do projeto
 
