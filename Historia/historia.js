@@ -143,3 +143,49 @@ function alternarVisibilidade() {
       botaoMinimizar.textContent = 'Expandir Linha do Tempo';
   }
 }
+
+/* Carrossel "Apoiadores da Política" */
+const carrosselPolitica = document.querySelector(".wrapper-politica .carrossel");
+const arrowBtnsPolitica = document.querySelectorAll(".wrapper-politica i");
+const firstParceiroWidthPolitica = carrosselPolitica.querySelector(".parceiro").offsetWidth;
+const carrosselChildrenPolitica = [...carrosselPolitica.children];
+
+let isDraggingPolitica = false, startXPolitica, startScrollLeftPolitica;
+
+let parceirosPerViewPolitica = Math.round(carrosselPolitica.offsetWidth / firstParceiroWidthPolitica);
+
+carrosselChildrenPolitica.slice(-parceirosPerViewPolitica).reverse().forEach(parceiro => {
+    carrosselPolitica.insertAdjacentHTML("afterbegin", parceiro.outerHTML);
+});
+
+carrosselChildrenPolitica.slice(0, parceirosPerViewPolitica).forEach(parceiro => {
+    carrosselPolitica.insertAdjacentHTML("beforeend", parceiro.outerHTML);
+});
+
+arrowBtnsPolitica.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carrosselPolitica.scrollLeft += btn.id === "left" ? -firstParceiroWidthPolitica : firstParceiroWidthPolitica;
+    });
+});
+
+const dragStartPolitica = (e) => {
+    isDraggingPolitica = true;
+    carrosselPolitica.classList.add("dragging");
+    startXPolitica = e.pageX;
+    startScrollLeftPolitica = carrosselPolitica.scrollLeft;
+}
+
+const draggingPolitica = (e) => {
+    if (!isDraggingPolitica) return;
+    e.preventDefault();
+    carrosselPolitica.scrollLeft = startScrollLeftPolitica - (e.pageX - startXPolitica);
+}
+
+const dragStopPolitica = () => {
+    isDraggingPolitica = false;
+    carrosselPolitica.classList.remove("dragging");
+}
+
+carrosselPolitica.addEventListener("mousedown", dragStartPolitica);
+carrosselPolitica.addEventListener("mousemove", draggingPolitica);
+document.addEventListener("mouseup", dragStopPolitica);
