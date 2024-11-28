@@ -1,11 +1,11 @@
-## 🌐 Site Usina Eco-Cultural!
+# 🌐 Site Usina Eco-Cultural!
 
 Descrição:
 O projeto tem como foco principal a criação de um site institucional para o parceiro Usina Eco-Cultural que não só atenda as demandas solicitadas por eles, mas também cumpra com o objetivo de ser um meio informativo sobre o movimento. O intuito é divulgar a história da Usina, quem eles são, os eventos que promovem, as notícias, página de doações, informações para contato, boletins periódicos e uma loja que vende seus produtos.
 
 ---
 
-# ✒️ Desenvolvedores:
+### ✒️ Desenvolvedores:
 
 Letícia de Carvalho Silva (24.00141-4) - realizou documentação e programadora frontend
 
@@ -16,7 +16,7 @@ Mateus Martins Gonçalves Doro (24.00553-3) - prototipagem no Figma e programado
 Sophia Heringer Coelho (24.01202-5) - programadora frontend e backend
 
 ---
-# 🛠️Tecnologias usadas:
+### 🛠️Tecnologias usadas:
 1- HTML5
 
 2- CSS
@@ -41,7 +41,7 @@ Sophia Heringer Coelho (24.01202-5) - programadora frontend e backend
 <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png" alt="Bootstrap"/></code>
 <code><img height="32" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mongodb/mongodb.png" alt="MongoDB"/></code>
 ---
-# 🔍 Visão Geral do Projeto
+### 🔍 Visão Geral do Projeto
 
 A Usina Eco-Cultural é uma organização que busca promover a cultura e a sustentabilidade. Para alcançar um público maior e aumentar o engajamento, nosso grupo está desenvolvendo um site com:
   1- Navegação fácil: Foco em uma interface agradável, que permita aos usuários encontrarem rapidamente as informações de que precisam.
@@ -53,7 +53,7 @@ A Usina Eco-Cultural é uma organização que busca promover a cultura e a suste
   4- Elementos interativos: Funcionalidades que incentivem a interatividade e tornem o site mais dinâmico, criando uma experiência mais envolvente para o usuário.
 
 --- 
-# 📄 Documentação e apresentação do projeto
+### 📄 Documentação e apresentação do projeto
 
 Link para documentação: https://docs.google.com/document/d/1dQVxHXb84giEkCd7Hm9IEg75IycxON0FQwRl-yx0X3c/edit?usp=sharing
 
