@@ -254,19 +254,20 @@
 
 .incenerador .texto h2 {
     text-align: right;
-    color: black;
+    color: #313131;
     margin-right: 10%;
-    font-size: 35px; /* Alterar o tamanho do título (h2) aqui */
+    font-size: 30px; 
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .incenerador .texto p {
     text-align: right;
     margin-right: 10%;
-    font-size: 20px; /* Alterar o tamanho do texto (parágrafo) aqui */
+    font-size: 18px; /* Alterar o tamanho do texto (parágrafo) aqui */
     font-family: 'Roboto', sans-serif; 
     margin-top: 3%;
-    margin-left: -5%;
+    margin-left: 2%;
     margin-bottom: 5%;
 }
 
@@ -292,11 +293,11 @@
 
 /* Adicionado para redimensionar a imagem */
 .incenerador .imagem img {
-    width: 112%; /* Ajustar o tamanho da imagem proporcionalmente ao contêiner */
-    max-width: 6000px; /* Tamanho máximo da imagem (pode ser ajustado) */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 112%; 
+    max-width: 5000px; 
+    height: auto; 
     display: block;
-    margin: 0 auto; /* Centraliza dentro do contêiner */
+    margin: 0 auto; 
     margin-bottom: -8.7%;
     margin-top: -13%;
 }
@@ -312,14 +313,15 @@
 }
 
 .header .icon {
-    font-size: 60px;
+    font-size: 40px;
     color: #69A625;
     margin-bottom: 2% ;
+    margin-top: 0.5%;
 }
 
 .header h1 {
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
 }
 .content-section {
     display: flex;
@@ -330,7 +332,7 @@
 /* Conteúdo Principal linha 1*/
 .content-1 p {
     font-family: 'Roboto', sans-serif; 
-    font-size: 20px; 
+    font-size: 18px; 
     color: #505050; 
     line-height: 1.5; 
     margin: 10px 0; 
@@ -349,6 +351,8 @@
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    margin-right: 6%;
+    margin-left: 6%;
 }
 
 .content-1 .imagem {
@@ -358,6 +362,7 @@
 .content-1 .texto {
     flex: 1;
     text-align: left;
+    margin-right: 6%;
 }
 
 .img-usina {
@@ -370,12 +375,12 @@
 
 .texto p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 18px;
     color: #555;
 }
 
 .content-1 img[src="img/UsinaB&W.png"] {
-    width: 60%;
+    width: 38%;
     height: auto;
 }
 
@@ -383,7 +388,7 @@
 /* Conteúdo Principal linha 2*/
 .content-2 p {
     font-family: 'Roboto', sans-serif; 
-    font-size: 20px; 
+    font-size: 18px; 
     color: #505050; 
     line-height: 1.5; 
     margin: 10px 0; 
@@ -414,6 +419,8 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-right: 6%;
+    margin-left: 6%;
 }
 
 .content-2 .imagem {
@@ -427,7 +434,7 @@
 
 
 .content-2 img[src="img"] {
-    width: 40%;
+    width: 38%;
     height: auto;
 }
 
@@ -435,7 +442,7 @@
 .content-ret1 {
     background-color: #EDEDED;
     padding: 20px;
-    margin-top: 3%;
+    margin-top: 1%;
 }
 
 .ret1 {
@@ -445,7 +452,7 @@
 
 .img-comida {
     margin-right: 20px;
-    width: 550px;
+    width: 480px;
     height: auto;
     margin-top: 2%;
     margin-left: -2%;
@@ -469,14 +476,14 @@
 .texto-content h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 28px;
     color: #313131;
 }
 
 .texto-content h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 20px;
     color: #464545;
     margin: 5px 0;
     margin-top: 3%;
@@ -522,7 +529,7 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 3%; /* Espaço entre o texto e a borda */
-    margin-top: 3%;
+    margin-top: -1%;
 }
 
 .texto-content2 h1, .texto-content2 h2, .texto-content2 p {
@@ -742,9 +749,8 @@ body {
 
 .linha-do-tempo-titulo {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 35px;
-    color: #69A625;
+    font-size: 33px;
+    color: #313131;
     text-align: center;
     margin: 20px 0; /* Adiciona margem para espaçamento */
 }

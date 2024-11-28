@@ -137,10 +137,10 @@ function alternarVisibilidade() {
   const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
   if (linhaDoTempo.style.display === 'none') {
       linhaDoTempo.style.display = 'block';
-      botaoMinimizar.textContent = 'Minimizar Linha do Tempo';
+      botaoMinimizar.textContent = '▲';
   } else {
       linhaDoTempo.style.display = 'none';
-      botaoMinimizar.textContent = 'Expandir Linha do Tempo';
+      botaoMinimizar.textContent = '▼';
   }
 }
 
