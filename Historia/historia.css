@@ -379,21 +379,6 @@
     height: auto;
 }
 
-@media (max-width: 768px) {
-    .content-1 {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .content-1 .imagem,
-    .content-1 .texto {
-        width: 100%;
-    }
-
-    .content-1 .imagem {
-        margin-bottom: 20px;
-    }
-}
 
 /* Conteúdo Principal linha 2*/
 .content-2 p {
@@ -687,28 +672,6 @@
     font-size: 1.31rem;
 }
 
-@media screen and (max-width: 900px) {
-    .wrapper .carrossel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-    .wrapper i {
-        font-size: 1rem;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .wrapper .carrossel {
-        grid-auto-columns: 100%;
-    }
-    .wrapper i {
-        font-size: 0.875rem;
-        height: 35px;
-        width: 35px;
-        line-height: 35px;
-    }
-}
 .titulo {
     text-align: left;
     margin-bottom: 20px;
@@ -1052,28 +1015,6 @@ body {
     font-size: 1.31rem;
 }
 
-@media screen and (max-width: 900px) {
-    .wrapper-politica .carrossel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-    .wrapper-politica i {
-        font-size: 1rem;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .wrapper-politica .carrossel {
-        grid-auto-columns: 100%;
-    }
-    .wrapper-politica i {
-        font-size: 0.875rem;
-        height: 35px;
-        width: 35px;
-        line-height: 35px;
-    }
-}
 .titulo {
     text-align: left;
     margin-bottom: 20px;
@@ -1122,3 +1063,4 @@ section {
 .wrapper-politica i:active {
     transform: translateY(-50%) scale(1.2); 
 }
+
