@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+
+    <link rel="stylesheet" href="/Loja/FinalizarCompra/FinalizarCompra.css">
+    <script src="/Loja/Loja/Loja.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
+</head>
+<body>
+    
+        <!-- Cabeçalho -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 logo bg-white text-center p-3">
+                    <a href="/Loja/Loja/Loja.html">
+                        <button class="back-btn">&lt;</button>
+                    </a>
+                    <img src="/Login/FalaConosco/img/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
+                </div>
+            </div>
+        </div>
+        
+        <!--Retomar itens para compra-->
+        <div class="finalizar-compra">
+            <label class="d-block mb-2"><strong>Finalizar compra</strong></label>
+                <div class="carrinho-menu">
+                    <div class="itens-carrinho">Carrinho vazio</div>
+                </div>
+        
+                <div class="rodape-sidebar">
+                    <div class="total">
+                        <h5>Total</h5>
+                        <div class="total-carrinho">R$0.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Métodos de pagamnto-->
+        <div class="form-groups mt-4">
+            <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
+            <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
+            <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
+        </div>
+
+</body>
+</html>

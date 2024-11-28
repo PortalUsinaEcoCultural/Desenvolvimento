@@ -1,0 +1,50 @@
+/*Estilizações gerais do site*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif !important;
+    background-color: #f4f4f4;
+    color: #313131;
+}
+
+
+/*Cabeçalho*/
+.container {
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+h2 {
+    font-size: 20px;
+    color: #333;
+}
+h3{
+    font-size: 15px;
+    color: #505050;
+    margin-bottom: 9%;
+}
+.logo {
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 40px;
+    display: inline-block; 
+    padding: 15px;
+}
+.back-btn {
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 50px; 
+    top: 7%; 
+    transform: none; 
+}
+
+
+/*Finalizar compra*/

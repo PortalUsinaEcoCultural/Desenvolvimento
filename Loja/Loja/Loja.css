@@ -1,8 +1,4 @@
-/* Estilos Gerais */  
-*{ 
-    font-family: "Roboto", sans-serif; 
-}
-
+/* Barra de navegação */  
 .navbar {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     height: 80px;
@@ -14,8 +10,6 @@
     z-index: 1050; 
     background-color: #fff; 
 }
-
-/* Logo */
 .logo {
     font-weight: 500;
     color: #69a625;
@@ -24,8 +18,6 @@
     margin-left: 16%;
     margin-top: 5px;
 }
-
-/* Botão de Doação */
 .doe-button {
     background-color: #69a625;
     color: #fff;
@@ -40,28 +32,22 @@
     text-align: center;
     position: fixed;
     top: -9px;
-    right: 12%;
+    right: 9%;
     z-index: 1000;
 }
-
 .doe-button:hover {
     background-color: #487218;
     color: #fff; 
 }
-
-/* Toggler do Navbar */
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
-        margin-right: 50px; /* Ajuste para mover o botão para a esquerda */
+        margin-right: 50px; 
 }
-
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
     outline: none;
 }
-
-/* Links da Navbar */
 .nav-link {
     font-weight: 500;
     position: relative;
@@ -69,17 +55,12 @@
     margin-top: 40px;
     margin-left: 10px;
 }
-
 .nav-link:hover, .nav-link.active {
     color: #000;
 }
-
-/* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
-    display: none; /* Esconde o ícone de seta */
+    display: none; 
 }
-
-/* Estilo do Dropdown Menu */ 
 .nav-item .dropdown-menu {
     display: none;
     position: absolute;
@@ -90,15 +71,11 @@
     border-radius: 8px; 
     min-width: 180px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border: none; /* Remover a borda */
+    border: none; 
 }
-
-/* Exibe o dropdown ao passar o mouse */
 .nav-item:hover .dropdown-menu {
     display: block;
 }
-
-/* Estilos para os itens do dropdown */
 .dropdown-menu .dropdown-item {
     font-weight: 500;
     padding: 10px 20px; 
@@ -106,17 +83,14 @@
     text-align: left; 
     background-color: transparent; 
     transition: background-color 0.3s ease; 
+    margin-top: -5px;
 }
-
-/* Para espaçar itens do dropdown */
 .dropdown-item {
     display: block;
     padding-left: 20px;
     margin-top: 10px;
 }
-
-
-@media (min-width: 991px) {
+@media (min-width: 200px) {
     .nav-link::before {
         content: "";
         position: absolute;
@@ -134,21 +108,16 @@
         visibility: visible;
     }
 }
-
-/* Outros estilos */
 .container2 {
     text-align: right;
     color: white;
     padding-right: 200px;
     padding-left: 15px;
 }
-
 .offcanvas-body {
     margin-right: 1%;
     margin-left: 50px;
 }
-
-/* Login Button */
 .login-button {
     width: 40px;
     height: 40px;
@@ -162,18 +131,15 @@
     text-decoration: none;
     padding: 5px;
     margin-top: 10px;
+    margin-left: 47px;
     border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    margin-left: 40px;
 }
-
 .login-button:hover {
     background-color: #69a625;
     color: white;
 }
-
-/* Seção Hero */
 .hero-section::before {
     background-color: rgba(0, 0, 0, 0.6);
     content: "";
@@ -183,13 +149,11 @@
     bottom: 0;
     left: 0;
 }
-
 .hero-section .container {
     height: 100vh;
     z-index: 1;
     position: relative;
 }
-
 .hero-section h1 {
     font-size: 1.5em;
 }
@@ -197,54 +161,38 @@
 .hero-section h2 {
     font-size: 1.2em;
 }
-
 .container {
     text-align: center;
     margin-top: 50px;
 }
-
-/* Remove seta do dropdown */
 .nav-item.dropdown > .nav-link::after {
     display: none; 
 }
-
-/* Ajustes para o menu hambúrguer */
-
 /* Ajuste de espaçamento dentro do hambúrguer */
 .offcanvas-body .navbar-nav {
-    margin-top: 3%; 
+    margin-top: 10px; 
 }
 .nav-item {
-    margin-bottom: 5%; 
+    margin-bottom: 10px; 
 }
-
 .nav-item .nav-link {
     margin-top: 10px; 
     margin-bottom: 10px; 
 }
-
-/* Ajuste do título do menu hambúrguer */
 .offcanvas-header .offcanvas-title {
     font-size: 20px;
     margin-bottom: 5px; 
 }
-
-/* Ajuste do botão de fechamento do hambúrguer */
 .offcanvas-header .btn-close {
     margin-top: 0;
     padding: 10px; 
 }
-
-/* Dropdown */
 .nav-item.dropdown .nav-link {
     margin-top: 10px; /
 }
-
 .nav-item .dropdown-menu {
     padding: 5px 0; 
 }
-
-
 
 
 /*Geral*/
@@ -258,6 +206,7 @@ body {
     background-color: #f4f4f4;
     color: #1D1D1F;
 }
+
 
 /*Banner*/
 header {
@@ -273,6 +222,7 @@ header {
 .subtitulo-banner {
     font-size: 15px;
 }
+
 
 /*Barra de pesquisa e carrinho*/
 .barra-carrinho-container{
@@ -307,7 +257,8 @@ header {
     color: #888;
 }
 
-/*carrinho de compras*/
+
+/*Carrinho de compras*/
 .carrinho-icone{
     position: relative;
     padding: 10px;
@@ -342,6 +293,7 @@ header {
     font-weight: bold;
 }
 
+
 /*Opções de compra*/
 .produtos-container{
     display: flex;
@@ -375,6 +327,7 @@ header {
     margin: 0;
 }
 
+
 /*Lojinha*/ 
 .lista-cards{
     display: flex;
@@ -400,6 +353,9 @@ header {
 .card img{
     width: 90%;
     height: auto;
+}
+.titulo-card{
+    font-size: 20px;
 }
 .card-preco{
     display: flex;
@@ -443,13 +399,14 @@ header {
     opacity: 1;
 }
 
-/*menu sidebar do carrinho*/
+
+/*Menu sidebar do carrinho*/
 .sidebar {
-    width: 350px;
-    height: 70%;
+    width: 25%;
+    height: 80%;
     position: fixed;
-    top: 20%;
-    right: -400px;
+    top: 15%;
+    right: -150%;
     background-color: #fff;
     box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
     transition: right 0,3s ease-in-out;
@@ -484,14 +441,14 @@ header {
     border: 1px solid #888;
 }
 .carrinho-menu{
-    margin-top: 20%;
+    margin-top: 5%;
 }
 .total-carrinho{
     color: #2B2B2E;
 }
 .rodape-sidebar{
     position: absolute;
-    bottom: 10px;
+    bottom: 0.5%;
     width: 88%;
 }
 .total {
@@ -526,9 +483,22 @@ header {
     background-color: #3b5f13;
     color:#fff
 }
+@media (max-width: 680px) {
+    .sidebar {
+        width: 90%;
+        height: 80%;
+    }
+}
+@media (min-width: 680px) and (max-width: 1200px) {
+    .sidebar {
+        width: 75%;
+        height: 85%;
+    }
+}
 
 
-/*seção do newsletter*/
+
+/*Seção do newsletter*/
 .newsletter-container {
     background-color: #D9D9D9;
     padding: 30px;
@@ -536,7 +506,7 @@ header {
     margin-top: 30px;
 }
 .conteudo{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 .newsletter-container h3 {
     font-size: 20px;
@@ -573,6 +543,16 @@ header {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+}
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
 }
 @media (max-width: 767px) {
     .form-group {
