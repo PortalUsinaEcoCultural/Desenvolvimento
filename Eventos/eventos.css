@@ -352,6 +352,16 @@ header {
     gap: 15px;
     flex-wrap: wrap;
 }
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
+}
 @media (max-width: 767px) {
     .form-group {
         flex: 1 1 100%;

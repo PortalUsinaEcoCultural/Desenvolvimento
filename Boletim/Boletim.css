@@ -32,7 +32,7 @@
     text-align: center;
     position: fixed;
     top: -9px;
-    right: 12%;
+    right: 9%;
     z-index: 1000;
 }
 .doe-button:hover {
@@ -216,11 +216,11 @@ body {
     background-color: #f8f9fa;
     padding: 1.5rem 0;
 }
-.boletim .texto h2 {
+.boletim .texto-banner h2 {
     text-align: right;
     color: #313131;
 }
-.boletim .texto p {
+.boletim .texto-banner p {
     text-align: right;
 }
 .boletim .imagem img {
@@ -328,6 +328,16 @@ body {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+}
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
 }
 @media (max-width: 767px) {
     .form-group {
