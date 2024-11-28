@@ -576,6 +576,19 @@
 }
 
 /* Seção "Apoiadores" */
+.grupos-apoiadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    margin-left: 2.5%;
+    margin-top: 3%;
+}
+
+
 .wrapper {
     max-width: 1000px;
     width: 100%;
@@ -619,6 +632,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    margin-left: 1%;
 }
 .carrossel::-webkit-scrollbar {
     display: none;
