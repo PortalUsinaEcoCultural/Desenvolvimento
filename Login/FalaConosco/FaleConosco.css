@@ -282,6 +282,7 @@ body {
     color: black;
 }
 
+
 /* Seção do quadro de informações */
 .informacoes-quadro {
     display: flex;
@@ -293,22 +294,18 @@ body {
     margin: 30px auto;
     max-width: 900px;
 }
-
 .informacoes-quadro .texto h2 {
     color: black;
     font-size: 25px;
     text-align: start;
 }
-
 .informacoes-quadro .texto p {
     color: black;
     font-size: 15px;
 }
-
 .informacoes-quadro .row {
     margin-bottom: 1.5rem;
 }
-
 /* Responsividade */
 @media (max-width: 767px) {
     .fale-conosco .texto h2,
@@ -319,16 +316,14 @@ body {
         text-align: left;
     }
 }
-
-/* Personalização de elementos */
 .informacoes-quadro span {
     font-weight: bold;
     color: black;
 }
-
 .informacoes-quadro u {
     text-decoration: underline;
 }
+
 
 /*Perguntas frequentes*/
 /* Limita a largura da FAQ ao mesmo tamanho do quadrado verde */
@@ -352,7 +347,6 @@ body {
     color: #69A625; 
     margin-bottom: 8px; 
 }
-
 .pergunta p {
     text-align: left;
     font-size: 15px;
@@ -458,6 +452,7 @@ body {
     }
 }
 
+
 /* Estilos para a barra de edição */
 /* Estilos para o modal */
 #modal {
@@ -476,13 +471,11 @@ body {
     max-width: 400px;
     text-align: center;
 }
-
 /* Estilos para a mensagem do modal */
 #modal-message {
     font-size: 20px;
     margin-bottom: 15px; /* Distância entre a mensagem e o botão */
 }
-
 /* Estilos para o botão "Fechar" */
 .close-button {
     background-color: #69A625;
@@ -498,7 +491,6 @@ body {
 .close-button:hover {
     background-color: #558320;
 }
-
 /* Estilos para o fundo escuro do modal */
 #modal-overlay {
     position: fixed;
@@ -510,7 +502,6 @@ body {
     z-index: 999; 
     display: none; /* Inicialmente oculto */
 }
-
 /* Estilos para o modal de feedback */
 #feedbackModal {
     display: none; /* Inicialmente oculto */
@@ -527,7 +518,6 @@ body {
     width: 80%;
     text-align: center;
 }
-
 /* Estilos para o conteúdo do modal de feedback */
 .modal-content {
     text-align: center;
@@ -535,7 +525,6 @@ body {
     font-size: 16px;
     color: #333;
 }
-
 /* Estilos para o botão de fechar do feedback */
 .modal-close {
     position: absolute;
@@ -545,6 +534,7 @@ body {
     cursor: pointer;
     color: #333;
 }
+
 
 /* Botões de edição (inicialmente escondidos) */
 .edit-buttons-container {
@@ -557,12 +547,10 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .edit-buttons {
     display: flex;
     gap: 12px;
 }
-
 .edit-button {
     background-color: #69A625;
     border: none;
@@ -574,21 +562,17 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
-
 .edit-button:hover {
     background-color: #558320;
     color: #ffffff;
 }
-
 .edit-button:active {
     background-color: #3b5f13;
 }
-
 .edit-button:disabled {
     background-color: #f1f1f1;
     cursor: not-allowed;
 }
-
 /* Estilos para a borda do modo de edição */
 .edit-mode-border {
     display: none;
@@ -602,7 +586,6 @@ body {
     pointer-events: none;
     z-index: 9998;
 }
-
 /* Estilos para o texto indicando que o modo de edição está ativado */
 .edit-mode-text {
     display: block;
@@ -612,7 +595,7 @@ body {
     transform: translateX(-50%);
     background-color: rgba(105, 166, 37, 0.9);
     color: white;
-    padding: 10px 20px;
+    padding: 0 5px;
     font-size: 20px;
     font-weight: bold;
     z-index: 9999;
@@ -620,7 +603,6 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
-
 /* Estilos para o botão de voltar */
 .back-btn {
     margin-left: 30px;
@@ -642,11 +624,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
-
 .back-btn:hover {
     background-color: #487218;
 }
-
 /* Estilos para o modal de confirmação */
 #modal {
     display: flex;
@@ -664,7 +644,6 @@ body {
     width: 400px;
     text-align: center;
 }
-
 /* Fundo escuro de overlay */
 #modal-overlay {
     position: fixed;
@@ -676,7 +655,6 @@ body {
     z-index: 999;
     display: none; /* Inicialmente oculto */
 }
-
 /* Botão dentro do modal */
 #modal button {
     padding: 5px 5px;
@@ -687,11 +665,9 @@ body {
     cursor: pointer;
     font-size: 15px;
 }
-
 #modal-message {
     font-size: 12px;
 }
-
 #modal button:hover {
     background-color: #558320;
 }
