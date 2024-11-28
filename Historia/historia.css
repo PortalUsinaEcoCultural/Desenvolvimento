@@ -1022,20 +1022,24 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.parceiro .img {
-    width: 148px;
-    height: 148px;
-    border-radius: 0%;
-    overflow: visible;
+.parceiro .img-politica {
+    width: 148px; /* Largura fixa do contêiner */
+    height: 148px; /* Altura fixa do contêiner */
+    border-radius: 0%; /* Bordas retas */
+    overflow: hidden; /* Esconde partes da imagem que excedem o contêiner */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
 }
-.parceiro .img img {
-    width: 190px;
-    height: 160px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0%;
-    overflow: visible;
+
+.parceiro .img-politica img {
+    width: auto; /* Permite que a largura da imagem se ajuste proporcionalmente */
+    height: 100%; /* Ajusta a altura ao tamanho do contêiner */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-position: center; /* Centraliza a imagem dentro do contêiner */
+    border-radius: 0%; /* Bordas retas */
 }
+
 .parceiro h2 {
     font-weight: 500;
     font-size: 1.56rem;
