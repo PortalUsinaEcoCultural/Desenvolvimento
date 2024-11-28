@@ -1,14 +1,19 @@
 
 body {
     font-family: 'Roboto',sans-serif;
-    background-color: #F8F8F8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-    margin: 0;
-    flex-direction: column;
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Ajusta o alinhamento superior */
+        align-items: center;
+        overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+        min-height: 100vh;
+        margin: 0;
+        background-color: #F8F8F8;
+        margin-top: -40px;
+    }    
+
+
+/*Cabeçalho*/
 .container {
     padding: 30px;
     border-radius: 5px;
@@ -16,7 +21,6 @@ body {
     width: 100%;
     text-align: center;
 }
-
 h2 {
     font-size: 20px;
     color: #333;
@@ -26,57 +30,50 @@ h3{
     color: #505050;
     margin-bottom: 9%;
 }
-
-/* Logo */
 .logo {
     margin-top: 10px;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 40px;
     display: inline-block; 
     padding: 15px;
 }
-
 .back-btn {
-    font-size: 20px;
+    font-size: 16px;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    left: 70px;
-    top: 10%;
-    transform: translateY(-50%);
+    left: 50px; 
+    top: 7%; 
+    transform: none; 
 }
+
 
 /* Formulário */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
-
 .form-groups {
     margin-bottom: 15px;
     text-align: center;
+    white-space: nowrap;
 }
-
 .form-control {
     background-color: #e0e0e0; 
     border: 1px solid transparent; 
     color: #333; 
 }
-
 .form-control:focus, .form-control:hover {
     background-color: #e0e0e0; 
     outline: none; 
     border: 1px solid transparent; 
     box-shadow: none; 
 }
-
 .form-control::placeholder {
     color: #999;
     font-size: 13px; 
 }
-
-/* Botões de Pagamento */
 .btn-pagamento {
     background-color: #F8F8F8; 
     color: #69A625;
@@ -84,43 +81,89 @@ h3{
     border: 2px solid #69A625; 
     border-radius: 5px;
     font-size: 15px;
-    margin: 5px;
-    width: 120px;
+    margin: 5px 10px; 
+    width: auto; 
     transition: background-color 0.3s, color 0.3s; 
+    display: inline-block; 
+    text-align: center; 
 }
 .btn-pagamento:hover {
     background-color: #69A625; 
     color: white;
 }
-
-/* Estilo para o link */
 a {
     text-decoration: none; 
 }
 a:hover, a:hover .btn-pagamento {
     color: #fff;
 }
-
-/* Estilo para os botões quando selecionados */
 .selecionado {
     background-color: #69A625;
     color: white; 
     border-color: #69A625;
 }
-
-/* Botão Continuar */
 .btn-continuar {
-    background-color: #69A625;
+    background-color: #69A625; 
     color: #fff; 
-    padding: 5px 15px; 
-    border-radius: 5px;
-    font-size: 14px; 
-    margin-left: 330px; 
-    margin-top: 50px; 
-    transition: background-color 0.3s, color 0.3s;
+    padding: 5px 5px; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    margin: 40px auto 0 !important; 
+    display: block; 
+    width: 120px !important; 
+    margin-right: 110px !important;
+    transition: background-color 0.3s, color 0.3s; 
 }
-
 .btn-continuar:hover {
     background-color: #4e7a1b;
     color: #fff; 
+}
+
+
+/* Ajustes para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .btn-continuar {
+        margin-left: 0;
+        width: 100%; /* Botão ocupa toda a largura */
+        text-align: center;
+        padding: 10px;
+    }
+    .btn-pagamento {
+        width: 30%; /* Botões de pagamento ocupam toda a largura */
+        margin: 5px 0; /* Espaçamento entre os botões */
+    }
+    .form-group, .form-groups {
+        padding: 0 5%;
+    }
+    h2, h3 {
+        padding: 0 5%;
+    }
+    .container {
+        padding: 10px 5%;
+    }
+}
+
+/* Ajustes para telas menores que 576px (celulares) */
+@media (max-width: 576px) {
+    .btn-pagamento {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .btn-continuar {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 1.5; /* Melhora o espaçamento entre linhas */
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .container {
+        padding: 5%;
+    }
 }

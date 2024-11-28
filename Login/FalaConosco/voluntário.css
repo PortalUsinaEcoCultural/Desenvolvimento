@@ -10,6 +10,8 @@ body {
     flex-direction: column;
 }
 
+
+/*Cabeçalho*/
 .container {
     padding: 30px;
     border-radius: 5px;
@@ -17,67 +19,58 @@ body {
     width: 100%;
     text-align: center;
 }
-
 h2 {
     font-size: 20px;
     color: #333;
 }
-
 h3{
     font-size: 15px;
     color: #505050;
     margin-bottom: 9%;
 }
-
-/* Logo */
 .logo {
     margin-top: 10px;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 70px;
     display: inline-block; 
-    padding: 15px;
+    padding: 10px;
 }
-
 .back-btn {
     font-size: 20px;
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    left: 70px;
-    top: 8%;
+    left: 50px; /* Aproxima o botão das bordas da tela */
+    top: 7.5%; /* Move o botão para o topo */
     transform: translateY(-50%);
 }
+
 
 /* Formulário */
 .form-group {
     margin-bottom: 15px;
     text-align: left;
 }
-
 .form-groups {
     margin-bottom: 15px;
     text-align: center;
 }
-
 .form-control {
     background-color: #e0e0e0; 
     border: 1px solid transparent; 
     color: #333; 
 }
-
 .form-control:focus, .form-control:hover {
     background-color: #e0e0e0; 
     outline: none; 
     border: 1px solid transparent; 
     box-shadow: none; 
 }
-
 .form-control::placeholder {
     color: #999;
     font-size: 13px; 
 }
-
 /* Botão Enviar */
 .btn-enviar {
     background-color: #69A625;
@@ -90,8 +83,87 @@ h3{
     cursor: pointer; 
     transition: background-color 0.3s, color 0.3s;
 }
-
 .btn-enviar:hover {
     background-color: #4e7a1b; 
     color: #fff;
+}
+
+
+/* Estilos padrões já definidos acima */
+/* Ajustes para telas maiores */
+@media (min-width: 1024px) {
+    .logo img {
+    margin-top: 90px;
+    }
+}
+/* Ajustes para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    body {
+        margin-top: -30px;
+    }
+    .container {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 14px;
+        margin-bottom: 12%;
+    }
+    .logo img {
+        width: 50px; /* Reduzindo o tamanho do logo */
+        margin-top: 80px;
+    }
+    .btn-enviar {
+        width: 100%; /* O botão ocupará a largura total */
+        height: 45px;
+        font-size: 14px;
+    }
+    .back-btn {
+        font-size: 16px;
+        left: 20px; /* Ajusta a posição para não sobrepor o logo */
+        top: 7%;
+    }
+}
+
+/* Ajustes para telas menores que 576px (celulares) */
+@media (max-width: 576px) {
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size: 13px;
+    }
+    .form-group, .form-groups {
+        margin-bottom: 10px;
+    }
+    .form-control {
+        font-size: 12px; /* Reduzindo a fonte dos inputs */
+    }
+    .btn-enviar {
+        font-size: 13px; 
+    }
+    .logo img {
+        width: 50px; /* Reduz o tamanho do logo em telas pequenas */
+        margin-top: 100px;
+    }
+    .back-btn {
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+        top: 10px; /* Posiciona mais próximo do topo */
+        left: 5px; /* Ajusta a distância das laterais */
+        margin-top: 6%;
+    }
+}
+
+/* Para telas muito pequenas */
+@media (max-width: 320px) {
+    .logo img {
+        max-height: 100px;
+        margin-top: 130px;
+    }
+    .back-btn {
+        font-size: 16px; /* Ajusta tamanho da fonte */
+        margin-top: 9%;
+    }
 }
