@@ -3,13 +3,96 @@
     font-family: "Roboto", sans-serif; 
 }
 
+
+/* banner topo */
+.carousel-item h1{
+    color: #fff;
+    padding: 5px; 
+    border-radius: 5px;
+    max-width: 80%; 
+    font-weight: 700;
+}
+.carousel-item p {
+    color: #fff;
+    padding: 5px; 
+    border-radius: 5px;
+    max-width: 80%; 
+}
+.carousel-item .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left; 
+    z-index: 10; 
+}
+.carousel-item{
+    height: 32rem;
+    background: #000;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.sequencia{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+}
+.edit-mode-border {
+    border: 5px solid rgba(105, 166, 37, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.carousel-item{
+    height: 32rem;
+    background: #000;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+    opacity:0.5;
+    filter: brightness(50%); 
+}
+
+/* botoes banner */
+.carousel-item .btn {
+    background-color: #69A625; 
+    color: #fff;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+}
+.carousel-item .btn:hover {
+    background-color: #3b5f13;
+    color: #fff; 
+}
+.carousel-item .btn:active {
+    background-color: #21350a;
+    color: #fff; 
+}
+
+
 /* Cards 01 */
 .cards1{
     background-color: #EDEDED;
     background-image: url(imagens/fundo.png);
     background-size: contain;
     width: 100% !important;
-    padding: 3%;
+    padding: 4%;
 }
 .card1 {
     justify-content: center;
@@ -18,22 +101,17 @@
     background-color: transparent;
 }
 .card1 h2{
-    color: #9A1827;
+    color: #69A625;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 25px;
-
+    font-size: 24px;
 }
 .card1 p{
-    color: #000;
+    color: #2B2B2E;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 100%;
+    font-size: 15px;
     margin-top: 5%;
-}
-.secao4 {
-    margin: 0;
-    font-family: Helvetica, sans-serif;
 }
 .row {
     display: flex;
@@ -56,7 +134,6 @@
     transform: scale(1.05);
     z-index: 1;
 }
-
 @media (max-width: 768px) {
     .secao4-div-card1 {
         width: 100%;
@@ -76,7 +153,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 700px; 
+    height: 680px; 
     object-fit: cover; 
 
 }
@@ -95,11 +172,10 @@
     color:#69A625;
 }
 .card p {
-    font-family: "Roboto", sans-serif;
     font-size: 15px;
     margin-bottom: 15px;
     text-align: left;
-    color:#555555;
+    color:#2B2B2E;
 }
 .card-text-info {
     font-family: "Roboto", sans-serif;
@@ -109,13 +185,13 @@
     font-weight: bold;
 }
 .card img {
-    width: 80%; /* Ajuste conforme necessário */
+    width: 80%;
     height: auto;
     margin-bottom: 15px;
     border-radius: 3px;
-    width: 100%; /* Ajusta a largura para preencher o card */
-    height: 200px; /* Define a altura uniforme */
-    object-fit: cover; /* Faz com que a imagem preencha o espaço sem distorcer */
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
 }
 .card button {
     background-color: #69A625;
@@ -314,95 +390,25 @@ button:hover {
     color: #fff;
 }
 
-.carousel-item{
-    height: 32rem;
-    background: #000;
-    color: white;
-    position: relative;
-    background-position: center;
-    background-size: cover;
+/* Conquistas */
+.container-conquistas {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
-.sequencia{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-bottom: 50px;
+.conquista {
+    text-align: center;
 }
-.overlay-image{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top:0;
-    background-position: center;
-    background-size: cover;
-    opacity:5;
+.conquista p {
+    font-size: 14px;
+    color: #888;
 }
-.edit-mode-border {
-    border: 5px solid rgba(105, 166, 37, 0.7);
-    padding: 10px;
-    box-sizing: border-box;
+.conquista h2 {
+    font-size: 18px;
+    color: #D45A5A;
 }
-.carousel-item{
-    height: 32rem;
-    background: #000;
-    color: white;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-}
-.sequencia{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding-bottom: 50px;
-}
-.overlay-image{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top:0;
-    background-position: center;
-    background-size: cover;
-    opacity:0.5;
-}
-
-/* banner */
-.carousel-item h1,
-.carousel-item p {
-    color: #fff;
-    padding: 5px; 
-    border-radius: 5px;
-    max-width: 80%; 
-}
-.carousel-item .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left; 
-    z-index: 10; 
-}
-/* botoes banner */
-.carousel-item .btn {
-    background-color: #69A625; 
-    color: #fff;
-    border: none; 
-    padding: 10px 20px; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    transition: background-color 0.3s ease;
-}
-.carousel-item .btn:hover {
-    background-color: #3b5f13;
-    color: #fff; 
-}
-/* deixar banner mais escuro */
-.overlay-image {
-    background-size: cover;
-    background-position: center;
-    filter: brightness(50%); 
+.icone-conquista {
+    font-size: 40px;
+    color: #F0A55C;
 }
