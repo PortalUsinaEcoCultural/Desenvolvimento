@@ -79,11 +79,12 @@
 .item-galeria p:hover::after {
     width: 100%; 
 }
-/*Rodapé*/
 
+
+/*Rodapé*/
 .bloco{
     background-color: #2B3420;
-    min-height: 460px; /* Usa altura mínima para evitar excesso */
+    min-height: 460px;
 }
 .social-icons {
     padding-top: 3px;
@@ -103,25 +104,22 @@
 .social-icons a:hover {
     transform: scale(1.1); 
 }
-
 .contato {
-    padding: 20px 0;
+    padding: 30px 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px; 
     text-decoration: none;
 }
-
 .contato-item {
     display: flex;
     align-items: center;
     color: white;
     text-decoration: none; 
     font-size: 15px;
-    gap: 10px; 
+    gap: 10px;
 }
-
 .contato-item:hover {
     transform: scale(1.02);
     text-decoration: none;
@@ -133,6 +131,9 @@
 .contato-item p {
     margin: 0; 
     white-space: nowrap;
+}
+.contato-item .tel{
+    padding-left: 100%;
 }
 .texto{
     font-size: 30px; 
