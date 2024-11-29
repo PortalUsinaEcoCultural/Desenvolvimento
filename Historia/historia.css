@@ -1070,3 +1070,362 @@ section {
     transform: translateY(-50%) scale(1.2); 
 }
 
+/* Responsividade*/
+
+/* Correção geral para evitar espaço extra à direita */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Seção "O Incinerador" */
+@media (max-width: 1200px) {
+    .incenerador {
+        padding: 3rem 0;
+    }
+    .incenerador .texto h2, .incenerador .texto p {
+        text-align: center;
+        margin-right: 0;
+    }
+    .button {
+        margin-right: 0;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .incenerador .texto h2 {
+        font-size: 24px;
+    }
+    .incenerador .texto p {
+        font-size: 16px;
+    }
+    .incenerador .imagem img {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .incenerador {
+        padding: 2rem 0;
+    }
+    .incenerador .texto h2 {
+        font-size: 20px;
+    }
+    .incenerador .texto p {
+        font-size: 14px;
+    }
+    .incenerador .imagem img {
+        margin-top: 20px; /* Aumenta o espaço acima da imagem */
+    }
+}
+
+/* Estilo do cabeçalho */
+@media (max-width: 900px) {
+    .header .icon {
+        font-size: 30px;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Conteúdo Principal Linha 1 */
+@media (max-width: 900px) {
+    .content-1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-1 img {
+        width: 80%;
+        margin: 0 auto;
+        scale: 140%;
+    }
+    .content-1 p {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20%;
+    }
+}
+
+/* Conteúdo Principal Linha 2 */
+@media (max-width: 900px) {
+    .content-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-2 img {
+        width: 80%;
+        margin: 0 auto;
+        scale: 140%;
+    }
+    .content-2 p {
+        margin-right: 2;
+        text-align: center;
+    }
+}
+
+/* Conteúdo Ret 1 */
+@media (max-width: 900px) {
+    .ret1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .img-comida {
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .texto-content {
+        margin-top: 4%;
+        margin-bottom: 4%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+    .texto-content h1, .texto-content h2, .texto-content p {
+        text-align: center;
+    }
+}
+
+/* Conteúdo Ret 2 */
+@media (max-width: 900px) {
+    .ret2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .img-banner {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .texto-content2 {
+        text-align: center;
+        margin: 0;
+    }
+    .texto-content2 h1, .texto-content2 h2, .texto-content2 p {
+        text-align: center;
+        margin-right: 15%;
+    }
+}
+
+/* Seção "Apoiadores" */
+@media (max-width: 1200px) {
+    .grupos-apoiadores {
+        padding: 15px;
+        margin-left: 1.5%;
+    }
+    .wrapper {
+        max-width: 800px;
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: calc((100% / 2) - 12px);
+        margin-left: 14%;
+    }
+}
+
+@media (max-width: 900px) {
+    .grupos-apoiadores {
+        padding: 10px;
+        margin-left: 1%;
+    }
+    .wrapper {
+        max-width: 600px;
+    }
+    .wrapper i {
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+}
+
+@media (max-width: 600px) {
+    .grupos-apoiadores {
+        padding: 5px;
+    }
+    .wrapper {
+        max-width: 400px;
+    }
+    .wrapper i {
+        height: 35px;
+        width: 35px;
+        font-size: 0.875rem;
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* Seção Linha-do-Tempo */
+@media (max-width: 1200px) {
+    .linha-do-tempo {
+        max-width: 600px;
+    }
+    .linha-do-tempo-container {
+        width: calc(75% - 45px);
+    }
+    .linha-do-tempo-container.esquerda {
+        left: -7.5%;
+    }
+    .linha-do-tempo-container.direita {
+        left: 50%;
+    }
+}
+
+@media (max-width: 900px) {
+    .linha-do-tempo {
+        max-width: 500px;
+    }
+    .linha-do-tempo-container {
+        width: calc(100% - 45px);
+        left: 0;
+    }
+    .linha-do-tempo-container.direita {
+        left: 0;
+    }
+    .linha-do-tempo-conteudo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .linha-do-tempo {
+        max-width: 400px;
+    }
+    .linha-do-tempo::after {
+        display: none; /* Remove a linha pontilhada */
+    }
+    .linha-do-tempo-container::after {
+        display: none; /* Remove o ponto verde */
+    }
+    .linha-do-tempo-container {
+        width: calc(100% - 20px);
+        left: 0;
+        text-align: center; /* Centraliza os eventos */
+        align-items: center;
+    }
+    .linha-do-tempo-container.direita {
+        left: 0;
+    }
+    .linha-do-tempo-conteudo {
+        margin: 0 auto; /* Centraliza o conteúdo */
+        display: block; /* Garante a centralização */
+        align-items: center;
+    }
+    .linha-do-tempo-botoes {
+        bottom: 5px;
+        right: 10px;
+        display: flex;
+        gap: 5px; /* Espaçamento entre os botões */
+    }
+    .linha-do-tempo-adicionar-evento, .linha-do-tempo-editar-evento, .linha-do-tempo-salvar-eventos {
+        font-size: 0.75rem; /* Diminui o tamanho da fonte dos botões */
+        padding: 5px 10px; /* Ajusta o padding dos botões */
+    }
+    .linha-do-tempo-botoes .linha-do-tempo-btn-excluir {
+        font-size: 0.75rem; /* Diminui o tamanho da fonte do botão de excluir */
+        padding: 5px 10px; /* Ajusta o padding do botão de excluir */
+    }
+}
+
+/*  "Apoiadores da Política" */
+.titulo h1 {
+    font-size: 2rem; /* Tamanho da fonte padrão */
+}
+
+@media (max-width: 1200px) {
+    .titulo h1 {
+        font-size: 1.75rem; /* Ajusta o tamanho da fonte para telas médias */
+        text-align: center; /* Centraliza o texto em telas médias */
+        margin-right: 8%;
+    }
+}
+
+@media (max-width: 900px) {
+    .titulo h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte para telas menores */
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo h1 {
+        font-size: 1.25rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
+        text-align: center; /* Centraliza o texto em telas muito pequenas */
+    }
+}
+
+/* Centralização do Carrossel na Seção "Política" */
+@media (max-width: 1200px) {
+    .grupos-apoiadores {
+        padding: 15px;
+        margin-left: 1.5%;
+    }
+    .wrapper-politica {
+        max-width: 800px;
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-politica .carrossel {
+        grid-auto-columns: calc((100% / 2) - 12px);
+        margin-left: 14%;
+    }
+}
+
+@media (max-width: 900px) {
+    .grupos-apoiadores {
+        padding: 10px;
+        margin-left: 1%;
+    }
+    .wrapper-politica {
+        max-width: 600px;
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-politica i {
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
+    }
+    .wrapper-politica .carrossel {
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+}
+
+@media (max-width: 600px) {
+    .grupos-apoiadores {
+        padding: 5px;
+    }
+    .wrapper-politica {
+        max-width: 400px;
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-politica i {
+        height: 35px;
+        width: 35px;
+        font-size: 0.875rem;
+    }
+    .wrapper-politica .carrossel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* Ajusta as imagens para terem o mesmo tamanho apenas no modo mobile */
+@media (max-width: 600px) {
+    .img-usina, .img-cartaz, .img-comida {
+        width: 50%;
+        height: auto;
+        max-width: 480px; /* Define a mesma largura máxima */
+        margin: 0 auto; /* Centraliza as imagens */
+        display: block; /* Garante que as imagens se comportem corretamente */
+    }
+}
