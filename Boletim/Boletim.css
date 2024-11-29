@@ -42,7 +42,7 @@
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
-        margin-right: 50px; 
+    margin-right: 15%; 
 }
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
@@ -291,7 +291,7 @@ body {
     margin-top: 30px;
 }
 .conteudo{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 .newsletter-container h3 {
     font-size: 20px;

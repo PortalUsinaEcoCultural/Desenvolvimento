@@ -295,7 +295,7 @@ body {
 .pergunta h4 {
     text-align: left;
     font-size: 20px;
-    color: #69A625; 
+    color: #000000; 
     margin-bottom: 8px; 
 }
 .pergunta p {
@@ -320,6 +320,7 @@ body {
 .duvidas h2 {
     font-size: 25px;
     margin-bottom: 10px;
+    color: #000;
 }
 .duvidas p {
     font-size: 15px;
@@ -350,11 +351,11 @@ body {
 .newsletter-container {
     background-color: #D9D9D9;
     padding: 30px;
-    border-radius: 30px 30px 0 0;
+    border-radius: 20px 20px 0 0;
     margin-top: 30px;
 }
 .conteudo{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 .newsletter-container h3 {
     font-size: 20px;
@@ -392,6 +393,16 @@ body {
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
+}
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
 }
 @media (max-width: 767px) {
     .form-group {
