@@ -319,9 +319,10 @@ body {
     border-radius: 5px;
     cursor: pointer;
     width: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 .newsletter-container .cadastro-botao:hover {
-    background-color: #3b5f13;
+    background-color: #487218;
 }
 .form-row {
     display: flex;

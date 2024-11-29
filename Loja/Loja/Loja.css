@@ -195,7 +195,7 @@
 }
 
 
-/*Geral*/
+/*Estilizações gerais do site*/
 * {
     margin: 0;
     padding: 0;
@@ -374,7 +374,7 @@ header {
     padding: 5px;
 }
 .adicionar:hover{
-    background-color: #3b5f13;
+    background-color: #487218;
     box-shadow: rgb(0 0 0 / 30%) 0px 4px 4px, rgb(231, 236, 236) 0px 0px 0px 3px;
 }
 .mensagem-confirmacao{
@@ -480,7 +480,7 @@ header {
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 .checkout:hover{
-    background-color: #3b5f13;
+    background-color: #487218;
     color:#fff
 }
 @media (max-width: 680px) {
@@ -534,9 +534,10 @@ header {
     border-radius: 5px;
     cursor: pointer;
     width: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 .newsletter-container .cadastro-botao:hover {
-    background-color: #3b5f13;
+    background-color: #487218;
 }
 .form-row {
     display: flex;
