@@ -221,8 +221,8 @@ body {
     text-align: left; 
 }
 .fale-conosco .texto h2,
-.fale-conosco .texto2 p {
-    text-align: right;
+.fale-conosco .texto p {
+    text-align: right !important;
     color: black;
 }
 @media (max-width:1000px ) {
@@ -285,16 +285,16 @@ body {
 .subtitulo-faq h3 {
     text-align: left; 
     color: #000; 
-    margin-bottom: 20px;
-    font-size: 25px;
+    margin-bottom: 3%;
+    font-size: 20px;
 }
 .pergunta {
-    margin-top: 50px;
+    margin-top: 2%;
     margin-bottom: 40px; 
 }
 .pergunta h4 {
     text-align: left;
-    font-size: 20px;
+    font-size: 15px;
     color: #000000; 
     margin-bottom: 8px; 
 }
@@ -360,11 +360,10 @@ body {
 .newsletter-container h3 {
     font-size: 20px;
     color: black;
-    margin-bottom: 15px;
 }
 .newsletter-container p {
     font-size: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 .form-group {
     flex: 1;
