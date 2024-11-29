@@ -268,7 +268,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100%; /* Assegura que todos os cards tenham a mesma altura */
+    height: 100%;
     object-fit: cover;
     display: flex;
     flex-direction: column;
@@ -370,7 +370,7 @@ button:hover {
         max-height: 120px; 
     }
     .card {
-        height: auto; /* Permite que o card ajuste sua altura de acordo com o conteúdo */
+        height: auto; 
     }
 }
 .container {
