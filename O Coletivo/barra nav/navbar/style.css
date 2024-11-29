@@ -12,14 +12,12 @@
     max-width: 80%;
     font-weight: 700;
 }
-
 .carousel-item p {
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     max-width: 80%;
 }
-
 .carousel-item .container {
     position: absolute;
     top: 50%;
@@ -28,7 +26,6 @@
     text-align: left;
     z-index: 10;
 }
-
 .carousel-item {
     height: 32rem;
     background: #000;
@@ -37,7 +34,6 @@
     background-position: center;
     background-size: cover;
 }
-
 .sequencia {
     position: absolute;
     bottom: 0;
@@ -45,13 +41,11 @@
     right: 0;
     padding-bottom: 50px;
 }
-
 .edit-mode-border {
     border: 5px solid rgba(105, 166, 37, 0.7);
     padding: 10px;
     box-sizing: border-box;
 }
-
 .carousel-item {
     height: 32rem;
     background: #000;
@@ -60,7 +54,6 @@
     background-position: center;
     background-size: cover;
 }
-
 .overlay-image {
     position: absolute;
     bottom: 0;
@@ -72,7 +65,6 @@
     opacity: 0.5;
     filter: brightness(50%);
 }
-
 /* botoes banner */
 .carousel-item .btn {
     background-color: #69A625;
@@ -83,368 +75,17 @@
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
-
 .carousel-item .btn:hover {
     background-color: #3b5f13;
     color: #fff;
 }
-
 .carousel-item .btn:active {
     background-color: #21350a;
     color: #fff;
 }
 
 
-/* Cards 01 */
-.cards1 {
-    background-color: #EDEDED;
-    background-image: url(imagens/fundo.png);
-    background-size: contain;
-    width: 100% !important;
-    padding: 4%;
-}
-
-.card1 {
-    justify-content: center;
-    align-items: center;
-    border: none;
-    background-color: transparent;
-}
-
-.card1 h2 {
-    color: #69A625;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-}
-
-.card1 p {
-    color: #2B2B2E;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
-    margin-top: 5%;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-.secao4-div-card1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    background-color: white;
-    transition: all 0.5s ease;
-    text-align: center;
-}
-
-.secao4-div-card1:hover {
-    transform: scale(1.05);
-    z-index: 1;
-}
-
-@media (max-width: 768px) {
-    .secao4-div-card1 {
-        width: 100%;
-    }
-}
-
-
-/*Notícias */
-.card {
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 680px;
-    object-fit: cover;
-
-}
-
-.card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.card h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-align: left;
-    color: #69A625;
-}
-
-.card p {
-    font-size: 15px;
-    margin-bottom: 15px;
-    text-align: left;
-    color: #2B2B2E;
-}
-
-.card-text-info {
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    margin-bottom: 15px;
-    text-align: left;
-    font-weight: bold;
-}
-
-.card img {
-    width: 80%;
-    height: auto;
-    margin-bottom: 15px;
-    border-radius: 3px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card button {
-    background-color: #69A625;
-    border: none;
-    padding: 8px 16px;
-    color: #f2f2f2;
-    font-size: 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-    border: 2px solid #69A625;
-}
-
-.card button:hover {
-    background-color: #3b5f13;
-    color: #ffffff;
-    border: 2px solid #3b5f13;
-}
-
-button {
-    background-color: #ffffff;
-    color: #69A625;
-    border: 2px solid #69A625;
-    padding: 8px 16px;
-    color: #69A625;
-    font-size: 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-    margin-top: auto
-}
-
-button:hover {
-    background-color: #69A625;
-    border: 2px solid #69A625;
-    color: white;
-}
-
-
-/*MVV*/
-.mvv {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 30px;
-}
-
-.mvv h1 {
-    font-size: 35px;
-    margin: 0 30px 0;
-    letter-spacing: 1px;
-}
-
-.services {
-    display: flex;
-    align-items: center;
-}
-
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    margin: 20px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    background-color: #f2f2f2;
-    border-radius: 2px;
-    height: 400px;
-}
-
-.content .icons {
-    font-size: 70px;
-    margin: 16px 0;
-}
-
-.content>* {
-    flex: 1 1 100%;
-}
-
-.content:hover {
-    color: white;
-}
-
-.content:hover a {
-    border-color: white;
-    background: white;
-}
-
-.content-1:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-
-.content-1:hover a {
-    color: #69A625
-}
-
-.content-2:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-
-.content-2:hover a {
-    color: #69A625
-}
-
-.content-3:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-
-.content-3:hover a {
-    color: #69A625
-}
-
-.content h2 {
-    font-size: 30px;
-    margin: 16px 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.content p {
-    font-size: 15px;
-    text-align: left;
-}
-
-.content a {
-    margin: 22px 0;
-    background: black;
-    color: white;
-    text-transform: none;
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 15px 0;
-    border-radius: 25px;
-    text-align: left;
-}
-
-.content a:hover {
-    border-radius: 4px;
-}
-
-@media (max-width: 900px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/*Cookies*/
-#cookies-aviso {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-
-    z-index: 10000;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    min-height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 2px 3px 15px #000;
-    padding: 24px 12px;
-}
-
-#cookies-aviso .conteudo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#cookies-aviso .conteudo span {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-#cookies-aviso .acoes {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-#cookies-aviso .acoes button {
-    padding: 12px 12px;
-    border: none;
-    border-radius: 12px;
-    outline: none;
-    margin: 1px;
-    transition: background-color .5s;
-    cursor: pointer;
-}
-
-#cookies-aviso .acoes .rejeitar {
-    border: 1px solid #69a625;
-    color: #69a625;
-    margin-right: 4px;
-}
-
-#cookies-aviso .acoes .rejeitar:hover {
-    background-color: red;
-    border-color: red;
-    color: #fff;
-}
-
-#cookies-aviso .acoes .aceitar {
-    background-color: #69a625;
-    color: #fff;
-    margin-right: 120px;
-}
-
-#cookies-aviso .acoes .aceitar:hover {
-    background-color: #3b5f13;
-    color: #fff;
-}
-
-
 /* Conquistas */
-
-
-/* Container principal agora sem fundo */
 .container-conquistas {
     display: flex;
     justify-content: center; 
@@ -458,7 +99,7 @@ button:hover {
 .conquistas-titulo {
     font-size: 35px; 
     font-weight: bold;
-    color: #4d8f29; 
+    color: #69a625; 
     margin-right: 40px; 
     white-space: nowrap;
     text-align: center; 
@@ -469,7 +110,7 @@ button:hover {
     display: flex;
     align-items: center; 
     flex-wrap: wrap; 
-    gap: 30px;
+    gap: 80px;
     margin-top: 0;
     width: 100%; 
     justify-content: center; 
@@ -486,7 +127,6 @@ button:hover {
 .conquista-item:hover {
     transform: translateY(-8px); 
 }
-
 .icone-conquista {
     font-size: 48px; 
     color: #69a625; 
@@ -495,11 +135,11 @@ button:hover {
 .conquista-numeros {
     font-size: 22px;
     font-weight: bold;
-    color: #333; 
+    color: #2B2B2E; 
 }
 .conquista-descricao {
     font-size: 15px;
-    color: #777; 
+    color: #555555; 
 }
 /* Responsividade */
 @media screen and (max-width: 1024px) {
@@ -550,5 +190,312 @@ button:hover {
         font-size: 13px; 
     }
 }
+
+
+/* Combo 4 cards */
+.cards1 {
+    background-color: #EDEDED;
+    background-image: url(imagens/fundo.png);
+    background-size: contain;
+    width: 100% !important;
+    padding: 4%;
+}
+.card1 {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+.card1 h2 {
+    color: #69A625;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+.card1 p {
+    color: #2B2B2E;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 5%;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.secao4-div-card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+.secao4-div-card1:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .secao4-div-card1 {
+        width: 100%;
+    }
+}
+
+
+/*Cards notícias*/
+.card {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 680px;
+    object-fit: cover;
+
+}
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.card h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #69A625;
+}
+.card p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #2B2B2E;
+}
+.card-text-info {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-weight: bold;
+}
+.card img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card button {
+    background-color: #69A625;
+    border: none;
+    padding: 8px 16px;
+    color: #f2f2f2;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #69A625;
+}
+.card button:hover {
+    background-color: #3b5f13;
+    color: #ffffff;
+    border: 2px solid #3b5f13;
+}
+button {
+    background-color: #ffffff;
+    color: #69A625;
+    border: 2px solid #69A625;
+    padding: 8px 16px;
+    color: #69A625;
+    font-size: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    margin-top: auto
+}
+button:hover {
+    background-color: #69A625;
+    border: 2px solid #69A625;
+    color: white;
+}
+
+
+/*MVV*/
+.mvv {
+    max-width: 1100px;
+    margin: 40px;
+    text-align: left;
+    padding: 30px;
+}
+.mvv h1 {
+    font-size: 35px;
+    margin: 0 30px 0;
+    letter-spacing: 1px;
+}
+.services {
+    display: flex;
+    align-items: center;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    height: 450px;
+}
+.content .icons {
+    font-size: 70px;
+    margin: 16px 0;
+}
+.content>* {
+    flex: 1 1 100%;
+}
+.content:hover {
+    color: white;
+}
+.content:hover a {
+    border-color: white;
+    background: white;
+}
+.content-1:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-1:hover a {
+    color: #69A625
+}
+.content-2:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-2:hover a {
+    color: #69A625
+}
+.content-3:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-3:hover a {
+    color: #69A625
+}
+.content h2 {
+    font-size: 30px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.content p {
+    font-size: 15px;
+    text-align: left;
+}
+.content a {
+    margin: 22px 0;
+    background: black;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+    border-radius: 25px;
+    text-align: left;
+}
+.content a:hover {
+    border-radius: 4px;
+}
+@media (max-width: 900px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/*Cookies*/
+#cookies-aviso {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 3px 15px #000;
+    padding: 24px 12px;
+}
+#cookies-aviso .conteudo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#cookies-aviso .conteudo span {
+    font-size: 18px;
+    line-height: 1.5;
+}
+#cookies-aviso .acoes {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+#cookies-aviso .acoes button {
+    padding: 12px 12px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    margin: 1px;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+#cookies-aviso .acoes .rejeitar {
+    border: 1px solid #69a625;
+    color: #69a625;
+    margin-right: 4px;
+}
+#cookies-aviso .acoes .rejeitar:hover {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+}
+#cookies-aviso .acoes .aceitar {
+    background-color: #69a625;
+    color: #fff;
+    margin-right: 120px;
+}
+#cookies-aviso .acoes .aceitar:hover {
+    background-color: #3b5f13;
+    color: #fff;
+}
+
+
 
 
