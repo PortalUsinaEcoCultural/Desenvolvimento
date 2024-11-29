@@ -1304,10 +1304,10 @@ body, html {
         max-width: 400px;
     }
     .linha-do-tempo::after {
-        display: none; /* Remove a linha pontilhada */
+        display: none; 
     }
     .linha-do-tempo-container::after {
-        display: none; /* Remove o ponto verde */
+        display: none; 
     }
     .linha-do-tempo-container {
         width: calc(100% - 20px);
@@ -1320,7 +1320,7 @@ body, html {
     }
     .linha-do-tempo-conteudo {
         margin: 0 auto; /* Centraliza o conteúdo */
-        display: block; /* Garante a centralização */
+        display: block; 
         align-items: center;
     }
     .linha-do-tempo-botoes {
@@ -1330,18 +1330,18 @@ body, html {
         gap: 5px; /* Espaçamento entre os botões */
     }
     .linha-do-tempo-adicionar-evento, .linha-do-tempo-editar-evento, .linha-do-tempo-salvar-eventos {
-        font-size: 0.75rem; /* Diminui o tamanho da fonte dos botões */
+        font-size: 0.75rem; 
         padding: 5px 10px; /* Ajusta o padding dos botões */
     }
     .linha-do-tempo-botoes .linha-do-tempo-btn-excluir {
-        font-size: 0.75rem; /* Diminui o tamanho da fonte do botão de excluir */
-        padding: 5px 10px; /* Ajusta o padding do botão de excluir */
+        font-size: 0.75rem;
+        padding: 5px 10px; 
     }
 }
 
 /*  "Apoiadores da Política" */
 .titulo h1 {
-    font-size: 2rem; /* Tamanho da fonte padrão */
+    font-size: 2rem; 
 }
 
 @media (max-width: 1200px) {
@@ -1361,8 +1361,8 @@ body, html {
 
 @media (max-width: 600px) {
     .titulo h1 {
-        font-size: 1.25rem; /* Ajusta o tamanho da fonte para telas muito pequenas */
-        text-align: center; /* Centraliza o texto em telas muito pequenas */
+        font-size: 1.25rem; 
+        text-align: center; 
     }
 }
 
