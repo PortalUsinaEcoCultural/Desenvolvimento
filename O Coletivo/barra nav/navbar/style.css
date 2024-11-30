@@ -7,16 +7,16 @@
 /* banner topo */
 .carousel-item h1 {
     color: #fff;
-    padding: 5px;
+    padding: 5 px;
     border-radius: 5px;
     max-width: 80%;
-    font-weight: 700;
+    font-weight: bold;
 }
 .carousel-item p {
     color: #fff;
     padding: 5px;
     border-radius: 5px;
-    max-width: 80%;
+    max-width: 100%;
 }
 .carousel-item .container {
     position: absolute;
