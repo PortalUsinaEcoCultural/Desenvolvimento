@@ -97,9 +97,8 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); 
 }
 .conquistas-titulo {
-    font-size: 35px; 
-    font-weight: bold;
-    color: #69a625; 
+    font-size: 25px; 
+    color: #1b1a1a; 
     margin-right: 40px; 
     white-space: nowrap;
     text-align: center; 
@@ -209,7 +208,6 @@
 .card1 h2 {
     color: #69A625;
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
     font-size: 24px;
 }
 .card1 p {
@@ -246,18 +244,20 @@
     }
 }
 
+
+/*Card-zigzag*/
+.titulo-card-zigzag{
+    font-size: 25px;
+    color: #1b1a1a;
+}
+
 /* Cards Notícias */
 .titulo-secao {
-    text-align: left; 
-    font-size: 32px;
-    font-weight: bold;
+    text-align: center; 
+    font-size: 25px;
     color: #2B2B2E;
-    margin-bottom: 0px;  
-    margin-top: 0; 
-    width: 100%; 
-    margin-left: 300px;
-    margin-top: 30px;
-    margin-bottom: -30px;
+    width: 100%;
+    margin-top: 2%; 
 }
 .card {
     background-color: #ffffff;
@@ -393,11 +393,6 @@ button:hover {
     text-align: left;
     padding: 30px;
 }
-.mvv h1 {
-    font-size: 35px;
-    margin: 0 30px 0;
-    letter-spacing: 1px;
-}
 .services {
     display: flex;
     align-items: center;
@@ -449,7 +444,7 @@ button:hover {
     color: #69A625
 }
 .content h2 {
-    font-size: 30px;
+    font-size: 20px;
     margin: 16px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
