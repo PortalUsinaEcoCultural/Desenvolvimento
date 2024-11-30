@@ -16,7 +16,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         if (data.success) {
             localStorage.setItem("loggedIn", "true");
             alert(data.message);
-            window.location.href = "/Admin/admin.html";
+            window.location.href = "/HTML/admin.html";
         } else {
             alert("Login falhou: " + data.message);
         }
