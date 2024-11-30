@@ -55,6 +55,7 @@ a:hover {
     background-color: #69A625; 
     color: #fff;
     border-color: #69A625; 
+    text-decoration: none;
 }
 
 .btn-voltar:active {
