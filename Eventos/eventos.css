@@ -272,8 +272,15 @@ header {
     border-radius: 5px;
     color: white;
 }
+.evento-resposta {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    display: none;
+    text-align: left;
+}
 @media (max-width: 900px) {
-    .inscrever-botao {
+    .evento-botao {
         position: static;
         transform: translateY(0%);
     }
