@@ -1,17 +1,17 @@
 const news = [ 
-    { img: "/Imagens/img-Noticias/noticia1.jpeg",
+    { img: "/Noticias/imgs/noticia1.jpeg",
         title: "Incinerador Vergueiro começa a ser fechado",
         date: "Mariana Viveiros - Folha de S.Paulo - 23/06/2001",
         link: "https://www1.folha.uol.com.br/fsp/cotidian/ff2306200112.htm",
         photoCredit: "Usina Eco-Cultural" },
     
-    { img: "/Imagens/img-Noticias/noticia2.jpg",
+    { img: "/Noticias/imgs/noticia2.jpg",
         title: "Inauguração da reforma e modernização de Estação de Transbordo",
         date: "Prefeitura de São Paulo - 11/06/2012",
         link: "https://www.prefeitura.sp.gov.br/cidade/secretarias/comunicacao/noticias/?p=106970",
         photoCredit: "Fábio Arantes/Secom" },
 
-    { img: "/Imagens/img-Noticias/noticia3.jpg",
+    { img: "/Noticias/imgs/noticia4.jpg",
         title: "Audiência Pública sobre Transbordo Vergueiro",
         date: "Câmara de São Paulo - 28/07/2021",
         link: "https://www.saopaulo.sp.leg.br/blog/situacao-atual-e-obras-de-modernizacao-da-estacao-de-transbordo-vergueiro-sao-debatidos-em-audiencia-publica/",
