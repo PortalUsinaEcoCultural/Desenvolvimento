@@ -237,10 +237,10 @@ header {
 .barra-pesquisa{
     display: flex;
     background-color: #EDEDED;
-    border-radius: 15px;
+    border-radius: 5px;
     align-items: center;
     padding: 10px 15px;
-    width: 50%;
+    width: 30%;
 }
 .barra-pesquisa i{
     color: #333;
@@ -248,7 +248,7 @@ header {
 }
 .barra-pesquisa input{
     background-color: transparent;
-    padding: 10px;
+    padding: 8px;
     width: 100%;
     border: none;
     outline: none;

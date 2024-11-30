@@ -250,7 +250,7 @@ header {
     font-size: 15px;
     text-align: left;
 }
-.inscrever-botao{
+.evento-botao{
     background-color: #ffffff;
     color: #69A625;
     border: 2px solid #69A625;
@@ -266,7 +266,7 @@ header {
     transform: translateY(-50%);
     text-align: end;
 }
-.inscrever-botao:hover {
+.evento-botao:hover {
     background-color: #69A625;
     border: 2px solid #69A625;
     border-radius: 5px;
