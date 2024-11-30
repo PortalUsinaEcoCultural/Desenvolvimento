@@ -75,18 +75,19 @@ function updateNews() {
         const isTCC = article.img.includes("TCC");
         const label = isTCC ? "TCC - Trabalho de Conclusão de Curso" : "Notícia";
         const labelColor = isTCC ? "#3b5f13" : "#69A625"; 
-    
+
         newsContainer.innerHTML += `
-            <div class="row mb-3">
+            <div class="row mb-3" data-index="${i}">
                 <div class="col-md-3">
-                    <img src="${article.img}" alt="Foto: ${article.photoCredit}" class="img-fluid rounded" width="293" height="226">
-                    <p class="text-muted text-left" style="font-size: 80%;">Foto: ${article.photoCredit}</p>
+                    <img src="${article.img}" alt="Foto: ${article.photoCredit}" class="img-fluid rounded" width="293" height="226" 
+                        onclick="editField(${i}, 'img')">
+                    <p class="text-muted text-left" style="font-size: 80%;" onclick="editField(${i}, 'photoCredit')">Foto: ${article.photoCredit}</p>
                 </div>
                 <div class="col-md-8">
-                    <p style="font-weight: bold; color: ${labelColor};">${label}</p> 
-                    <h4 class="font-weight-bold">${article.title}</h4>
-                    <a href="${article.link}" class="d-block text-dark">${article.link}</a>
-                    <p class="text-muted">${article.date}</p>
+                    <p style="font-weight: bold; color: ${labelColor};">${label}</p>
+                    <h4 class="font-weight-bold" onclick="editField(${i}, 'title')">${article.title}</h4>
+                    <a href="${article.link}" class="d-block text-dark" onclick="editField(${i}, 'link')">${article.link}</a>
+                    <p class="text-muted" onclick="editField(${i}, 'date')">${article.date}</p>
                 </div>
             </div>`;
     }
@@ -109,6 +110,28 @@ function navigate(direction) {
     if (currentPage > totalPages) currentPage = totalPages;
 
     updateNews();
+}
+
+function editField(index, field) {
+    const oldValue = news[index][field];
+    const newValue = prompt(`Editar ${field}:`, oldValue);
+
+    if (newValue !== null) {
+        news[index][field] = newValue;
+        saveChanges();
+        updateNews();
+    }
+}
+
+function saveChanges() {
+    // Aqui você pode enviar os dados para um servidor ou salvar localmente
+    localStorage.setItem("news", JSON.stringify(news));
+}
+
+// Carregar dados do localStorage (se disponível)
+const savedNews = localStorage.getItem("news");
+if (savedNews) {
+    Object.assign(news, JSON.parse(savedNews));
 }
 
 updateNews();

@@ -48,7 +48,7 @@ function logout() {
     })
     .then(response => {
         if (response.ok) {
-            window.location.href = '/login.html';
+            window.location.href = '/Login/FalaConosco/Fale_Conosco.html';
         } else {
             throw new Error(`Erro ao fazer logout: ${response.status} ${response.statusText}`);
         }
