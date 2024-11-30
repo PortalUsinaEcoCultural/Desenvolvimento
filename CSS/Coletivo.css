@@ -251,6 +251,7 @@
     color: #1b1a1a;
 }
 
+
 /* Cards Notícias */
 .titulo-secao {
     text-align: center; 
@@ -348,8 +349,9 @@ button:hover {
         text-align: center;
         height: auto;
     }
-    .card img {
-        height: 180px;
+    .card-img-top {
+        width: 100%;
+        object-fit: cover;
     }
     .card h2 {
         font-size: 18px;
