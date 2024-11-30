@@ -486,7 +486,6 @@ button:hover {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
     z-index: 10000;
     position: fixed;
     bottom: 0;
@@ -533,11 +532,6 @@ button:hover {
     color: #69a625;
     margin-right: 4px;
 }
-#cookies-aviso .acoes .rejeitar:hover {
-    background-color: red;
-    border-color: red;
-    color: #fff;
-}
 #cookies-aviso .acoes .aceitar {
     background-color: #69a625;
     color: #fff;
@@ -546,6 +540,15 @@ button:hover {
 #cookies-aviso .acoes .aceitar:hover {
     background-color: #3b5f13;
     color: #fff;
+}
+.termos {
+    color: #000;
+    font-weight: bold;
+}
+.termos:hover {
+    font-weight: bold; 
+    color: #000000;
+    text-decoration: underline;
 }
 
 
