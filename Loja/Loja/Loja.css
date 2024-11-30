@@ -497,6 +497,110 @@ header {
 }
 
 
+/*Poruqe comprar*/
+.container-porque {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 10px;
+    flex-wrap: wrap; 
+    width: 100%;
+    margin: 0 auto; 
+}
+.porque-titulo {
+    font-size: 25px; 
+    color: #2a2a2a; 
+    margin-right: 40px; 
+    white-space: nowrap;
+    text-align: center; 
+    width: auto; 
+    margin: 10px;
+}
+.porque-itens {
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap; 
+    gap: 80px;
+    margin-top: 0;
+    width: 100%; 
+    justify-content: center; 
+}
+.porque-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 180px; 
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.porque-item:hover {
+    transform: translateY(-8px); 
+}
+.icone-porque {
+    font-size: 48px; 
+    color: #69a625; 
+    margin-bottom: 15px;
+}
+.porque-numeros {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2B2B2E; 
+}
+.porque-descricao {
+    font-size: 15px;
+    color: #555555; 
+}
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+    .container-conquistas {
+        flex-direction: column; 
+        text-align: center;
+    }
+    .conquistas-titulo {
+        margin-right: 0; 
+        margin-bottom: 30px; 
+        font-size: 28px;
+    }
+    .conquistas-itens {
+        justify-content: center; 
+    }
+    .conquista-item {
+        width: 150px; 
+        padding: 18px; 
+    }
+    .icone-conquista {
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container-conquistas {
+        padding: 20px; 
+    }
+    .conquistas-titulo {
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    .conquistas-itens {
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center; 
+    }
+    .conquista-item {
+        width: 130px;
+        padding: 15px; 
+    }
+    .icone-conquista {
+        font-size: 36px; 
+    }
+    .conquista-numeros {
+        font-size: 18px; 
+    }
+    .conquista-descricao {
+        font-size: 13px; 
+    }
+}
+
 
 /*Seção do newsletter*/
 .newsletter-container {
