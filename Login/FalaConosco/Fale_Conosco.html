@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Fale Conosco</title>
-
+    <script src="/Login/FalaConosco/Fale_Conosco.js"></script>
     <link rel="stylesheet" href="/Login/FalaConosco/FaleConosco.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -111,7 +111,8 @@
                         <h2 data-editable data-key="canalExclusivoTitulo">Canal exclusivo para doador</h2>
                         <p data-editable data-key="canalExclusivoDescricao">Caso queira falar conosco sobre doações,
                             brindes ou atualização de dados, entre em contato por meio da nossa central de
-                            relacionamento com o doador: <strong>0800 789 2510</strong> (de segunda a sexta-feira das 9h
+                            relacionamento com o doador: <strong>(11) 98760-0742</strong> (de segunda a sexta-feira das
+                            9h
                             às 19h). Ou envie um e-mail para: <strong>usinaecocultural@gmail.com</strong></p>
                     </div>
                 </div>
@@ -123,7 +124,7 @@
                         <h2 data-editable data-key="mobilizacaoTitulo">Mobilização e voluntariado</h2>
                         <p data-editable data-key="mobilizacaoDescricao">Quer saber como participar de nossas
                             atividades, solicitar apoio de mobilização ou se tornar um voluntário ou voluntária? Envie
-                            um e-mail para <strong>conexaoverde.br@greenpeace.org</strong>. Caso queira receber
+                            um e-mail para <strong>usinaecocultural@gmail.com</strong>. Caso queira receber
                             palestras na sua escola, preencha o nosso formulário e conheça o Projeto Escola aqui.</p>
                     </div>
                 </div>
@@ -141,7 +142,7 @@
                         <h2 data-editable data-key="informacoesGeraisTitulo">Informações gerais</h2>
                         <p data-editable data-key="informacoesGeraisDescricao">Nós temos uma página exclusiva sobre
                             <u>dúvidas frequentes</u> que pode te ajudar. Para outras informações e comentários, escreva
-                            um e-mail para <strong>usinaecocultural@gmail.com</strong>.
+                            um e-mail para <strong>usina.duvidas@gmail.com</strong>./
                         </p>
                     </div>
                 </div>
@@ -154,33 +155,40 @@
     <div class="container">
         <div class="faq">
             <div class="subtitulo-faq">
-                <h3 data-editable data-key="faqTitulo">FAQ - perguntas frequentes</h3>
+                <h3>Perguntas Frequentes</h3>
+            </div>
+            <!-- Barra de pesquisa -->
+            <div class="barra-carrinho-container">
+                <div class="barra-pesquisa">
+                    <i class="fa fa-search" id="searchIcon"></i>
+                    <input type="text" id="searchInput" placeholder="Pesquise...">
+                </div>
             </div>
             <div class="perguntas">
                 <div class="pergunta">
-                    <h4 data-editable data-key="faqPergunta1"><strong>Como posso contribuir para a Usina Eco-Cultural?</strong></h4>
-                    <p data-editable data-key="faqResposta1">Pode participar de nossos eventos que acontecem com grande
-                        frequência, realizar doações e, não menos importante, contribuir assinando os abaixos-assinados.
-                        Isso nos ajuda a impulsionar a organização.</p>
+                    <h4 class="pergunta-titulo"><strong>Como posso contribuir para a Usina Eco-Cultural?</strong></h4>
+                    <p class="pergunta-resposta">Você pode contribuir participando de nossos eventos, fazendo doações
+                        financeiras ou de produtos, e assinando nossos abaixo-assinados. Sua ajuda é fundamental para
+                        impulsionar a nossa organização e fortalecer nossos projetos.</p>
                 </div>
                 <div class="pergunta">
-                    <h4 data-editable data-key="faqPergunta2"><strong>Como posso me envolver com a Usina Eco-Cultural?</strong></h4>
-                    <p data-editable data-key="faqResposta1">Você pode se envolver participando de nossos eventos, como
-                        voluntário, ou mesmo ajudando na organização e promoção das atividades. Também é possível apoiar
-                        assinando e divulgando nossos abaixo-assinados e compartilhando a nossa missão com outras
-                        pessoas.</p>
+                    <h4 class="pergunta-titulo"><strong>Como posso me envolver com a Usina Eco-Cultural?</strong></h4>
+                    <p class="pergunta-resposta">Participe de nossos eventos, como voluntário, ou ajude na organização e
+                        promoção das atividades. Você também pode apoiar assinando e divulgando os abaixo-assinados.</p>
                 </div>
                 <div class="pergunta">
-                    <h4 data-editable data-key="faqPergunta3"><strong>Como posso apoiar a Usina Eco-Cultural se não posso
-                        comparecer aos eventos?</strong></h4>
-                    <p data-editable data-key="faqResposta1">Você pode apoiar a Usina Eco-Cultural fazendo doações
-                        financeiras ou em produtos, como materiais culturais e educacionais. Além disso, apoiar nossa
-                        causa nas redes sociais e incentivar outras pessoas a participarem também é uma grande ajuda.
-                    </p>
+                    <h4 class="pergunta-titulo"><strong>Como posso apoiar a Usina Eco-Cultural se não posso comparecer
+                            aos eventos?</strong></h4>
+                    <p class="pergunta-resposta">Você pode apoiar fazendo doações financeiras ou de produtos. Além
+                        disso, pode ajudar divulgando nossa causa nas redes sociais. <a
+                            href="/Doe e apoie/formsDoe.html" target="_blank" class="link-doacao">Clique aqui para fazer
+                            sua doação e contribuir com nossos projetos!</a></p>
                 </div>
             </div>
         </div>
     </div>
+
+
 
 
     <!--Localização-->
@@ -188,13 +196,10 @@
         <div class="row localizacao">
             <div class="d-flex justify-content-center align-items-center rounded-2">
                 <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.538896519991!2d-46.62398262554749!3d-23.596715084669585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1698650017223!5m2!1spt-BR!2sbr"
-                width="600"
-                height="300"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.538896519991!2d-46.62398262554749!3d-23.596715084669585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5bf8fec09847%3A0x21fe6ebe5482bc4e!2sUsina%20Eco-Cultural!5e0!3m2!1spt-BR!2sbr!4v1698650017223!5m2!1spt-BR!2sbr"
+                    width="600" height="300" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </div>
@@ -227,7 +232,8 @@
                 <div class="row justify-content-start">
                     <div class="form-group nome col-md-5">
                         <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome"
+                            required>
                     </div>
                     <div class="form-group email col-md-5">
                         <label for="email">E-mail</label>

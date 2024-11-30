@@ -238,18 +238,18 @@ body {
     align-items: center;
     justify-content: center;
     border: 2px solid #69A625;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     margin: 30px auto;
     max-width: 55%;
 }
 .informacoes-quadro .texto h2 {
-    color: black;
+    color: #1D1D1F;
     font-size: 25px;
     text-align: start;
 }
 .informacoes-quadro .texto p {
-    color: black;
+    color: #1D1D1F;
     font-size: 15px;
 }
 .informacoes-quadro .row {
@@ -276,56 +276,109 @@ body {
 }
 
 
-/*Perguntas frequentes*/
-.faq {
-    max-width: 90%;
-    margin: 10px auto 0; 
-    padding: 10px; 
-}
-.subtitulo-faq h3 {
-    text-align: left; 
-    color: #000; 
-    margin-bottom: 3%;
-    font-size: 20px;
-}
-.pergunta {
-    margin-top: 2%;
-    margin-bottom: 40px; 
-}
-.pergunta h4 {
-    text-align: left;
-    font-size: 15px;
-    color: #000000; 
-    margin-bottom: 8px; 
-}
-.pergunta p {
-    text-align: left;
-    font-size: 15px;
-    color: #000000; 
-    line-height: 1.6; 
-}
-
-
-/*Seção de duvidas*/
+/* Seção FAQ */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
-.duvidas {
+.faq {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.subtitulo-faq h3 {
     text-align: center;
-    margin-bottom: 30px;
-}
-.duvidas h2 {
+    color: #1D1D1F;
     font-size: 25px;
-    margin-bottom: 10px;
-    color: #000;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
-.duvidas p {
-    font-size: 15px;
-    color: #000000;
+/* Barra de pesquisa */
+.barra-carrinho-container {
+    display: flex;
+    justify-content: center; 
     margin-bottom: 20px;
+}
+.barra-pesquisa {
+    display: flex;
+    background-color: #EDEDED;
+    border-radius: 5px;
+    align-items: center;
+    padding: 4px 15px;
+    width: 50%;
+}
+.barra-pesquisa i {
+    color: #1D1D1F;
+    margin-right: 10px;
+}
+.barra-pesquisa input {
+    background-color: transparent;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+}
+.barra-pesquisa input::placeholder {
+    color: #888;
+}
+/* Estilo das perguntas */
+.perguntas .pergunta {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.pergunta-titulo {
+    font-size: 18px;
+    cursor: pointer;
+    color: #1D1D1F;
+    margin-bottom: 8px;
+    text-align: left;
+    margin-left: 320px;
+}
+.pergunta-resposta {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+    display: none;
+    text-align: left;
+    margin-left: 320px;
+    margin-right: 320px;
+}
+.pergunta-titulo:hover {
+    color: #69A625;
+}
+.link-doacao {
+    color: #69A625;
+    text-decoration: none; 
+}
+.link-doacao:hover {
+    color: #487218; 
+    text-decoration: underline;  
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .faq {
+        padding: 15px;
+    }
+
+    .subtitulo-faq h3 {
+        font-size: 22px;
+    }
+
+    .pergunta-titulo {
+        font-size: 16px;
+    }
+
+    .pergunta-resposta {
+        font-size: 14px;
+    }
+
+    .barra-pesquisa {
+        width: 80%;
+    }
 }
 .botoes {
     display: flex;
@@ -347,6 +400,7 @@ body {
 }
 
 
+
 /*Seção do newsletter*/
 .newsletter-container {
     background-color: #D9D9D9;
@@ -359,7 +413,7 @@ body {
 }
 .newsletter-container h3 {
     font-size: 20px;
-    color: black;
+    color: #1D1D1F;
 }
 .newsletter-container p {
     font-size: 15px;
@@ -487,7 +541,7 @@ body {
     right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #333;
+    color: #1D1D1F;
 }
 
 
