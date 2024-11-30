@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+h1 {
+    color: #1D1D1F;
+    font-size: 1.8rem; 
+    margin-bottom: 20px;
+}
+h3 {
+    color: #69a625;
+    font-size: 1.3rem; 
+    margin-top: 20px;
+}
+ul {
+    margin-left: 20px;
+}
+p {
+    margin-bottom: 20px;
+}
+a {
+    color: #69a625;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Botão Voltar */
+.btn-voltar {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 15px;
+    color: #69A625; 
+    background-color: #f8f9fa; 
+    border: 2px solid #69A625; 
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px; 
+    text-decoration: none;
+}
+
+.btn-voltar:hover {
+    background-color: #69A625; 
+    color: #fff;
+    border-color: #69A625; 
+}
+
+.btn-voltar:active {
+    background-color: #497A1D;
+    border-color: #3C6415; 
+}
