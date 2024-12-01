@@ -53,6 +53,59 @@ h2.quem-somos {
     font-weight: lighter;
     color: #313131;
 }
+
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .cabecalho {
+      flex-direction: column; /* Coloca o texto abaixo da imagem */
+      text-align: center; /* Centraliza o conteúdo */
+      align-items: center; /* Centraliza os itens horizontalmente */
+    }
+  
+    .cabecalho img {
+      width: 80%; /* Reduz a imagem */
+      margin: 0 auto; /* Centraliza a imagem */
+    }
+  
+    .conteudo-cabecalho {
+      width: 100%; /* Garante que o texto ocupe todo o espaço */
+      padding: 10px;
+      text-align: center; /* Centraliza os textos */
+    }
+  
+    .conteudo-cabecalho h1 {
+      font-size: 24px; /* Tamanho ajustado */
+    }
+  
+    .conteudo-cabecalho h2 {
+      font-size: 18px; /* Tamanho ajustado */
+    }
+  
+    .conteudo-cabecalho p {
+      font-size: 14px; /* Tamanho ajustado */
+    }
+  }
+  
+  /* Estilos para telas muito pequenas (menos de 480px) */
+  @media (max-width: 480px) {
+    .conteudo-cabecalho {
+      padding: 10px; /* Espaçamento ajustado */
+      text-align: center; /* Centraliza os textos */
+    }
+  
+    .conteudo-cabecalho h1 {
+      font-size: 20px; /* Reduz mais o tamanho */
+    }
+  
+    .conteudo-cabecalho h2 {
+      font-size: 22px; /* Tamanho menor para encaixar */
+    }
+  
+    .conteudo-cabecalho p {
+      font-size: 12px; /* Texto menor para boa leitura */
+    }
+  }
+  
 /* Atividades */
 .atividades {
     padding: 20px;
@@ -79,8 +132,7 @@ h2.quem-somos {
 }
 .item-galeria img {
     width: 100%;
-    height: 250px;/
-    object-fit: cover; 
+    height: 250px;
     border-radius: 0px; 
 }
 /* Efeito de animação para sublinhado */
@@ -154,35 +206,44 @@ h2.objetivos {
     object-fit: cover; /* Faz o corte da imagem sem distorção */
 }
 
-/* Media query para dispositivos menores */
 @media (max-width: 768px) {
-    .cabecalho {
-        flex-direction: column;
-    }
-
-    .cabecalho img,
-    .conteudo-cabecalho {
-        width: 100%;
-    }
-
-    .galeria {
-        flex-direction: column;
-    }
-
-    .item-galeria {
-        margin-bottom: 20px;
-    }
-
     .conteudo-objetivos {
-        flex-direction: column;
+      display: flex;
+      flex-direction: column; /* Coloca o texto abaixo da imagem */
+      align-items: center; /* Centraliza horizontalmente */
+      text-align: center; /* Centraliza o conteúdo de texto */
+      gap: 20px; /* Espaçamento entre texto e imagem */
     }
-
-
-    .objetivos .imagem {
-        width: 100%;
+  
+    .imagem img {
+      width: 80%; /* Reduz a largura da imagem */
+      margin: 0 auto; /* Centraliza a imagem */
     }
-}
-
+  
+    .texto {
+      width: 100%; /* Garante que o texto ocupe toda a largura */
+      padding: 10px; /* Espaçamento interno */
+    }
+  
+    .texto h1 {
+      font-size: 22px; /* Reduz o tamanho do h1 */
+      text-align: center; /* Centraliza título */
+      margin: 0 auto; /* Garante alinhamento */
+      margin-bottom: 2%;
+    }
+  
+    .texto h2 {
+      font-size: 18px; /* Tamanho do subtítulo */
+    }
+  
+    .texto p {
+      font-size: 14px; /* Tamanho do parágrafo */
+      line-height: 1.6; /* Espaçamento entre linhas */
+      text-align: center; /* Centraliza o parágrafo */
+      margin: 0 auto; /* Garante alinhamento */
+    }
+  }
+  
 /* Estilos para a seção "Nossos Principais Objetivos Detalhados" */
 .objetivos-detalhados {
     padding: 20px;
@@ -294,9 +355,11 @@ h2.objetivos {
 }
 .wrapper i:first-child {
     left: -80px;
+    color: #69A625;
 }
 .wrapper i:last-child {
     right: -80px;
+    color: #69A625;
 }
 .wrapper .carrossel {
     display: grid;
@@ -357,28 +420,6 @@ h2.objetivos {
     font-size: 1.31rem;
 }
 
-@media screen and (max-width: 900px) {
-    .wrapper .carrossel {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-    .wrapper i {
-        font-size: 1rem;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .wrapper .carrossel {
-        grid-auto-columns: 100%;
-    }
-    .wrapper i {
-        font-size: 0.875rem;
-        height: 35px;
-        width: 35px;
-        line-height: 35px;
-    }
-}
 .titulo {
     text-align: left;
     margin-bottom: 20px;
@@ -411,7 +452,7 @@ h2.objetivos {
     left: 0;
     width: 100%;
     height: 105%; 
-    background-color: #9A181C;
+    background-color: #69A625;
     z-index: -1;
   }
   
@@ -453,7 +494,7 @@ h2.objetivos {
 .wrapper-conexoes i {
     height: 50px;
     width: 50px;
-    background: #9A181C;
+    background: #69A625;
     text-align: center;
     line-height: 50px;
     border-radius: 50%;
@@ -532,35 +573,12 @@ h2.objetivos {
     text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-    .wrapper-conexoes .carrossel-conexoes {
-        grid-auto-columns: calc((100% / 2) - 9px);
-    }
-    .wrapper-conexoes i {
-        font-size: 1rem;
-        height: 40px;
-        width: 40px;
-        line-height: 40px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .wrapper-conexoes .carrossel-conexoes {
-        grid-auto-columns: 100%;
-    }
-    .wrapper-conexoes i {
-        font-size: 0.875rem;
-        height: 35px;
-        width: 35px;
-        line-height: 35px;
-    }
-}
-
 .titulo-conexoes {
     text-align: left;
     margin-bottom: 20px;
     margin-left: 10%;
     margin-top: -3%;
-    color: #9A181C;
+    color: #69A625;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 0;
@@ -609,3 +627,5 @@ h2.objetivos {
 section + section {
     margin-top: 50px; 
 }
+
+/* Media Queries Responsivos */
