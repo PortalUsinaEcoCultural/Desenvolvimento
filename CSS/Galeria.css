@@ -202,7 +202,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif !important;
     background-color: #f4f4f4;
     color: #1D1D1F;
 }
@@ -227,26 +227,31 @@ header {
 
 
 /*Titulo das fotos*/
-.fotos i{
+.galerias{
+margin-left: 16%;
+}
+.galeria i{
     color: #0f0f0f;
     font-size: 20px;
 }
-.titulo-fotos{
+.subtitulo-galeria{
     color: #000;
     font-size: 25px;
-
+    text-align: left;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+.paragrafo-galeria{
+    text-align: left;
+    font-size: 15px;
 }
 
-/*Fotos*/
+
+/*Fotos e vídeos*/
 .atividades {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-}
-.atividades h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 35px;
 }
 .galeria {
     display: flex;
@@ -270,6 +275,7 @@ header {
 .item-galeria p {
     margin-top: 10px;
     font-style: italic;
+    font-size: 15px;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -286,4 +292,137 @@ header {
 }
 .item-galeria p:hover::after {
     width: 100%; 
+}
+
+
+/*Seção do newsletter*/
+.newsletter-container {
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+    margin-top: 30px;
+}
+.conteudo{
+    margin-left: 10%;
+}
+.newsletter-container h3 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+}
+.newsletter-container p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.form-group {
+    flex: 1;
+    margin-bottom: 2%;
+}
+.newsletter-container .form-control {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.newsletter-container .cadastro-botao {
+    background-color: #69A625;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.newsletter-container .cadastro-botao:hover {
+    background-color: #487218;
+}
+.form-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
+}
+@media (max-width: 767px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+    .newsletter-container .form-control {
+        max-width: 100%;
+    }
+    .newsletter-container .cadastro-botao {
+        width: 100%;
+    }
+}
+
+
+/*Rodapé*/
+.bloco{
+    background-color: #2B3420;
+    min-height: 460px;
+}
+.social-icons {
+    padding-top: 3px;
+}
+.social-icons a {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    border-radius: 50%;
+}
+.social-icons a i {
+    color: rgb(32, 32, 32); 
+    background-color: rgb(239, 239, 239);
+    padding: 15px !important; 
+    border-radius: 50% !important; 
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.1); 
+}
+.contato {
+    padding: 30px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px; 
+    text-decoration: none;
+}
+.contato-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none; 
+    font-size: 15px;
+    gap: 10px;
+}
+.contato-item:hover {
+    transform: scale(1.02);
+    text-decoration: none;
+    color: #ffffff;
+}
+.contato-item i {
+    font-size: 15px; 
+}
+.contato-item p {
+    margin: 0; 
+    white-space: nowrap;
+}
+.contato-item .tel{
+    padding-left: 100%;
+}
+.texto{
+    font-size: 30px; 
+    color: #AEAEAE; 
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bolder;
 }
