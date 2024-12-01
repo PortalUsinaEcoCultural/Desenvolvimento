@@ -226,9 +226,9 @@ header {
 }
 
 
-/*Titulo das fotos*/
+/*Titulo das fotos e vídeos*/
 .galerias{
-margin-left: 16%;
+margin-left: 9%;
 }
 .galeria i{
     color: #0f0f0f;
@@ -292,6 +292,12 @@ margin-left: 16%;
 }
 .item-galeria p:hover::after {
     width: 100%; 
+}
+.atividades a{
+    color: #000;
+}
+.atividades a:hover{
+    color: #000;
 }
 
 
