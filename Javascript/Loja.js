@@ -7,11 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
     const closeButton = document.querySelector('.fechar-sidebar i');
     const mensagemConfirmacao = document.querySelector('.mensagem-confirmacao');
-    const checkoutButton = document.querySelector('.checkout'); // Selecionando o botão de checkout
-    const checkoutLink = document.querySelector('.rodape-sidebar a'); // Selecionando o link de checkout
+    const checkoutButton = document.querySelector('.checkout'); 
+    const checkoutLink = document.querySelector('.rodape-sidebar a'); 
 
-    let cartItems = [];
-    let totalAmount = 0;
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let totalAmount = parseFloat(localStorage.getItem('totalAmount')) || 0;
+
+    // Atualizar UI ao carregar a página
+    updateCartUI();
 
     addToCartButtons.forEach((button, index) => {
         button.addEventListener('click', () => {
@@ -28,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             totalAmount += itemPrice;
             updateCartUI();
+            saveCartToLocalStorage();
             mostrarConfirmacao(itemName);
         });
     });
@@ -68,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCartItemCount() {
         const itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-        cartItemCount.textContent = itemCount;
+        cartItemCount.textContent = itemCount || 0;
     }
 
     function updateCartItemList() {
@@ -103,19 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItems.splice(index, 1);
         }
         updateCartUI();
+        saveCartToLocalStorage();
     }
 
     function updateCartTotal() {
         cartTotal.textContent = `R$ ${totalAmount.toFixed(2)}`;
     }
 
+    // Função para salvar carrinho no localStorage
+    function saveCartToLocalStorage() {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.setItem('totalAmount', totalAmount.toFixed(2));
+    }
+
     // Ação do ícone do carrinho
-    cartIcon.addEventListener('click', () => {
+    cartIcon?.addEventListener('click', () => {
         sidebar.classList.toggle('abrir-sidebar');
     });
 
     // Ação do botão de fechar sidebar
-    closeButton.addEventListener('click', () => {
+    closeButton?.addEventListener('click', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
 

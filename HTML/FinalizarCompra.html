@@ -26,32 +26,60 @@
                 </div>
             </div>
         </div>
-        
-        <!--Retomar itens para compra-->
-        <div class="finalizar-compra">
-            <label class="d-block mb-2"><strong>Finalizar compra</strong></label>
-                <div class="carrinho-menu">
-                    <div class="itens-carrinho">Carrinho vazio</div>
-                </div>
-        
-                <div class="rodape-sidebar">
-                    <div class="total">
-                        <h5>Total</h5>
-                        <div class="total-carrinho">R$0.00</div>
-                    </div>
-                </div>
+    <header>
+        <h1>Resumo da Compra</h1>
+    </header>
+    <main>
+        <div id="resumoCarrinho">
+            <h2>Itens no Carrinho</h2>
+            <ul id="itensCarrinho"></ul>
+            <h3 id="valorTotal">Total: R$ 0,00</h3>
+        </div>
+    </main>
+            <!--Métodos de pagamnto-->
+            <div class="form-groups mt-4">
+                <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
+                <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
+                <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
             </div>
-        </div>
+            <div>
+                <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
+            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const itensCarrinho = document.getElementById('itensCarrinho');
+            const valorTotal = document.getElementById('valorTotal');
 
-        <!--Métodos de pagamnto-->
-        <div class="form-groups mt-4">
-            <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
-            <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
-            <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
-        </div>
-        <div>
-            <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
-        </div>
+            // Recuperar dados do LocalStorage
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const totalAmount = parseFloat(localStorage.getItem('totalAmount')) || 0;
 
+            // Verifica se há itens no carrinho
+            if (cartItems.length > 0) {
+                // Exibir os itens do carrinho
+                cartItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2)}`;
+                    itensCarrinho.appendChild(li);
+                });
+
+                // Exibir o valor total
+                valorTotal.textContent = `Total: R$ ${totalAmount.toFixed(2)}`;
+            } else {
+                itensCarrinho.innerHTML = '<li>O carrinho está vazio.</li>';
+                valorTotal.textContent = `Total: R$ 0,00`;
+            }
+
+            // Ação do botão "Continuar"
+            document.getElementById('continuarBtn').addEventListener('click', () => {
+                localStorage.removeItem('cartItems'); // Limpa os itens do carrinho
+                localStorage.removeItem('totalAmount'); // Limpa o valor total
+                alert('Compra finalizada com sucesso!');
+                window.location.href = 'index.html'; // Redireciona para a página inicial
+            });
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
