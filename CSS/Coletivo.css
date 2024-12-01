@@ -245,6 +245,97 @@
 }
 
 
+/**/
+/*MVV*/
+.mvv {
+    max-width: 1100px;
+    margin: 40px;
+    text-align: left;
+    padding: 30px;
+}
+.services {
+    display: flex;
+    align-items: center;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    height: 450px;
+}
+.content .icons {
+    font-size: 70px;
+    margin: 16px 0;
+}
+.content>* {
+    flex: 1 1 100%;
+}
+.content:hover {
+    color: white;
+}
+.content:hover a {
+    border-color: white;
+    background: white;
+}
+.content-1:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-1:hover a {
+    color: #69A625
+}
+.content-2:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-2:hover a {
+    color: #69A625
+}
+.content-3:hover {
+    border-color: #69A625;
+    background: #69A625;
+}
+.content-3:hover a {
+    color: #69A625
+}
+.content h2 {
+    font-size: 20px;
+    margin: 16px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.content p {
+    font-size: 15px;
+    text-align: left;
+}
+.content a {
+    margin: 22px 0;
+    background: black;
+    color: white;
+    text-transform: none;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 15px 0;
+    border-radius: 25px;
+    text-align: left;
+}
+.content a:hover {
+    border-radius: 4px;
+}
+@media (max-width: 900px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
 /*Card-zigzag*/
 .titulo-card-zigzag{
     font-size: 25px;
@@ -341,7 +432,6 @@ button:hover {
     border: 2px solid #69A625;
     color: white;
 }   
-
 /* Responsividade */
 @media (max-width: 767px) {
     .card {
@@ -364,7 +454,6 @@ button:hover {
         padding: 10px 20px;
     }
 }
-
 @media (max-width: 768px) {
     .card img {
         height: auto;
@@ -388,95 +477,41 @@ button:hover {
     justify-content: space-between; 
 }
 
-/*MVV*/
-.mvv {
-    max-width: 1100px;
-    margin: 40px;
-    text-align: left;
-    padding: 30px;
-}
-.services {
-    display: flex;
-    align-items: center;
-}
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
-    margin: 20px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    background-color: #f2f2f2;
-    border-radius: 2px;
-    height: 450px;
-}
-.content .icons {
-    font-size: 70px;
-    margin: 16px 0;
-}
-.content>* {
-    flex: 1 1 100%;
-}
-.content:hover {
-    color: white;
-}
-.content:hover a {
-    border-color: white;
-    background: white;
-}
-.content-1:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-.content-1:hover a {
-    color: #69A625
-}
-.content-2:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-.content-2:hover a {
-    color: #69A625
-}
-.content-3:hover {
-    border-color: #69A625;
-    background: #69A625;
-}
-.content-3:hover a {
-    color: #69A625
-}
-.content h2 {
-    font-size: 20px;
-    margin: 16px 0;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: left;
-}
-.content p {
-    font-size: 15px;
-    text-align: left;
-}
-.content a {
-    margin: 22px 0;
-    background: black;
-    color: white;
-    text-transform: none;
-    text-decoration: none;
-    border: 1px solid black;
-    padding: 15px 0;
-    border-radius: 25px;
-    text-align: left;
-}
-.content a:hover {
-    border-radius: 4px;
-}
-@media (max-width: 900px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-    }
-}
 
+/*Causas que defendemos*/
+.causas-defendidas {
+    padding: 40px 40px;
+    text-align: center;
+}
+.causas-defendidas h4 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 3%;
+}
+.card-causa {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card-causa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card-causa i {
+    font-size: 280%; 
+    color: #69A625; 
+    margin-bottom: 15px;
+}
+.card-causa p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+}
 
 /*Cookies*/
 #cookies-aviso {
