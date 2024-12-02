@@ -1,85 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Compra</title>
 
     <link rel="stylesheet" href="/CSS/FinalizarCompra.css">
-    <script src="/Javascript/Loja.js"></script>
+    <script src="/Javascript/FinalizarCompra.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 </head>
+
 <body>
-    
-        <!-- Cabeçalho -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 logo bg-white text-center p-3">
-                    <a href="/Loja/Loja/Loja.html">
-                        <button class="back-btn">&lt;</button>
-                    </a>
-                    <img src="/Login/FalaConosco/img/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
-                </div>
+
+    <!-- Banner da página -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 logo bg-white text-center p-3">
+                <a href="/HTML/Loja.html">
+                    <button class="back-btn">&lt;</button>
+                </a>
+                <img src="/Imagens/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
             </div>
         </div>
+    </div>
+
+
+    <!--Resumo da compra-->
     <header>
-        <h1>Resumo da Compra</h1>
+        <h1 class="titulo-resumo"> <i class="fa-solid fa-receipt"></i> Resumo da Compra</h1>
     </header>
     <main>
         <div id="resumoCarrinho">
-            <h2>Itens no Carrinho</h2>
+            <h2 class="subtitulo-itens">Itens no Carrinho</h2>
             <ul id="itensCarrinho"></ul>
-            <h3 id="valorTotal">Total: R$ 0,00</h3>
+            <h3 id="valorTotal" class="subtitulo-total">Total: R$ 0,00</h3>
         </div>
     </main>
-            <!--Métodos de pagamnto-->
-            <div class="form-groups mt-4">
-                <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
-                <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
-                <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
-            </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const itensCarrinho = document.getElementById('itensCarrinho');
-            const valorTotal = document.getElementById('valorTotal');
 
-            // Recuperar dados do LocalStorage
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            const totalAmount = parseFloat(localStorage.getItem('totalAmount')) || 0;
 
-            // Verifica se há itens no carrinho
-            if (cartItems.length > 0) {
-                // Exibir os itens do carrinho
-                cartItems.forEach(item => {
-                    const li = document.createElement('li');
-                    li.textContent = `${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2)}`;
-                    itensCarrinho.appendChild(li);
-                });
+    <!--Divisória-->
+    <div class="col-8 mx-auto">
+        <hr style="border-top: 1px solid #767676; margin-top:3%">
+    </div>
 
-                // Exibir o valor total
-                valorTotal.textContent = `Total: R$ ${totalAmount.toFixed(2)}`;
-            } else {
-                itensCarrinho.innerHTML = '<li>O carrinho está vazio.</li>';
-                valorTotal.textContent = `Total: R$ 0,00`;
-            }
 
-            // Ação do botão "Continuar"
-            document.getElementById('continuarBtn').addEventListener('click', () => {
-                localStorage.removeItem('cartItems'); // Limpa os itens do carrinho
-                localStorage.removeItem('totalAmount'); // Limpa o valor total
-                alert('Compra finalizada com sucesso!');
-                window.location.href = 'index.html'; // Redireciona para a página inicial
-            });
-        });
-    </script>
+    <!--Métodos de pagamnto-->
+    <div class="container">
+        <h4 class="subtitulo-pagamento">Finalizar compra</h4>
+        <p class="paragrafo-pagamento"> Você está finalizando sua compra na <strong>lojinha da Usina Eco-Cultural</strong>.
+            Cada compra, grande ou pequena, <strong> faz a diferença.</strong>
+            <br>Esperamos que goste de nossos produtos, todos foram produzidos com muito carinho.
+        </p>
+            <form id="formPagamento">
+                <div class="form-group row">
+                    <div class="col-12 col-sm-6">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+                </div>
+                <!-- como de pagamento -->
+                <div class="form-group mt-4">
+                    <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
+                    <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
+                    <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
+                </div>
+                <div id="qrCodeContainer" style="display: none; margin-top: 20px; text-align: center;">
+                    <h4>Escaneie o QR Code para realizar o pagamento:</h4>
+                    <img src="qrcode.png" alt="QR Code PIX" id="qrCode" style="max-width: 200px;">
+                </div>
+                
+                <!-- Botão Continuar -->
+                <div>
+                    <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
+                </div>
+            </form>
+        </div>
+               
+    </div>
+
 </body>
-</html>
-</body>
+
 </html>

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const cartItem = document.createElement('div');
             cartItem.classList.add('cart-item');
             cartItem.innerHTML = `
-                <span>(${item.quantity}x) ${item.name}</span>
+                <span>(${item.quantity}x) ${item.name} - </span>
                 <span class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2)}</span>
                 <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-times"></i></button>
             `;

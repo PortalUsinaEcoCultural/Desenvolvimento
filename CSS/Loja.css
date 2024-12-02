@@ -386,6 +386,9 @@ header {
     color: #1D1D1F;
     font-size: 15px;
 }
+.descricao-card{
+    font-size: 12px;
+}
 .adicionar{
     background-color: #69A625;
     color: #fff;
@@ -522,6 +525,8 @@ p {
     text-align: justify; 
     margin: 10px 0; 
 }
+
+
 /*Por que comprar*/
 .container-porque {
     justify-content: center; 
@@ -747,7 +752,6 @@ p {
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 5000;
 }
-
 .mensagem-confirmacao.show {
     opacity: 1;
     visibility: visible;
