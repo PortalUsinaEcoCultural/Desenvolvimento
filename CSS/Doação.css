@@ -246,16 +246,20 @@
     padding: 5px 0; 
 }
 
+
+/*Estilizações gerais do site*/
 *{
     font-family: "Roboto", sans-serif; 
 }
 body {
-    background-color: #dedede; /* Escolha a cor que desejar */
+    background-color: #dedede;
 }
 html {
     scroll-behavior: smooth;
 }
-/* Banner */
+
+
+/* Banner da página */
 .banner {
     position: relative;
     height: 500px;
@@ -369,6 +373,11 @@ html {
 .service-button:hover {
     background-color: #3b5f13;
     color: #ffffff;
+}
+@media (max-width:1200px){
+    .trio {
+        position: relative;
+    }
 }
 
 
