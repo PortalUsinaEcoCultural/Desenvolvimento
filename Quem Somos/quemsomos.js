@@ -1,4 +1,4 @@
-/* Seção "Nossos Parceiros..." */
+// Seção "Parceiros Estratégicos"
 const carrossel = document.querySelector(".carrossel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const firstParceiroWidth = carrossel.querySelector(".parceiro").offsetWidth;
@@ -61,7 +61,7 @@ faders.forEach(fader => {
 });
 
 
-// JavaScript para a nova seção "Parceiros e Conexões"
+// Seção "Parceiros e Conexões"
 const carrosselConexoes = document.querySelector(".carrossel-conexoes");
 const arrowBtnsConexoes = document.querySelectorAll(".wrapper-conexoes i");
 const firstParceiroWidthConexoes = carrosselConexoes.querySelector(".parceiro-conexoes").offsetWidth;
