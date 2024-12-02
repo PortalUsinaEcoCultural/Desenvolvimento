@@ -442,12 +442,14 @@ h2.objetivos {
     width: 148px;
     height: 148px;
     border-radius: 0%;
+    overflow: visible;
 }
 .parceiro .img img {
     width: 190px;
     height: 160px;
     object-fit: cover;
     border-radius: 0%;
+    overflow: visible;
 }
 .parceiro h2 {
     font-weight: 500;
@@ -650,12 +652,14 @@ h2.objetivos {
     width: 148px;
     height: 148px;
     border-radius: 0%;
+    overflow: visible;
 }
 .parceiro-conexoes .img img {
     width: 190px;
     height: 160px;
     object-fit: cover;
     border-radius: 0%;
+    overflow: visible;
 }
 .parceiro-conexoes h2 {
     font-weight: 500;
