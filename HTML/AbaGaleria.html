@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/AbaGaleria.css">
+    <script src="/Javascript/AbaGaleria.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -53,23 +54,86 @@
 
     <section>
         <div class="container imagens">
-            <img src="/Imagens/img-Galeria/ColetivoReunido.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/ColetivoRoda.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/MovimentoUsina.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/NaUsina.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/ReuniaoUsina.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/RodaDeConversa.jpg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/Reunidos.jpeg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/DentroUsina.jpeg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/EventoUsina.jpeg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/TodosJuntos.jpeg" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/Yoga.JPG" alt="Pessoas em reunião" class="img-fluid">
-            <img src="/Imagens/img-Galeria/NaFrenteUsina.jpeg" alt="Pessoas em reunião" class="img-fluid">
+            <figure>
+                <img src="/Imagens/img-Galeria/ColetivoReunido.jpg" alt="Pessoas participantes da Usina juntas para tirar uma foto na rua." class="img-fluid">
+                <figcaption>Coletivo reunido em atividades</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/ColetivoRoda.jpg" alt="Roda de conversa entre os participantes da Usina." class="img-fluid">
+                <figcaption>Roda de conversa com a comunidade</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/MovimentoUsina.jpg" alt="Participantes da Usina com placas das ODS na mão." class="img-fluid">
+                <figcaption>Movimento na Usina Eco-Cultural</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/NaUsina.jpg" alt="Foto espontânea com os participantes conversando." class="img-fluid">
+                <figcaption>Participantes no espaço da Usina conversando</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/ReuniaoUsina.jpg" alt="Foto espontânea com os participantes conversando na rua" class="img-fluid">
+                <figcaption>Todos reunidos para foto</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/RodaDeConversa.jpg" alt="Roda de conversa com os participantes da Usina." class="img-fluid">
+                <figcaption>Discussões importantes para a comunidade</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/Reunidos.jpeg" alt="Comunidade reunida em frente a Usina." class="img-fluid">
+                <figcaption>Unidos por um propósito</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/DentroUsina.jpeg" alt="Roda de conversa com os participantes da Usina." class="img-fluid">
+                <figcaption>Conversa na Usina Eco-Cultural</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/EventoUsina.jpeg" alt="Pessoas reunidas em um evento, com um homem engravatado falando em um megafone." class="img-fluid">
+                <figcaption>Evento comunitário na Usina</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/TodosJuntos.jpeg" alt="Comunidade reunida em frente a Usina." class="img-fluid">
+                <figcaption>Todos juntos pelo mesmo objetivo</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/Yoga.JPG" alt="Pessoas realizando aula de yoga na Usina." class="img-fluid">
+                <figcaption>Aula de yoga para bem-estar</figcaption>
+            </figure>
+            <figure>
+                <img src="/Imagens/img-Galeria/NaFrenteUsina.jpeg" alt="Grupo com uma mesa em frente a Usina." class="img-fluid">
+                <figcaption>Grupo em frente à Usina Eco-Cultural</figcaption>
+            </figure>
         </div>
+        
         <div class="col-10 mx-auto">
             <hr style="border-top: 1px solid #767676; margin-top:1%">
         </div>
     </section>
+
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImage">
+        <div id="caption"></div>
+    </div>
+
+
+    <script>
+        function expandImage(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("expandedImage");
+            const captionText = document.getElementById("caption");
+
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
 
 </body>
 
