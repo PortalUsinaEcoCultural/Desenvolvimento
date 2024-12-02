@@ -133,3 +133,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicialize a verificação do botão ao carregar a página
     toggleCheckoutButton();
 });
+

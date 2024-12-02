@@ -354,7 +354,7 @@ header {
     align-items: flex-start;
     flex-direction: column;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     text-align: center;
@@ -424,7 +424,7 @@ header {
 
 /*Menu sidebar do carrinho*/
 .sidebar {
-    width: 25%;
+    width: 30%;
     height: 80%;
     position: fixed;
     top: 15%;
@@ -434,7 +434,7 @@ header {
     transition: right 0,3s ease-in-out;
     z-index: 1000;
     padding: 30px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 10px 0 0 10px;
 }
 .abrir-sidebar{
     right: 0;
@@ -742,15 +742,16 @@ p {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color:#69A625;
+    background-color: #69a625; 
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     z-index: 5000;
+    font-weight: 500;
 }
 .mensagem-confirmacao.show {
     opacity: 1;
