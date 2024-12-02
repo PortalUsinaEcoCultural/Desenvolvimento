@@ -262,6 +262,46 @@ app.post('/parceiro', async (req, res) => {
     }
 });
 
+const Email = mongoose.model("Email", mongoose.Schema({
+    Nome: { type: String },
+    Email: { type: String }
+}));
+
+app.post('/submit_newsletter', async (req, res) => {
+    const { name, email } = req.body;
+
+    try {
+        // Salvar no MongoDB
+        const novoEmail = new Email({ Nome: name, Email: email });
+        await novoEmail.save();
+        console.log('Novo email salvo no MongoDB:', novoEmail);
+
+        // Configurar o transporte de e-mail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
+
+        // Configurar o conteúdo do e-mail
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: email, // Enviar para o email do usuário
+            subject: 'Obrigado por se inscrever!',
+            html: `<h1>Olá ${name}!</h1><p>Obrigado por se inscrever na nossa newsletter!</p>`,
+        };
+
+        // Enviar o e-mail
+        await transporter.sendMail(mailOptions);
+
+        res.status(200).json({ message: 'Cadastro realizado com sucesso! Verifique seu e-mail para a confirmação.' });
+    } catch (error) {
+        console.error('Erro ao salvar email ou enviar confirmação:', error);
+        res.status(500).json({ error: 'Erro ao processar a inscrição na newsletter.' });
+    }
+});
 
 // Iniciar o servidor
 app.listen(port, () => {
