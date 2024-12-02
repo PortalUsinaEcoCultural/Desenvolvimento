@@ -1,8 +1,7 @@
 // npm init -y 
-// npm install express mongoose body-parser nodemon bcrypt
+// npm install express mongoose body-parser nodemon bcrypt nodemailer dotenv cors
 // Para executar, use o comando "node server.js"
 // Deve aparecer a mensagem: "Servidor rodando em http://localhost:3000 e conectado ao MongoDB"
-//mongodb+srv://sophiacoelho40:sophia010306@cluster0.vztzz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -11,6 +10,8 @@ const path = require('path');
 const cors = require('cors');
 const session = require('express-session');
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -49,21 +50,31 @@ directories.forEach(dir => {
 // Conexão com o MongoDB
 async function conectarAoMongoDB() {
     try {
-        await mongoose.connect('mongodb+srv://sophiacoelho40:sophia010306@cluster0.vztzz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        await mongoose.connect(process.env.MONGO_URI);
         console.log('Conectado ao MongoDB');
     } catch (err) {
         console.error('Erro ao conectar ao MongoDB:', err);
     }
 }
 
-// Modelo do MongoDB
+// Modelo de Usuário
 const User = mongoose.model('User', mongoose.Schema({
     nome: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     senha: { type: String, required: true }
 }));
 
-// Rota de cadastro
+// Modelo de Doação
+const Doacao = mongoose.model('Doacao', mongoose.Schema({
+    nome: { type: String, required: true },
+    sobrenome: { type: String, required: true },
+    email: { type: String, required: true },
+    comentario: { type: String },
+    metodoPagamento: { type: String, required: true },
+    data: { type: Date, default: Date.now }
+}));
+
+// Rota de cadastro de usuário
 app.post('/signup', async (req, res) => {
     const { nome, email, senha } = req.body;
 
@@ -84,7 +95,7 @@ app.post('/signup', async (req, res) => {
     }
 });
 
-// Rota de login
+// Rota de login de usuário
 app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
     try {
@@ -101,15 +112,42 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// Rota de verificação de autenticação
-app.get('/verificar-autenticacao', (req, res) => {
-    if (req.session && req.session.user) {
-        res.status(200).json({
-            autenticado: true,
-            usuario: req.session.user,
+// Rota para registrar doações
+app.post('/doacao', async (req, res) => {
+    const { nome, sobrenome, email, comentario, metodoPagamento } = req.body;
+
+    try {
+        const novaDoacao = new Doacao({ nome, sobrenome, email, comentario, metodoPagamento });
+        await novaDoacao.save();
+
+        // Configurar e enviar o e-mail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
         });
-    } else {
-        res.status(401).json({ autenticado: false, message: 'Usuário não autenticado.' });
+
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_DESTINO, // E-mail do responsável pelas doações
+            subject: 'Nova Doação Recebida',
+            text: `
+                Uma nova doação foi registrada:
+                Nome: ${nome} ${sobrenome}
+                Email: ${email}
+                Comentário: ${comentario || 'Nenhum'}
+                Método de Pagamento: ${metodoPagamento}
+            `,
+        };
+
+        await transporter.sendMail(mailOptions);
+
+        res.status(200).json({ message: 'Doação registrada e e-mail enviado!' });
+    } catch (error) {
+        console.error('Erro ao salvar a doação:', error);
+        res.status(500).json({ error: 'Erro ao processar a doação' });
     }
 });
 
@@ -119,7 +157,7 @@ app.post('/logout', (req, res) => {
         if (err) {
             return res.status(500).json({ success: false, message: 'Erro ao deslogar.' });
         }
-        res.clearCookie('connect.sid'); // Limpa o cookie de sessão
+        res.clearCookie('connect.sid');
         res.status(200).json({ success: true, message: 'Logout realizado com sucesso.' });
     });
 });

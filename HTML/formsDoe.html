@@ -63,6 +63,40 @@
     </div>
 
     <script>
+        document.querySelector('form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+        
+            const formData = {
+            nome: document.getElementById('nome').value,
+            sobrenome: document.getElementById('sobrenome').value,
+            email: document.getElementById('email').value,
+            comentario: document.getElementById('comentario').value,
+            metodoPagamento: document.querySelector('.btn-pagamento.active')?.textContent || 'Não especificado',
+            };
+        
+            try {
+            const response = await fetch('http://localhost:3000/doacao', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+        
+            if (response.ok) {
+                alert('Doação registrada com sucesso!');
+            } else {
+                alert('Erro ao registrar a doação. Tente novamente.');
+            }
+            } catch (error) {
+            console.error('Erro:', error);
+            }
+        });
+        
+        document.querySelectorAll('.btn-pagamento').forEach((btn) => {
+            btn.addEventListener('click', () => {
+            document.querySelectorAll('.btn-pagamento').forEach((b) => b.classList.remove('active'));
+            btn.classList.add('active');
+            });
+        });
         // Variáveis dos botões
         const pixBtn = document.getElementById('pixBtn');
         const paypalBtn = document.getElementById('paypalBtn');
@@ -94,7 +128,7 @@
         // Ação do botão Continuar
         continuarBtn.addEventListener('click', function () {
             if (metodoSelecionado === 'PIX') {
-                window.location.href = '/Doe e apoie/formsPix.html'; // Redireciona para o PIX quando o botão Continuar é clicado
+                window.location.href = '/HTML/formsPix.html'; // Redireciona para o PIX quando o botão Continuar é clicado
             } else {
                 // Pode adicionar uma mensagem de erro ou redirecionar para outro lugar, se necessário
                 alert('Selecione um método de pagamento antes de continuar.');
