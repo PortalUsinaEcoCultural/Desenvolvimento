@@ -262,23 +262,33 @@ margin-left: 9%;
     flex: 1;
     text-align: center;
     transition: transform 0.2s ease-in-out;
+    overflow: hidden; 
 }
 .item-galeria:hover {
     transform: scale(1.05);
 }
 .item-galeria img {
     width: 85%;
-    height: 180px; 
-    object-fit: cover; 
-    border-radius: 3px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 3px;
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease-in-out; 
 }
 .item-galeria p {
     margin-top: 10px;
-    font-style: italic;
     font-size: 15px;
     display: inline-block;
     position: relative;
     cursor: pointer;
+    color: #000;
+    transition: color 0.3s ease-in-out; 
+}
+.item-galeria:hover img {
+    filter: grayscale(0%);
+}
+.item-galeria:hover p {
+    color: #69A625; 
 }
 .item-galeria p::after {
     content: "";
