@@ -213,6 +213,56 @@ app.post('/voluntarios', async (req, res) => {
     }
 });
 
+// Adicione este modelo para Parceiro
+const Parceiro = mongoose.model('Parceiro', mongoose.Schema({
+    nome: { type: String, required: true },
+    sobrenome: { type: String, required: true },
+    email: { type: String, required: true },
+    comentario: { type: String },
+    comoOuviu: { type: String },
+    data: { type: Date, default: Date.now }
+}));
+
+// Rota para registrar parceiros
+app.post('/parceiro', async (req, res) => {
+    const { nome, sobrenome, email, comentario, comoOuviu } = req.body;
+
+    try {
+        const novoParceiro = new Parceiro({ nome, sobrenome, email, comentario, comoOuviu });
+        await novoParceiro.save();
+
+        // Configurar e enviar o e-mail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
+
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_DESTINO, // E-mail do responsável pelos parceiros
+            subject: 'Novo Interesse em Parceria',
+            text: `
+                Um novo interessado em parceria preencheu o formulário:
+                Nome: ${nome} ${sobrenome}
+                Email: ${email}
+                Contribuição: ${comentario || 'Nenhuma'}
+                Como ouviu: ${comoOuviu || 'Não informado'}
+            `,
+        };
+
+        await transporter.sendMail(mailOptions);
+
+        res.status(200).json({ message: 'Dados enviados e e-mail enviado ao responsável!' });
+    } catch (error) {
+        console.error('Erro ao salvar parceiro:', error);
+        res.status(500).json({ error: 'Erro ao processar o registro de parceiro' });
+    }
+});
+
+
 // Iniciar o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
