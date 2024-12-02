@@ -120,17 +120,16 @@ a:hover, a:hover .btn-pagamento {
 }
 
 
-/* Ajustes para telas menores que 768px (tablets e celulares) */
+/* Ajustes da responsividade */
 @media (max-width: 768px) {
     .btn-continuar {
         margin-left: 0;
-        width: 100%; /* Botão ocupa toda a largura */
-        text-align: center;
+        width: 100%; 
         padding: 10px;
     }
     .btn-pagamento {
-        width: 30%; /* Botões de pagamento ocupam toda a largura */
-        margin: 5px 0; /* Espaçamento entre os botões */
+        width: 30%; 
+        margin: 5px 0; 
     }
     .form-group, .form-groups {
         padding: 0 5%;
@@ -142,8 +141,6 @@ a:hover, a:hover .btn-pagamento {
         padding: 10px 5%;
     }
 }
-
-/* Ajustes para telas menores que 576px (celulares) */
 @media (max-width: 576px) {
     .btn-pagamento {
         font-size: 14px;
@@ -155,7 +152,7 @@ a:hover, a:hover .btn-pagamento {
     }
     h2 {
         font-size: 14px;
-        line-height: 1.5; /* Melhora o espaçamento entre linhas */
+        line-height: 1.5;
     }
     h3 {
         font-size: 12px;

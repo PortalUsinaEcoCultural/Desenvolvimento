@@ -34,6 +34,7 @@ h3{
     margin-top: 40px;
     display: inline-block; 
     padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .back-btn {
     font-size: 16px;
@@ -48,3 +49,176 @@ h3{
 
 
 /*Finalizar compra*/
+header {
+    color: #1b1b1b;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.titulo-resumo {
+    margin-top: 2%;
+    font-size: 35px;
+}
+.titulo-resumo i{
+    font-size: 28px;
+}
+
+/* Estilos para o resumo do carrinho */
+#resumoCarrinho {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} 
+.subtitulo-itens {
+    color: #1b1b1b;
+    font-size: 25px;
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+.subtitulo-total {
+    color: #1b1b1b;
+    font-size: 20px;
+    margin-top: 7%;
+}
+
+/* Lista de itens */
+#itensCarrinho {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 1%;
+}
+#itensCarrinho li {
+    background-color: #fefefe;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulário */
+.subtitulo-pagamento{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.paragrafo-pagamento{
+    font-size: 15px;
+    margin-bottom: 3%;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.form-groups {
+    margin-bottom: 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+.form-control {
+    background-color: #e0e0e0; 
+    border: 1px solid transparent; 
+    color: #333; 
+}
+.form-control:focus, .form-control:hover {
+    background-color: #e0e0e0; 
+    outline: none; 
+    border: 1px solid transparent; 
+    box-shadow: none; 
+}
+.form-control::placeholder {
+    color: #999;
+    font-size: 13px; 
+}
+.btn-pagamento {
+    background-color: #F8F8F8; 
+    color: #69A625;
+    padding: 10px 40px;
+    border: 2px solid #69A625; 
+    border-radius: 5px;
+    font-size: 15px;
+    margin: 5px 10px; 
+    width: auto; 
+    transition: background-color 0.3s, color 0.3s; 
+    display: inline-block; 
+    text-align: center; 
+}
+.btn-pagamento:hover {
+    background-color: #69A625; 
+    color: white;
+}
+a {
+    text-decoration: none; 
+}
+a:hover, a:hover .btn-pagamento {
+    color: #fff;
+}
+.selecionado {
+    background-color: #69A625;
+    color: white; 
+    border-color: #69A625;
+}
+.btn-continuar {
+    background-color: #69A625; 
+    color: #fff; 
+    padding: 5px 5px; 
+    border-radius: 5px; 
+    font-size: 15px; 
+    margin: 40px auto 0 !important; 
+    display: block; 
+    width: 120px !important; 
+    margin-right: 110px !important;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.btn-continuar:hover {
+    background-color: #4e7a1b;
+    color: #fff; 
+}
+
+
+/* Ajustes da responsividade */
+@media (max-width: 768px) {
+    .btn-continuar {
+        margin-left: 0;
+        width: 100%; 
+        padding: 10px;
+    }
+    .btn-pagamento {
+        width: 30%; 
+        margin: 5px 0; 
+    }
+    .form-group, .form-groups {
+        padding: 0 5%;
+    }
+    h2, h3 {
+        padding: 0 5%;
+    }
+    .container {
+        padding: 10px 5%;
+    }
+}
+@media (max-width: 576px) {
+    .btn-pagamento {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .btn-continuar {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    h3 {
+        font-size: 12px;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .container {
+        padding: 5%;
+    }
+}
