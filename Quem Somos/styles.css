@@ -1,3 +1,11 @@
+/*não haja rolagem horizontal */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Desativa a rolagem horizontal */
+    width: 100%; /* Garante que a largura total da tela seja usada */
+}
+
 /* Reset básico */
 * {
     margin: 0;
@@ -10,7 +18,7 @@ body {
     font-weight: 400; /* Regular */
 }
 
-/* Cabeçalho */
+/* Seção "Quem Somos" */
 .cabecalho {
     display: flex;
     padding: 50px;
@@ -54,8 +62,8 @@ h2.quem-somos {
     color: #313131;
 }
 
-/* Estilos para telas menores */
-@media (max-width: 768px) {
+/* Seção "Quem Somos" - Estilos para telas menores */
+@media (max-width: 767px) {
     .cabecalho {
       flex-direction: column; /* Coloca o texto abaixo da imagem */
       text-align: center; /* Centraliza o conteúdo */
@@ -86,27 +94,7 @@ h2.quem-somos {
     }
   }
   
-  /* Estilos para telas muito pequenas (menos de 480px) */
-  @media (max-width: 480px) {
-    .conteudo-cabecalho {
-      padding: 10px; /* Espaçamento ajustado */
-      text-align: center; /* Centraliza os textos */
-    }
-  
-    .conteudo-cabecalho h1 {
-      font-size: 20px; /* Reduz mais o tamanho */
-    }
-  
-    .conteudo-cabecalho h2 {
-      font-size: 22px; /* Tamanho menor para encaixar */
-    }
-  
-    .conteudo-cabecalho p {
-      font-size: 12px; /* Texto menor para boa leitura */
-    }
-  }
-  
-/* Atividades */
+/* Seção "O Que Queremos" */
 .atividades {
     padding: 20px;
     max-width: 1200px;
@@ -154,10 +142,40 @@ h2.quem-somos {
     transition: width 0.3s ease-in-out;
 }
 .item-galeria p:hover::after {
-    width: 100%; /* Animação para o sublinhado verde */
+    width: 100%; 
 }
 
-/* Seção de Objetivos */
+/* Responsividade para telas menores (max-width: 767px) */
+@media (max-width: 767px) {
+    .galeria {
+        flex-direction: column; /* Empilha os itens em uma coluna */
+        align-items: center; /* Centraliza os itens */
+        gap: 15px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .item-galeria {
+        flex: 1 1 100%; /* Cada item ocupa 100% da largura */
+        max-width: 100%; /* Permite que o item ocupe toda a largura */
+        margin-bottom: 20px; /* Espaçamento entre os itens */
+    }
+
+    .item-galeria img {
+        max-width: 100%; /* Garante que a imagem ocupe toda a largura disponível sem distorcer */
+        height: auto; /* Mantém a proporção da imagem */
+        max-height: 200px; /* Limita a altura máxima da imagem para evitar que ela ocupe muito espaço */
+    }
+
+    .item-galeria p {
+        font-size: 14px; /* Reduz o tamanho do texto para telas menores */
+    }
+
+    .atividades h2 {
+        font-size: 28px; /* Ajusta o tamanho do título */
+        margin-bottom: 20px; /* Ajusta o espaçamento abaixo do título */
+    }
+}
+
+/* Seção "Nossos Principais Objetivos" */
 h1.objetivos {
     margin: 5px 0;
     font-size: 35px;
@@ -206,6 +224,7 @@ h2.objetivos {
     object-fit: cover; /* Faz o corte da imagem sem distorção */
 }
 
+/* Estilos para telas menores */
 @media (max-width: 768px) {
     .conteudo-objetivos {
       display: flex;
