@@ -344,6 +344,28 @@ h2.objetivos {
     flex-shrink: 0;
 }
 
+@media (max-width: 900px) {
+    .tres, .dois {
+        justify-content: center;
+    }
+
+    .objetivo-card {
+        width: calc(50% - 20px); /* Dois por linha */
+    }
+}
+
+@media (max-width: 600px) {
+    .tres, .dois {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objetivo-card {
+        width: 100%; /* Um por linha */
+    }
+}
+
+
 /* Seção "Nossos Parceiros..." */
 .wrapper {
     max-width: 1000px;
@@ -497,7 +519,63 @@ h2.objetivos {
     transform: translateY(0); 
 }
 
-/*seção*/
+/*media*/
+/* Media Queries Responsivos para Parceiros Estratégicos */
+@media (max-width: 1200px) {
+    .titulo h1 {
+        font-size: 28px; /* 1.75rem para px */
+        text-align: center;
+        margin-right: 8%;
+    }
+    .wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: calc((100% / 2) - 12px);
+        margin-left: 14%;
+    }
+}
+
+@media (max-width: 900px) {
+    .titulo h1 {
+        font-size: 24px; /* 1.5rem para px */
+        text-align: center;
+    }
+    .wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .wrapper i {
+        height: 40px;
+        width: 40px;
+        font-size: 16px; /* 1rem para px */
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: calc((100% / 1) - 12px);
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo h1 {
+        font-size: 20px; /* 1.25rem para px */
+        text-align: center;
+    }
+    .wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .wrapper i {
+        height: 35px;
+        width: 35px;
+        font-size: 14px; /* 0.875rem para px */
+    }
+    .wrapper .carrossel {
+        grid-auto-columns: 100%;
+    }
+}
+
+
 /* Seção "Parceiros e Conexões" */
 .wrapper-conexoes {
     max-width: 1000px;
@@ -640,6 +718,61 @@ h2.objetivos {
 .fade-in.show {
     opacity: 1; 
     transform: translateY(0); 
+}
+
+
+@media (max-width: 1200px) {
+    .titulo-conexoes h1 {
+        font-size: 28px; /* 1.75rem para px */
+        text-align: center; /* Centraliza o texto em telas médias */
+        margin-right: 8%; /* Mantém a margem em % */
+    }
+    .wrapper-conexoes {
+        max-width: 800px; /* Mantém o mesmo tamanho */
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-conexoes .carrossel-conexoes {
+        grid-auto-columns: calc((100% / 2) - 12px); /* Ajuste dinâmico em % */
+        margin-left: 14%; /* Mantém a margem */
+    }
+}
+
+@media (max-width: 900px) {
+    .titulo-conexoes h1 {
+        font-size: 24px; /* 1.5rem para px */
+        text-align: center; /* Centraliza o texto em telas menores */
+    }
+    .wrapper-conexoes {
+        max-width: 600px; /* Mantém o mesmo tamanho */
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-conexoes i {
+        height: 40px;
+        width: 40px;
+        font-size: 16px; /* 1rem para px */
+    }
+    .wrapper-conexoes .carrossel-conexoes {
+        grid-auto-columns: calc((100% / 1) - 12px); /* Ajuste dinâmico em % */
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-conexoes h1 {
+        font-size: 20px; /* 1.25rem para px */
+        text-align: center; /* Centraliza o texto */
+    }
+    .wrapper-conexoes {
+        max-width: 400px; /* Mantém o mesmo tamanho */
+        margin: 0 auto; /* Centraliza o carrossel */
+    }
+    .wrapper-conexoes i {
+        height: 35px;
+        width: 35px;
+        font-size: 14px; /* 0.875rem para px */
+    }
+    .wrapper-conexoes .carrossel-conexoes {
+        grid-auto-columns: 100%; /* Total largura */
+    }
 }
 
 /* Espaçamento entre os carrosséis */
