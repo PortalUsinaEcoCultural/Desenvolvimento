@@ -30,7 +30,7 @@
     <div class="container px-3">
         <h2><strong>Fale Conosco - Formulário Voluntário</strong></h2>
         <h3>*Ao preencher este formulário você demonstra interesse em se voluntariar para as atividades realizadas, fazer parte da história da Usina e apoiar o projeto*</h3>
-        <form>
+        <form action="http://localhost:3000/voluntarios" method="POST">
             <div class="row g-3">
                 <div class="col-12 col-md-6">
                     <label for="nome" class="form-label">Nome:</label>
@@ -51,12 +51,12 @@
             </div>
             <div class="form-group mt-3">
                 <label for="como-ouviu" class="form-label">Como você ouviu falar de nós?</label>
-                <input type="text" id="como-ouviu" name="como-ouviu" class="form-control" placeholder="Ex. pelas redes sociais, através de amigos...">
+                <input type="text" id="como-ouviu" name="comoOuviu" class="form-control" placeholder="Ex. pelas redes sociais, através de amigos...">
             </div>
             <div class="form-groups text-center mt-4">
                 <button type="submit" class="btn btn-enviar" id="continuarBtn">Enviar</button>
             </div>
-        </form>
+        </form>        
     </div>
 </body>
 </html>

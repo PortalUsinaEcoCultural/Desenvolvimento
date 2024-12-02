@@ -112,6 +112,17 @@ app.post('/login', async (req, res) => {
     }
 });
 
+// Rota de logout
+app.post('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            return res.status(500).json({ success: false, message: 'Erro ao deslogar.' });
+        }
+        res.clearCookie('connect.sid');
+        res.status(200).json({ success: true, message: 'Logout realizado com sucesso.' });
+    });
+});
+
 // Rota para registrar doações
 app.post('/doacao', async (req, res) => {
     const { nome, sobrenome, email, comentario, metodoPagamento } = req.body;
@@ -151,15 +162,55 @@ app.post('/doacao', async (req, res) => {
     }
 });
 
-// Rota de logout
-app.post('/logout', (req, res) => {
-    req.session.destroy(err => {
-        if (err) {
-            return res.status(500).json({ success: false, message: 'Erro ao deslogar.' });
-        }
-        res.clearCookie('connect.sid');
-        res.status(200).json({ success: true, message: 'Logout realizado com sucesso.' });
-    });
+const Voluntario = mongoose.model('Voluntario', mongoose.Schema({
+    nome: { type: String, required: true },
+    sobrenome: { type: String, required: true },
+    email: { type: String, required: true },
+    comentario: { type: String },
+    comoOuviu: { type: String },
+    data: { type: Date, default: Date.now },
+}));
+
+
+app.post('/voluntarios', async (req, res) => {
+    const { nome, sobrenome, email, comentario, comoOuviu } = req.body;
+
+    try {
+        // Salvar dados no MongoDB
+        const novoVoluntario = new Voluntario({ nome, sobrenome, email, comentario, comoOuviu });
+        await novoVoluntario.save();
+
+        // Configurar o transporte de e-mail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+        });
+
+        // Configurar conteúdo do e-mail
+        const mailOptions = {
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_DESTINO, // E-mail do responsável pelos voluntários
+            subject: 'Novo Cadastro de Voluntário',
+            text: `
+                Novo voluntário cadastrado:
+                Nome: ${nome} ${sobrenome}
+                Email: ${email}
+                Comentário: ${comentario || 'Nenhum'}
+                Como ouviu falar: ${comoOuviu || 'Não informado'}
+            `,
+        };
+
+        // Enviar o e-mail
+        await transporter.sendMail(mailOptions);
+
+        res.status(200).json({ message: 'Voluntário registrado e e-mail enviado!' });
+    } catch (error) {
+        console.error('Erro ao salvar voluntário:', error);
+        res.status(500).json({ error: 'Erro ao processar o cadastro do voluntário' });
+    }
 });
 
 // Iniciar o servidor
