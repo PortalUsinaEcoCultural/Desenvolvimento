@@ -218,14 +218,18 @@ body {
 }
 .boletim .texto-banner h2 {
     text-align: right;
-    color: #313131;
+    color: #1D1D1F;
 }
 .boletim .texto-banner p {
     text-align: right;
+    color: #2B2B2E;
+    margin-left: 20px;
 }
 .boletim .imagem img {
     width: 100%;
     height: auto;
+    transform: scale(1.15);
+    margin-left: 6%;
 }
 @media (max-width:1000px ) {
     .boletim{
@@ -237,8 +241,9 @@ body {
 /*Boletins da usina*/
 .subtitulo-boletim {
     margin: 35px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: left;
+    font-weight: bold;
 }
 .boletins {
     margin: 40px;
@@ -292,7 +297,6 @@ body {
 .newsletter-container {
     background-color: #D9D9D9;
     padding: 30px;
-    border-radius: 20px 20px 0 0;
     margin-top: 30px;
 }
 .conteudo{
@@ -300,7 +304,7 @@ body {
 }
 .newsletter-container h3 {
     font-size: 20px;
-    color: black;
+    color: #2B2B2E;
     margin-bottom: 15px;
 }
 .newsletter-container p {
