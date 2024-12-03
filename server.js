@@ -397,16 +397,20 @@ app.get('/eventos', async (req, res) => {
 // Rota para salvar novos eventos
 app.post('/eventos', async (req, res) => {
     const { ano, descricao } = req.body;
+    console.log('Evento recebido:', req.body); // Verifique se o evento está chegando ao servidor corretamente
 
     const novoEvento = new Evento({ ano, descricao });
 
     try {
         await novoEvento.save();  // Salva o evento no banco de dados
+        console.log('Evento salvo no banco');
         res.status(200).json({ message: 'Evento salvo com sucesso' });
     } catch (error) {
+        console.error('Erro ao salvar evento:', error);
         res.status(500).json({ message: 'Erro ao salvar evento' });
     }
 });
+
 
 // Iniciar o servidor
 app.listen(port, () => {

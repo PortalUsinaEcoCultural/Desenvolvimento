@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarEventos();
 });
 
+
+
 // Função para adicionar um novo evento na linha do tempo
 function adicionarEvento() {
     const ano = prompt("Digite o ano:");
@@ -104,6 +106,17 @@ async function salvarEventoNoServidor(ano, descricao) {
     }
 }
 
+function alternarVisibilidade() {
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+    const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
+    if (linhaDoTempo.style.display === 'none') {
+        linhaDoTempo.style.display = 'block';
+        botaoMinimizar.textContent = '▲';
+    } else {
+        linhaDoTempo.style.display = 'none';
+        botaoMinimizar.textContent = '▼';
+    }}
+
 // Função para salvar todos os eventos no servidor
 function salvarEventos() {
     const eventos = [];
@@ -123,12 +136,13 @@ function salvarEventos() {
 // Função para carregar eventos do servidor
 async function carregarEventos() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
-    linhaDoTempo.innerHTML = ''; // Limpa o conteúdo para evitar duplicação
+    linhaDoTempo.innerHTML = '';  // Limpa o conteúdo para evitar duplicação
 
     // Buscar eventos do servidor
     const response = await fetch('http://localhost:3000/eventos');
     if (response.ok) {
         const eventos = await response.json();
+        console.log('Eventos recebidos do servidor:', eventos); // Verifique os eventos recebidos
         eventos.forEach(evento => {
             const container = document.createElement('div');
             container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
