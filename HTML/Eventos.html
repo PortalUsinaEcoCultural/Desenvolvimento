@@ -87,8 +87,17 @@
 
 
     <section class="eventos container">
-        <h3 class="subtitulo-eventos">Próximos Eventos</h3>
+        <h3 class="subtitulo-eventos"> <i class="fa-solid fa-calendar-days"></i> Próximos Eventos</h3>
         <ul>
+            <li class="evento">
+                <p><strong>Feira de orgânicos</strong> - dia 15 de Novembro de 2024 às 16h</p>
+                <p>Uma oportunidade de experimentar alimentos orgânicos. Participe conosco!</p>
+                <button class="evento-botao saiba-mais-botao">Saiba mais</button>
+                <p class="evento-resposta" style="display: none;">Explore os sabores incríveis dos alimentos orgânicos!
+                    Participe do nosso movimento e viva uma experiência única. Use roupas confortáveis!
+                </p>
+            </li>
+
             <li class="evento">
                 <p><strong>O Skate na Usina Resiste</strong> - dia 10 de fevereiro de 2025 às 14h</p>
                 <p>Um dia de arte, música e competições. Participe e traga seus amigos!</p>
@@ -96,14 +105,7 @@
                     <button class="col-xs-12 evento-botao inscrever-botao">Inscreva-se</button>
                 </a>
             </li>
-    
-            <li class="evento">
-                <p><strong>Feira de orgânicos</strong> - dia 15 de Novembro de 2024 às 16h</p>
-                <p>Uma oportunidade de experimentar alimentos orgânicos. Participe conosco!</p>
-                <button class="evento-botao saiba-mais-botao">Saiba mais</button>
-                <p class="evento-resposta" style="display: none;">Conheça mais sobre os benefícios dos alimentos orgânicos e nossa rede de produtores locais.</p>
-            </li>
-    
+
             <li class="evento">
                 <p><strong>Feira do livro</strong> - dia 30 de Novembro de 2024 às 15h</p>
                 <p>Venha aproveitar um dia de leitura com diversos aprendizados e momentos de reflexão!</p>
@@ -117,15 +119,28 @@
 
     <!-- Seção do calendário do Google -->
     <section class="calendario container mb-5">
-        <h3 class="subtitulo-eventos">
-            <light>Acompanhe </light><strong>nosso calendário</strong>
-        </h3>
+        <h3 class="subtitulo-eventos">Acompanhe nosso calendário</h3>
         <div class="calendario-parte">
             <iframe
                 src="https://calendar.google.com/calendar/embed?src=leticia.csilva%40mauajr.com&ctz=America%2FSao_Paulo"
                 frameborder="0" scrolling="no"></iframe>
         </div>
     </section>
+
+    
+    <!--Seção Calendify-->
+    <div class="container">
+        <div class="calendify">
+            <h2 class="subtitulo-informações text-center">Deseja mais informações?</h2>
+            <p class="paragrafo-calendify text-center">Acesse nosso Calendify! Lá os eventos também serão divulgados.
+            </p>
+            <div class="botoes">
+                <a href="https://calendify.com/@usinaecocultural/agenda/past">
+                    <button class="botao-calendify">Acessar</button>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
     <!--Newsletter-->
@@ -154,7 +169,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const botoesSaibaMais = document.querySelectorAll('.saiba-mais-botao');
-        
+
             botoesSaibaMais.forEach(botao => {
                 botao.addEventListener('click', () => {
                     const resposta = botao.nextElementSibling;
