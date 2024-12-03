@@ -85,67 +85,32 @@ p, li {
 
 /* Botão */
 .btn-save {
-    background-color: #ffffff;
-    color: #69A625;
-    border: 2px solid #69A625;
-    padding: 5px 13px;
-    font-size: 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
-    cursor: pointer;
-    margin-top: 10px;
+    background-color: #ffffff !important;
+    color: #69A625 !important;
+    border: 2px solid #69A625 !important;
+    padding: 5px 13px !important;
+    font-size: 15px !important;
+    border-radius: 5px !important; 
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
+    cursor: pointer !important;
+    margin-top: 10px !important;
 }
 .btn-save:hover {
-    background-color: #69A625;
-    border: 2px solid #69A625;
-    color: white;
+    background-color: #69A625 !important;
+    border: 2px solid #69A625 !important;
+    color: white !important;
 }
 .bg-white {
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+.logout-icon {
+    font-size: 20px; 
+    color: #1d1d1f; 
+    cursor: pointer; 
+    transition: color 0.2s ease; 
+}
 
-/* Popup caixa */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-.modal-content {
-    background-color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: auto;
-    max-width: 300px;
-}
-.modal-content p {
-    margin-bottom: 20px;
-    color: #313131;
-    font-size: 16px;
-}
-.modal-content .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #69A625;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.modal-content .btn:hover {
-    background-color: #55791e;
-}
 
 /* gerenciamento de conteudo */
 .opcoes {
