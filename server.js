@@ -99,20 +99,52 @@ app.post('/signup', async (req, res) => {
     }
 });
 
-// Rota de login de usuário
 app.post('/login', async (req, res) => {
     const { email, senha } = req.body;
     try {
         const usuario = await User.findOne({ email });
         if (usuario && await bcrypt.compare(senha, usuario.senha)) {
             req.session.user = { nome: usuario.nome, email: usuario.email };
-            res.status(200).json({ success: true, message: `Bem-vindo(a), ${usuario.nome}!` });
+            
+            // Incluindo o nome do usuário na resposta JSON
+            res.status(200).json({
+                success: true,
+                message: `Bem-vindo(a), ${usuario.nome}!`,
+                nome: usuario.nome // Envia o nome do usuário
+            });
         } else {
             res.status(400).json({ success: false, message: 'E-mail ou senha incorretos.' });
         }
     } catch (err) {
         console.error(err);
         res.status(500).json({ success: false, message: 'Erro ao processar login.' });
+    }
+});
+
+app.put('/atualizarPerfil', async (req, res) => {
+    const { email, nome, senha } = req.body; // Dados enviados do frontend
+
+    try {
+        // Busca o usuário pelo email
+        const usuario = await User.findOne({ email });
+
+        if (!usuario) {
+            return res.status(404).json({ success: false, message: 'Usuário não encontrado.' });
+        }
+
+        // Atualiza os campos permitidos
+        if (nome) usuario.nome = nome;
+        if (senha) {
+            const hashedSenha = await bcrypt.hash(senha, 10); // Criptografa a senha antes de salvar
+            usuario.senha = hashedSenha;
+        }
+
+        await usuario.save(); // Salva as alterações no banco
+
+        res.status(200).json({ success: true, message: 'Perfil atualizado com sucesso.' });
+    } catch (error) {
+        console.error('Erro ao atualizar perfil:', error);
+        res.status(500).json({ success: false, message: 'Erro ao atualizar o perfil.' });
     }
 });
 

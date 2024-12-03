@@ -46,7 +46,6 @@ document.getElementById('salvar-perfil').addEventListener('click', function () {
     }
 });
 
-
 // Selecionar os campos de entrada
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
@@ -54,37 +53,102 @@ const senhaInput = document.getElementById("senha");
 
 // Carregar os dados salvos ao iniciar a página
 window.onload = function () {
-    if (localStorage.getItem("nome")) {
-        nomeInput.value = localStorage.getItem("nome");
-    }
-    if (localStorage.getItem("email")) {
-        emailInput.value = localStorage.getItem("email");
-    }
-    if (localStorage.getItem("senha")) {
-        senhaInput.value = localStorage.getItem("senha");
-    }
+    const nome = localStorage.getItem("nome") || "Nome não definido";
+    const email = localStorage.getItem("email") || "Email não definido";
+    const senha = localStorage.getItem("senha") || "";
+
+    nomeInput.value = nome; // Atualiza o campo de nome
+    emailInput.value = email; // Atualiza o campo de email
+    senhaInput.value = senha; // Atualiza o campo de senha
 };
 
 // Função do olhinho para mostrar ou esconder a senha
-document.getElementById("toggle-password").addEventListener("click", function () {
-    const senhaInput = document.getElementById("senha");
-    const passwordIcon = document.getElementById("password-icon");
+document.addEventListener("DOMContentLoaded", function () {
+    const salvarBtn = document.getElementById("salvar-perfil");
 
-    if (senhaInput.type === "password") {
-        senhaInput.type = "text";
-        passwordIcon.classList.remove("fa-eye");
-        passwordIcon.classList.add("fa-eye-slash");
-    } else {
-        senhaInput.type = "password";
-        passwordIcon.classList.remove("fa-eye-slash");
-        passwordIcon.classList.add("fa-eye");
+    if (salvarBtn) {
+        salvarBtn.addEventListener("click", function () {
+            // Obtém os valores dos campos de perfil
+            const nome = document.getElementById("nome").value;
+            const email = localStorage.getItem("email"); // O email é usado como identificador único
+            const senha = document.getElementById("senha").value;
+
+            // Validações básicas
+            if (!nome || !email) {
+                alert("Nome e email são obrigatórios.");
+                return;
+            }
+
+            // Envia os dados atualizados para o backend
+            fetch("http://localhost:3000/atualizarPerfil", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, nome, senha }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Atualiza o nome no localStorage
+                        localStorage.setItem("nome", nome);
+
+                        // Atualiza a mensagem de boas-vindas
+                        const welcomeMessage = document.querySelector("h2.mb-4");
+                        if (welcomeMessage) {
+                            welcomeMessage.textContent = `Bem-vindo, ${nome}!`;
+                        }
+
+                        // Exibe a mensagem de sucesso
+                        alert("Perfil atualizado com sucesso!");
+                    } else {
+                        // Exibe o erro do backend (caso haja)
+                        alert("Erro ao atualizar perfil: " + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro ao salvar perfil:", error);
+                    alert("Erro ao salvar perfil. Por favor, tente novamente.");
+                });
+        });
     }
 });
 
+function exibirPopup(id, mensagem) {
+    const popup = document.getElementById(id);
+    if (popup) {
+        popup.querySelector("span").innerText = mensagem;
+        popup.style.display = "flex";
 
+        // Oculta automaticamente após 5 segundos
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 5000);
+    }
+}
+
+function fecharPopup(id) {
+    const popup = document.getElementById(id);
+    if (popup) {
+        popup.style.display = "none";
+    }
+}
+
+
+
+function logout() {
+    // Limpar dados do localStorage
+    localStorage.removeItem("nome");
+    localStorage.removeItem("email");
+    localStorage.removeItem("senha");
+
+    // Mensagem de logout e redirecionamento
+    alert("Você foi deslogado!");
+    window.location.href = "/Login/Login.html";
+}
 
 // Gráficos
- if (localStorage.getItem('acessos')) {
+if (localStorage.getItem('acessos')) {
     let contador = parseInt(localStorage.getItem('acessos')) + 1;
     localStorage.setItem('acessos', contador);
 } else {
@@ -140,4 +204,3 @@ new Chart(ctxVendas, {
         responsive: true,
     }
 });
-

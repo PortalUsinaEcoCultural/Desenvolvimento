@@ -20,13 +20,21 @@
 
     <!--Banner-->
     <header class="bg-light border-bottom py-3">
-        <div class="container d-flex align-items-center">
+        <div class="container d-flex align-items-center">            
+            <!-- Ícone de Página Inicial -->
             <a href="/" class="home-link text-decoration-none me-2" roboto-label="Página Inicial">
                 <i class="fas fa-home fa-lg"></i>
             </a>
-            <h1 class="m-0">Meu Site</h1>
+            
+            <!-- Título do Site -->
+            <h1 class="m-0"><a href="/index.html" class="text-decoration-none">Meu Site</a></h1>
+            <div style="display: flex; justify-content: flex-end; align-items: center; width: 100%;">
+                <i class="fa-solid fa-right-from-bracket logout-icon" onclick="logout()" title="Logout"></i>
+            </div>            
+
         </div>
     </header>
+    
 
 
     <!--Seção do usuário-->
@@ -41,18 +49,16 @@
                     <form id="perfil-form">
                         <div class="mb-3">
                             <label for="nome" class="form-label"><i class="fas fa-user"></i> Nome</label>
-                            <input type="text" id="nome" class="form-control" value="Mariana Lopez de Abreu"
-                                data-original="Mariana Lopez de Abreu">
+                            <input type="text" id="nome" class="form-control">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email</label>
-                            <input type="email" id="email" class="form-control" value="marianalopezdeabreu92@gmail.com"
-                                data-original="marianalopezdeabreu92@gmail.com">
+                            <input type="email" id="email" class="form-control"  >
                         </div>
                         <div class="mb-3">
                             <label for="senha" class="form-label"><i class="fas fa-lock"></i> Senha</label>
                             <div class="input-group">
-                                <input type="password" id="senha" class="form-control" value="Mariana123Lopez"
+                                <input type="password" id="senha" class="form-control" 
                                     data-original="Mariana123Lopez">
                                 <button type="button" id="toggle-password" class="btn-olhinho">
                                     <i class="fas fa-eye" id="password-icon"></i>
@@ -61,29 +67,14 @@
                         </div>
                         <button type="button" id="salvar-perfil" class="btn btn-save">Salvar</button>
                     </form>
-                </div>
-
-                <!-- Caixa Erro -->
-                <div class="modal" id="error-modal" style="display: none;">
-                    <div class="modal-content">
-                        <p id="error-message"></p>
-                        <button class="btn" id="close-modal">Fechar</button>
+                    
+                    <!-- Modal de erro -->
+                    <div id="error-modal" style="display: none;" class="modal">
+                        <div class="modal-content">
+                            <span id="close-modal" class="close">&times;</span>
+                            <p id="error-message"></p>
+                        </div>
                     </div>
-                </div>
-                <!-- Caixa Sucesso -->
-                <div class="modal" id="success-modal" style="display: none;">
-                    <div class="modal-content">
-                        <p id="success-message">Informações atualizadas com sucesso!</p>
-                        <button class="btn" id="close-success-modal">Fechar</button>
-                    </div>
-                </div>
-
-                <div id="modal-salvo" class="modal" style="display: none;">
-                    <div class="modal-content">
-                        <p>Alterações salvas com sucesso!</p>
-                        <button id="fechar-modal" class="btn btn-save">Fechar</button>
-                    </div>
-                </div>
         </section>
 
         <!-- Gerenciamento do site -->
@@ -126,15 +117,6 @@
         </section>
 
 
-        <!-- Caixa de Sucesso após confirmação -->
-        <div id="success-modal" class="modal" style="display: none;">
-            <div class="modal-content">
-                <p>Informações atualizadas com sucesso!</p>
-                <button id="close-success-modal" class="btn">Fechar</button>
-            </div>
-        </div>
-
-
         <!-- Estatísticas -->
         <section>
             <div class="p-4 bg-white rounded shadow-sm">
@@ -170,6 +152,29 @@
         </section> 
     </main>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nome = localStorage.getItem("nome"); // Recupera o nome salvo no localStorage
+        
+            if (nome) {
+                // Insere o nome no título
+                const welcomeMessage = document.querySelector("h2.mb-4");
+                if (welcomeMessage) {
+                    welcomeMessage.textContent = `Bem-vindo, ${nome}!`; // Atualiza o texto para incluir o nome
+                }
+        
+                // Preenche o campo de nome no formulário de perfil
+                const nomeInput = document.getElementById("nome");
+                if (nomeInput) {
+                    nomeInput.value = nome; // Preenche o campo com o nome do usuário
+                }
+            } else {
+                console.log("Nome não encontrado no localStorage.");
+            }
+        });
+        
+    </script>
+
         <!--Arquivo JavaScript-->
         <script src="/Javascript/Administrador.js"></script>
 
@@ -185,6 +190,7 @@
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+        <script src="/login.js"></script>
 
 </body>
 
