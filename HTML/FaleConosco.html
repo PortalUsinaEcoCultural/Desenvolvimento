@@ -328,52 +328,57 @@
         </div>
 
 
-        <!--Modo de edição-->
-        <div id="modal-overlay"></div> <!-- Fundo escuro -->
-        <div id="modal">
-            <div id="modal-message">Mensagem do modal</div>
-            <button onclick="fecharModal()" class="close-button">Fechar</button>
-        </div>
+<!-- Modal de mensagem (exibido quando algum feedback ou mensagem for necessário) -->
+<div id="modal-overlay"></div> <!-- Fundo escuro -->
+<div id="modal">
+    <div id="modal-message">Mensagem do modal</div>
+    <button onclick="fecharModal()" class="close-button">Fechar</button>
+</div>
 
-        <!-- Modal de feedback -->
-        <div id="feedbackModal" class="modal">
-            <div class="modal-content">
-                <span class="modal-close"
-                    onclick="document.getElementById('feedbackModal').style.display='none'">&times;</span>
-                <p class="modal-message"></p>
-            </div>
-        </div>
+<!-- Modal de feedback -->
+<div id="feedbackModal" class="modal">
+    <div class="modal-content">
+        <span class="modal-close"
+            onclick="document.getElementById('feedbackModal').style.display='none'">&times;</span>
+        <p class="modal-message"></p>
+    </div>
+</div>
 
-        <!-- Botões de edição (inicialmente escondidos) -->
-        <div class="edit-buttons-container" id="editButtons" style="display: none;">
-            <div class="edit-buttons">
-                <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
-                <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
-                <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
-            </div>
-        </div>
+<!-- Botão de voltar (inicialmente escondido) -->
+<button class="back-btn" id="backButton" onclick="irParaAdmin()" style="display: flex;">&lt;</button>
 
-        <script src="/authAndEdit.js"></script>
-        <script src="/edit.js"></script>
+<!-- Botões de edição (inicialmente escondidos) -->
+<div class="edit-buttons-container" id="editButtons" style="display: none;">
+    <div class="edit-buttons">
+        <button class="edit-button" onclick="ativarEdicao()">Ativar Edição</button>
+        <button class="edit-button" onclick="salvarEdicoes()">Salvar Edições</button>
+        <button class="edit-button" onclick="desfazerEdicoes()">Desfazer Todas Edições</button>
+        <button id="logoutButton" style="display: none;" onclick="logout()">Logout</button>
+    </div>
+</div>
 
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-                <div class="vw-plugin-top-wrapper"></div>
-            </div>
-        </div>
+<!-- Modos de edição -->
+<div class="edit-mode-border" id="editModeBorder" style="display: none;"></div>
+<div class="edit-mode-text" id="editModeText" style="display: none;">Modo de edição ativado</div>
 
-        <button id="logoutButton" style="display: none;">Logout</button>
+<button class="back-btn" id="backButton" onclick="irParaAdmin()" style="display: flex;">&lt;</button>
 
-        <div class="edit-mode-border" id="editModeBorder" style="display: none;"></div>
-        <div class="edit-mode-text" id="editModeText" style="display: none;">Modo de edição ativado
-        </div>
-        <button class="back-btn" id="backButton" onclick="irParaAdmin()" style="display: none;">&lt;</button>
+<!-- Scripts -->
+<script src="/authAndEdit.js"></script>
+<script src="/edit.js"></script>
+
+<!-- Plugin para acessibilidade -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
 
         <script>
             function irParaAdmin() {
                 // Redireciona para a página de administração
-                window.location.href = "/Admin/admin.html";
+                window.location.href = "/HTML/admin.html";
             }
         </script>
 

@@ -1,4 +1,4 @@
-// Função para verificar a autenticação do usuário
+// Função para verificar a autenticação do usuário 
 async function verificarAutenticacao() {
     try {
         const response = await fetch('http://localhost:3000/verificar-autenticacao', {
@@ -17,28 +17,6 @@ async function verificarAutenticacao() {
         return false;
     }
 }
-
-document.getElementById('logoutButton')?.addEventListener('click', logout);
-
-
-// Inicializa os estados da página ao carregar
-document.addEventListener("DOMContentLoaded", async function () {
-    esconderBotoesDeEdicao();
-    salvarConteudoOriginal();
-    carregarConteudo();
-
-    // Gerencia o botão de logout baseado na autenticação
-    const logoutButton = document.getElementById('logoutButton');
-    const autenticado = await verificarAutenticacao();
-
-    if (autenticado) {
-        logoutButton.style.display = 'block'; // Exibe o botão de logout
-        console.log("Usuário autenticado, botão de logout visível.");
-    } else {
-        logoutButton.style.display = 'none'; // Esconde o botão de logout
-        console.log("Usuário não autenticado, botão de logout oculto.");
-    }
-});
 
 // Função de logout
 function logout() {
@@ -59,14 +37,23 @@ function logout() {
     });
 }
 
+// Inicializa os estados da página ao carregar
 document.addEventListener("DOMContentLoaded", async function () {
-    const logoutButton = document.getElementById('logoutButton');
-    const autenticado = await verificarAutenticacao();
+    esconderBotoesDeEdicao();
+    salvarConteudoOriginal();
+    carregarConteudo();
 
+    const logoutButton = document.getElementById('logoutButton');
+    
+    // Verifica se o usuário está autenticado e exibe o botão de logout
+    const autenticado = await verificarAutenticacao();
+    
     if (autenticado) {
-        logoutButton.style.display = 'block';
+        logoutButton.style.display = 'block'; // Exibe o botão de logout
+        console.log("Usuário autenticado, botão de logout visível.");
     } else {
-        logoutButton.style.display = 'none';
+        logoutButton.style.display = 'none'; // Esconde o botão de logout
+        console.log("Usuário não autenticado, botão de logout oculto.");
     }
 });
 

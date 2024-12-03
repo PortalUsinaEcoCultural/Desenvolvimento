@@ -115,7 +115,7 @@ window.onload = function () {
     // Verifica se o botão de retorno existe antes de tentar acessar seu estilo
     const backButton = document.getElementById("backButton");
     if (backButton) {
-        backButton.style.display = "none";
+        backButton.style.display = "flex";
     }
 
     salvarConteudoOriginal();
