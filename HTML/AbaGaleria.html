@@ -12,7 +12,10 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Onde aplicamos os ícones-->
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
+    <!--Plugin de acessibilidade-->
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 
 </head>
 
@@ -52,6 +55,8 @@
         </div>
     </section>
 
+
+    <!--Seção das Imagens-->
     <section>
         <div class="container imagens">
             <figure>
@@ -110,7 +115,7 @@
     </section>
 
 
-    <!-- Modal -->
+    <!-- Modal que permite ampliar as fotos -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="expandedImage">
@@ -118,21 +123,16 @@
     </div>
 
 
+    <!--plugin que garante acessibilidade-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        function expandImage(img) {
-            const modal = document.getElementById("imageModal");
-            const modalImg = document.getElementById("expandedImage");
-            const captionText = document.getElementById("caption");
-
-            modal.style.display = "block";
-            modalImg.src = img.src;
-            captionText.innerHTML = img.alt;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById("imageModal");
-            modal.style.display = "none";
-        }
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
 </body>
