@@ -359,6 +359,39 @@ app.post('/submit_newsletter', async (req, res) => {
     }
 });
 
+const eventoSchema = new mongoose.Schema({
+    ano: { type: Number, required: true },
+    descricao: { type: String, required: true },
+});
+
+const Evento = mongoose.model('Evento', eventoSchema);
+
+module.exports = Evento;
+
+// Rota para obter todos os eventos
+app.get('/eventos', async (req, res) => {
+    try {
+        const eventos = await Evento.find();  // Busca todos os eventos
+        res.status(200).json(eventos);
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao buscar eventos' });
+    }
+});
+
+// Rota para salvar novos eventos
+app.post('/eventos', async (req, res) => {
+    const { ano, descricao } = req.body;
+
+    const novoEvento = new Evento({ ano, descricao });
+
+    try {
+        await novoEvento.save();  // Salva o evento no banco de dados
+        res.status(200).json({ message: 'Evento salvo com sucesso' });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao salvar evento' });
+    }
+});
+
 // Iniciar o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);

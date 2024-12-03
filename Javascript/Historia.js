@@ -46,35 +46,41 @@ document.addEventListener("mouseup", dragStop);
 
 /* Seção "linha do tempo" */
 
-// Carregar eventos do localStorage ao carregar a página
+// Carregar eventos do servidor ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-  carregarEventos();
+    carregarEventos();
 });
 
 function adicionarEvento() {
-  const ano = prompt("Digite o ano:");
-  const descricao = prompt("Digite a descrição:");
+    const ano = prompt("Digite o ano:");
+    const descricao = prompt("Digite a descrição:");
 
-  if (!ano || !descricao) return;
+    if (!ano || !descricao) return;
 
-  const linhaDoTempo = document.getElementById('linha-do-tempo');
-  const container = document.createElement('div');
-  container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+    const container = document.createElement('div');
+    container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
 
-  container.innerHTML = `
-      <div class="linha-do-tempo-conteudo">
-          <h2>${ano}</h2>
-          <p>${descricao}</p>
-          <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
-      </div>
-  `;
+    container.innerHTML = `
+        <div class="linha-do-tempo-conteudo">
+            <h2>${ano}</h2>
+            <p>${descricao}</p>
+            <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+        </div>
+    `;
 
-  linhaDoTempo.appendChild(container);
+    linhaDoTempo.appendChild(container);
+    // Enviar evento para o servidor
+    salvarEventoNoServidor(ano, descricao);
 }
 
 function excluirEvento(botao) {
-  const evento = botao.parentElement.parentElement;
-  evento.remove();
+    const evento = botao.parentElement.parentElement;
+    evento.remove();
+
+    // Excluir evento no banco de dados
+    const ano = evento.querySelector('h2').textContent;
+    excluirEventoNoServidor(ano);
 }
 
 function editarTodosEventos() {
@@ -83,66 +89,104 @@ function editarTodosEventos() {
     let encontrado = false;
 
     eventos.forEach(evento => {
-        if (evento.querySelector('h2').textContent === ano) {
-            const novoAno = prompt("Editar ano:", evento.querySelector('h2').textContent);
-            const novaDescricao = prompt("Editar descrição:", evento.querySelector('p').textContent);
+    if (evento.querySelector('h2').textContent === ano) {
+        const novoAno = prompt("Editar ano:", evento.querySelector('h2').textContent);
+        const novaDescricao = prompt("Editar descrição:", evento.querySelector('p').textContent);
 
-            if (novoAno && novaDescricao) {
-                evento.querySelector('h2').textContent = novoAno;
-                evento.querySelector('p').textContent = novaDescricao;
-            }
-            encontrado = true;
+        if (novoAno && novaDescricao) {
+        evento.querySelector('h2').textContent = novoAno;
+        evento.querySelector('p').textContent = novaDescricao;
+          // Atualizar evento no servidor
+        atualizarEventoNoServidor(ano, novoAno, novaDescricao);
         }
+        encontrado = true;
+    }
     });
 
     if (!encontrado) {
-        alert(`Não existe um evento cadastrado em ${ano}.`);
+    alert(`Não existe um evento cadastrado em ${ano}.`);
     }
 }
 
-
 function salvarEventos() {
-  const eventos = [];
-  document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
-      const ano = container.querySelector('h2').textContent;
-      const descricao = container.querySelector('p').textContent;
-      eventos.push({ ano, descricao });
-  });
-  localStorage.setItem('eventosLinhaDoTempo', JSON.stringify(eventos));
-  alert('Modificações salvas com sucesso!');
+    const eventos = [];
+    document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
+    const ano = container.querySelector('h2').textContent;
+    const descricao = container.querySelector('p').textContent;
+    eventos.push({ ano, descricao });
+    });
+    // Salvar todos os eventos no servidor
+    eventos.forEach(evento => {
+    salvarEventoNoServidor(evento.ano, evento.descricao);
+    });
+    alert('Modificações salvas com sucesso!');
 }
 
-function carregarEventos() {
-  const linhaDoTempo = document.getElementById('linha-do-tempo');
-  linhaDoTempo.innerHTML = ''; // Limpa o conteúdo para evitar duplicação
-  const eventos = JSON.parse(localStorage.getItem('eventosLinhaDoTempo')) || [];
-  eventos.forEach(evento => {
-      const container = document.createElement('div');
-      container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+async function carregarEventos() {
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+    linhaDoTempo.innerHTML = ''; // Limpa o conteúdo para evitar duplicação
 
-      container.innerHTML = `
-          <div class="linha-do-tempo-conteudo">
-              <h2>${evento.ano}</h2>
-              <p>${evento.descricao}</p>
-              <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
-          </div>
-      `;
+    // Buscar eventos do servidor
+    const response = await fetch('http://localhost:3000/eventos');
+    if (response.ok) {
+    const eventos = await response.json();
+    eventos.forEach(evento => {
+        const container = document.createElement('div');
+        container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
 
-      linhaDoTempo.appendChild(container);
-  });
+        container.innerHTML = `
+            <div class="linha-do-tempo-conteudo">
+                <h2>${evento.ano}</h2>
+                <p>${evento.descricao}</p>
+                <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+            </div>
+        `;
+
+        linhaDoTempo.appendChild(container);
+    });
+    } else {
+    alert('Erro ao carregar eventos');
+    }
 }
 
 function alternarVisibilidade() {
-  const linhaDoTempo = document.getElementById('linha-do-tempo');
-  const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
-  if (linhaDoTempo.style.display === 'none') {
-      linhaDoTempo.style.display = 'block';
-      botaoMinimizar.textContent = '▲';
-  } else {
-      linhaDoTempo.style.display = 'none';
-      botaoMinimizar.textContent = '▼';
-  }
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+    const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
+    if (linhaDoTempo.style.display === 'none') {
+        linhaDoTempo.style.display = 'block';
+        botaoMinimizar.textContent = '▲';
+    } else {
+        linhaDoTempo.style.display = 'none';
+        botaoMinimizar.textContent = '▼';
+    }
 }
+
+  // Funções para interagir com o servidor (Backend)
+
+async function salvarEventoNoServidor(ano, descricao) {
+    const evento = { ano, descricao };
+    await fetch('http://localhost:3000/eventos', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(evento),
+    });
+}
+
+async function excluirEventoNoServidor(ano) {
+    await fetch(`http://localhost:3000/eventos/${ano}`, {
+    method: 'DELETE',
+    });
+}
+
+async function atualizarEventoNoServidor(anoAntigo, novoAno, novaDescricao) {
+    const eventoAtualizado = { ano: novoAno, descricao: novaDescricao };
+    await fetch(`http://localhost:3000/eventos/${anoAntigo}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(eventoAtualizado),
+    });
+}
+
 
 /* Carrossel "Apoiadores da Política" */
 const carrosselPolitica = document.querySelector(".wrapper-politica .carrossel");
