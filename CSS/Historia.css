@@ -302,6 +302,12 @@
     margin-top: -13%;
 }
 
+/* Página História Geral */
+.img-pequena {
+    width: 50%; /* Define a largura da imagem como 50% do contêiner */
+    height: auto; /* Mantém a proporção original da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
 
 /* Estilo do cabeçalho */
 .header {
