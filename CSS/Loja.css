@@ -202,7 +202,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif !important;
     background-color: #f4f4f4;
     color: #1D1D1F;
 }
@@ -518,14 +518,6 @@ header {
     }
 }
 
-p {
-    color: #333; 
-    font-size: 10px; 
-    line-height: 1.5; 
-    text-align: justify; 
-    margin: 10px 0; 
-}
-
 
 /*Por que comprar*/
 .container-porque {
@@ -633,6 +625,63 @@ p {
 }
 
 
+.porque-comprar p {
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .porque-comprar {
+        padding: 15px;
+    }
+
+    .porque-comprar h3 {
+        font-size: 20px;
+    }
+
+    .porque-comprar p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .porque-comprar {
+        padding: 10px;
+    }
+
+    .porque-comprar h3 {
+        font-size: 18px;
+    }
+
+    .porque-comprar p {
+        font-size: 13px;
+    }
+}
+
+.mensagem-confirmacao {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #69a625; 
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5000;
+    font-weight: 500;
+}
+.mensagem-confirmacao.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /*Seção do newsletter*/
 .newsletter-container {
     background-color: #D9D9D9;
@@ -644,8 +693,9 @@ p {
 }
 .newsletter-container h3 {
     font-size: 20px;
-    color: black;
+    color: #1D1D1F;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 .newsletter-container p {
     font-size: 15px;
@@ -702,58 +752,143 @@ p {
 }
 
 
-.porque-comprar p {
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
+/* Rodapé */
+.bloco {
+    background-color: #2B3420;
+    min-height: 420px;  
+    height: auto; 
+    max-height: none;  
+    padding: 20px;  
+}
+@media (max-width: 768px) {
+    .bloco {
+        min-height: 300px;  
+        padding: 15px;  
+    }
+}
+.social-icons a {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    border-radius: 50%;
+}
+.social-icons a i {
+    color: rgb(32, 32, 32);
+    background-color: rgb(239, 239, 239);
+    padding: 15px !important;
+    border-radius: 50% !important;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    text-decoration: none;
+    margin-bottom: -10px;
+}
+.contato-item {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    gap: 8px; 
+}
+.contato-item:hover {
+    transform: scale(1.02);
+    text-decoration: none;
+    color: #ffffff;
+}
+.contato-item i {
     font-size: 15px;
 }
-
+.contato-item p {
+    margin: 0;
+    white-space: nowrap;
+}
+.contato-item .tel {
+    padding-left: 10%;
+}
+.texto {
+    font-size: 30px;
+    color: #AEAEAE;
+    text-align: center;
+    margin-top: -45px;
+    font-weight: bolder;
+}
+@media (max-width: 1200px) {
+    .contato {
+        gap: 20px; 
+    }
+    .social-icons a i {
+        padding: 12px;
+    }
+}
+@media (max-width: 992px) {
+    .social-icons {
+        padding-top: 10px;
+    }
+    .contato {
+        flex-direction: column;
+        gap: 20px; 
+        margin-bottom: 10px;
+    }
+    .texto {
+        font-size: 24px;
+    }
+}
 @media (max-width: 768px) {
-    .porque-comprar {
-        padding: 15px;
+    .bloco {
+        padding: 10px;
+        min-height: auto;
     }
-
-    .porque-comprar h3 {
-        font-size: 20px;
-    }
-
-    .porque-comprar p {
+    .contato-item {
         font-size: 14px;
     }
-}
-
-@media (max-width: 480px) {
-    .porque-comprar {
+    .social-icons a i {
         padding: 10px;
     }
-
-    .porque-comprar h3 {
+    .texto {
+        font-size: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .bloco {
+        padding: 10px;
+    }
+    .contato-item {
+        font-size: 14px;
+        gap: 5px; 
+    }
+    .social-icons a i {
+        padding: 8px;
+    }
+    .texto {
         font-size: 18px;
     }
-
-    .porque-comprar p {
-        font-size: 13px;
+    .footer-title {
+        font-size: 24px;
     }
 }
-
-.mensagem-confirmacao {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #69a625; 
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 5000;
-    font-weight: 500;
+.topicos {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;  
+    gap: 20px;  
+    margin-left: 20px;
+    margin-right: 20px;
 }
-.mensagem-confirmacao.show {
-    opacity: 1;
-    visibility: visible;
+@media (max-width: 768px) {
+    .topicos {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .col-12.col-sm-6 {
+        margin-bottom: 15px; 
+    }
 }
