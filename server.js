@@ -384,8 +384,6 @@ const eventoSchema = new mongoose.Schema({
 
 const Evento = mongoose.model('Evento', eventoSchema);
 
-module.exports = Evento;
-
 // Rota para obter todos os eventos
 app.get('/eventos', async (req, res) => {
     try {
@@ -396,10 +394,9 @@ app.get('/eventos', async (req, res) => {
     }
 });
 
+// Rota para salvar novos eventos
 app.post('/eventos', async (req, res) => {
     const { ano, descricao } = req.body;
-
-    console.log('Evento recebido:', req.body);  // Verifique se os dados estão sendo recebidos corretamente
 
     const novoEvento = new Evento({ ano, descricao });
 
@@ -407,11 +404,9 @@ app.post('/eventos', async (req, res) => {
         await novoEvento.save();  // Salva o evento no banco de dados
         res.status(200).json({ message: 'Evento salvo com sucesso' });
     } catch (error) {
-        console.error('Erro ao salvar evento:', error);
         res.status(500).json({ message: 'Erro ao salvar evento' });
     }
 });
-
 
 // Iniciar o servidor
 app.listen(port, () => {

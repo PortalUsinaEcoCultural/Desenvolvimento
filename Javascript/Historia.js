@@ -148,18 +148,67 @@ async function carregarEventos() {
     }
 }
 
-// Função para alternar a visibilidade da linha do tempo
-function alternarVisibilidade() {
+// Função para adicionar um novo evento na linha do tempo
+function adicionarEvento() {
+    const ano = prompt("Digite o ano:");
+    const descricao = prompt("Digite a descrição:");
+
+    if (!ano || !descricao) return;
+
     const linhaDoTempo = document.getElementById('linha-do-tempo');
-    const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
-    if (linhaDoTempo.style.display === 'none') {
-        linhaDoTempo.style.display = 'block';
-        botaoMinimizar.textContent = '▲';
+    const container = document.createElement('div');
+    container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+
+    container.innerHTML = `
+        <div class="linha-do-tempo-conteudo">
+            <h2>${ano}</h2>
+            <p>${descricao}</p>
+            <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+        </div>
+    `;
+
+    linhaDoTempo.appendChild(container);
+
+    // Enviar evento para o servidor
+    salvarEventoNoServidor(ano, descricao);
+}
+
+// Função para salvar um evento no servidor
+async function salvarEventoNoServidor(ano, descricao) {
+    const evento = { ano, descricao };
+
+    const response = await fetch('http://localhost:3000/eventos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(evento),
+    });
+
+    if (response.ok) {
+        console.log('Evento salvo com sucesso!');
     } else {
-        linhaDoTempo.style.display = 'none';
-        botaoMinimizar.textContent = '▼';
+        console.error('Erro ao salvar evento');
     }
 }
+
+// Função para excluir um evento da linha do tempo
+function excluirEvento(button) {
+    button.closest('.linha-do-tempo-container').remove();
+}
+
+// Função para iniciar o polling
+function iniciarPolling() {
+    setInterval(async () => {
+        await carregarEventos(); // Atualiza os eventos a cada 10 segundos
+    }, 10000);  // Atualiza a cada 10 segundos (10000 milissegundos)
+}
+
+// Chama a função para iniciar o polling assim que a página for carregada
+document.addEventListener('DOMContentLoaded', () => {
+    carregarEventos();   // Carrega eventos ao carregar a página
+    iniciarPolling();    // Inicia o polling para atualizações a cada 10 segundos
+});
 
 
 
