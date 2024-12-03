@@ -56,25 +56,31 @@
             Cada compra, grande ou pequena, <strong> faz a diferença.</strong>
             <br>Esperamos que goste de nossos produtos, todos foram produzidos com muito carinho.
         </p>
-            <form id="formPagamento">
-                <div class="form-group row">
-                    <div class="col-12 col-sm-6">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="sobrenome">Sobrenome:</label>
-                        <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
-                    </div>
+        <form action="http://localhost:3000/pagamento" method="POST">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
                 </div>
-                <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço completo" required>
+                <div class="col-12 col-md-6">
+                    <label for="sobrenome" class="form-label">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
-                </div>
+            </div>
+            <div class="form-group mt-3">
+                <label for="endereco" class="form-label">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" class="form-control" placeholder="Digite seu endereço completo" required>
+            </div>
+            <div class="form-group mt-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+            </div>
+            <div class="form-groups text-center mt-4">
+                <button type="submit" class="btn btn-primary" id="continuarBtn">Enviar</button>
+            </div>
+        </form>
+    </div>
+    </div>
                 <!-- como de pagamento -->
                 <div class="form-group mt-4">
                     <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
@@ -85,14 +91,12 @@
                     <h4>Escaneie o QR Code para realizar o pagamento:</h4>
                     <img src="qrcode.png" alt="QR Code PIX" id="qrCode" style="max-width: 200px;">
                 </div>
-                
                 <!-- Botão Continuar -->
                 <div>
                     <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
                 </div>
             </form>
         </div>
-               
     </div>
 
 </body>
