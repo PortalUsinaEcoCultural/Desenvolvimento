@@ -1,3 +1,35 @@
+// Função para verificar a autenticação do usuário 
+async function verificarAutenticacao() {
+    try {
+        const response = await fetch('http://localhost:3000/verificar-autenticacao', {
+            method: 'GET',
+            credentials: 'include', // Envia os cookies para autenticação
+        });
+
+        if (!response.ok) {
+            throw new Error('Falha na requisição');
+        }
+
+        const data = await response.json();
+        return data.autenticado; // Certifique-se de que a API retorna { autenticado: true }
+    } catch (error) {
+        console.error('Erro ao verificar autenticação:', error);
+        return false;
+    }
+}
+
+// Função para exibir ou esconder o botão de voltar com base na autenticação
+document.addEventListener('DOMContentLoaded', async () => {
+    const autenticado = await verificarAutenticacao();
+    const backButton = document.getElementById("backButton");
+
+    // Exibe ou esconde o botão de voltar dependendo do login
+    if (backButton) {
+        backButton.style.display = autenticado ? "flex" : "none";
+    }
+});
+
+
 // Função para carregar o conteúdo salvo no localStorage
 function carregarConteudo() {
     document.querySelectorAll("[data-editable]").forEach(element => {
@@ -21,7 +53,7 @@ function ativarEdicao() {
         document.getElementById("editModeText").style.display = "block";
 
         // Exibe o botão de retorno no canto esquerdo
-        document.getElementById("backButton").style.display = "flex";
+        document.getElementById("backButton").style.display = "none";
 
         mostrarModal("Modo de edição ativado. Clique em 'Salvar Edições' para salvar ou 'Desfazer Todas Edições' para reverter.");
     } else {
@@ -50,9 +82,19 @@ function salvarEdicoes() {
     }
 }
 
+// Verifica se o usuário está logado ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    const loggedIn = localStorage.getItem('loggedIn');
+    if (loggedIn === 'true') {
+        // Exibe o botão de voltar se estiver logado
+        document.getElementById("backButton").style.display = "flex";
+    }
+});
+
 // Função para desfazer todas as edições e restaurar o conteúdo original
 function desfazerEdicoes() {
-    if (localStorage.getItem('loggedIn') === 'true') {
+    const loggedIn = localStorage.getItem('loggedIn'); // Verifica novamente se está logado
+    if (loggedIn === 'true') {
         if (confirm("Tem certeza que deseja desfazer todas as edições? Esta ação é irreversível.")) {
             document.querySelectorAll("[data-editable]").forEach(element => {
                 const key = element.getAttribute("data-key");
@@ -64,8 +106,8 @@ function desfazerEdicoes() {
             document.getElementById("editModeBorder").style.display = "none";
             document.getElementById("editModeText").style.display = "none";
 
-            // Oculta o botão de retorno
-            document.getElementById("backButton").style.display = "none";
+            // Exibe o botão de voltar após desfazer as edições
+            document.getElementById("backButton").style.display = "flex";
 
             mostrarModal("Todas as edições foram desfeitas.");
         }
@@ -73,6 +115,8 @@ function desfazerEdicoes() {
         mostrarModal("Você precisa estar logado para desfazer as edições.");
     }
 }
+
+
 
 // Função para salvar o conteúdo original antes de qualquer edição
 function salvarConteudoOriginal() {

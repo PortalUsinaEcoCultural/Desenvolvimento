@@ -214,7 +214,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f8f9fa;
-    padding: 1.5rem 0;
+    padding: 4% 0;
 }
 .boletim .texto-banner h2 {
     text-align: right;
@@ -235,6 +235,43 @@ body {
     .boletim{
         margin-top: 15%;
     }
+}
+
+
+/*Causas que defendemos*/
+.causas-defendidas {
+    padding: 40px 40px;
+    text-align: center;
+}
+.causas-defendidas h4 {
+    font-size: 25px;
+    color: #1D1D1F;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.card-causa {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card-causa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card-causa i {
+    font-size: 280%; 
+    color: #2B2B2E; 
+    margin-bottom: 15px;
+}
+.card-causa p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2B2B2E;
+    margin: 0;
 }
 
 
