@@ -6,8 +6,7 @@
 }
 body {
     font-family: "Roboto", sans-serif !important;
-    background-color: #f4f4f4;
-    color: #313131;
+    background-color: #ffffff;
 }
 
 
@@ -15,18 +14,9 @@ body {
 .container {
     padding: 30px;
     border-radius: 5px;
-    max-width: 100%;
+    max-width: 500px;
     width: 100%;
     text-align: center;
-}
-h2 {
-    font-size: 20px;
-    color: #333;
-}
-h3{
-    font-size: 15px;
-    color: #505050;
-    margin-bottom: 9%;
 }
 .logo {
     margin-top: 10px;
@@ -45,4 +35,34 @@ h3{
     left: 50px; 
     top: 7%; 
     transform: none; 
+}
+
+
+/*Titulo da página*/
+.titulo-boletim {
+    margin: 3% 0 0 9%;
+}
+.titulo-boletim i {
+    color: #1d1d1f;
+    font-size: 25px;
+}
+.subtitulo-boletim {
+    color: #1d1d1f;
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+.paragrafo-boletim {
+    text-align: left;
+    font-size: 15px;
+}
+
+
+/*Boletim de Maio*/
+.img-boletim{
+    width: 60%; 
+    height: auto; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.307);
 }

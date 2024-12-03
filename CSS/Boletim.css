@@ -204,7 +204,6 @@
 body {
     font-family: "Roboto", sans-serif !important;
     background-color: #f4f4f4;
-    color: #313131;
 }
 
 
@@ -219,16 +218,17 @@ body {
 .boletim .texto-banner h2 {
     text-align: right;
     color: #1D1D1F;
+    font-size: 35px;
 }
 .boletim .texto-banner p {
     text-align: right;
     color: #2B2B2E;
     margin-left: 20px;
+    font-size: 15px;
 }
 .boletim .imagem img {
     width: 100%;
     height: auto;
-    transform: scale(1.15);
     margin-left: 6%;
 }
 @media (max-width:1000px ) {
@@ -238,18 +238,18 @@ body {
 }
 
 
-/*Causas que defendemos*/
-.causas-defendidas {
-    padding: 40px 40px;
+/*Temas que defendemos*/
+.temas-abordados {
+    padding: 2% 4%;
     text-align: center;
 }
-.causas-defendidas h4 {
+.temas-abordados h4 {
     font-size: 25px;
     color: #1D1D1F;
     font-weight: bold;
     margin-bottom: 3%;
 }
-.card-causa {
+.card-tema {
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -258,16 +258,16 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
 }
-.card-causa:hover {
+.card-tema:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.card-causa i {
+.card-tema i {
     font-size: 280%; 
     color: #2B2B2E; 
     margin-bottom: 15px;
 }
-.card-causa p {
+.card-tema p {
     font-size: 15px;
     font-weight: 500;
     color: #2B2B2E;
