@@ -227,9 +227,11 @@ header {
 
 /*Proximos eventos*/
 .subtitulo-eventos{
+    color: #000;
     margin: 35px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: left;
+    font-weight: bold;
 }
 .eventos {
     margin: 40px;
@@ -279,7 +281,7 @@ header {
     display: none;
     text-align: left;
 }
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .evento-botao {
         position: static;
         transform: translateY(0%);
@@ -310,6 +312,27 @@ header {
     height: 600px;
     border: 0;
     border-radius: 5px;
+}
+
+
+/*Área do Calendify*/
+.subtitulo-informações{
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+}
+.botoes button {
+    background-color: #69A625;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.botoes button:hover {
+    background-color: #487218;
 }
 
 
