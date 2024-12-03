@@ -215,7 +215,7 @@ function excluirEvento(button) {
 function iniciarPolling() {
     setInterval(async () => {
         await carregarEventos(); // Atualiza os eventos a cada 10 segundos
-    }, 10000);  // Atualiza a cada 10 segundos (10000 milissegundos)
+    }, 86400000);  // Atualiza a cada 10 segundos (10000 milissegundos)
 }
 
 // Chama a função para iniciar o polling assim que a página for carregada

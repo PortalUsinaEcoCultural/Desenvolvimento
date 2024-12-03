@@ -378,7 +378,7 @@ async function salvarEventoNoServidor(ano, descricao) {
 }
 
 const eventoSchema = new mongoose.Schema({
-    ano: { type: Number, required: true },
+    ano: { type: String, required: true },
     descricao: { type: String, required: true },
 });
 
