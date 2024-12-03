@@ -27,9 +27,8 @@ html, body {
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-    font-weight: 400; /* Regular */
+    font-family: 'Roboto', sans-serif !important;
+    line-height: 1.4;
 }
 
 
@@ -503,9 +502,8 @@ h2.objetivos {
     margin-bottom: 20px;
     margin-left: 10%;
     margin-top: -3%;
-    color: #555555;
+    color: #1d1d1d;
     font-size: 25px;
-    font-family: 'Roboto', sans-serif;
     padding-bottom: 0;
 }
 
@@ -520,7 +518,7 @@ h2.objetivos {
 }
 
 .estrategicos {
-    font-family: 'Roboto Light', sans-serif; 
+    font-family: 'Roboto', sans-serif; 
     font-weight: 300; 
 }
 
@@ -688,7 +686,7 @@ h2.objetivos {
     font-weight: 500;
     font-size: 1.56rem;
     margin: 30px 0 5px;
-    color: #2B2B2E;
+    color: #1d1d1d;
     text-align: center;
 }
 .parceiro-conexoes span {
@@ -702,7 +700,7 @@ h2.objetivos {
     margin-bottom: 20px;
     margin-left: 10%;
     margin-top: -3%;
-    color: #555555;
+    color: #1d1d1d;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 0;
@@ -719,7 +717,7 @@ h2.objetivos {
 }
 
 .conexoes {
-    font-family: 'Roboto Light', sans-serif; 
+    font-family: 'Roboto', sans-serif; 
     font-weight: 300; 
 }
 
