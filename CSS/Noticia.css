@@ -209,10 +209,6 @@ body {
 
 
 /* Noticias*/
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #f9f9f9;
-}
 .container {
     text-align: center;
     margin-top: 50px;
@@ -227,8 +223,8 @@ button, .pagination button {
     background-color: #ffffff; 
     color: #69A625; 
     border: 2px solid #69A625; 
-    padding: 12px 24px;  
-    font-size: 16px;  
+    padding: 8px 16px;  
+    font-size: 15px;  
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
     cursor: pointer;
@@ -248,7 +244,6 @@ button:hover, .pagination button:hover {
     color: #a0a0a0; 
     border-color: #a0a0a0; 
 }
-/* Ajuste do alinhamento do botão*/
 .pagination {
     display: flex;
     justify-content: center;
@@ -305,10 +300,9 @@ header {
     height: 341px; 
 }
 .event-title {
-    color: black;
-    font-size: 20px;
+    color: #1D1D1F;
+    font-size: 15px;
     text-decoration: none;
-    font-weight: normal;
 }
 
 
