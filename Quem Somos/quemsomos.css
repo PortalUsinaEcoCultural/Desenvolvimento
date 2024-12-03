@@ -464,6 +464,7 @@ h2.objetivos {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: none;
 }
 .parceiro .img {
     width: 148px;
