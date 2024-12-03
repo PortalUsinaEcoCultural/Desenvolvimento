@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarEventos();
 });
 
+// Função para adicionar um novo evento na linha do tempo
 function adicionarEvento() {
     const ano = prompt("Digite o ano:");
     const descricao = prompt("Digite a descrição:");
@@ -74,6 +75,7 @@ function adicionarEvento() {
     salvarEventoNoServidor(ano, descricao);
 }
 
+// Função para excluir um evento da linha do tempo
 function excluirEvento(botao) {
     const evento = botao.parentElement.parentElement;
     evento.remove();
@@ -83,45 +85,42 @@ function excluirEvento(botao) {
     excluirEventoNoServidor(ano);
 }
 
-function editarTodosEventos() {
-    const ano = prompt("Digite o ano do evento que deseja editar:");
-    const eventos = document.querySelectorAll('.linha-do-tempo-container');
-    let encontrado = false;
+// Função para salvar um evento no servidor
+async function salvarEventoNoServidor(ano, descricao) {
+    const evento = { ano, descricao };
 
-    eventos.forEach(evento => {
-    if (evento.querySelector('h2').textContent === ano) {
-        const novoAno = prompt("Editar ano:", evento.querySelector('h2').textContent);
-        const novaDescricao = prompt("Editar descrição:", evento.querySelector('p').textContent);
-
-        if (novoAno && novaDescricao) {
-        evento.querySelector('h2').textContent = novoAno;
-        evento.querySelector('p').textContent = novaDescricao;
-          // Atualizar evento no servidor
-        atualizarEventoNoServidor(ano, novoAno, novaDescricao);
-        }
-        encontrado = true;
-    }
+    const response = await fetch('http://localhost:3000/eventos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(evento),  // Envia o evento em formato JSON
     });
 
-    if (!encontrado) {
-    alert(`Não existe um evento cadastrado em ${ano}.`);
+    if (response.ok) {
+        console.log('Evento salvo com sucesso!');
+    } else {
+        console.error('Erro ao salvar evento');
     }
 }
 
+// Função para salvar todos os eventos no servidor
 function salvarEventos() {
     const eventos = [];
     document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
-    const ano = container.querySelector('h2').textContent;
-    const descricao = container.querySelector('p').textContent;
-    eventos.push({ ano, descricao });
+        const ano = container.querySelector('h2').textContent;
+        const descricao = container.querySelector('p').textContent;
+        eventos.push({ ano, descricao });
     });
-    // Salvar todos os eventos no servidor
+
+    // Enviar todos os eventos para o servidor
     eventos.forEach(evento => {
-    salvarEventoNoServidor(evento.ano, evento.descricao);
+        salvarEventoNoServidor(evento.ano, evento.descricao);
     });
     alert('Modificações salvas com sucesso!');
 }
 
+// Função para carregar eventos do servidor
 async function carregarEventos() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
     linhaDoTempo.innerHTML = ''; // Limpa o conteúdo para evitar duplicação
@@ -129,26 +128,27 @@ async function carregarEventos() {
     // Buscar eventos do servidor
     const response = await fetch('http://localhost:3000/eventos');
     if (response.ok) {
-    const eventos = await response.json();
-    eventos.forEach(evento => {
-        const container = document.createElement('div');
-        container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+        const eventos = await response.json();
+        eventos.forEach(evento => {
+            const container = document.createElement('div');
+            container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
 
-        container.innerHTML = `
-            <div class="linha-do-tempo-conteudo">
-                <h2>${evento.ano}</h2>
-                <p>${evento.descricao}</p>
-                <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
-            </div>
-        `;
+            container.innerHTML = `
+                <div class="linha-do-tempo-conteudo">
+                    <h2>${evento.ano}</h2>
+                    <p>${evento.descricao}</p>
+                    <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+                </div>
+            `;
 
-        linhaDoTempo.appendChild(container);
-    });
+            linhaDoTempo.appendChild(container);
+        });
     } else {
-    alert('Erro ao carregar eventos');
+        alert('Erro ao carregar eventos');
     }
 }
 
+// Função para alternar a visibilidade da linha do tempo
 function alternarVisibilidade() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
     const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
@@ -161,59 +161,6 @@ function alternarVisibilidade() {
     }
 }
 
-// Função para adicionar um novo evento na linha do tempo
-function adicionarEvento() {
-    const linhaDoTempo = document.getElementById('linha-do-tempo');
-    
-    // Criação de um novo evento na linha do tempo (formulário para captura)
-    const novoEventoHTML = `
-        <div class="linha-do-tempo-container esquerda">
-            <div class="linha-do-tempo-conteudo">
-                <h2><input type="number" placeholder="Ano" class="ano" required></h2>
-                <p><input type="text" placeholder="Descrição do evento" class="descricao" required></p>
-                <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
-            </div>
-        </div>
-    `;
-    
-    linhaDoTempo.insertAdjacentHTML('beforeend', novoEventoHTML);
-}
-
-// Função para excluir um evento da linha do tempo
-function excluirEvento(button) {
-    button.closest('.linha-do-tempo-container').remove();
-}
-
-// Função para salvar os eventos no banco de dados
-async function salvarEventos() {
-    const eventos = [];
-    
-    // Coletando todos os eventos da linha do tempo
-    const containers = document.querySelectorAll('.linha-do-tempo-container');
-    containers.forEach(container => {
-        const ano = container.querySelector('.ano').value;
-        const descricao = container.querySelector('.descricao').value;
-
-        if (ano && descricao) {
-            eventos.push({ ano: parseInt(ano), descricao: descricao });
-        }
-    });
-
-    // Enviando os dados para o servidor
-    const response = await fetch('http://localhost:3000/eventos', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(eventos),
-    });
-
-    if (response.ok) {
-        alert('Eventos salvos com sucesso!');
-    } else {
-        alert('Erro ao salvar eventos!');
-    }
-}
 
 
 /* Carrossel "Apoiadores da Política" */
