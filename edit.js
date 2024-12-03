@@ -21,7 +21,7 @@ function ativarEdicao() {
         document.getElementById("editModeText").style.display = "block";
 
         // Exibe o botão de retorno no canto esquerdo
-        document.getElementById("backButton").style.display = "flex";
+        document.getElementById("backButton").style.display = "none";
 
         mostrarModal("Modo de edição ativado. Clique em 'Salvar Edições' para salvar ou 'Desfazer Todas Edições' para reverter.");
     } else {
