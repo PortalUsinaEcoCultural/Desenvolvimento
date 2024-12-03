@@ -1,0 +1,201 @@
+/*Bloqueia movimento Horizontal*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* Seção "Quem Somos" */
+.cabecalho {
+    display: flex;
+    padding: 50px;
+    background-color: #EDEDED;
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+.cabecalho img {
+    flex: 3;
+    width: 100%;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 0px;
+    flex-shrink: 0;
+    margin-right: -10%;
+    transform: scale(1.11);
+    margin-left: -20px;
+    margin-bottom: -30px;
+}
+
+.cabecalho .img-fluid {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.cabecalho .img-fluid-crianca {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+}
+
+.conteudo-cabecalho {
+    width: 50%;
+    padding: 10px 20px;
+    margin-right: 20%;
+    margin-top: 1%;
+    margin-left: 11%;
+    margin-bottom: 4%;
+    flex-shrink: 0;
+}
+
+h1 .quem-somos {
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+h2.quem-somos {
+    margin: 10px 0;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    color: #1D1D1F;
+}
+
+/*Estilo para telas menores*/
+@media (max-width: 1128px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cabecalho img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .conteudo-cabecalho {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .conteudo-cabecalho h1 {
+        font-size: 24px;
+    }
+
+    .conteudo-cabecalho h2 {
+        font-size: 18px;
+    }
+
+    .conteudo-cabecalho p {
+        font-size: 14px;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container-fundo-cinza {
+    background-color: #e6e6e6;
+    /* Fundo cinza */
+    padding: 40px 20px;
+    /* Espaçamento interno */
+}
+
+
+/* Estilo base */
+.container-quem-somos {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+.coluna-imagem-quem-somos {
+    flex: 1;
+}
+.coluna-imagem-quem-somos img {
+    max-width: 100%;
+    height: auto;
+    transform: scale(1.3);
+    object-fit: cover;
+    margin-left: -50px;
+    margin-bottom: -13px;
+}
+.coluna-texto-quem-somos {
+    flex: 1;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.titulo-principal-quem-somos {
+    font-size: 28px;
+    color: #2B2B2E;
+    margin-bottom: 10px;
+}
+.subtitulo-quem-somos {
+    font-size: 14px;
+    color: #2B2B2E;
+    margin-bottom: 15px;
+}
+.paragrafo-quem-somos {
+    font-size: 14px;
+    line-height: 1.6;
+}
+strong {
+    color: #2B2B2E;
+}
+
+/* Estilo responsivo para telas médias (tablets, por exemplo) */
+@media (max-width: 768px) {
+    .container-quem-somos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .coluna-texto-quem-somos {
+        padding-left: 0;
+        text-align: center;
+    }
+    .titulo-principal-quem-somos {
+        font-size: 24px;
+    }
+    .paragrafo-quem-somos {
+        font-size: 13px;
+    }
+}
+
+/* Estilo responsivo para telas pequenas (celulares) */
+@media (max-width: 480px) {
+    .container-quem-somos {
+        padding: 10px;
+    }
+    .titulo-principal-quem-somos {
+        font-size: 20px;
+    }
+    .paragrafo-quem-somos {
+        font-size: 12px;
+    }
+}

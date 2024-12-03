@@ -2,33 +2,24 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* desativa a rolagem horizontal */
-    width: 100%; /*largura total da tela seja usada */
+    overflow-x: hidden; 
+    width: 100%;
+
 }
-
-
-/* Efeito Fade*/
 .fade-in {
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
 }
-
 .fade-in.show {
     opacity: 1; 
     transform: translateY(0); 
 }
-
-
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
-    font-family: 'Roboto', sans-serif !important;
-    line-height: 1.4;
+    font-family: 'Roboto', sans-serif ;
 }
 
 
@@ -36,7 +27,7 @@ body {
 .cabecalho {
     display: flex;
     padding: 50px;
-    background-color: #EDEDED; /* Retângulo cinza */
+    background-color: #EDEDED; 
     margin-bottom: 30px;
     width: 100%;
     height: auto; 
@@ -49,6 +40,9 @@ body {
     border-radius: 0px; 
     flex-shrink: 0;
     margin-right: -10%;
+    transform: scale(1.11);
+    margin-left: -20px;
+    margin-bottom: -30px;
 }
 .cabecalho .img-fluid {
     width: 100%;
@@ -59,7 +53,6 @@ body {
     width: 100%;
     height: 370px; 
     object-fit: cover;
-    
 }
 .conteudo-cabecalho {
     width: 50%;
@@ -71,15 +64,14 @@ body {
     flex-shrink: 0;
 }
 h1 .quem-somos {
-    margin-top: 0;
     font-size: 35px;
+    margin-left: 20px;
 }
 h2.quem-somos {
     margin: 10px 0;
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
-    color: #313131;
+    color: #1D1D1F;
 }
 
 /*Estilo para telas menores*/
@@ -89,32 +81,25 @@ h2.quem-somos {
       text-align: center; 
       align-items: center; 
     }
-  
     .cabecalho img {
       width: 80%; 
       margin: 0 auto; 
     }
-  
     .conteudo-cabecalho {
       width: 100%; 
       padding: 10px;
       text-align: center; 
     }
-  
     .conteudo-cabecalho h1 {
       font-size: 24px; 
     }
-  
     .conteudo-cabecalho h2 {
       font-size: 18px; 
     }
-  
     .conteudo-cabecalho p {
       font-size: 14px; 
     }
   }
-
-/* FIM da Seção "Quem Somos" */
 
   
 /* Seção "Nossa Atuação/ Nossas Conquistas/ Usina se reinventa" */
@@ -207,7 +192,7 @@ h1.objetivos {
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight: lighter;
-    color: #313131;
+    color: #1D1D1F;
     text-align: right;
     padding-bottom: 0;
 }
@@ -217,7 +202,7 @@ h2.objetivos {
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color: #313131;
+    color: #1D1D1F;
     text-align: right;
     padding-top: 0;
 }
@@ -260,28 +245,23 @@ h2.objetivos {
       text-align: center; 
       gap: 20px; 
     }
-  
     .imagem img {
       width: 80%; 
       margin: 0 auto; 
     }
-  
     .texto {
       width: 100%; 
       padding: 10px; 
     }
-  
     .texto h1 {
       font-size: 22px; 
       text-align: center; 
       margin: 0 auto;
       margin-bottom: 2%;
     }
-  
     .texto h2 {
       font-size: 18px; 
     }
-  
     .texto p {
       font-size: 14px; 
       line-height: 1.6; 
@@ -289,8 +269,6 @@ h2.objetivos {
       margin: 0 auto; 
     }
   }
-
-/* FIM da Seção "Nossos Principais Objetivos" */
   
 
 /* Seção "Bolinhas" */
@@ -299,13 +277,11 @@ h2.objetivos {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .objetivos-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .tres,
 .dois {
     display: flex;
@@ -313,7 +289,6 @@ h2.objetivos {
     gap: 20px;
     margin-bottom: 20px;
 }
-
 .objetivo-card {
     display: inline-block;
     width: 40%;
@@ -322,14 +297,12 @@ h2.objetivos {
     vertical-align: top;
     position: relative; 
 }
-
 .circular-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
-
 .objetivo-card h3 {
     background-color: #6aa6258f; 
     color: #2B2B2E;
@@ -348,7 +321,6 @@ h2.objetivos {
     border-radius: 0px; 
     flex-shrink: 0;
 }
-
 .slider-container {
     width: 90%;
     overflow: hidden;
@@ -356,13 +328,11 @@ h2.objetivos {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 0px;
 }
-
 .slider {
     display: flex;
     transition: transform 0.3s ease;
     cursor: grab;
 }
-
 .parceiro {
     min-width: 200px;
     margin: 10px;
@@ -373,7 +343,6 @@ h2.objetivos {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     flex-shrink: 0;
 }
-
 /*Estilo para telas menores*/
 @media (max-width: 900px) {
     .tres, .dois {
@@ -381,10 +350,9 @@ h2.objetivos {
     }
 
     .objetivo-card {
-        width: calc(50% - 20px); /* Dois por linha */
+        width: calc(50% - 20px); 
     }
 }
-
 @media (max-width: 600px) {
     .tres, .dois {
         flex-direction: column;
@@ -392,11 +360,9 @@ h2.objetivos {
     }
 
     .objetivo-card {
-        width: 100%; /* Um por linha */
+        width: 100%; 
     }
 }
-
-/* FIM da Seção "Bolinhas" */
 
 
 /* Seção "Parceiros Estratégicos..." */
@@ -502,7 +468,7 @@ h2.objetivos {
     margin-bottom: 20px;
     margin-left: 10%;
     margin-top: -3%;
-    color: #1d1d1d;
+    color: #1D1D1F;
     font-size: 25px;
     padding-bottom: 0;
 }
@@ -513,12 +479,10 @@ h2.objetivos {
 }
 
 .parceiros {
-    font-family: 'Roboto', sans-serif; 
     font-weight: 400; 
 }
 
 .estrategicos {
-    font-family: 'Roboto', sans-serif; 
     font-weight: 300; 
 }
 
@@ -702,7 +666,6 @@ h2.objetivos {
     margin-top: -3%;
     color: #1d1d1d;
     font-size: 25px;
-    font-family: 'Roboto', sans-serif;
     padding-bottom: 0;
 }
 
