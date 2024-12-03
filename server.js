@@ -16,6 +16,10 @@ require('dotenv').config();
 const app = express();
 const port = 3000;
 
+// Configuração para aceitar dados em JSON e URL codificado
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Configuração do CORS
 app.use(cors({
     origin: 'http://127.0.0.1:5501',
@@ -259,6 +263,58 @@ app.post('/parceiro', async (req, res) => {
     } catch (error) {
         console.error('Erro ao salvar parceiro:', error);
         res.status(500).json({ error: 'Erro ao processar o registro de parceiro' });
+    }
+});
+
+// Definição do modelo de pagamento
+const pagamentoSchema = new mongoose.Schema({
+    nome: { type: String, required: true },
+    sobrenome: { type: String, required: true },
+    endereco: { type: String, required: true },
+    email: { type: String, required: true },
+    data: { type: Date, default: Date.now }
+});
+
+const Pagamento = mongoose.model('Pagamento', pagamentoSchema);
+
+// Rota para registrar o pagamento
+app.post('/pagamento', async (req, res) => {
+    const { nome, sobrenome, endereco, email } = req.body;
+
+    try {
+        // Criando o novo documento no banco de dados
+        const novoPagamento = new Pagamento({ nome, sobrenome, endereco, email });
+        await novoPagamento.save();
+
+        // Configurando o envio de e-mail
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.EMAIL_USER, // Seu e-mail
+                pass: process.env.EMAIL_PASS, // Sua senha
+            },
+        });
+
+        const mailOptions = {
+            from: process.env.EMAIL_USER, // De quem será o e-mail
+            to: process.env.EMAIL_DESTINO, // Para quem vai o e-mail (responsável pelo acompanhamento)
+            subject: 'Novo Registro de Pagamento', // Assunto do e-mail
+            text: `
+            Um novo pagamento foi registrado:
+            Nome: ${nome} ${sobrenome}
+            Email: ${email}
+            Endereço: ${endereco}
+            `, // Corpo do e-mail
+        };
+
+        // Enviando o e-mail
+        await transporter.sendMail(mailOptions);
+
+        // Respondendo ao cliente com sucesso
+        res.status(200).json({ message: 'Pagamento registrado e e-mail enviado!' });
+    } catch (error) {
+        console.error('Erro ao salvar pagamento:', error);
+        res.status(500).json({ error: 'Erro ao processar o pagamento' });
     }
 });
 

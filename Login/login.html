@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Login/login.css">
-    <script src="https://kit.fontawesome.com/a27cc7b249.js" crossorigin="anonymous"></script>
     <title>Site Usina Eco-Cultural</title>
+    <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/Login/login.css">
+
+    <script src="https://kit.fontawesome.com/a27cc7b249.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+
     <!--Botão de voltar-->
     <div class="container">
-        <a href="javascript:history.back()" class="back-button">
-            <
-        </a>
-        
+        <a href="javascript:history.back()" class="back-button">&lt;</a>
 
         <!-- Formulário de Login -->
         <div class="form-box m-20">
@@ -31,13 +33,13 @@
                     </div>
                     <div class="input-field">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="senha" name="senha" placeholder="Senha" required autocomplete="current-password">
+                        <input type="password" id="senha" name="senha" placeholder="Senha" required
+                            autocomplete="current-password">
                     </div>
                     <p>Esqueceu a senha? <a href="#">Clique Aqui</a></p>
                 </div>
                 <button type="submit" id="entrarBtn" class="button">Entrar</button>
             </form>
-
 
             <!-- Formulário de Cadastro -->
             <form id="signupForm" action="http://localhost:3000/signup" method="post" style="display: none;">
@@ -80,7 +82,7 @@
     <div class="modal" id="modal">
         <div class="modal-content">
             <p id="modal-message"></p>
-            <button class="modal-button" onclick="fecharModal()">Fechar</button>
+            <button class="modal-button" onclick="fecharModal()"></button>
         </div>
     </div>
     <script src="/login.js"></script>
@@ -89,29 +91,30 @@
     <script>
         const signupForm = document.getElementById("signupForm");
         const loginForm = document.getElementById("loginForm");
-    
+
         const signupBtn = document.getElementById("signupBtn");
         const signinBtn = document.getElementById("signinBtn");
-    
+
         const signupBtn2 = document.getElementById("signupBtn2");
         const signinBtn2 = document.getElementById("signinBtn2");
-    
+
         const title = document.getElementById("title");
-    
-        signupBtn.onclick = function() {
+
+        signupBtn.onclick = function () {
             loginForm.style.display = "block";
             signupForm.style.display = "none";
             title.innerHTML = "Login";
         };
 
-        signinBtn.onclick = function() {
+        signinBtn.onclick = function () {
             signupForm.style.display = "block";
             loginForm.style.display = "none";
             title.innerHTML = "Cadastro";
         };
-    
+
         signupBtn2.onclick = signupBtn.onclick;
         signinBtn2.onclick = signinBtn.onclick;
-    </script>    
+    </script>
 </body>
+
 </html>
