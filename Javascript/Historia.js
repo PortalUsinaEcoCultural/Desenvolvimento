@@ -161,30 +161,58 @@ function alternarVisibilidade() {
     }
 }
 
-  // Funções para interagir com o servidor (Backend)
-
-async function salvarEventoNoServidor(ano, descricao) {
-    const evento = { ano, descricao };
-    await fetch('http://localhost:3000/eventos', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(evento),
-    });
+// Função para adicionar um novo evento na linha do tempo
+function adicionarEvento() {
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+    
+    // Criação de um novo evento na linha do tempo (formulário para captura)
+    const novoEventoHTML = `
+        <div class="linha-do-tempo-container esquerda">
+            <div class="linha-do-tempo-conteudo">
+                <h2><input type="number" placeholder="Ano" class="ano" required></h2>
+                <p><input type="text" placeholder="Descrição do evento" class="descricao" required></p>
+                <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+            </div>
+        </div>
+    `;
+    
+    linhaDoTempo.insertAdjacentHTML('beforeend', novoEventoHTML);
 }
 
-async function excluirEventoNoServidor(ano) {
-    await fetch(`http://localhost:3000/eventos/${ano}`, {
-    method: 'DELETE',
-    });
+// Função para excluir um evento da linha do tempo
+function excluirEvento(button) {
+    button.closest('.linha-do-tempo-container').remove();
 }
 
-async function atualizarEventoNoServidor(anoAntigo, novoAno, novaDescricao) {
-    const eventoAtualizado = { ano: novoAno, descricao: novaDescricao };
-    await fetch(`http://localhost:3000/eventos/${anoAntigo}`, {
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(eventoAtualizado),
+// Função para salvar os eventos no banco de dados
+async function salvarEventos() {
+    const eventos = [];
+    
+    // Coletando todos os eventos da linha do tempo
+    const containers = document.querySelectorAll('.linha-do-tempo-container');
+    containers.forEach(container => {
+        const ano = container.querySelector('.ano').value;
+        const descricao = container.querySelector('.descricao').value;
+
+        if (ano && descricao) {
+            eventos.push({ ano: parseInt(ano), descricao: descricao });
+        }
     });
+
+    // Enviando os dados para o servidor
+    const response = await fetch('http://localhost:3000/eventos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(eventos),
+    });
+
+    if (response.ok) {
+        alert('Eventos salvos com sucesso!');
+    } else {
+        alert('Erro ao salvar eventos!');
+    }
 }
 
 

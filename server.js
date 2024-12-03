@@ -359,6 +359,24 @@ app.post('/submit_newsletter', async (req, res) => {
     }
 });
 
+async function salvarEventoNoServidor(ano, descricao) {
+    const evento = { ano, descricao };
+
+    const response = await fetch('http://localhost:3000/eventos', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(evento),  // Converte o evento em JSON para enviar
+    });
+
+    if (response.ok) {
+        console.log('Evento salvo com sucesso!');
+    } else {
+        console.error('Erro ao salvar evento');
+    }
+}
+
 const eventoSchema = new mongoose.Schema({
     ano: { type: Number, required: true },
     descricao: { type: String, required: true },
@@ -378,9 +396,10 @@ app.get('/eventos', async (req, res) => {
     }
 });
 
-// Rota para salvar novos eventos
 app.post('/eventos', async (req, res) => {
     const { ano, descricao } = req.body;
+
+    console.log('Evento recebido:', req.body);  // Verifique se os dados estão sendo recebidos corretamente
 
     const novoEvento = new Evento({ ano, descricao });
 
@@ -388,9 +407,11 @@ app.post('/eventos', async (req, res) => {
         await novoEvento.save();  // Salva o evento no banco de dados
         res.status(200).json({ message: 'Evento salvo com sucesso' });
     } catch (error) {
+        console.error('Erro ao salvar evento:', error);
         res.status(500).json({ message: 'Erro ao salvar evento' });
     }
 });
+
 
 // Iniciar o servidor
 app.listen(port, () => {
