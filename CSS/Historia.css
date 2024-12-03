@@ -992,21 +992,21 @@ body {
     flex-direction: column;
 }
 .parceiro .img-politica {
-    width: 148px; /* Largura fixa do contêiner */
-    height: 148px; /* Altura fixa do contêiner */
-    border-radius: 0%; /* Bordas retas */
-    overflow: hidden; /* Esconde partes da imagem que excedem o contêiner */
+    width: 148px; 
+    height: 148px; 
+    border-radius: 0%; 
+    overflow: hidden; 
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .parceiro .img-politica img {
-    width: auto; /* Permite que a largura da imagem se ajuste proporcionalmente */
-    height: 100%; /* Ajusta a altura ao tamanho do contêiner */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
-    object-position: center; /* Centraliza a imagem dentro do contêiner */
-    border-radius: 0%; /* Bordas retas */
+    width: auto; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+    border-radius: 0%; 
 }
 
 .parceiro h2 {
@@ -1038,15 +1038,14 @@ body {
 
 .parceiros {
     font-family: 'Roboto', sans-serif; 
-    font-size: 35px;
-    color: #555555;
+    font-size: 25px;
+    color: #1d1d1d;
 }
 
 .estrategicos {
-    font-family: 'Roboto Light', sans-serif; 
-    font-size: 35px;
-    color: #69A625;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 25px;
+    color: #1d1d1d;
 }
 
 .retangulo-fundo {
