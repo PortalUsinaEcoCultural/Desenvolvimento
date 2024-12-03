@@ -44,17 +44,23 @@ body {
 }
 .cabecalho img {
     flex: 3;
-    margin-top: 2%;
-    margin-bottom: -3.1%;
-    margin-left: -2px;
-    margin-right: -10.7%;
-    width: 50vw;
-    
+    width: 100%; 
+    height: 20px; 
+    object-fit: cover; 
+    border-radius: 0px; 
+    flex-shrink: 0;
+    margin-right: -10%;
 }
 .cabecalho .img-fluid {
     width: 100%;
     height: 350px; 
     object-fit: cover; 
+}
+.cabecalho .img-fluid-crianca {
+    width: 100%;
+    height: 370px; 
+    object-fit: cover;
+    
 }
 .conteudo-cabecalho {
     width: 50%;
@@ -233,6 +239,7 @@ h2.objetivos {
 .objetivos .texto {
     flex: 1;
     text-align: right;
+    margin-left: 5%;
 }
 
 .objetivos .imagem {
