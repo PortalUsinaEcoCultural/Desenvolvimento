@@ -50,6 +50,14 @@ function salvarEdicoes() {
     }
 }
 
+// Verifica se o usuário está logado ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('loggedIn') === 'true') {
+        // Exibe o botão de voltar se estiver logado
+        document.getElementById("backButton").style.display = "flex";
+    }
+});
+
 // Função para desfazer todas as edições e restaurar o conteúdo original
 function desfazerEdicoes() {
     if (localStorage.getItem('loggedIn') === 'true') {
@@ -64,8 +72,8 @@ function desfazerEdicoes() {
             document.getElementById("editModeBorder").style.display = "none";
             document.getElementById("editModeText").style.display = "none";
 
-            // Oculta o botão de retorno
-            document.getElementById("backButton").style.display = "none";
+            // Exibe o botão de voltar
+            document.getElementById("backButton").style.display = "flex";
 
             mostrarModal("Todas as edições foram desfeitas.");
         }
@@ -73,6 +81,7 @@ function desfazerEdicoes() {
         mostrarModal("Você precisa estar logado para desfazer as edições.");
     }
 }
+
 
 // Função para salvar o conteúdo original antes de qualquer edição
 function salvarConteudoOriginal() {
