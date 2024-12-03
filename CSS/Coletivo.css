@@ -537,6 +537,7 @@ button:hover {
     margin: 0;
 }
 
+
 /*Cookies*/
 #cookies-aviso {
     margin: 0;
@@ -608,5 +609,72 @@ button:hover {
 }
 
 
+/*Seção do newsletter*/
+.newsletter-container {
+    background-color: #D9D9D9;
+    padding: 30px;
+    margin-top: 30px;
+}
+.conteudo{
+    margin-left: 10%;
+}
+.newsletter-container h3 {
+    font-size: 20px;
+    color: #1D1D1F;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.newsletter-container p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.form-group {
+    flex: 1;
+    margin-bottom: 2%;
+}
+.newsletter-container .form-control {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.newsletter-container .cadastro-botao {
+    background-color: #69A625;
+    color: white;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.newsletter-container .cadastro-botao:hover {
+    background-color: #487218;
+}
+.form-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.form-control {
+    outline: none !important;
+    box-shadow: none !important;
+}
 
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important; 
+}
+@media (max-width: 767px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+    .newsletter-container .form-control {
+        max-width: 100%;
+    }
+    .newsletter-container .cadastro-botao {
+        width: 100%;
+    }
+}
 
