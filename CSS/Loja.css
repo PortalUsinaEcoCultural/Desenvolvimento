@@ -414,7 +414,6 @@ header {
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-
 }
 .mensagem-confirmacao.show {
     display: block;
@@ -573,7 +572,6 @@ header {
     font-size: 15px;
     color: #2B2B2E; 
 }
-/* Responsividade */
 @media screen and (max-width: 1024px) {
     .container-conquistas {
         flex-direction: column; 
@@ -878,7 +876,6 @@ header {
         margin-left: 10px;
         margin-right: 10px;
     }
-
     .col-12.col-sm-6 {
         margin-bottom: 15px; 
     }

@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const itensCarrinho = document.getElementById('itensCarrinho');
     const valorTotal = document.getElementById('valorTotal');
-    // Recuperar dados do LocalStorage
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
     const totalAmount = parseFloat(localStorage.getItem('totalAmount')) || 0;
 
+
+    // Lógica para o resumo da compra
     if (cartItems.length > 0) {
         cartItems.forEach(item => {
             const li = document.createElement('li');
@@ -17,17 +18,18 @@ document.addEventListener('DOMContentLoaded', () => {
         valorTotal.textContent = `Total: R$ 0,00`;
     }
 
+
+    // Lógica para aparecer o Pix quandi ele for selecionado
     document.getElementById("pixBtn").addEventListener("click", function () {
         const qrCodeContainer = document.getElementById("qrCodeContainer");
-        
-        // Alterna entre mostrar e esconder
         if (qrCodeContainer.style.display === "none" || qrCodeContainer.style.display === "") {
-            qrCodeContainer.style.display = "block"; // Mostra o QR Code
+            qrCodeContainer.style.display = "block";
         } else {
-            qrCodeContainer.style.display = "none"; // Esconde o QR Code
+            qrCodeContainer.style.display = "none"; 
         }
     });
 
+    
     // Ação do botão "Continuar"
     document.getElementById('continuarBtn').addEventListener('click', () => {
         localStorage.removeItem('cartItems');
