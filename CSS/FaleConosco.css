@@ -16,7 +16,7 @@
     font-size: 24px;
     transition: 0.3s color;
     margin-left: 16%;
-    margin-top: 5px;
+    margin-top: -15px;
 }
 .doe-button {
     background-color: #69a625;
@@ -797,27 +797,26 @@ body {
     text-align: center;
 }
 .back-btn {
-    margin-left: 30px;
+    color: #1D1D1F;
+    margin-left: 0px;
     position: fixed;
     top: 20px;
-    left: 10px;
+    left: 80px;
     z-index: 10000;
-    background-color: #69a625;
-    color: white;
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 .back-btn:hover {
-    background-color: #487218;
+    color: #1D1D1F;
+    text-decoration: none;
 }
 #modal {
     display: flex;
