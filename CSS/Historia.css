@@ -758,7 +758,7 @@ body {
     font-size: 25px;
     color: #1d1d1d;
     text-align: center;
-    margin: 20px 0; /* Adiciona margem para espaçamento */
+    margin: 20px 0; 
 }
 
 .linha-do-tempo-secao {
@@ -1276,7 +1276,7 @@ body, html {
 }
 
 /* Seção Linha-do-Tempo */
-@media (max-width: 1200px) {
+@media (max-width: 630px) {
     .linha-do-tempo {
         max-width: 600px;
     }
@@ -1291,7 +1291,7 @@ body, html {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 630px) {
     .linha-do-tempo {
         max-width: 500px;
     }
@@ -1307,7 +1307,7 @@ body, html {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 630px) {
     .linha-do-tempo {
         max-width: 400px;
     }
