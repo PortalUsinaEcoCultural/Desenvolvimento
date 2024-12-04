@@ -256,19 +256,19 @@
     text-align: right;
     color: #313131;
     margin-right: 10%;
-    font-size: 30px; 
+    font-size: 35px; 
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
 }
 
 .incenerador .texto p {
     text-align: right;
     margin-right: 10%;
-    font-size: 18px; /* Alterar o tamanho do texto (parágrafo) aqui */
+    font-size: 16px; 
     font-family: 'Roboto', sans-serif; 
     margin-top: 3%;
     margin-left: 2%;
     margin-bottom: 5%;
+    font-weight: lighter;
 }
 
 /* Estilo do botão */
@@ -338,7 +338,7 @@
 /* Conteúdo Principal linha 1*/
 .content-1 p {
     font-family: 'Roboto', sans-serif; 
-    font-size: 18px; 
+    font-size: 16px; 
     color: #505050; 
     line-height: 1.5; 
     margin: 10px 0; 
@@ -381,7 +381,7 @@
 
 .texto p {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
 
@@ -394,11 +394,11 @@
 /* Conteúdo Principal linha 2*/
 .content-2 p {
     font-family: 'Roboto', sans-serif; 
-    font-size: 18px; 
+    font-size: 16px; 
     color: #505050; 
     line-height: 1.5; 
     margin: 10px 0; 
-    margin-left: 10%;
+    margin-left: 1%;
     text-align: right;
     margin-right: 30px;
 }
@@ -499,7 +499,7 @@
 .texto-content p {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: #505050;
     margin-top: 3%;
 }
@@ -554,7 +554,7 @@
 .texto-content2 h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     color: #464545;
     margin: 5px 0;
     margin-top: 3%;
@@ -563,7 +563,7 @@
 .texto-content2 p {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     color: #505050;
     margin-top: 3%;
 }
@@ -1624,7 +1624,7 @@ body, html {
         padding: 8px;
     }
     .texto {
-        font-size: 18px;
+        font-size: 16px;
     }
     .footer-title {
         font-size: 24px;
