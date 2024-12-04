@@ -1,4 +1,3 @@
-/*Bloqueia movimento Horizontal*/
 html,
 body {
     margin: 0;
@@ -13,8 +12,6 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 
 /* Seção "Quem Somos" */
@@ -106,16 +103,10 @@ body {
     background-color: #f9f9f9;
     color: #333;
 }
-
 .container-fundo-cinza {
     background-color: #e6e6e6;
-    /* Fundo cinza */
     padding: 40px 20px;
-    /* Espaçamento interno */
 }
-
-
-/* Estilo base */
 .container-quem-somos {
     display: flex;
     flex-direction: row;
@@ -188,7 +179,6 @@ strong {
     }
 }
 
-
   
 /* Seção "Nossa Atuação/ Nossas Conquistas/ Usina se reinventa" */
 .atividades {
@@ -220,7 +210,6 @@ strong {
     height: 250px;
     border-radius: 0px; 
 }
-/* Efeito de animação para sublinhado */
 .item-galeria p {
     margin-top: 10px;
     font-style: italic;
@@ -274,7 +263,6 @@ strong {
 
 
 /* Zigzag */
-
 .quadrado1{
     margin-bottom: -90px;
 }
