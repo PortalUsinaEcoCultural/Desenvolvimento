@@ -1,11 +1,9 @@
 /*Especificações gerais do site*/
 body {
-    background-color: #f8f9fa; 
-    color: #313131; 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important; 
 }
 h1, h2, h3, h4 {
-    color: #313131;
+    color: #2b2b2e;
     font-size: 25px;
     font-weight: 550;
 }
@@ -41,7 +39,7 @@ header a {
     font-size: 13px;
 }
 i {
-    color: #313131;
+    color: #2b2b2e;
     size: 10px; 
 }
 .img-fluid, .bg-white {
@@ -49,7 +47,7 @@ i {
 }
 p, li {
     line-height: 1.5;
-    color: #313131;
+    color: #2b2b2e;
     font-size: 15px;
 }
 .container {
@@ -76,7 +74,7 @@ p, li {
     position: absolute;
     right: 4%;
     cursor: pointer;
-    color: #313131;
+    color: #2b2b2e;
 }
 .btn-olhinho:hover {
     color: #69A625;
@@ -105,10 +103,10 @@ p, li {
 }
 .bg-white {
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .logout-icon {
-    font-size: 20px; 
+    font-size: 25px; 
     color: #1d1d1f; 
     cursor: pointer; 
     transition: color 0.2s ease; 
@@ -127,20 +125,20 @@ p, li {
     align-items: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-decoration: none; 
-    color: #313131;
+    color: #2b2b2e;
     flex: 1; 
 }
 .opcoes:hover {
     transform: scale(1.02);
 }
 .opcoes i {
-    color: #313131; 
+    color: #2b2b2e; 
     margin-bottom: 10px;
 }
 .opcoes p {
     margin: 0;
     font-size: 14px;
-    color: #313131;
+    color: #2b2b2e;
 }
 .row {
     display: flex;
