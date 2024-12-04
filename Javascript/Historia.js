@@ -46,12 +46,16 @@ document.addEventListener("mouseup", dragStop);
 
 /* Seção "linha do tempo" */
 
+// Variável de controle para evitar chamadas duplicadas
+let eventosCarregados = false;
+
 // Carregar eventos do servidor ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    carregarEventos();
+    if (!eventosCarregados) {
+        carregarEventos();
+        eventosCarregados = true; // Marca que os eventos foram carregados
+    }
 });
-
-
 
 // Função para adicionar um novo evento na linha do tempo
 function adicionarEvento() {
@@ -64,6 +68,10 @@ function adicionarEvento() {
     const container = document.createElement('div');
     container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
 
+    // Gerar um id único para o evento
+    const eventoId = `evento-${Date.now()}`;
+    container.id = eventoId;
+
     container.innerHTML = `
         <div class="linha-do-tempo-conteudo">
             <h2>${ano}</h2>
@@ -73,13 +81,14 @@ function adicionarEvento() {
     `;
 
     linhaDoTempo.appendChild(container);
+
     // Enviar evento para o servidor
-    salvarEventoNoServidor(ano, descricao);
+    salvarEventoNoServidor(ano, descricao, eventoId);
 }
 
 // Função para excluir um evento da linha do tempo
 function excluirEvento(botao) {
-    const evento = botao.parentElement.parentElement;
+    const evento = botao.closest('.linha-do-tempo-container');
     evento.remove();
 
     // Excluir evento no banco de dados
@@ -88,15 +97,15 @@ function excluirEvento(botao) {
 }
 
 // Função para salvar um evento no servidor
-async function salvarEventoNoServidor(ano, descricao) {
-    const evento = { ano, descricao };
+async function salvarEventoNoServidor(ano, descricao, eventoId) {
+    const evento = { ano, descricao, eventoId };
 
     const response = await fetch('http://localhost:3000/eventos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(evento),  // Envia o evento em formato JSON
+        body: JSON.stringify(evento),
     });
 
     if (response.ok) {
@@ -106,6 +115,7 @@ async function salvarEventoNoServidor(ano, descricao) {
     }
 }
 
+// Função para alternar visibilidade da linha do tempo
 function alternarVisibilidade() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
     const botaoMinimizar = document.querySelector('.linha-do-tempo-minimizar');
@@ -115,7 +125,8 @@ function alternarVisibilidade() {
     } else {
         linhaDoTempo.style.display = 'none';
         botaoMinimizar.textContent = '▼';
-    }}
+    }
+}
 
 // Função para salvar todos os eventos no servidor
 function salvarEventos() {
@@ -136,16 +147,25 @@ function salvarEventos() {
 // Função para carregar eventos do servidor
 async function carregarEventos() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
-    linhaDoTempo.innerHTML = '';  // Limpa o conteúdo para evitar duplicação
+
+    // Limpar todos os eventos anteriores
+    while (linhaDoTempo.firstChild) {
+        linhaDoTempo.removeChild(linhaDoTempo.firstChild);
+    }
 
     // Buscar eventos do servidor
     const response = await fetch('http://localhost:3000/eventos');
     if (response.ok) {
         const eventos = await response.json();
         console.log('Eventos recebidos do servidor:', eventos); // Verifique os eventos recebidos
+
+        // Adicionar os eventos recebidos à linha do tempo
         eventos.forEach(evento => {
             const container = document.createElement('div');
             container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+
+            // Gerar um id único para o evento
+            container.id = evento.eventoId;
 
             container.innerHTML = `
                 <div class="linha-do-tempo-conteudo">
@@ -162,67 +182,22 @@ async function carregarEventos() {
     }
 }
 
-// Função para adicionar um novo evento na linha do tempo
-function adicionarEvento() {
-    const ano = prompt("Digite o ano:");
-    const descricao = prompt("Digite a descrição:");
-
-    if (!ano || !descricao) return;
-
-    const linhaDoTempo = document.getElementById('linha-do-tempo');
-    const container = document.createElement('div');
-    container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
-
-    container.innerHTML = `
-        <div class="linha-do-tempo-conteudo">
-            <h2>${ano}</h2>
-            <p>${descricao}</p>
-            <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
-        </div>
-    `;
-
-    linhaDoTempo.appendChild(container);
-
-    // Enviar evento para o servidor
-    salvarEventoNoServidor(ano, descricao);
-}
-
-// Função para salvar um evento no servidor
-async function salvarEventoNoServidor(ano, descricao) {
-    const evento = { ano, descricao };
-
-    const response = await fetch('http://localhost:3000/eventos', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(evento),
-    });
-
-    if (response.ok) {
-        console.log('Evento salvo com sucesso!');
-    } else {
-        console.error('Erro ao salvar evento');
-    }
-}
-
-// Função para excluir um evento da linha do tempo
-function excluirEvento(button) {
-    button.closest('.linha-do-tempo-container').remove();
-}
-
-// Função para iniciar o polling
+// Função para iniciar o polling (atualizações automáticas a cada 24 horas)
 function iniciarPolling() {
     setInterval(async () => {
-        await carregarEventos(); // Atualiza os eventos a cada 10 segundos
-    }, 86400000);  // Atualiza a cada 10 segundos (10000 milissegundos)
+        await carregarEventos(); // Atualiza os eventos a cada 24 horas
+    }, 86400000);  // Atualiza a cada 24 horas
 }
 
 // Chama a função para iniciar o polling assim que a página for carregada
 document.addEventListener('DOMContentLoaded', () => {
-    carregarEventos();   // Carrega eventos ao carregar a página
-    iniciarPolling();    // Inicia o polling para atualizações a cada 10 segundos
+    if (!eventosCarregados) {
+        carregarEventos();   // Carrega eventos ao carregar a página
+        eventosCarregados = true;
+    }
+    iniciarPolling();    // Inicia o polling para atualizações a cada 24 horas
 });
+
 
 
 
