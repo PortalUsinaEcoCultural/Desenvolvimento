@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Usina Eco-Cultural</title>
+    <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/CSS/DoeEApoie.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Onde aplicamos os ícones-->
+    <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
+    <!--Plugin de acessibilidade-->
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid box">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="/Fala Conosco/img/logo.jpg" width="60px" alt="Logo Usina Eco-Cultural">
+            </div>
+
+            <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu de navegação (Hamburguer) -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
+                            <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
+                                <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;"
+                                        href="/Galeria/galeria.html">Galeria</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">História</a>
+                            <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
+                                <li><a class="dropdown-item" href="#">Incinerador</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/Loja/Loja.html">Loja</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Eventos/eventos.html">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Noticias/Noticia.html">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Boletim/Boletim.html">Boletim da Usina</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="/Login/login.html" class="login-button login-button-rounded"
+                                style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a" class="doe-button"><b>Doe e apoie</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Banner da página de Doação-->
+    <div class="banner ">
+        <div class="imagem" style="background-image: url('/Imagens/img-Doe/fundo.jpg');"></div>
+        <div class="overlay"></div>
+        <div class="banner-content container">
+            <h1>Juntos podemos fazer a diferença</h1>
+            <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, <br> criada para proteger,
+                revitalizar e reinventar.</p>
+            <div class="containerBtn">
+                <a href="/HTML/FormsDoe.html" class="doeBtn">Doe agora!</a>
+                <a href="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/"
+                    class="doeBtn" target="_blank">Abaixo-Assinado</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Seção de Doar/voluntariar -->
+    <section class="trio">
+        <div class="services container">
+            <div class="service-card">
+                <h2>Se Torne um Voluntariado</h2>
+                <p>Participe de ações que promovem cultura e sustentabilidade.
+                    Contribua para transformar vidas e ganhar experiências únicas</p>
+                <a href="/HTML/FormsVoluntário.html" class="service-button">Voluntarie-se</a>
+            </div>
+            <div class="service-card">
+                <h2>Faça Parceria</h2>
+                <p>Junte-se a nós para apoiar iniciativas que promovem impacto positivo e
+                    sustentabilidade, fortalecendo comunidades.</p>
+                <a href="/HTML/FormsParceiro.html" class="service-button">Faça parte!</a>
+            </div>
+            <div class="service-card">
+                <h2>Propostas para a Usina</h2>
+                <p>Contribua com ideias e colabore para ampliar o impacto da Usina em projetos culturais e ambientais.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeylWAQpSRKiyCCmsyQV17E9pVFGHpuufqjRAvohdHFqLJJ8w/viewform"
+                    class="service-button">Contribua</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Divisória-->
+    <div class="col-md-8 mx-auto fade-in">
+        <hr style="border-top: 1px solid #555; margin:1.5%; margin-bottom: 5%;">
+    </div>
+
+
+    <!--Porque doar-->
+    <div class="container ">
+        <div class="porque-titulo">
+            Por que realizar a doação?
+        </div>
+
+        <div class="porque-doar">
+            <p>Ao doar, você transforma vidas e apoia um futuro melhor.
+                <br>Cada doação é um gesto de esperança que impulsiona iniciativas voltadas para <strong>preservar o
+                    meio ambiente, <br>promover a cultura e apoiar comunidades em vulnerabilidade</strong>.
+            </p>
+        </div>
+
+        <div class="porque-itens">
+            <div class="porque-item">
+                <div class="icone-porque"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <div class="porque-numeros">Transformação</div>
+                <div class="porque-descricao">de diversas vidas</div>
+            </div>
+
+            <div class="porque-item">
+                <div class="icone-porque"><i class="fa-solid fa-hand-fist"></i></div>
+                <div class="porque-numeros">Fortalecimento</div>
+                <div class="porque-descricao">do movimento</div>
+            </div>
+
+            <div class="porque-item">
+                <div class="icone-porque"><i class="fa-solid fa-people-roof"></i></div>
+                <div class="porque-numeros">Promoção</div>
+                <div class="porque-descricao"> de espaços culturais</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Nossos Apoios -->
+    <div class="section container-fluid py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="/Imagens/img-Doe/2.jpg" alt="Imagem de uma pessoa servindo comida"
+                    class="img-fluid section-img">
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <h2>Nossos Apoios</h2>
+                    <h3>Além da comunidade local (Ipiranga), a Usina Eco-Cultural recebe apoio de moradores de Vila
+                        Mariana,
+                        Santa Cruz, Praça da Árvore, Saúde, Cambuci, Vila Moraes, Heliópolis e Cursino.</h3>
+                    <p>
+                        A população tem abraçado a Usina, pessoas têm ocupado o espaço, incluindo trabalhadores que
+                        moram nas
+                        proximidades, que vão ao local durante o horário de trabalho.
+                        Também contamos com o apoio das seguintes entidades: <strong>Vila Mariana e Cades Ipiranga,
+                            Missão Ambiental, GEPEM, Ciclo Vida, Muda Ipiranga, SOS Abelha Sem Ferrão, Umapaz, Casa Ó,
+                            Termo
+                            Fischer
+                            (empresa local), Instituto Chão, MST, MTST, Federação Paulista de Skate, Central de
+                            Movimentos
+                            Populares
+                            (CMP) e Casa de Cultura Chico Science.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Mais informações -->
+    <div class="section2 container-fluid py-5">
+        <div class="row align-items-center justify-content-end">
+            <div class="col-md-8 content2 text-end">
+                <h2>Mais informações sobre o movimento</h2>
+                <h3>O Incinerador encerrou oficialmente em 2002, marcado por uma celebração com balões coloridos.</h3>
+                <p>
+                    Houve 461 reclamações formais, 19 multas ambientais não pagas, e o local permanece considerado
+                    tóxico já
+                    que o poder público não fez nada para “desintoxicar”. As tentativas de transformá-lo em um polo
+                    cultural
+                    e ambiental foram frustradas, deixando o prédio interditado, com vidros quebrados e pichações. A
+                    chaminé
+                    continua como símbolo da luta da comunidade. Ao lado, o Transbordo Vergueiro recebe cerca de 3000
+                    toneladas de lixo diariamente.
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img src="/Imagens/img-Doe/1.jpeg" alt="Imagem do Incinerador" class="img-fluid section-img">
+            </div>
+        </div>
+    </div>
+
+
+    <!--Divisória-->
+    <div class="col-md-8 mx-auto fade-in">
+        <hr style="border-top: 1px solid #555; margin-top:1.5%;">
+    </div>
+
+
+    <!-- ODS -->
+    <section class="causas-defendidas fade-in">
+        <div class="container">
+            <h4 class="causas-defendidas">Principais ODS que defendemos</h4>
+            <div class="row g-4 justify-content-center">
+                <div class="mt-3 col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-people-arrows"></i>
+                        <p>1. Erradicação da pobreza</p>
+                    </div>
+                </div>
+                <div class="mt-3 col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <p>5. Igualdade de gênero</p>
+                    </div>
+                </div>
+                <div class="mt-3 col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-equals"></i>
+                        <p>10. Redução das desigualdades</p>
+                    </div>
+                </div>
+                <div class="mt-3 col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-tree-city"></i>
+                        <p>11. Cidades e comunidades sustentáveis</p>
+                    </div>
+                </div>
+                <div class="mt-3 2col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                        <p>12. Consumo de produções responsáveis</p>
+                    </div>
+                </div>
+                <div class="mt-3 2col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="card-causa">
+                        <i class="fa-solid fa-dove"></i>
+                        <p>16. Paz, justiça e instituições eficazes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Newsletter-->
+    <div class="newsletter-container mt-5">
+        <div class="conteudo">
+            <h3>Inscreva-se!</h3>
+            <p>Receba nossa newsletter e novas atualizações para ficar por dentro de todas as novidades!</p>
+
+            <form id="newsletterForm" action="http://localhost:3000/submit_newsletter" method="POST">
+                <div class="row justify-content-start">
+                    <div class="form-group nome col-md-5">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome"
+                            required>
+                    </div>
+                    <div class="form-group email col-md-5">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail"
+                            required>
+                    </div>
+                </div>
+                <button type="submit" class="cadastro-botao">Inscrever</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!--Rodapé da página-->
+    <div class="container-fluid bloco">
+        <div class="footer" style="">
+            <p class="text-center" style="font-size: 19px; color: white; font: weight 900px;">Fique por dentro do que
+                acontece na Usina</p>
+            <div class="social-icons text-center ">
+                <a href="https://www.instagram.com/usinaecocultural/" target="_blank">
+                    <i class="fab fa-instagram fa-2x rounded-circle p-3 mx-2"></i>
+                </a>
+                <a href="https://www.facebook.com/usinaecocultural" target="_blank">
+                    <i class="fa-brands fa-facebook fa-2x rounded-circle p-3 mx-2"></i>
+                </a>
+                </a>
+                <a href="https://www.youtube.com/@usinaecocultural" target="_blank">
+                    <i class="fa-brands fa-youtube fa-2x rounded-circle p-3 mx-2"></i>
+                </a>
+                <a href="https://open.spotify.com/intl-pt" target="_blank">
+                    <i class="fa-brands fa-spotify fa-2x rounded-circle p-3 mx-2"></i>
+                </a>
+                <a href="https://w.app/1iqhOT" target="_blank">
+                    <i class="fa-brands fa-whatsapp fa-2x rounded-circle p-3 mx-2"></i>
+                </a>
+            </div>
+
+            <div class="container">
+                <div class="row contato">
+                    <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center mb-3">
+                        <a href="tel:+5511985873735" class="contato-item tel text-center">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+55 11 98587-3735</p>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center mb-3">
+                        <a href="mailto:usina.eco.cultural@gmail.com?subject=Contato&body=Olá, gostaria de saber mais sobre..."
+                            class="contato-item text-center">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>usina.eco.cultural@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center mb-3">
+                        <a href="https://drive.google.com/file/d/1kDx72fzrCsVuIQG3DY9QdLEcpThjbB56/view?fbclid=PAZXh0bgNhZW0CMTEAAabc06wfFhICfDW4tJ2UJBjwyRyvd636frAaW9HSppAnO-TuD9LKdkk6IRA_aem_bun_HSnO3C0WycvdG6Ob_w"
+                            class="contato-item text-center">
+                            <i class="fa-solid fa-file"></i>
+                            <p>Estatuto da Usina</p>
+                        </a>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 mx-auto">
+            <hr style="border-top: 1px solid #767676; margin-top:1.5%">
+        </div>
+
+        <div class="container">
+            <div class="row topicos">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/index.html" style="text-decoration: none; color: inherit;">O Coletivo</a>
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li><a href="" style="font-size: 13px; color: white; text-decoration: none;">Quem somos</a></li>
+                        <li><a href="/HTML/Galeria.html"
+                                style="font-size: 13px; color: white; text-decoration: none;">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Historia.html" style="text-decoration: none; color: inherit;">História</a>
+                    </h3>
+                    <ul class="list-unstyled">
+                        <li><a href="/HTML/HistoriaUsina.html"
+                                style="font-size: 13px; color: white; text-decoration: none;">Usina</a></li>
+                        <li><a href="/HTML/HistoriaIncenerador.html"
+                                style="font-size: 13px; color: white; text-decoration: none;">Incinerador</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Loja.html" style="text-decoration: none; color: inherit;">Loja</a>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Eventos.html" style="text-decoration: none; color: inherit;">Eventos</a>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Noticia.html" style="text-decoration: none; color: inherit;">Notícias</a>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Boletim.html" style="text-decoration: none; color: inherit;">Boletim da Usina</a>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/FaleConosco.html" style="text-decoration: none; color: inherit;">Fale Conosco</a>
+                    </h3>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-1">
+                    <h3 style="font-size: 15px; color: #9ABC74; font-weight: bold;">
+                        <a href="/HTML/Doação.html" style="text-decoration: none; color: inherit;">Doe e Apoie</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <footer class="container text-center footer">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="footer-title">
+                        <div class="footer-title texto">
+                            <span>Usina</span><br>
+                            <span style="font-size: 30px; color: #787878;">Eco-Cultural</span>
+                        </div>
+                    </h2>
+                    <p class="copyright" style="color: #9ABC74; font-size:10px">Todos os direitos reservados USINA
+                        ECO-CULTURAL © 2024 | Ícones retirados de Font Awesome</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!--plugin VLibras para garantir acessibilidade-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>
