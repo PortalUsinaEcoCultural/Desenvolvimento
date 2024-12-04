@@ -8,15 +8,16 @@
     <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/Doação.css">
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JQj2tQ2HpWtfqO6jrck73wzFZ4Vxa0ZyXaOkbDW4HlFwrpaF3H9A9C1TrChfTm84" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--Onde aplicamos os ícones-->
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!--Plugin de acessibilidade-->
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 </head>
 
-<body style="background-color: #eaeaea;">
+<body>
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid box">
@@ -27,12 +28,14 @@
             </div>
 
             <!-- Navbar Toggler (hambúrguer) - visível apenas em telas pequenas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Menu de navegação (Hamburguer) -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -40,27 +43,32 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="coletivoDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">O Coletivo</a>
                             <ul class="dropdown-menu" aria-labelledby="coletivoDropdown">
                                 <li><a class="dropdown-item" href="/Quem Somos/quemsomos.html">Quem Somos</a></li>
-                                <li><a class="dropdown-item" style="margin-top: -5px;" href="/Galeria/galeria.html">Galeria</a></li>
+                                <li><a class="dropdown-item" style="margin-top: -5px;"
+                                        href="/Galeria/galeria.html">Galeria</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">História</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="historiaDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">História</a>
                             <ul class="dropdown-menu" aria-labelledby="historiaDropdown">
                                 <li><a class="dropdown-item" href="#">Incinerador</a></li>
                                 <li><a class="dropdown-item" style="margin-top: -5px;" href="#">Usina</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link"  href="/Loja/Loja.html">Loja</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Eventos/eventos.html">Eventos</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Noticias/Noticia.html">Notícias</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Boletim/Boletim.html">Boletim da Usina</a></li>
-                        <li class="nav-item"><a class="nav-link"  href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Loja/Loja.html">Loja</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Eventos/eventos.html">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Noticias/Noticia.html">Notícias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Boletim/Boletim.html">Boletim da Usina</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Fala Conosco/Fale_Conosco.html">Fale Conosco</a>
+                        </li>
 
                         <li class="nav-item">
-                            <a href="/Login/login.html" class="login-button login-button-rounded" style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
+                            <a href="/Login/login.html" class="login-button login-button-rounded"
+                                style="margin-left: 47px;"><i class="fa-solid fa-user"></i></a>
                         </li>
                         <li class="nav-item">
                             <a href="a" class="doe-button"><b>Doe e apoie</b></a>
@@ -71,97 +79,87 @@
         </div>
     </nav>
 
-    <div class="banner">
+
+    <!--Banner da página de Doação-->
+    <div class="banner ">
         <div class="imagem" style="background-image: url('/Imagens/img-Doe/fundo.jpg');"></div>
         <div class="overlay"></div>
-        <div class="banner-content">
-            <h1>Juntos fazemos <br>fazer a diferença</h1>
-            <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, <br>criada para proteger, revitalizar e
-                reinventar.</p>
+        <div class="banner-content container">
+            <h1>Juntos podemos fazer a diferença</h1>
+            <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, <br> criada para proteger,
+                revitalizar e reinventar.</p>
             <div class="containerBtn">
-                <a href="/Doe e apoie/formsDoe.html" class="doeBtn">DOE AGORA!</a>
-                <a href="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/" class="doeBtn">ABAIXO-ASSINADO</a>
+                <a href="/Doe e apoie/formsDoe.html" class="doeBtn">Doe agora!</a>
+                <a href="https://secure.avaaz.org/community_petitions/po/prefeitura_municipal_de_sao_paulo_eu_apoio_incinerador_vergueiro_devera_ser_um_espaco_de_conscientizacao_ambiental_e_vida/"
+                    class="doeBtn">Abaixo-Assinado</a>
             </div>
         </div>
     </div>
 
+
     <!-- Seção de Doar/voluntariar -->
     <section class="trio">
-        <div class="services-container">
+        <div class="services container">
             <div class="service-card">
-                <div class="icons">
-                    <i class="fa-solid fa-handshake-angle"></i>
-                </div>
                 <h2>Se Torne um Voluntariado</h2>
                 <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, criada para proteger,
                     revitalizar e reinventar.</p>
-                <a href="#" class="service-button">Faça parte</a>
+                <a href="#" class="service-button">Voluntariá-se</a>
             </div>
             <div class="service-card">
-                <div class="icons">
-                    <i class="fa-solid fa-children"></i>
-                </div>
                 <h2>Faça Parceria</h2>
                 <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, criada para proteger,
                     revitalizar e reinventar.</p>
                 <a href="#" class="service-button">Faça parte</a>
             </div>
             <div class="service-card">
-                <div class="icons">
-                    <i class="fa-regular fa-calendar"></i>
-                </div>
                 <h2>Agende uma Atividade</h2>
                 <p>O Coletivo Usina Eco-Cultural é uma organização sem fins lucrativos, criada para proteger,
                     revitalizar e reinventar.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeylWAQpSRKiyCCmsyQV17E9pVFGHpuufqjRAvohdHFqLJJ8w/viewform" 
-                class="service-button">Agendar</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeylWAQpSRKiyCCmsyQV17E9pVFGHpuufqjRAvohdHFqLJJ8w/viewform"
+                    class="service-button">Agendar</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção "quadrados 3" -->
-    <section class="atividades">
-        <div class="galeria">
-            <div class="item-galeria">
-                <img src="/Imagens/img-Doe/1.jpeg" alt="Aula de yoga">
-                <a href="/Quem Somos/quemsomos.html#objetivos">Nossos objetivos ></a>
-            </div>
-            <div class="item-galeria">
-                <img src="/Imagens/img-Doe/2.jpg" alt="Pessoas em reunião">
-                <a href="/Quem Somos/quemsomos.html">Nossos Objetivos ></a>
-            </div>
-            <div class="item-galeria">
-                <img src="/Imagens/img-Doe/3.jpeg" alt="Pessoa tocando violão">
-                <a href="/Quem Somos/quemsomos.html">Nossas conquistas ></a>
-            </div>
-        </div>
-    </section>
+    
+    <!--Divisória-->
+    <div class="col-md-8 mx-auto fade-in">
+        <hr style="border-top: 1px solid #555; margin:1.5%; margin-bottom: 5%;">
     </div>
 
+
+    <!--Nossos apoios-->
     <div class="section">
         <img src="/Imagens/img-Doe/2.jpg" alt="Imagem de uma pessoa servindo comida">
-        
+
         <div class="content">
             <h2>Nossos Apoios</h2>
-            <h3>Além da comunidade local (Ipiranga), a Usina Eco-Cultural recebe apoio de moradores de Vila Mariana, 
+            <h3>Além da comunidade local (Ipiranga), a Usina Eco-Cultural recebe apoio de moradores de Vila Mariana,
                 Santa Cruz, Praça da Árvore, Saúde, Cambuci, Vila Moraes, Heliópolis e Cursino.</h3>
             <p>
-                A população tem abraçado a Usina, pessoas têm ocupado o espaço, incluindo trabalhadores que moram nas 
-                proximidades, que vão ao local durante o horário de trabalho. 
-                Também contamos com o apoio das seguintes entidades: <strong>Vila Mariana e Cades Ipiranga, 
-                Missão Ambiental, GEPEM, Ciclo Vida, Muda Ipiranga, SOS Abelha Sem Ferrão, Umapaz, Casa Ó, Termo Fischer 
-                (empresa local), Instituto Chão, MST, MTST, Federação Paulista de Skate, Central de Movimentos Populares 
-                (CMP) e Casa de Cultura Chico Science. </strong> 
+                A população tem abraçado a Usina, pessoas têm ocupado o espaço, incluindo trabalhadores que moram nas
+                proximidades, que vão ao local durante o horário de trabalho.
+                Também contamos com o apoio das seguintes entidades: <strong>Vila Mariana e Cades Ipiranga,
+                    Missão Ambiental, GEPEM, Ciclo Vida, Muda Ipiranga, SOS Abelha Sem Ferrão, Umapaz, Casa Ó, Termo
+                    Fischer
+                    (empresa local), Instituto Chão, MST, MTST, Federação Paulista de Skate, Central de Movimentos
+                    Populares
+                    (CMP) e Casa de Cultura Chico Science. </strong>
 
-                </p>
+            </p>
         </div>
     </div>
     <div class="section2">
-        
+
         <div class="content2">
             <h2>Mais coisas</h2>
             <h3>O Incinerador encerrou oficialmente em 2002, marcado por uma celebração com balões coloridos.</h3>
-            <p>Houve 461 reclamações formais, 19 multas ambientais não pagas, e o local permanece considerado tóxico já que o poder público não fez nada para “desintoxicar”. As tentativas de transformá-lo em um polo cultural e ambiental foram frustradas, deixando o prédio interditado, com vidros quebrados e pichações. A chaminé continua como símbolo da luta da comunidade. Ao lado, o Transbordo Vergueiro recebe cerca de 3000 toneladas de lixo diariamente.</p>
+            <p>Houve 461 reclamações formais, 19 multas ambientais não pagas, e o local permanece considerado tóxico já
+                que o poder público não fez nada para “desintoxicar”. As tentativas de transformá-lo em um polo cultural
+                e ambiental foram frustradas, deixando o prédio interditado, com vidros quebrados e pichações. A chaminé
+                continua como símbolo da luta da comunidade. Ao lado, o Transbordo Vergueiro recebe cerca de 3000
+                toneladas de lixo diariamente.</p>
         </div>
         <img src="/Imagens/img-Doe/1.jpeg" alt="Imagem de uma pessoa servindo comida">
 

@@ -249,10 +249,10 @@
 
 /*Estilizações gerais do site*/
 *{
-    font-family: "Roboto", sans-serif; 
+    font-family: "Roboto", sans-serif !important; 
 }
 body {
-    background-color: #dedede;
+    background-color: #ffffff;
 }
 html {
     scroll-behavior: smooth;
@@ -262,7 +262,7 @@ html {
 /* Banner da página */
 .banner {
     position: relative;
-    height: 500px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,7 +285,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.749); 
     z-index: 2;
 }
 .banner-content {
@@ -293,21 +293,22 @@ html {
     z-index: 3; 
 }
 .banner-content h1 {
-    font-size: 50px;
-    font-weight: bolder;
+    font-size: 35px;
 }
 .containerBtn {
     display: flex;
     gap: 20px;
-    margin-left: 10%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .doeBtn{
     display: inline-block;
-    padding: 10px 24px;
+    padding: 8px 16px;
     background-color: #69A625;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -318,38 +319,43 @@ html {
 
 
 /* Seção de Serviços */
-.icons {
-    font-size: 50px;
-    margin: 16px 0;
-}
+
 .trio {
-    position: absolute;
-    top: 80%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 76%;
-    background-color: #ffffff;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px 40px;
-    z-index: 90;
+    width: 80%;
+    border-radius: 5px;
+    margin: 3% auto;
+    transition: box-shadow 0.3s ease;
+    background-color: transparent;
 }
-.services-container {
+.services {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
 }
 .service-card {
+    flex: 1 1 calc(33.333% - 30px);
+    max-width: 350px;
     text-align: center;
-    margin: 0 15px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
 }
 .service-card img {
-    width: 60px;
+    width: 70px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .service-card h2 {
     font-size: 25px;
-    color: #1D1D1F;
+    color: #2B2B2E;
     margin-bottom: 10px;
     text-align: left;
     font-weight: bold;
@@ -357,101 +363,54 @@ html {
 .service-card p {
     font-size: 15px;
     margin-bottom: 20px;
-    color: #2B2B2E;
+    color: #555;
     text-align: left;
+    line-height: 1.6;
 }
 .service-button {
     font-size: 15px;
-    padding: 8px 30px;
+    padding: 10px 25px;
     background-color: #69A625;
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    float: left;
-    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 .service-button:hover {
     background-color: #3b5f13;
     color: #ffffff;
 }
-@media (max-width:1200px){
-    .trio {
-        position: relative;
+@media (max-width: 1200px) {
+    .services {
+        gap: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card {
+        flex: 1 1 100%;
     }
 }
 
+/*ODS*/
 
-/* Doe/Volunatrie */
-.atividades {
-    padding: 20px;
-    max-width: 1100px;
-    max-height: 100%;
-    margin: 0 auto;
-    margin-top: 17%; 
-}
-.atividades h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 35px;
-}
-.galeria {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-.item-galeria {
-    flex: 1;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-}
-.item-galeria:hover {
-    transform: scale(1.05);
-}
-.item-galeria img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; 
-    border-radius: 0px; 
-}
-.item-galeria a {
-    margin-top: 10px;
-    font-style: none;
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    color: #2B2B2E;
-    text-decoration: none;
-}
-.item-galeria a:hover{
-    color: #2B2B2E;
-}
-.item-galeria a::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #69A625;
-    transition: width 0.3s ease-in-out;
-    text-decoration: none;
-}
-.item-galeria a:hover::after {
-    width: 100%; 
-    text-decoration: none;
-}
-
-/*do abandono*/
+/*Nossos apoios*/
 .section {
     display: flex;
     align-items: flex-start;
     background-color: #f4f4f4;
     max-width: 1900px;
-    height: 500px;
+    height: 400px;
     margin: 0 auto;
 }
 .section img {
-    width: 50%;
+    width: 40%;
     border-radius: 0px;
     margin-right: 20px;
     align-self: flex-end;
@@ -460,16 +419,18 @@ html {
     width: 50%;
 }
 .content h2 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 25px;
     margin-top: 10%;
+    color: #2B2B2E;
 }
 .content h3 {
-    font-size: 20px;
-    color: #333;
+    font-size: 15px;
+    color: #2B2B2E;
     margin-bottom: 15px;
     margin-right:20%;
+    font-weight: bold;
 }
 .content p {
     font-size: 15px;
@@ -479,42 +440,43 @@ html {
     text-align: justify;
 }
 
-/*do abandono*/
+/*Mais informações*/
 .section2 {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     background-color: #f4f4f4;
     max-width: 1900px;
-    height: 500px;
+    height: 310px;
     margin: 0 auto;
     margin-top: 3%;
 }
 .section2 img {
-    width: 50%;
+    width: 40%;
     border-radius: 0px;
     margin-right: 0px;
-    align-self: flex-end;
+    align-self: flex-start;
     height: 100%;
-    margin-top: 2%;
 }
 .content2 {
-    width: 50%;
+    width: 60%;
 }
 .content2 h2 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 25px;
     margin-top: 10%;
     text-align: right;
     margin-right: 2%;
+    color: #2B2B2E;
 }
 .content2 h3 {
-    font-size: 20px;
-    color: #333;
+    font-size: 15px;
+    color: #2B2B2E;
     margin-bottom: 15px;
     margin-left:20%;
     margin-right: 2%;
     text-align: right;
+    font-weight: bold;
 }
 .content2 p {
     font-size: 15px;
@@ -524,7 +486,6 @@ html {
     margin-right: 2%;
     text-align: right ;
 }
-
 /* Responsividade */
 @media (max-width: 1200px) {
     .containerBtn {
@@ -534,7 +495,6 @@ html {
         font-size: 40px;
     }
 }
-
 @media (max-width: 992px) {
     .containerBtn {
         flex-direction: column;
@@ -553,7 +513,6 @@ html {
         font-size: 13px;
     }
 }
-
 @media (max-width: 768px) {
     .section {
         flex-direction: column;
@@ -569,7 +528,6 @@ html {
         margin-top: 20px;
     }
 }
-
 @media (max-width: 576px) {
     .banner-content h1 {
         font-size: 30px;
