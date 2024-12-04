@@ -45,25 +45,133 @@ carrossel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 
 /* Seção "linha do tempo" */
+let usuarioLogado = false; // Controle de login
+let eventosCarregados = false; // Controle para evitar duplicidade
 
-// Variável de controle para verificar o login
-let usuarioLogado = false;  // Altere isso conforme o status de login do seu sistema
+// Função para simular o login
+// Função para simular o login
+function login() {
+    console.log("Login realizado");
+    usuarioLogado = true;
 
-// Variável de controle para evitar chamadas duplicadas
-let eventosCarregados = false;
+    // Exibir a div com os botões
+    const botoesLinhaDoTempo = document.querySelector('.linha-do-tempo-botoes');
+    if (botoesLinhaDoTempo) {
+        botoesLinhaDoTempo.style.display = 'block'; // Exibe os botões
+    }
 
-// Carregar eventos do servidor ao carregar a página
+    // Atualizar outros botões de exclusão, se houver
+    exibirBotoesExcluir();
+    exibirBotoesEdicao();
+}
+
+
+// Adiciona os eventos na DOM ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
     if (!eventosCarregados) {
         carregarEventos();
         eventosCarregados = true; // Marca que os eventos foram carregados
     }
 
-    // Exibir os eventos apenas se o usuário estiver logado
+    // Atualiza a exibição com base no estado de login
     if (usuarioLogado) {
         exibirBotoesExcluir();
     }
 });
+
+// Função para exibir os botões de edição e adicionar evento
+function exibirBotoesEdicao() {
+    const botoesEdicao = document.querySelector('.linha-do-tempo-botoes');
+    
+    if (usuarioLogado) {
+        botoesEdicao.style.display = 'inline-block'; // Torna os botões visíveis
+    } else {
+        botoesEdicao.style.display = 'none'; // Esconde os botões se o usuário não estiver logado
+    }
+}
+
+// Função para exibir os botões de exclusão (se necessário)
+function exibirBotoesExcluir() {
+    const botoesExcluir = document.querySelectorAll('.linha-do-tempo-btn-excluir');
+    botoesExcluir.forEach(botao => {
+        botao.style.display = usuarioLogado ? 'inline-block' : 'none';
+    });
+}
+
+// Função para editar todos os eventos
+function editarTodosEventos() {
+    const containersEventos = document.querySelectorAll('.linha-do-tempo-container');
+    
+    containersEventos.forEach(container => {
+        const descricaoElemento = container.querySelector('p');
+        const descricaoAtual = descricaoElemento.textContent;
+
+        const novaDescricao = prompt("Editar descrição do evento:", descricaoAtual);
+
+        if (novaDescricao !== null && novaDescricao !== descricaoAtual) {
+            descricaoElemento.textContent = novaDescricao; // Atualiza a descrição do evento
+            // Aqui você pode adicionar lógica para atualizar o evento no servidor também
+            const ano = container.querySelector('h2').textContent;
+            atualizarEventoNoServidor(ano, novaDescricao);
+        }
+    });
+}
+
+// Função para atualizar o evento no servidor
+async function atualizarEventoNoServidor(ano, novaDescricao) {
+    const response = await fetch(`http://localhost:3000/eventos/${ano}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ descricao: novaDescricao })
+    });
+
+    if (response.ok) {
+        console.log('Evento atualizado no servidor!');
+    } else {
+        console.error('Erro ao atualizar evento no servidor');
+    }
+}
+
+// Função para carregar eventos do servidor
+async function carregarEventos() {
+    const linhaDoTempo = document.getElementById('linha-do-tempo');
+
+    // Limpar todos os eventos anteriores antes de carregar novos
+    while (linhaDoTempo.firstChild) {
+        linhaDoTempo.removeChild(linhaDoTempo.firstChild);
+    }
+
+    // Buscar eventos do servidor
+    const response = await fetch('http://localhost:3000/eventos');
+    if (response.ok) {
+        const eventos = await response.json();
+        console.log('Eventos recebidos do servidor:', eventos); // Verifique os eventos recebidos
+
+        // Adicionar os eventos recebidos à linha do tempo
+        eventos.forEach(evento => {
+            const container = document.createElement('div');
+            container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
+
+            // Gerar um id único para o evento
+            container.id = evento.eventoId;
+
+            container.innerHTML = `
+                <div class="linha-do-tempo-conteudo">
+                    <h2>${evento.ano}</h2>
+                    <p>${evento.descricao}</p>
+                    ${usuarioLogado ? '<button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>' : ''}
+                </div>
+            `;
+
+            linhaDoTempo.appendChild(container);
+        });
+    } else {
+        alert('Erro ao carregar eventos');
+    }
+}
+
 
 // Função para adicionar um novo evento na linha do tempo
 function adicionarEvento() {
@@ -149,74 +257,20 @@ function alternarVisibilidade() {
     }
 }
 
-// Função para salvar todos os eventos no servidor
-function salvarEventos() {
-    const eventos = [];
-    document.querySelectorAll('.linha-do-tempo-container').forEach(container => {
-        const ano = container.querySelector('h2').textContent;
-        const descricao = container.querySelector('p').textContent;
-        eventos.push({ ano, descricao });
-    });
-
-    // Enviar todos os eventos para o servidor
-    eventos.forEach(evento => {
-        salvarEventoNoServidor(evento.ano, evento.descricao);
-    });
-    alert('Modificações salvas com sucesso!');
-}
-
-// Função para carregar eventos do servidor
-async function carregarEventos() {
-    const linhaDoTempo = document.getElementById('linha-do-tempo');
-
-    // Limpar todos os eventos anteriores antes de carregar novos
-    while (linhaDoTempo.firstChild) {
-        linhaDoTempo.removeChild(linhaDoTempo.firstChild);
-    }
-
-    // Buscar eventos do servidor
-    const response = await fetch('http://localhost:3000/eventos');
-    if (response.ok) {
-        const eventos = await response.json();
-        console.log('Eventos recebidos do servidor:', eventos);  // Verifique os eventos recebidos
-
-        // Adicionar os eventos recebidos à linha do tempo
-        eventos.forEach(evento => {
-            const container = document.createElement('div');
-            container.className = `linha-do-tempo-container ${linhaDoTempo.children.length % 2 === 0 ? 'esquerda' : 'direita'}`;
-
-            // Gerar um id único para o evento
-            container.id = evento.eventoId;
-
-            container.innerHTML = `
-                <div class="linha-do-tempo-conteudo">
-                    <h2>${evento.ano}</h2>
-                    <p>${evento.descricao}</p>
-                    ${usuarioLogado ? '<button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>' : ''}
-                </div>
-            `;
-
-            linhaDoTempo.appendChild(container);
-        });
-    } else {
-        alert('Erro ao carregar eventos');
-    }
-}
-
 // Função para iniciar o polling (atualizações automáticas a cada 24 horas)
 function iniciarPolling() {
     setInterval(async () => {
         await carregarEventos(); // Atualiza os eventos a cada 24 horas
-    }, 86400000);  // Atualiza a cada 24 horas
+    }, 86400000); // Atualiza a cada 24 horas
 }
 
-// Chama a função para iniciar o polling assim que a página for carregada
+// Iniciar polling e carregar eventos ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
     if (!eventosCarregados) {
-        carregarEventos();   // Carrega eventos ao carregar a página
+        carregarEventos();
         eventosCarregados = true;
     }
-    iniciarPolling();    // Inicia o polling para atualizações a cada 24 horas
+    iniciarPolling();
 });
 
 

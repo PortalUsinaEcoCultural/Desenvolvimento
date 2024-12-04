@@ -253,7 +253,7 @@ button:hover, .pagination button:hover {
 /*Conteudo das noticias*/
 #news-container {
     text-align: left;
-    margin-left: 15%;
+    margin-left: 12%;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
