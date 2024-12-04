@@ -6,7 +6,6 @@
 }
 body {
     font-family: "Roboto", sans-serif !important;
-    color: #313131;
 }
 
 
@@ -56,24 +55,40 @@ body {
 .paragrafo-galeria {
     text-align: left;
     font-size: 15px;
+    color: #2d2d2e;
 }
 
 
 /*Parte das imagens*/
-.imagens{
+.imagens {
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 16px; 
 }
-.imagens img{
-    padding: 0 1% 1% 0;
-    width: 100%;
+.imagens img {
+    width: 100%; 
     height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
+    object-fit: cover; 
+    border-radius: 5px; 
 }
-figcaption{
+figcaption {
     font-size: 15px;
+    text-align: center; 
+    margin-top: 2%;
+    color: #2d2d2e;
+}
+@media (max-width: 768px) {
+    .imagens {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+    .imagens img {
+        height: 200px; 
+    }
+}
+@media (max-width: 550px) {
+    .imagens img {
+        height: 180px; 
+    }
 }
 
 
@@ -83,8 +98,8 @@ figcaption{
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.9); 
     display: flex;
     align-items: center; 
@@ -112,7 +127,7 @@ figcaption{
 }
 .close {
     position: absolute;
-    right: 20px; 
+    right: 4%; 
     transform: translateY(-50%); 
     color: #fff;
     font-size: 30px;
@@ -120,7 +135,7 @@ figcaption{
     cursor: pointer;
     transition: 0.3s ease;
     z-index: 1100; 
-    top: 20px;
+    top: 5%;
 }
 .close:hover {
     color: #bbb;
