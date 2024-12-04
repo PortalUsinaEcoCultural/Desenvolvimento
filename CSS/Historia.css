@@ -245,7 +245,7 @@
     height: auto; 
     display: block;
     margin: 0 auto; 
-    margin-bottom: -8.7%;
+    margin-bottom: -.7%;
     margin-top: -13%;
 }
 
@@ -709,7 +709,7 @@ body {
 }
 
 .linha-do-tempo-secao {
-    background: #ffffff; /* Retângulo cinza */
+    background: #ededed; /* Retângulo cinza */
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -1037,6 +1037,7 @@ body, html {
     .incenerador .texto h2, .incenerador .texto p {
         text-align: center;
         margin-right: 0;
+        margin-top: 5%;
     }
     .button {
         margin-right: 0;
