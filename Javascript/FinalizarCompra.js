@@ -17,6 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
         valorTotal.textContent = `Total: R$ 0,00`;
     }
 
+    document.getElementById("pixBtn").addEventListener("click", function () {
+        const qrCodeContainer = document.getElementById("qrCodeContainer");
+        
+        // Alterna entre mostrar e esconder
+        if (qrCodeContainer.style.display === "none" || qrCodeContainer.style.display === "") {
+            qrCodeContainer.style.display = "block"; // Mostra o QR Code
+        } else {
+            qrCodeContainer.style.display = "none"; // Esconde o QR Code
+        }
+    });
+
     // Ação do botão "Continuar"
     document.getElementById('continuarBtn').addEventListener('click', () => {
         localStorage.removeItem('cartItems');

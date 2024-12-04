@@ -94,7 +94,7 @@ header {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Formulário */
@@ -107,6 +107,9 @@ header {
     font-size: 15px;
     margin-bottom: 3%;
 }
+.form-label{
+    text-align: left !important;
+}
 .form-group {
     margin-bottom: 15px;
     text-align: left;
@@ -117,25 +120,25 @@ header {
     white-space: nowrap;
 }
 .form-control {
-    background-color: #e0e0e0; 
-    border: 1px solid transparent; 
-    color: #333; 
+    background-color: #e0e0e0 !important; 
+    border: 1px solid transparent !important; 
+    color: #333 !important; 
 }
 .form-control:focus, .form-control:hover {
-    background-color: #e0e0e0; 
-    outline: none; 
-    border: 1px solid transparent; 
-    box-shadow: none; 
+    background-color: #e0e0e0 !important; 
+    outline: none !important; 
+    border: 1px solid transparent  !important; 
+    box-shadow: none !important; 
 }
 .form-control::placeholder {
-    color: #999;
+    color: #999 !important;
     font-size: 13px; 
 }
 .btn-pagamento {
     background-color: #F8F8F8; 
-    color: #69A625;
+    color: #69A625 !important;
     padding: 10px 40px;
-    border: 2px solid #69A625; 
+    border: 2px solid #69A625 !important; 
     border-radius: 5px;
     font-size: 15px;
     margin: 5px 10px; 
@@ -145,8 +148,8 @@ header {
     text-align: center; 
 }
 .btn-pagamento:hover {
-    background-color: #69A625; 
-    color: white;
+    background-color: #69A625 !important; ; 
+    color: white !important; ;
 }
 a {
     text-decoration: none; 
@@ -155,13 +158,14 @@ a:hover, a:hover .btn-pagamento {
     color: #fff;
 }
 .selecionado {
-    background-color: #69A625;
+    background-color: #69A625 !important;
     color: white; 
-    border-color: #69A625;
+    border-color: #69A625 !important;
 }
-.btn-continuar {
-    background-color: #69A625; 
-    color: #fff; 
+.btn-primary {
+    background-color: #69A625 !important; 
+    border: 2px solid #69A625 !important; 
+    color: #fff !important; 
     padding: 5px 5px; 
     border-radius: 5px; 
     font-size: 15px; 
@@ -169,11 +173,11 @@ a:hover, a:hover .btn-pagamento {
     display: block; 
     width: 120px !important; 
     margin-right: 110px !important;
-    transition: background-color 0.3s, color 0.3s; 
+    transition: background-color 0.3s, color 0.3s !important; 
 }
 .btn-continuar:hover {
-    background-color: #4e7a1b;
-    color: #fff; 
+    background-color: #4e7a1b !important;
+    color: #fff !important; 
 }
 
 

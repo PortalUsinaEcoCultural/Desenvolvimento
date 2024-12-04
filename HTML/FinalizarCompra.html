@@ -75,30 +75,20 @@
                 <label for="email" class="form-label">Email:</label>
                 <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
             </div>
+            <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
+                    <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
+                    <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
+                    <div id="qrCodeContainer" style="display: none; margin-top: 20px; text-align: center;">
+                        <h4>Escaneie o QR Code para realizar o pagamento:</h4>
+                        <img src="/Imagens/img-Doe e apoie/qrcode-pix.png" alt="QR Code PIX" id="qrCode" style="max-width: 200px;">
+                    </div>
+                </div>
             <div class="form-groups text-center mt-4">
-                <button type="submit" class="btn btn-primary" id="continuarBtn">Enviar</button>
+                <button type="submit" class="btn btn-primary bnt-continuar" id="continuarBtn">Enviar</button>
             </div>
         </form>
     </div>
     </div>
-                <!-- como de pagamento -->
-                <div class="form-group mt-4">
-                    <label class="d-block mb-2">Escolha o <strong>método de pagamento:</strong></label>
-                    <button type="button" class="btn btn-pagamento" id="pixBtn">PIX</button>
-                    <button type="button" class="btn btn-pagamento" id="paypalBtn">PayPal</button>
-                </div>
-                <div id="qrCodeContainer" style="display: none; margin-top: 20px; text-align: center;">
-                    <h4>Escaneie o QR Code para realizar o pagamento:</h4>
-                    <img src="qrcode.png" alt="QR Code PIX" id="qrCode" style="max-width: 200px;">
-                </div>
-                <!-- Botão Continuar -->
-                <div>
-                    <button type="submit" class="btn btn-continuar w-100 mt-3" id="continuarBtn">Continuar &gt;</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
+</div>
 </body>
-
 </html>
