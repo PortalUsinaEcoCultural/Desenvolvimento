@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     // Função para mostrar a mensagem de confirmação
     function mostrarConfirmacao(itemName) {
         mensagemConfirmacao.textContent = `"${itemName}" adicionado ao carrinho!`;
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mensagemConfirmacao.classList.remove('show');
         }, 3000);
     }
+
 
     // Função para habilitar/desabilitar o botão de checkout
     function toggleCheckoutButton() {
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             checkoutLink.style.pointerEvents = 'auto'; 
         }
     }
+
 
     // Funções de atualização do carrinho
     function updateCartUI() {
@@ -85,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="cart-item-price">R$ ${(item.price * item.quantity).toFixed(2)}</span>
                 <button class="remove-btn" data-index="${index}"><i class="fa-solid fa-times"></i></button>
             `;
-
             cartItemsList.append(cartItem);
         });
 
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartTotal.textContent = `R$ ${totalAmount.toFixed(2)}`;
     }
 
+
     // Função para salvar carrinho no localStorage
     function saveCartToLocalStorage() {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
@@ -130,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.remove('abrir-sidebar');
     });
 
-    // Inicialize a verificação do botão ao carregar a página
+    // Inicializa a verificação do botão ao carregar a página
     toggleCheckoutButton();
 });
 
