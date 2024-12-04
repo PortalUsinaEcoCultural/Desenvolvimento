@@ -228,3 +228,10 @@ a:hover, a:hover .btn-pagamento {
         padding: 5%;
     }
 }
+.nome-field {
+    margin-left: 29.5%;  
+    margin-bottom: -10%;
+}
+.sobrenome-field {
+    margin-left: 49.5%;  
+}
