@@ -97,42 +97,44 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Formulário */
-.subtitulo-pagamento{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 2%;
+/*Formulario*/
+.subtitulo-pagamento {
+    font-size: 25px !important;
+    font-weight: bold !important;
+    margin-bottom: 2% !important;
 }
-.paragrafo-pagamento{
-    font-size: 15px;
-    margin-bottom: 3%;
-}
-.form-label{
-    text-align: left !important;
-}
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-.form-groups {
-    margin-bottom: 15px;
-    text-align: center;
-    white-space: nowrap;
+.paragrafo-pagamento {
+    font-size: 15px !important;
+    margin-bottom: 3% !important;
 }
 .form-control {
+    width: 40% !important; 
+    font-size: 15px !important; 
+    padding: 4px 8px !important; 
     background-color: #e0e0e0 !important; 
-    border: 1px solid transparent !important; 
     color: #333 !important; 
+    border-radius: 4px !important; 
 }
 .form-control:focus, .form-control:hover {
-    background-color: #e0e0e0 !important; 
-    outline: none !important; 
-    border: 1px solid transparent  !important; 
-    box-shadow: none !important; 
+    background-color: #e0e0e0 !important;
+    outline: none !important;
+    border-color: #888 !important;
+    box-shadow: none !important;
 }
 .form-control::placeholder {
     color: #999 !important;
-    font-size: 13px; 
+    font-size: 15px !important;
+}
+.form-label {
+    font-size: 15px !important;
+    text-align: left !important;
+    display: block !important;
+    margin-bottom: 5px !important; 
+}
+.form-group{
+    align-items: center !important;
+    justify-items: center;
+    margin-bottom: 10px !important;
 }
 .btn-pagamento {
     background-color: #F8F8F8; 
@@ -163,16 +165,17 @@ a:hover, a:hover .btn-pagamento {
     border-color: #69A625 !important;
 }
 .btn-primary {
+    margin-left: 10px;
+    margin-top: -30px;
+    align-items: center;
     background-color: #69A625 !important; 
     border: 2px solid #69A625 !important; 
     color: #fff !important; 
     padding: 5px 5px; 
     border-radius: 5px; 
     font-size: 15px; 
-    margin: 40px auto 0 !important; 
     display: block; 
     width: 120px !important; 
-    margin-right: 110px !important;
     transition: background-color 0.3s, color 0.3s !important; 
 }
 .btn-continuar:hover {
