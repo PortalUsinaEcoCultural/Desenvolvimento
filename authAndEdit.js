@@ -18,44 +18,6 @@ async function verificarAutenticacao() {
     }
 }
 
-// Função de logout
-function logout() {
-    fetch('http://localhost:3000/logout', {
-        method: 'POST',
-        credentials: 'include', // Inclui os cookies na requisição
-    })
-    .then(response => {
-        if (response.ok) {
-            window.location.href = '/HTML/Fale_Conosco.html';
-        } else {
-            throw new Error(`Erro ao fazer logout: ${response.status} ${response.statusText}`);
-        }
-    })
-    .catch(error => {
-        console.error('Erro ao deslogar:', error);
-        alert('Erro ao tentar fazer logout. Tente novamente mais tarde.');
-    });
-}
-
-// Inicializa os estados da página ao carregar
-document.addEventListener("DOMContentLoaded", async function () {
-    esconderBotoesDeEdicao();
-    salvarConteudoOriginal();
-    carregarConteudo();
-
-    const logoutButton = document.getElementById('logoutButton');
-    
-    // Verifica se o usuário está autenticado e exibe o botão de logout
-    const autenticado = await verificarAutenticacao();
-    
-    if (autenticado) {
-        logoutButton.style.display = 'block'; // Exibe o botão de logout
-        console.log("Usuário autenticado, botão de logout visível.");
-    } else {
-        logoutButton.style.display = 'none'; // Esconde o botão de logout
-        console.log("Usuário não autenticado, botão de logout oculto.");
-    }
-});
 
 // Salva o conteúdo original dos elementos editáveis
 function salvarConteudoOriginal() {
