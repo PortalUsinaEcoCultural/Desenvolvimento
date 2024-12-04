@@ -9,15 +9,18 @@
     <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/FormsVoluntário.css">
+
+    <!--Pluguin de acessibilidade-->
+    <script src="https://cdn.userway.org/widget.js" data-account="9AycmX4hek"></script>
 </head>
 
 <body>
 
-        <!--Cabeçalho-->
+    <!--Cabeçalho-->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 logo bg-white text-center p-3">
-                <a href="/Login/FalaConosco/Fale_Conosco.html">
+                <a href="/HTML/FaleConosco.html">
                     <button class="back-btn">&lt;</button>
                 </a>
                 <img src="/Imagens/logo.jpg" width="66px" alt="Logo Usina Eco-Cultural">
@@ -26,37 +29,63 @@
     </div>
 
 
-        <!--Formulário-->
+    <!--Formulário-->
     <div class="container px-3">
         <h2><strong>Fale Conosco - Formulário Voluntário</strong></h2>
-        <h3>*Ao preencher este formulário você demonstra interesse em se voluntariar para as atividades realizadas, fazer parte da história da Usina e apoiar o projeto*</h3>
+        <h3>*Ao preencher este formulário você demonstra interesse em se voluntariar para as atividades realizadas,
+            fazer parte da história da Usina e apoiar o projeto*</h3>
         <form action="http://localhost:3000/voluntarios" method="POST">
             <div class="row g-3">
                 <div class="col-12 col-md-6">
                     <label for="nome" class="form-label">Nome:</label>
-                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome" required>
+                    <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome"
+                        required>
                 </div>
                 <div class="col-12 col-md-6">
                     <label for="sobrenome" class="form-label">Sobrenome:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" class="form-control" placeholder="Digite seu sobrenome" required>
+                    <input type="text" id="sobrenome" name="sobrenome" class="form-control"
+                        placeholder="Digite seu sobrenome" required>
                 </div>
             </div>
             <div class="form-group mt-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email" required>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Digite seu email"
+                    required>
             </div>
             <div class="form-group mt-3">
                 <label for="comentario" class="form-label">De qual maneira você gostaria de contribuir?</label>
-                <textarea id="comentario" name="comentario" class="form-control" placeholder="Ex. Gostaria de auxiliar na feira de livros..." rows="3"></textarea>
+                <textarea id="comentario" name="comentario" class="form-control"
+                    placeholder="Ex. Gostaria de auxiliar na feira de livros..." rows="3"></textarea>
             </div>
             <div class="form-group mt-3">
                 <label for="como-ouviu" class="form-label">Como você ouviu falar de nós?</label>
-                <input type="text" id="como-ouviu" name="comoOuviu" class="form-control" placeholder="Ex. pelas redes sociais, através de amigos...">
+                <input type="text" id="como-ouviu" name="comoOuviu" class="form-control"
+                    placeholder="Ex. pelas redes sociais, através de amigos...">
             </div>
             <div class="form-groups text-center mt-4">
                 <button type="submit" class="btn btn-enviar" id="continuarBtn">Enviar</button>
             </div>
-        </form>        
+        </form>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!--plugin VLibras para garantir acessibilidade-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 </body>
+
 </html>
