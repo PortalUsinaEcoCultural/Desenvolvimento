@@ -187,6 +187,7 @@
     padding: 5px 0; 
 }
 
+
 /* Estilos Gerais */
 * {
     font-family: "Roboto", sans-serif;
@@ -339,7 +340,6 @@ html {
     font-size: 15px;
     color: #2B2B2E; 
 }
-/* Responsividade */
 @media screen and (max-width: 1024px) {
     .container-conquistas {
         flex-direction: column; 
@@ -395,8 +395,8 @@ html {
     background-color: #EDEDED;
     background-image: url(/Imagens/img-Coletivo/fundo.png);
     background-size: contain;
-    width: 100% !important;
-    padding: 4%;
+    width: 100%;
+    padding: 1% 0 3% 0;
 }
 .card1 {
     justify-content: center;
@@ -451,7 +451,7 @@ html {
     margin: 40px;
     text-align: left;
     padding: 30px;
-    margin-left: 11%;
+    margin-left: 15%;
 }
 .services {
     display: flex;
@@ -536,11 +536,47 @@ html {
 }
 
 
-
 /*Card-zigzag*/
 .titulo-card-zigzag{
     font-size: 25px;
     color: #1D1D1F;
+}
+
+
+/*Causas que defendemos*/
+.causas-defendidas {
+    padding: 40px 40px;
+    text-align: center;
+}
+.causas-defendidas h4 {
+    font-size: 25px;
+    color: #1D1D1F;
+    font-weight: bold;
+    padding-bottom: 3%;
+}
+.card-causa {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+.card-causa:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card-causa i {
+    font-size: 280%; 
+    color: #2B2B2E; 
+    margin-bottom: 15px;
+}
+.card-causa p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2B2B2E;
+    margin: 0;
 }
 
 
@@ -635,7 +671,6 @@ button:hover {
     border: 2px solid #69A625;
     color: white;
 }   
-/* Responsividade */
 @media (max-width: 767px) {
     .card {
         padding: 15px;
@@ -681,39 +716,86 @@ button:hover {
 }
 
 
-/*Causas que defendemos*/
-.causas-defendidas {
-    padding: 40px 40px;
-    text-align: center;
-}
-.causas-defendidas h4 {
+/* Estilos gerais de depoimentos */
+.titulo-secao {
     font-size: 25px;
-    color: #1D1D1F;
     font-weight: bold;
-}
-.card-causa {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-}
-.card-causa:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.card-causa i {
-    font-size: 280%; 
-    color: #2B2B2E; 
-    margin-bottom: 15px;
-}
-.card-causa p {
-    font-size: 15px;
-    font-weight: 500;
     color: #2B2B2E;
-    margin: 0;
+}
+.depoimento-cartao {
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+.depoimento-cartao:hover {
+    transform: translateY(-5px);
+}
+.depoimento-imagem {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ffffff; 
+}
+.nome-usuario {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1D1D1F;
+}
+.cargo-usuario {
+    font-size: 15px;
+    color: #757575;
+}
+.texto-depoimento {
+    font-size: 15px;
+    color: #69A625;
+    margin-top: 10px; 
+}
+@media (max-width: 768px) {
+    .titulo-secao {
+      font-size: 24px;
+    }
+    .depoimento-cartao {
+      margin-bottom: 15px;
+    }
+    .depoimento-imagem {
+      width: 80px;
+      height: 80px;
+    }
+    .nome-usuario {
+      font-size: 18px;
+    }
+    .cargo-usuario {
+      font-size: 13px;
+    }
+    .texto-depoimento {
+      font-size: 14px;
+    }
+}
+@media (max-width: 576px) {
+    .titulo-secao {
+      font-size: 22px;
+    }
+    .depoimento-cartao {
+      margin-bottom: 10px;
+    }
+    .depoimento-imagem {
+      width: 70px;
+      height: 70px;
+    }
+    .nome-usuario {
+      font-size: 16px;
+    }
+    .cargo-usuario {
+      font-size: 12px;
+    }
+    .texto-depoimento {
+      font-size: 13px;
+    }
 }
 
 
@@ -742,7 +824,7 @@ button:hover {
     justify-content: flex-start;
     align-items: center;
     text-align: left;
-    font-size: 14px;
+    font-size: 18px;
     color: #2B2B2E;
     width: 100%;
     margin-bottom: 15px;
@@ -793,8 +875,6 @@ button:hover {
     background-color: #3b5f13;
     color: rgba(255, 255, 255, 0.9);
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     #cookies-aviso {
         padding: 15px 10px;
@@ -894,100 +974,7 @@ button:hover {
     }
 }
 
-/* Estilos gerais de depoimentos */
-.titulo-secao {
-    font-size: 25px;
-    font-weight: bold;
-    color: #1D1D1F;
-  }
-  .depoimento-cartao {
-    border: none;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s ease;
-  }
-  .depoimento-cartao:hover {
-    transform: translateY(-5px);
-  }
-  .depoimento-imagem {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 3px solid #ffffff; 
-  }
-  .nome-usuario {
-    font-size: 20px;
-    font-weight: bold;
-    color: #1D1D1F;
-  }
-  .cargo-usuario {
-    font-size: 15px;
-    color: #757575;
-  }
-  .texto-depoimento {
-    font-size: 15px;
-    color: #69A625;
-    margin-top: 10px;
-    
-  }
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .titulo-secao {
-      font-size: 24px;
-    }
-  
-    .depoimento-cartao {
-      margin-bottom: 15px;
-    }
-  
-    .depoimento-imagem {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .nome-usuario {
-      font-size: 18px;
-    }
-  
-    .cargo-usuario {
-      font-size: 13px;
-    }
-  
-    .texto-depoimento {
-      font-size: 14px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .titulo-secao {
-      font-size: 22px;
-    }
-  
-    .depoimento-cartao {
-      margin-bottom: 10px;
-    }
-  
-    .depoimento-imagem {
-      width: 70px;
-      height: 70px;
-    }
-  
-    .nome-usuario {
-      font-size: 16px;
-    }
-  
-    .cargo-usuario {
-      font-size: 12px;
-    }
-  
-    .texto-depoimento {
-      font-size: 13px;
-    }
-  }
+
 /* Rodapé */
 .bloco {
     background-color: #2B3420;
@@ -1028,7 +1015,7 @@ button:hover {
 .contato-item {
     display: flex;
     align-items: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 15px;
     gap: 8px; 
