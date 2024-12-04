@@ -1,4 +1,11 @@
 /*Estilizações gerais do site*/
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%;
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -234,4 +241,51 @@ a:hover, a:hover .btn-pagamento {
 }
 .sobrenome-field {
     margin-left: 49.5%;  
+}
+@media (max-width: 710px) {
+    .nome-field {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -13%;
+    }
+}
+@media (max-width: 304px) {
+    .nome-field {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -13%;
+    }
+}
+
+@media (max-width: 576px) {
+    .nome-field {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.endereco-label {
+    text-align: left;
+    margin-left: 61%;
+    display: block;
+    width: 100%;
+}
+
+.email-label {
+    text-align: left;
+    margin-left: 61%;
+    display: block;
+    width: 100%;
+}
+
+.form-control:focus, .form-control:hover {
+    background-color: #e0e0e0 !important;
+    outline: none !important;
+    border-color: #e0e0e0 !important;
+    box-shadow: none !important;
+}
+
+#qrCodeContainer h4 {
+    font-size: 18px; /* ajuste o tamanho que desejar */
+    margin-bottom: 4%;
 }
