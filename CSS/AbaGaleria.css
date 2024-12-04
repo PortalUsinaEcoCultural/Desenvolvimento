@@ -123,11 +123,10 @@ figcaption {
     display: block; 
     position: relative;
     top: 55px;
-    
 }
 .close {
     position: absolute;
-    right: 4%; 
+    right: 6%; 
     transform: translateY(-50%); 
     color: #fff;
     font-size: 30px;
