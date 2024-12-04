@@ -247,6 +247,7 @@ body, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 .doeBtn{
     display: inline-block;
@@ -547,12 +548,20 @@ body, body {
 .content-info {
     text-align: right;
     padding-right: 20px;
+   
 }
 .section-info img {
     border-radius: 0;
     width: 100%;
     height: auto;
     object-fit: cover;
+    
+}
+.reunidos{
+    margin-left: -1.8%;
+}
+.incenerador{
+
 }
 @media (max-width: 768px) {
     .section-info .row {
@@ -673,6 +682,10 @@ body, body {
     .newsletter-container .cadastro-botao {
         width: 100%;
     }
+}
+
+.informacoes{
+    margin-top: -4%;
 }
 
 
