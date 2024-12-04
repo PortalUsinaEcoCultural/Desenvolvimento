@@ -60,6 +60,7 @@ const news = [
         photoCredit: "Abner Juan Bobato"}
 ];
 
+// Páginas de notícias
 const totalPages = Math.ceil(news.length / 3);
 let currentPage = 1;
 
@@ -70,6 +71,7 @@ function updateNews() {
     const startIndex = (currentPage - 1) * 3;
     const endIndex = startIndex + 3;
 
+    // Para passar as páginas
     for (let i = startIndex; i < endIndex && i < news.length; i++) {
         const article = news[i];
         const isTCC = article.img.includes("TCC");
@@ -124,11 +126,10 @@ function editField(index, field) {
 }
 
 function saveChanges() {
-    // Aqui você pode enviar os dados para um servidor ou salvar localmente
     localStorage.setItem("news", JSON.stringify(news));
 }
 
-// Carregar dados do localStorage (se disponível)
+
 const savedNews = localStorage.getItem("news");
 if (savedNews) {
     Object.assign(news, JSON.parse(savedNews));

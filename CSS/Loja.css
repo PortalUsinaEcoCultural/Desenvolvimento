@@ -41,8 +41,8 @@
 }
 .navbar-toggler {
     border: none;
-    font-size: 1.25rem;
-        margin-right: 50px; 
+    font-size: 15px;
+    margin-right: 110px; 
 }
 .navbar-toggler:focus, .btn-close:focus {
     box-shadow: none;
@@ -56,7 +56,7 @@
     margin-left: 10px;
 }
 .nav-link:hover, .nav-link.active {
-    color: #000;
+    color: #1D1D1F;
 }
 .nav-item.dropdown > .nav-link::after {
     display: none; 
@@ -68,7 +68,7 @@
     left: 0;
     background-color: #ffffff; 
     padding: 10px 0; 
-    border-radius: 8px; 
+    border-radius: 5px; 
     min-width: 180px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border: none; 
@@ -79,7 +79,7 @@
 .dropdown-menu .dropdown-item {
     font-weight: 500;
     padding: 10px 20px; 
-    color: black; 
+    color: #1D1D1F; 
     text-align: left; 
     background-color: transparent; 
     transition: background-color 0.3s ease; 
@@ -131,7 +131,7 @@
     text-decoration: none;
     padding: 5px;
     margin-top: 10px;
-    margin-left: 47px;
+    margin-left: 25px;
     border: 2px solid #69a625;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
@@ -157,7 +157,6 @@
 .hero-section h1 {
     font-size: 1.5em;
 }
-
 .hero-section h2 {
     font-size: 1.2em;
 }
@@ -169,12 +168,6 @@
     display: none; 
 }
 /* Ajuste de espaçamento dentro do hambúrguer */
-.offcanvas-body .navbar-nav {
-    margin-top: 10px; 
-}
-.nav-item {
-    margin-bottom: 10px; 
-}
 .nav-item .nav-link {
     margin-top: 10px; 
     margin-bottom: 10px; 
