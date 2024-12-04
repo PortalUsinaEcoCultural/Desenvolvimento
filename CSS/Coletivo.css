@@ -396,10 +396,10 @@ html {
     color: #69A625;
 }
 .card p {
-    font-size: 15px;
-    margin-bottom: 15px;
-    text-align: left;
-    color: #2B2B2E;
+    font-size: 15px !important;
+    margin-bottom: 15px !important;
+    text-align: left !important;
+    color: #2B2B2E !important; 
 }
 .card-text-info {
     font-size: 15px;
@@ -802,4 +802,4 @@ button:hover {
       font-size: 13px;
     }
   }
-  
+/* Rodapé */
