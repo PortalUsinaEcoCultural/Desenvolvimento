@@ -46,6 +46,9 @@ document.addEventListener("mouseup", dragStop);
 
 /* Seção "linha do tempo" */
 
+// Variável de controle para verificar o login
+let usuarioLogado = false;  // Altere isso conforme o status de login do seu sistema
+
 // Variável de controle para evitar chamadas duplicadas
 let eventosCarregados = false;
 
@@ -54,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!eventosCarregados) {
         carregarEventos();
         eventosCarregados = true; // Marca que os eventos foram carregados
+    }
+
+    // Exibir os eventos apenas se o usuário estiver logado
+    if (usuarioLogado) {
+        exibirBotoesExcluir();
     }
 });
 
@@ -76,7 +84,7 @@ function adicionarEvento() {
         <div class="linha-do-tempo-conteudo">
             <h2>${ano}</h2>
             <p>${descricao}</p>
-            <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+            ${usuarioLogado ? '<button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>' : ''}
         </div>
     `;
 
@@ -115,6 +123,19 @@ async function salvarEventoNoServidor(ano, descricao, eventoId) {
     }
 }
 
+// Função para excluir um evento do servidor
+async function excluirEventoNoServidor(ano) {
+    const response = await fetch(`http://localhost:3000/eventos/${ano}`, {
+        method: 'DELETE',
+    });
+
+    if (response.ok) {
+        console.log('Evento excluído com sucesso!');
+    } else {
+        console.error('Erro ao excluir evento');
+    }
+}
+
 // Função para alternar visibilidade da linha do tempo
 function alternarVisibilidade() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
@@ -148,7 +169,7 @@ function salvarEventos() {
 async function carregarEventos() {
     const linhaDoTempo = document.getElementById('linha-do-tempo');
 
-    // Limpar todos os eventos anteriores
+    // Limpar todos os eventos anteriores antes de carregar novos
     while (linhaDoTempo.firstChild) {
         linhaDoTempo.removeChild(linhaDoTempo.firstChild);
     }
@@ -157,7 +178,7 @@ async function carregarEventos() {
     const response = await fetch('http://localhost:3000/eventos');
     if (response.ok) {
         const eventos = await response.json();
-        console.log('Eventos recebidos do servidor:', eventos); // Verifique os eventos recebidos
+        console.log('Eventos recebidos do servidor:', eventos);  // Verifique os eventos recebidos
 
         // Adicionar os eventos recebidos à linha do tempo
         eventos.forEach(evento => {
@@ -171,7 +192,7 @@ async function carregarEventos() {
                 <div class="linha-do-tempo-conteudo">
                     <h2>${evento.ano}</h2>
                     <p>${evento.descricao}</p>
-                    <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
+                    ${usuarioLogado ? '<button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>' : ''}
                 </div>
             `;
 
@@ -197,8 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     iniciarPolling();    // Inicia o polling para atualizações a cada 24 horas
 });
-
-
 
 
 /* Carrossel "Apoiadores da Política" */

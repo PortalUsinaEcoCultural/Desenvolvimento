@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/Historia.css">
-    <script src="/Javascript/Historia.js" defer></script>
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -186,24 +186,22 @@
                 <div class="linha-do-tempo-conteudo">
                     <h2>1968</h2>
                     <p>Início das atividades do Incinerador Vergueiro</p>
-                    <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
                 </div>
             </div>
             <div class="linha-do-tempo-container direita">
                 <div class="linha-do-tempo-conteudo">
                     <h2>2002</h2>
                     <p>Encerramento da queima de lixo</p>
-                    <button class="linha-do-tempo-btn-excluir" onclick="excluirEvento(this)">Excluir</button>
                 </div>
             </div>
         </div>
-        <div class="linha-do-tempo-botoes">
-            <button class="linha-do-tempo-adicionar-evento" onclick="adicionarEvento()">Adicionar Evento</button>
-            <button class="linha-do-tempo-editar-evento" onclick="editarTodosEventos()">Editar Evento</button>
-            <button class="linha-do-tempo-salvar-eventos" onclick="salvarEventos()">Salvar Mudanças</button>
-        </div>
-    </section>
+<div class="linha-do-tempo-botoes" style="display: none;">
+    <button class="linha-do-tempo-adicionar-evento" onclick="adicionarEvento()">Adicionar Evento</button>
+    <button class="linha-do-tempo-editar-evento" onclick="editarTodosEventos()">Editar Evento</button>
+    <button class="linha-do-tempo-salvar-eventos" onclick="salvarEventos()">Salvar Mudanças</button>
+</div>
 
+    </section>
 
     <!-- Carrossel Grupos Apoiadores? -->
     <section class="grupos-apoiadores">
@@ -666,7 +664,7 @@
 
     <!--Rodapé da página-->
     <div class="container-fluid bloco">
-        <div class="footer" style="">
+        <div class="footer">
             <p class="text-center" style="font-size: 19px; color: white; font: weight 900px;">Fique por dentro do que
                 acontece na Usina</p>
             <div class="social-icons text-center ">
@@ -802,7 +800,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/e64e449d7c.js" crossorigin="anonymous"></script>
-
+    <script src="/Javascript/Historia.js" defer></script>
 </body>
 
 </html>
