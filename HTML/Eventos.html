@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="/Imagens/logoBranca.png" type="image/x-icon">
 
     <link rel="stylesheet" href="/CSS/Eventos.css">
+    <script src="/Javascript/Eventos.js"></script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -212,7 +213,7 @@
                     </div>
                     <div class="col-12 col-md-3 col-lg-2 d-flex justify-content-center mb-3">
                         <a href="https://drive.google.com/file/d/1kDx72fzrCsVuIQG3DY9QdLEcpThjbB56/view?fbclid=PAZXh0bgNhZW0CMTEAAabc06wfFhICfDW4tJ2UJBjwyRyvd636frAaW9HSppAnO-TuD9LKdkk6IRA_aem_bun_HSnO3C0WycvdG6Ob_w"
-                            class="contato-item text-center">
+                            class="contato-item text-center" target="_blank">
                             <i class="fa-solid fa-file"></i>
                             <p>Estatuto da Usina</p>
                         </a>
@@ -298,21 +299,6 @@
         </footer>
     </div>
 
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const botoesSaibaMais = document.querySelectorAll('.saiba-mais-botao');
-
-            botoesSaibaMais.forEach(botao => {
-                botao.addEventListener('click', () => {
-                    const resposta = botao.nextElementSibling;
-                    if (resposta && resposta.classList.contains('evento-resposta')) {
-                        resposta.style.display = resposta.style.display === 'none' ? 'block' : 'none';
-                    }
-                });
-            });
-        });
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
