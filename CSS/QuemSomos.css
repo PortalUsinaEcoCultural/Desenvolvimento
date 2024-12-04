@@ -19,7 +19,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif ;
+    font-family: 'Roboto', sans-serif ; 
 }
 
 
@@ -462,7 +462,6 @@ h2.objetivos {
     color: #6a6d78;
     font-size: 1.31rem;
 }
-
 .titulo {
     text-align: left;
     margin-bottom: 20px;
@@ -472,7 +471,6 @@ h2.objetivos {
     font-size: 25px;
     padding-bottom: 0;
 }
-
 .titulo h1 {
     position: relative;
     top: 20px;
