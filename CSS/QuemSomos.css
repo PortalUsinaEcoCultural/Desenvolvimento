@@ -65,7 +65,7 @@ html, body {
 }
 h1 .quem-somos {
     font-size: 35px;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 h2.quem-somos {
     margin: 10px 0;
@@ -73,7 +73,6 @@ h2.quem-somos {
     font-family: 'Roboto', sans-serif;
     color: #1D1D1F;
 }
-
 /*Estilo para telas menores*/
 @media (max-width: 1128px) {
     .cabecalho {
