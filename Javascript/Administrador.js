@@ -12,19 +12,19 @@ document.getElementById('salvar-perfil').addEventListener('click', function () {
         if (field.id === 'nome' && value === '') {
             isValid = false;
             errorMessage += 'O nome não pode estar vazio.<br>';
-            field.value = originalValue; 
+            field.value = originalValue;
         }
 
         if (field.id === 'email' && !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|br)$/.test(value)) {
             isValid = false;
             errorMessage += 'O email deve ser válido';
-            field.value = originalValue; 
+            field.value = originalValue;
         }
 
         if (field.id === 'senha' && value.length < 8) {
             isValid = false;
             errorMessage += 'A senha deve ter pelo menos 8 caracteres.<br>';
-            field.value = originalValue; 
+            field.value = originalValue;
         }
     });
 
@@ -46,6 +46,27 @@ document.getElementById('salvar-perfil').addEventListener('click', function () {
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nome = localStorage.getItem("nome");
+
+    if (nome) {
+        // Insere o nome no título
+        const welcomeMessage = document.querySelector("h2.mb-4");
+        if (welcomeMessage) {
+            welcomeMessage.textContent = `Bem-vindo, ${nome}!`;
+        }
+        // Preenche o campo de nome no formulário de perfil
+        const nomeInput = document.getElementById("nome");
+        if (nomeInput) {
+            nomeInput.value = nome;
+        }
+    } else {
+        console.log("Nome não encontrado no localStorage.");
+    }
+});
+
+
 // Selecionar os campos de entrada
 const nomeInput = document.getElementById("nome");
 const emailInput = document.getElementById("email");
@@ -57,9 +78,9 @@ window.onload = function () {
     const email = localStorage.getItem("email") || "Email não definido";
     const senha = localStorage.getItem("senha") || "";
 
-    nomeInput.value = nome; // Atualiza o campo de nome
-    emailInput.value = email; // Atualiza o campo de email
-    senhaInput.value = senha; // Atualiza o campo de senha
+    nomeInput.value = nome;
+    emailInput.value = email;
+    senhaInput.value = senha;
 };
 
 // Função do olhinho para mostrar ou esconder a senha
@@ -68,9 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (salvarBtn) {
         salvarBtn.addEventListener("click", function () {
-            // Obtém os valores dos campos de perfil
             const nome = document.getElementById("nome").value;
-            const email = localStorage.getItem("email"); // O email é usado como identificador único
+            const email = localStorage.getItem("email");
             const senha = document.getElementById("senha").value;
 
             // Validações básicas
@@ -98,11 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (welcomeMessage) {
                             welcomeMessage.textContent = `Bem-vindo, ${nome}!`;
                         }
-
-                        // Exibe a mensagem de sucesso
                         alert("Perfil atualizado com sucesso!");
                     } else {
-                        // Exibe o erro do backend (caso haja)
                         alert("Erro ao atualizar perfil: " + data.message);
                     }
                 })
@@ -119,7 +136,6 @@ function exibirPopup(id, mensagem) {
     if (popup) {
         popup.querySelector("span").innerText = mensagem;
         popup.style.display = "flex";
-
         // Oculta automaticamente após 5 segundos
         setTimeout(() => {
             popup.style.display = "none";
@@ -133,7 +149,6 @@ function fecharPopup(id) {
         popup.style.display = "none";
     }
 }
-
 
 
 function logout() {
@@ -169,7 +184,6 @@ var acessoDados = {
         borderWidth: 1
     }]
 };
-// Gráfico de Acessos ao Site
 var ctxAcesso = document.getElementById('acessoGrafico').getContext('2d');
 new Chart(ctxAcesso, {
     type: 'bar',
@@ -186,7 +200,7 @@ new Chart(ctxAcesso, {
 
 // Dados para o gráfico de Vendas
 var vendasDados = {
-    labels: ['Camiseta branca', 'Botton', 'Boné', 'Caneca'], 
+    labels: ['Camiseta branca', 'Botton', 'Boné', 'Caneca'],
     datasets: [{
         label: 'Vendas por Produto',
         data: [5, 10, 8, 15],
@@ -195,7 +209,6 @@ var vendasDados = {
         borderWidth: 1
     }]
 };
-// Gráfico de Vendas por Produto
 var ctxVendas = document.getElementById('vendasGrafico').getContext('2d');
 new Chart(ctxVendas, {
     type: 'pie',
