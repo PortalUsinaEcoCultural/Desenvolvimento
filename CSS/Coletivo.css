@@ -543,6 +543,7 @@ html {
 }
 
 
+
 /*Causas que defendemos*/
 .causas-defendidas {
     padding: 40px 40px;
@@ -1110,7 +1111,6 @@ button:hover {
         margin-left: 10px;
         margin-right: 10px;
     }
-
     .col-12.col-sm-6 {
         margin-bottom: 15px; 
     }
@@ -1122,9 +1122,9 @@ button:hover {
     padding: 0 15px;
 }
 
-.buttonzigzag{
-    align-items: left !important;
-}
+
+
+/* margem em zig zag ate antes do newsletter */
 .margemtodas{
     margin-left: 10%;
     margin-right: 10%;
