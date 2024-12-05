@@ -1,6 +1,6 @@
 # 🌐 Site Usina Eco-Cultural!
 
-####Breve introdução:
+#### Breve introdução:
 O projeto tem como foco principal a criação de um site institucional para o parceiro Usina Eco-Cultural que não só atenda as demandas solicitadas por eles, mas também cumpra com o objetivo de ser um meio informativo sobre o movimento. O intuito é divulgar a história da Usina, quem eles são, os eventos que promovem, as notícias, página de doações, informações para contato, boletins periódicos e uma loja que vende seus produtos.
 
 ---
