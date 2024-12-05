@@ -226,10 +226,10 @@
                 abaixo e entraremos em contato assim
                 que possível!</p>
             <div class="botoes">
-                <a href="/Login/FalaConosco/voluntário.html">
+                <a href="/HTML/FormsVoluntário.html">
                     <button class="btn-voluntario">Sou voluntário</button>
                 </a>
-                <a href="/Login/FalaConosco/parceiro.html">
+                <a href="/HTML/FormsParceiro.html">
                     <button class="btn-parceiro">Sou um parceiro</button>
                 </a>
             </div>
@@ -447,6 +447,24 @@
         window.onload = function () {
             carregarEdicoes();  // Agora a função está disponível
         };
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <!--plugin VLibras para garantir acessibilidade-->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 
