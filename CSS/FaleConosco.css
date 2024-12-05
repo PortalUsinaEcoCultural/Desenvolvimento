@@ -329,7 +329,7 @@ body {
 }
 /* Estilo das perguntas */
 .perguntas {
-    margin-left: 20%;
+    margin-left: 18%;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -368,7 +368,6 @@ body {
     font-size: 15px;
     color: #555;
     line-height: 1.6;
-    display: none;
     text-align: left;
     margin-right: 30%
 }

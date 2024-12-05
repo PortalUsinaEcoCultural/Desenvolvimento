@@ -1,11 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const perguntas = document.querySelectorAll('.pergunta-titulo');
+document.addEventListener('DOMContentLoaded', () => {
+    const titulo = document.querySelector('.pergunta-titulo');
+    const resposta = document.querySelector('.pergunta-resposta');
 
-    perguntas.forEach(function (pergunta) {
-        pergunta.addEventListener('click', function () {
-            const resposta = pergunta.nextElementSibling;
-            resposta.style.display = resposta.style.display === 'block' ? 'none' : 'block';
-        });
+    if (!titulo || !resposta) {
+        console.error('Elementos não encontrados!');
+        return;
+    }
+
+    titulo.addEventListener('click', () => {
+        resposta.style.display = resposta.style.display === 'none' ? 'block' : 'none';
+        console.log(`Resposta visível: ${resposta.style.display}`);
     });
 });
-

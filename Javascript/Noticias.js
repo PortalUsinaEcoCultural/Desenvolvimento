@@ -113,26 +113,4 @@ function navigate(direction) {
 
     updateNews();
 }
-
-function editField(index, field) {
-    const oldValue = news[index][field];
-    const newValue = prompt(`Editar ${field}:`, oldValue);
-
-    if (newValue !== null) {
-        news[index][field] = newValue;
-        saveChanges();
-        updateNews();
-    }
-}
-
-function saveChanges() {
-    localStorage.setItem("news", JSON.stringify(news));
-}
-
-
-const savedNews = localStorage.getItem("news");
-if (savedNews) {
-    Object.assign(news, JSON.parse(savedNews));
-}
-
 updateNews();
