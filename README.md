@@ -9,7 +9,7 @@ O projeto tem como foco principal a criação de um site institucional para o pa
 
 Letícia de Carvalho Silva (24.00141-4) - realizou documentação e programadora frontend
 
-Lyssa Okawa Perini (24.001193-2) - prototipagem no Figma e programador frontend
+Lyssa Okawa Perini (24.001193-2) - prototipagem no Figma e programadora frontend
 
 Mateus Martins Gonçalves Doro (24.00553-3) - prototipagem no Figma e programador frontend
 
