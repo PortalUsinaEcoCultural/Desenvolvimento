@@ -1,6 +1,6 @@
 # 🌐 Site Usina Eco-Cultural!
 
-Descrição:
+####Breve introdução:
 O projeto tem como foco principal a criação de um site institucional para o parceiro Usina Eco-Cultural que não só atenda as demandas solicitadas por eles, mas também cumpra com o objetivo de ser um meio informativo sobre o movimento. O intuito é divulgar a história da Usina, quem eles são, os eventos que promovem, as notícias, página de doações, informações para contato, boletins periódicos e uma loja que vende seus produtos.
 
 ---
@@ -45,6 +45,7 @@ Sophia Heringer Coelho (24.01202-5) - programadora frontend e backend
 ### 🔍 Visão Geral do Projeto
 
 A Usina Eco-Cultural é uma organização que busca promover a cultura e a sustentabilidade. Para alcançar um público maior e aumentar o engajamento, nosso grupo está desenvolvendo um site com:
+
   1- Navegação fácil: Foco em uma interface agradável, que permita aos usuários encontrarem rapidamente as informações de que precisam.
   
   2- Design minimalista: Um layout limpo, moderno e visualmente agradável, que prioriza a clareza e a simplicidade.
@@ -59,5 +60,7 @@ A Usina Eco-Cultural é uma organização que busca promover a cultura e a suste
 Link para documentação: https://docs.google.com/document/d/1dQVxHXb84giEkCd7Hm9IEg75IycxON0FQwRl-yx0X3c/edit?usp=sharing
 
 Link para apresentação: https://docs.google.com/presentation/d/1XkGP17_znANspCC-P_jWFbh2GpumYk_J4uhkUgb-p7E/edit?usp=sharing
+
+Acesse nosso Linktree: https://linktr.ee/siteusinaecocultural?utm_source=linktree_profile_share&ltsid=887dc08f-4099-471a-9222-df43297ed7f0
 
 
