@@ -16,6 +16,9 @@ Mateus Martins Gonçalves Doro (24.00553-3) - prototipagem no Figma e programado
 Sophia Heringer Coelho (24.01202-5) - programadora frontend e backend
 
 ---
+### IMPORTANTE: as especificações de como acessar o nosso banco de dados estão especificados no arquivo SERVER.JS e no arquivo .ENV está a chave de nosso banco e o e-amil cadastrado para receber as informações dos formulários!
+
+---
 ### 🛠️Tecnologias usadas:
 1- HTML5
 
